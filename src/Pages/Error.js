@@ -6,13 +6,11 @@ const Error = () => {
   return (
     <div className='error'>
       <div className='errorCol'>
-        <Transitions>
           <h1>404</h1>
           <p> Page Not Found</p>
           <div className='btnSpaceEx center'>     
             <RippleButton to="/" className="btnDark fontL"><span>Back to home page</span></RippleButton>
           </div>
-        </Transitions>
       </div>
     </div>
   );

@@ -14,7 +14,6 @@ const JoinTheTeam = () => {
   return (
     <>
       <Header />
-      <Transitions>
 
 <div className="spacer"></div>
 
@@ -126,7 +125,6 @@ const JoinTheTeam = () => {
       </div>
     </section>
 
-    </Transitions>
       <Footer />
     </>
   )

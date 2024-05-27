@@ -320,7 +320,6 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   return (
     <>
       <Header />
-      <Transitions>
       <div className="spacer"></div>
 
         <section className='SolutionsSecAbout'>
@@ -713,8 +712,6 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
         </div></section> 
         {/* Free Audit End */} 
 
-
-      </Transitions>
       <Footer />
     </>
   );

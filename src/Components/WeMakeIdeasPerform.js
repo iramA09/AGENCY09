@@ -1,45 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import RippleButton from '../Hooks/RippleButton';
 import { GoNorthStar } from "react-icons/go";
 
 
 const WeMakeIdeasPerform = () => {
-
-
-  
-// GSPA
-useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    
-  const wemakeTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".hContTechPin",
-      toggleActions: "restart pause resume pause",
-      start: "top 50%",
-      end: "+=50%",
-      scrub: true,
-      duration: 3,
-    }
-  });
-  wemakeTl.to(".hContTechColorBox", { scale: "1" })
-  .to(".hContTechColorBox", { top: "0" })
-  .to(".hContTechColorBox", { height: "100%" })
-  .to(".hContTechColorBox", { width: "100%" })
-  .to(".hContTechColorBox", { borderRadius: "0" })
-  .to(".hContTechRow", { opacity: "1" })
-  ;
- 
-
-    return () => {
-        ScrollTrigger.getAll().forEach(trigger => {
-            trigger.kill();
-        });
-        };
-}, []);
-
 return (
     <>
     <section className='hContTech'>

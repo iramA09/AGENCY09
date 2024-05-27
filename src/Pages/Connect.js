@@ -23,7 +23,6 @@ const Connect = () => {
   return (
     <>
       <Header />
-      <Transitions>
       <div className="spacer"></div>
 
       <section><div className='container'>
@@ -153,7 +152,6 @@ const Connect = () => {
       </div></section>
 
 
-      </Transitions>
       <Footer />
     </>
     )

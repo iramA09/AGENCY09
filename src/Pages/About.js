@@ -42,8 +42,6 @@ const About = () => {
   <>
     <Header />
 
-
-    <Transitions>
     <div className="spacer"></div>
 
  
@@ -128,7 +126,6 @@ const About = () => {
       <PartnerCompanies />
     </div></section>
 
-    </Transitions>
 
     <Footer />
   </>

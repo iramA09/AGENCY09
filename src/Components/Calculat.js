@@ -1,38 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Draggable } from 'gsap/Draggable';
 import { PiStarFourFill } from "react-icons/pi";
 
 const Calculat = () => {
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, Draggable);
-
-
-    gsap.utils.toArray('.CalculatCol').forEach(col => {
-      Draggable.create(col, {
-        type: "x,y",
-        bounds: ".Calculat",
-      });
-    });
-
-    // Reset positions of draggable elements when scrolling down
-    ScrollTrigger.create({
-      trigger: ".Calculat",
-      start: "top 20%",
-      end: "bottom top",
-      onEnter: () => {
-        gsap.to(".CalculatCol", { x: 0, y: 0 });
-      },
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => {
-        trigger.kill();
-      });
-    };
-  }, []);
+ 
   
   return (
     <>

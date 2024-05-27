@@ -32,7 +32,6 @@ const Design = () => {
     <>
       <Header />
 
-      <Transitions>
 
       <div className="spacer"></div>
 
@@ -220,7 +219,6 @@ const Design = () => {
 
     <ServicesList />
 
-    </Transitions>
 
       <Footer />
     </>

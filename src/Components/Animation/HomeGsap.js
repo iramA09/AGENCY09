@@ -31,7 +31,6 @@ const animateGsap = () => {
     },
   });
   Hero.to(".ourWorkHm", { background: "#fff", })
-    .to("body", { background: "#fff118", })
     .to(".ourWorkHm", { borderRadius: "100px" });
 
       const ctB = gsap.timeline({
@@ -46,24 +45,6 @@ const animateGsap = () => {
         },
       });
       ctB.to(".background", { background: "#fff" });
-  
-   
- 
-
-    
-    const tlWork = gsap.timeline({
-      duration: 0.1,
-      scrollTrigger: {
-        trigger: ".ourWork",
-        toggleActions: "restart none none none",
-        start: "top 50%",
-        end: "+=100%",
-        scrub: true,
-      },
-    });
-    tlWork.to(".ourWork .workTitle .iconF", { transform: 'rotate(3760deg)', });
-
-    
   
   return () => {
       ScrollTrigger.getAll().forEach(trigger => {

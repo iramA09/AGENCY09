@@ -143,7 +143,6 @@ const Home = () => {
         <div className='background'></div>
 
 
-      <Transitions>
 
       {/* Hero */}
         <section className='heroRow'>
@@ -276,7 +275,6 @@ const Home = () => {
       <Social />                  
     {/* Social End */}
       
-      </Transitions>
       
       <Footer />
     </>

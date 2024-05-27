@@ -104,7 +104,7 @@ const Footer = () => {
       <div className='footerCol'>
         <h3 className='fHd'>Play Music</h3>
         <div className='Spotify'>
-          <iframe src="https://open.spotify.com/embed/playlist/6YwHfFlzVMhMjz95nUdaNY?utm_source=generator&theme=0" width="100%"  frameBorder="1" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/playlist/6YwHfFlzVMhMjz95nUdaNY?utm_source=generator&theme=0" width="100%"   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
 

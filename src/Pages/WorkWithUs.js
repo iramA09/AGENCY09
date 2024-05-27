@@ -17,7 +17,6 @@ const WorkWithUs = () => {
   return (
     <>
     <Header />
-    <Transitions>
     <div className="spacer"></div>
 
     <section><div className='container'>
@@ -67,7 +66,6 @@ const WorkWithUs = () => {
         <h1 className='sizeH1 uppercase center'>Testimonials</h1>
       </div>
     </section>
-    </Transitions>
 
     <Footer />
       

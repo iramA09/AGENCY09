@@ -19,7 +19,6 @@ useLenisScroll();
   return (
     <>
       <Header />
-      <Transitions>
       <div className="spacer"></div>
         
       <section><div className='container'>
@@ -119,7 +118,6 @@ useLenisScroll();
           </Accordion>
       </div></section>
 
-      </Transitions>
       <Footer />
     </>
   )
