@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import RippleButton from '../../Hooks/RippleButton';
+import { Link } from 'react-router-dom';
 
 function JoinTheTeamForm() {
   const [formData, setFormData] = useState({
@@ -129,7 +129,7 @@ function JoinTheTeamForm() {
       </div>
 
       <div className='form-group-btn'>
-      <RippleButton type="submit" className="btnBlack fontS "><span> Apply Now </span></RippleButton>
+      <Link type="submit" className="btnBlack fontS ripple-button"><span> Apply Now </span></Link>
       </div>
     </div>
     </form>

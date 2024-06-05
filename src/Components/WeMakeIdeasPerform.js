@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import RippleButton from '../Hooks/RippleButton';
 import { GoNorthStar } from "react-icons/go";
 
 
@@ -16,9 +15,9 @@ return (
 
           <div className='hContTechRow'>
               <div className='hContTechCol hContTechColText'>
-                <h3 className='sizeH1 uppercase'>We make<span><i className="iconF"><GoNorthStar /></i></span><span className='underline'>ideas<hr/></span> perform</h3>
-                <p>We are an independent agency combining<br/> <b><i>content & tech</i></b>  to implement growth strategies.</p>
-                <RippleButton to="/work" className="btnDark"><span>Know MOre</span></RippleButton>
+                <h3 className='sizeH1 uppercase'>We make <span className='underline'>ideas<hr/></span> perform</h3>
+                <p>We are an independent agency combining <br/> <b><i>content & tech</i></b> to implement growth strategies with results.</p>
+                <Link className='btnDark ripple-button' to="/work" ><span>Know MOre</span></Link>
               </div>              
           </div>
         </div>
@@ -30,3 +29,4 @@ return (
 }
 
 export default WeMakeIdeasPerform
+  

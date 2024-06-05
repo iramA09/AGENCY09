@@ -13,9 +13,7 @@ import WeMakeIdeasPerform from '../Components/WeMakeIdeasPerform';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import useLenisScroll from '../Hooks/useLenisScroll';
-import RippleButton from '../Hooks/RippleButton';
 import animateGsap from '../Components/Animation/HomeGsap'; 
-import Transitions from '../Hooks/Transitions';
 import { IoStarSharp } from "react-icons/io5";
 import { SlArrowRightCircle } from "react-icons/sl";
 import SVGCurveLine from '../Hooks/SVGCurveLine'; 
@@ -29,64 +27,73 @@ import ourwork3 from '../Assets/Images/work/ourwork-3.jpg';
 import ourwork4 from '../Assets/Images/work/ourwork-4.jpg';
 // Images end
 
-
 // Array of work items
 export const workItems = [
   {
     id: 1,
-    title: 'Lorem Ipsum is simply dummy text of the printing 2',
+    title: '5 Tailored Websites for Tata Motors CV',
     tags: [
       { name: 'Brand Strategy', link: '/' },
       { name: 'Print AD', link: '/' },
       { name: 'Digital', link: '/' }
     ],
     image: ourwork1,
-    link: '/'
+    link: '/',
+    brand: 'Mahindra Tsubaki',
+    department: 'Tech'
   },
   {
     id: 2,
-    title: 'Lorem Ipsum is simply dummy text of the printing',
+    title: 'Crafting a unique IP for Godrej Laffaire',
     tags: [
       { name: 'Brand Strategy', link: '/' },
       { name: 'Print AD', link: '/' },
       { name: 'Digital', link: '/' }
     ],
     image: ourwork2,
-    link: '/'
+    link: '/',
+    brand: 'Mahindra Tsubaki',
+    department: 'Tech'
   },
   {
     id: 3,
-    title: 'Lorem Ipsum is simply dummy text of the printing',
+    title: 'Award-Winning Annual Report for BARC India',
     tags: [
       { name: 'Brand Strategy', link: '/' },
       { name: 'Print AD', link: '/' },
       { name: 'Digital', link: '/' }
     ],
     image: ourwork3,
-    link: '/'
+    link: '/',
+    brand: 'Mahindra Tsubaki',
+    department: 'Tech'
   },
   {
     id: 4,
-    title: 'Lorem Ipsum is simply dummy text of the printing',
+    title: 'Tech based Campaign Ambassador Program for Tribevibe',
     tags: [
       { name: 'Brand Strategy', link: '/' },
       { name: 'Print AD', link: '/' },
       { name: 'Digital', link: '/' }
     ],
     image: ourwork4,
-    link: '/'
+    link: '/',
+    brand: 'Mahindra Tsubaki',
+    department: 'Tech'
   },
   
   {
     id: 5,
-    title: 'Lorem Ipsum is simply dummy text of the printing',
+    title: 'Elevated Employer Branding Content for Aditya Birla Capital',
     tags: [
       { name: 'Brand Strategy', link: '/' },
       { name: 'Print AD', link: '/' },
       { name: 'Digital', link: '/' }
     ],
     image: ourwork4,
-    link: '/'
+    link: '/',
+    brand: 'Mahindra Tsubaki',
+    department: 'Tech'
   },
 ];
 
@@ -104,7 +111,7 @@ const Home = () => {
     dots: true,
     arrows: false,
     infinite: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 6000,
     speed: 1000,
     draggable: true,
@@ -118,31 +125,34 @@ const Home = () => {
     { 
       image: rgiBG,
       imageLogo: rgiLogo,
-      title: "Reliance<br> General<br> Insurance<br> Products",
-      description: 'Lorem Ipsum is simply dummy text of the printing ',
+      title: "Product Communication  <br>for Reliance General  <br>Insurance",
+      description: '',
       btnLink: '#',
       className: 'rgiSlider',
     },
     { 
       image: '',
       imageLogo: '',
-      title: "Lakme <br/>Fashion <br/>Week",
-      description: 'Lorem Ipsum is simply dummy text of the printing ',
+      title: "Content Creation & Event<br> Coverage for 6 Seasons of <br> Lakme Fashion Week",
+      description: '',
       btnLink: '#',
       className: 'lakmeSlider',
+    },
+    { 
+      image: '',
+      imageLogo: '',
+      title: "Series of Product<br> Films for <br> American Tourister",
+      description: '',
+      btnLink: '#',
+      className: 'americanTouristerSlider',
     },
   ];
   // Hero End
 
 
-  
-
   return (
     <>
       <Header />
-        <div className='background'></div>
-
-
 
       {/* Hero */}
         <section className='heroRow'>
@@ -153,18 +163,17 @@ const Home = () => {
                 <motion.div 
                   key={index} 
                   className={`item ${slide.className}`} 
-                  whileDrag={{ scale: 0.97 }}
-                  whileTap={{ scale: 0.97}} 
+                  
                 >
-                  <div className='container'>
-                    <div className='HeroImage'>
+                  <div className='HeroImage'>
+                    <div className='container'>
                       <div className='Herobg'><img src={slide.image} alt={`Slide ${index} - ${slide.image}`} /></div>
                       <div className='HerobgLogo'><img src={slide.imageLogo} alt={`Slide ${index} - ${slide.image}`} /></div>
                       <div className='HeroText'>
                         {slide.title && <h1 dangerouslySetInnerHTML={{ __html: slide.title }} />}
                         {slide.description && <p>{slide.description}</p>}
                         <div className='HeroBtn'>
-                          {slide.btnLink && <RippleButton className="btnWhite" to={slide.href}><span>Know More</span></RippleButton>}
+                          {slide.btnLink && <a className="btnWhite ripple-button" to={slide.href}><span>Know More</span></a>}
                         </div>
                       </div>
                     </div>
@@ -183,8 +192,8 @@ const Home = () => {
       <div className='container'>
         <div className='Heading center'>  
           
-        <h2 className='sizeH1 uppercase workTitle'><span>We</span> <span>grow</span> <span>brands</span> <span><i className="iconF arrowBtn"><SlArrowRightCircle /></i></span> <br/> <span>with</span> <span className='underline'>ideas <hr/></span> <span>for</span> <span>content,</span> <span>technology,</span> <br /> 
-        <span><i className="iconF"><IoStarSharp /></i></span><span>design & data.</span><span><i className="iconF"><IoStarSharp /></i></span></h2>
+        <h2 className='sizeH1 uppercase workTitle'><span>We</span> <span>grow</span> <span>brands</span> <span><i className="iconF arrowBtn"><SlArrowRightCircle /></i></span> <br/> <span><i className="iconF"><IoStarSharp /></i></span> <span>with</span>  <span className='underline'>ideas <hr/></span> <span>for</span> <span>content,</span> <span>technology,</span>
+       <span>design & data.</span><span><i className="iconF"><IoStarSharp /></i></span></h2>
 
           <div className='btnSpaceEx'>     
             <div className="btnDark ripple-button titalBtn"><span>Our Work</span></div>
@@ -201,6 +210,13 @@ const Home = () => {
                     <div className='cursor09'></div>
                     <div className='workGridItemImg'>
                       <img src={item.image} alt={item.title}/>
+                      <div className='workGridItemHover'>
+                          <div className='workGridItemHoverIn'>
+                              <h3>{item.title}</h3>
+                              <h4>{item.brand}</h4>
+                              <p>{item.department}</p>
+                          </div>
+                      </div>
                     </div>
                     <div className='workGridItemText'>
                       <h3>{item.title}</h3>
@@ -217,7 +233,7 @@ const Home = () => {
           </div>
 
           <div className='btnSpaceEx center'>     
-            <RippleButton to="/work" className="btnDark fontL"><span>See More Work</span></RippleButton>
+            <Link to="/work/case-studies" className="btnDark fontL ripple-button"><span>See More Work</span></Link>
           </div>
 
       </div>

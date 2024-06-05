@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import RippleButton from '../Hooks/RippleButton';
+import { Link } from 'react-router-dom';
 
 
 // Images
@@ -80,8 +80,8 @@ const Social = () => {
           <div className='CultureRow center'>
             <p>We’re building a culture of progressive thinking open minded folks<br/> who are well equipped to tackle the nuances of communicating with the thumb generation.</p>
             <div className='CultureRowBtn'>
-              <RippleButton className="btnDark" to='/'><span>Our Culture</span></RippleButton>
-              <RippleButton className="btnDark" to='/'><span>View Openings</span></RippleButton>
+              <Link className="btnDark ripple-button" to='/'><span>Our Culture</span></Link>
+              <Link className="btnDark ripple-button" to='/'><span>View Openings</span></Link>
             </div>
           </div>
 

@@ -16,10 +16,10 @@ const Calculat = () => {
               <div className='CalculatColIn'><h4>85+</h4><p>Members <PiStarFourFill /></p></div>
             </div>
             <div className='CalculatCol CalculatColC'>
-              <div className='CalculatColIn'><h4>450+</h4><p>Pojects <PiStarFourFill /></p></div>
+              <div className='CalculatColIn'><h4>450+</h4><p>Projects <PiStarFourFill /></p></div>
             </div>
             <div className='CalculatCol CalculatColD'>
-              <div className='CalculatColIn'><h4>3</h4><p>Countries <PiStarFourFill /></p></div>
+              <div className='CalculatColIn'><h4>3</h4><p>Global Offices <PiStarFourFill /></p></div>
             </div>
           </div>
       {/* Calculat End */}

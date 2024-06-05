@@ -10,7 +10,6 @@ import ServicesForm from '../../Components/Forms/ServicesForm';
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 import { PiArrowCircleRightThin } from "react-icons/pi";
-import Transitions from '../../Hooks/Transitions';
 import RippleButton from '../../Hooks/RippleButton';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 

@@ -74,26 +74,26 @@ useEffect(() => {
     {
       link: '/',
       image: ideasPerform,
-      title: 'Lorem Ipsum is simply dummy text',
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      title: 'AGENCY09 Celebrates a decade of Simplifying the Web',
+      description: "Unlocking Digital Potential Since 20XX",
     },
     {
       link: '/',
       image: ideasPerform1,
-      title: 'Lorem Ipsum is simply dummy text',
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      title: 'Tata Motors enlists A09 for their Smart City Project website',
+      description: "AGENCY09 Powers Tata Motors' Smart City Initiative Online",
     },
     {
       link: '/',
       image: ideasPerform2,
-      title: 'Lorem Ipsum is simply dummy text',
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      title: 'Bat, Ball & Balle Balle',
+      description: "Sports Day at AGENCY09",
     },
     {
       link: '/',
       image: ideasPerform3,
-      title: 'Lorem Ipsum is simply dummy text',
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      title: 'AGENCY09 Signs up as Social Media Partner for Kinjal Group',
+      description: "Strengthens real estate portfolio",
     },
   ];
   // Update end

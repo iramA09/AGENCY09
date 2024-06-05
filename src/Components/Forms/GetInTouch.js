@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import RippleButton from '../../Hooks/RippleButton';
-
+import { Link } from 'react-router-dom';
 function ParterWithUs() {
   const [formData, setFormData] = useState({
     name: '',
@@ -53,7 +52,7 @@ function ParterWithUs() {
 
     <div  className='FormGridS1'>
       <div className='form-group-btn center'>
-        <RippleButton type="submit" className="btnBlack fontS "><span> Submit </span></RippleButton>
+        <Link type="submit" className="btnBlack fontS ripple-button"><span> Submit </span></Link>
       </div>
     </div>
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
-import Transitions from '../Hooks/Transitions';
 import useLenisScroll from '../Hooks/useLenisScroll';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
@@ -37,37 +36,7 @@ const Connect = () => {
       </div> 
       </div></section>
     
-      <section className='conatcWrapTab'><div className='container'>
-      <Tabs>
-            <TabList>
-              <Tab><span>Start a Project</span></Tab>
-              <Tab><span>Get in Touch</span></Tab>
-            </TabList>
-
-            <TabPanel>
-              <StartAProjectForm />
-            </TabPanel>
-            <TabPanel>
-              <GetInTouch />
-            </TabPanel>
-      </Tabs>
-      </div></section>
-
-
-      <section className='greenBox center greenB'>
-          <div className='greenBoxFix'>
-          <div className='container'>
-          <div className='greenBoxRow'>
-              <div className='greenBoxCol greenBoxColText'>
-                <h3 className='sizeH1 uppercase'>Simplifying <span><i className="iconF"><GoNorthStar /></i> </span><span className='underline'>The Web<hr/></span> </h3>
-                <p>Get enlightened by reading our AGENCY09 blog on various topics like marketing,<br/> strategy, tech, design, and much more.</p>
-                <RippleButton to="https://www.agency09.co/simplifyingtheweb/" target="_blank" className="btnDark"><span>Visit Blog</span></RippleButton>
-              </div>              
-          </div>
-        </div>
-        </div>
-        </section>
-
+    
       <section className='contactAdress blackB'><div className='contactAdressRow'>
       <div className='contactAdressCol'>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.09367715296!2d72.83382077520493!3d19.0596184821416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c93dcff89f6f%3A0x9f74f6463d2bb9a!2sAGENCY09!5e0!3m2!1sen!2sin!4v1716232514330!5m2!1sen!2sin" allowfullscreen="" loading="lazy"  referrerpolicy="no-referrer-when-downgrade"></iframe>  
@@ -113,6 +82,42 @@ const Connect = () => {
           </div>
       </div>
       </div></section>
+
+
+
+      <section className='conatcWrapTab'><div className='container'>
+      <Tabs>
+            <TabList>
+
+              <Tab><span>Start a Project</span></Tab>
+              <Tab><span>PARTNER WITH US</span></Tab>
+              <Tab><span>Get in Touch</span></Tab>
+            </TabList>
+
+            <TabPanel>
+              <StartAProjectForm />
+            </TabPanel>
+            <TabPanel>
+              <GetInTouch />
+            </TabPanel>
+      </Tabs>
+      </div></section>
+
+
+      <section className='greenBox center greenB'>
+          <div className='greenBoxFix'>
+          <div className='container'>
+          <div className='greenBoxRow'>
+              <div className='greenBoxCol greenBoxColText'>
+                <h3 className='sizeH1 uppercase'>Simplifying <span><i className="iconF"><GoNorthStar /></i> </span><span className='underline'>The Web<hr/></span> </h3>
+                <p>Get enlightened by reading our AGENCY09 blog on various topics like marketing,<br/> strategy, tech, design, and much more.</p>
+                <Link to="https://www.agency09.co/simplifyingtheweb/" target="_blank" className="btnDark ripple-button"><span>Visit Blog</span></Link>
+              </div>              
+          </div>
+        </div>
+        </div>
+        </section>
+
 
 
       <section className='faqContent'><div className='container'>

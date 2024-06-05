@@ -4,7 +4,6 @@ import Footer from '../Components/Footer';
 import { PiArrowCircleRightThin } from "react-icons/pi";
 import JoinTheTeamForm from '../Components/Forms/JoinTheTeamForm';
 import useLenisScroll from '../Hooks/useLenisScroll';
-import Transitions from '../Hooks/Transitions';
 import Accordion from 'react-bootstrap/Accordion';
 
 

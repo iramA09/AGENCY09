@@ -7,6 +7,11 @@ import OctrineOrganics from '../Assets/Images/logos/octrine-organics.png';
 import instaHolidays from '../Assets/Images/logos/insta-holidays.png';
 import a09store from '../Assets/Images/logos/a09store.png';
 import AcademyZeroNine from '../Assets/Images/logos/academy-zero-nine.png';
+import l09ix from '../Assets/Images/logos/l09ix.png';
+import starY from '../Assets/Images/icons/star.png';
+
+
+
 
 // PartnerCompanies settings
 const PartnerCompaniesSlider = {
@@ -16,7 +21,7 @@ const PartnerCompaniesSlider = {
     autoplay: false,
     autoplaySpeed: 7000,
     speed: 700,
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesToScroll: 1,
     responsive: [
       {
@@ -41,55 +46,85 @@ const PartnerCompanies = () => {
 
 // Pilllars Data
 const PartnerCompanies = [
+  
+   {
+    link: 'https://www.a09store.com/',  
+    image: a09store,
+    Text: 'Look Cool, Feel Happy. E-Commerce merchandise store that empowers	 artists and seeks to build a community.',
+    siteUrl: 'www.a09store.com'
+    },
+    {
+      link: 'https://www.instaholidays.in/',  
+      image: instaHolidays,
+      Text: 'Crafting personalized travel experiences to make your holidays unforgettable. Discover the world with tailored itineraries and expert guidance.',
+      siteUrl: 'www.instaholidays.in'
+    },
+    {
+      link: '#',  
+      image: l09ix,
+      Text: "Pioneering organic mushroom farming with a focus on health and sustainability. Bringing the best of nature's superfoods to your table.",
+    },
+
     {
         link: 'https://www.academy09.com/',  
         image: AcademyZeroNine,
-        Text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        Text: ' Empowering creative talent through hands-on digital marketing, creative & tech training.',
+        siteUrl: 'www.academy09.com'
     },
-    {
-        link: 'https://www.a09store.com/',  
-        image: a09store,
-        Text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    },
-    {
-        link: 'https://www.instaholidays.in/',  
-        image: instaHolidays,
-        Text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    },
+    
+
     {
         link: 'https://www.pk-a.in/',  
         image: pk_a,
-        Text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        Text: 'Buy, Rent or Sell. Real estate done right with precision & Creativity',
+        siteUrl: 'www.pk-a.in'
     },
     {
         link: 'https://www.octarineorganics.com/',  
         image: OctrineOrganics,
-        Text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    },
+        Text: "Pioneering organic mushroom farming with a focus on health and sustainability. Bringing the best of nature's superfoods to your table.",
+        siteUrl: 'www.octarineorganics.com'
+    }
+    
               
   ]
   // Pilllars Data End
 
   return (
     <>
-    <div className='Heading center HeadingIcon'>
-          <h2 className='sizeH4 uppercase'>Partner Companies</h2>
-    </div>
-    <Slider {...PartnerCompaniesSlider} className='PartnerCompaniesSlider slick-slider'>
+     <div className='Heading center HeadingIcon pb-30'>
+          <h2 className='sizeH1 uppercase'>
+            <span className='iconSVG'>
+              <i className='iconF'>
+                <img src={starY} alt='Star Icon' />
+              </i>
+            </span>
+            Partner Companies
+            <span className='iconSVG'>
+              <i className='iconF'>
+                <img src={starY} alt='Star Icon' />
+              </i>
+            </span>
+          </h2>
+        </div>
+   
+   <div className='ourEcosystemDiv'>
+    <ul>
           {PartnerCompanies.map((PartnerCompanies, index) => (
+            <li> 
             <div key={index} className='item'>
                 <Link to={PartnerCompanies.link} target="_blank">
                     <div className='PartnerCompaniesCol'>
                         <div className='PartnerCompaniesImg'><img src={PartnerCompanies.image} alt='' /></div>
                         <div className='PartnerCompaniesText'><p>{PartnerCompanies.Text}</p></div>
+                        <div className='PartnerCompaniesUrl'><span>{PartnerCompanies.siteUrl}</span></div>
                     </div>
                 </Link>
             </div>
-          ))}
-        </Slider>
-
-
-
+            </li>
+          ))} 
+    </ul>
+   </div>
     </>
   )
 }

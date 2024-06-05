@@ -37,13 +37,13 @@ const Milestones = () => {
   const milestonesData = [
     {
       year: 2024,
-      teamStrength: 80,
-      events: ['Sports Day', 'Tata Motors Live', 'Store - Comic Con'],
+      teamStrength: 85,
+      events: ['Sports Day', 'Tata Motors Live', 'Store - Comic Con', 'Chaitali Plus 2', 'Laffaire Event'],
     },
     {
       year: 2023,
       teamStrength: 80,
-      events: ['Salary Shifted to Pvt Ltd', 'Goa Trip - 65 People', 'First A Team Meet up - 24', 'Shivangi becomes plus one', 'Ritesh Became plus one', 'AGENCY09 Board', 'Rasika became plus one', 'Got Bits Pilani Website Live', 'Tata Motors', 'Bits Pilani - Website']
+      events: ['Salary Shifted to Pvt Ltd', 'Goa Trip - 65 People', 'First A Team Meet up - 24', 'Shivangi becomes plus one', 'Ritesh Became plus one', 'AGENCY09 Board', 'Rasika became plus one', 'Got Bits Pilani Website Live', 'Tata Motors', 'Bits Pilani - Website', '10th Year - Biggest Parents Meet Up']
     },
     {
       year: 2022,
@@ -57,8 +57,48 @@ const Milestones = () => {
     },
     {
       year: 2020,
-      teamStrength: 45,
-      events: ['Annual Meet', 'Product Launch', 'New Office Opening'],
+      teamStrength: 38,
+      events: ['Debt Free', 'Lockdown', 'First Creative Tweeted by PM', 'First logo for International Client', '#PM Retweeted #MuskurayagaIndia', 'First Consulting Client - SSG', 'Bagged  - MGI Group - Tommy Hilfiger', 'Won 06 Awards', 'RYAN SEO', 'Appraisals during Lockdown', '9th Anniversary celebration'],
+    },
+    {
+      year: 2019,
+      teamStrength: 35,
+      events: ['Bipeen Become Plus One', 'Bagged Star Wars (Disney)', 'RGI - National Campaign (Covered Hai)', 'Almost debt free', 'Australia Office Started', 'JJUST onboard', 'Dubai Franchise - Mayank', 'A campaign got copied', 'Ryan International (92 Website Project)', 'Nomura (Social Network Project)', 'Started Blog - agency.co', 'Archita Introduced Ayaansh', 'PKA - First Deal', 'Exerfit', 'Nomura Bank - Social Newtork'],
+    },
+    {
+      year: 2018,
+      teamStrength: 30,
+      events: ['International Expansion - Dubai Trip', 'Conceptualized and designed a cafe - Road House Cafe', 'Alibaug', 'Raj Bhai Joined the Team', 'Reliance General Insurance', 'Total Team Strength - 5'],
+    },
+    {
+      year: 2017,
+      teamStrength: 25,
+      events: ['Amanzee - Club Party', 'First Web Series - Lalbuag Chi Jatra', 'First feature in a magazine', 'Pyaar Ka Rang Sunehra - Biggest Campaign', 'Rennovation', 'Australia Start Date', 'Tech Team Got Formed'],
+    },
+    {
+      year: 2016,
+      teamStrength: 18,
+      events: ['Team Camping trip - Red Hat', '5000+ Real-estate Leads', 'Archita Joined the team', 'First Regional newspaper client - Lokmat',],
+    },
+    {
+      year: 2015,
+      teamStrength: 14,
+      events: ['Bagged Lakme Fashion Week', 'Actually started using all the rooms', 'Team Camping trip', '1st International Client - Rocket', 'A09 Party - Villa 69', 'Chaitali Aditya Joined the Team', 'Krunal Joined the Team'],
+    },
+    {
+      year: 2014,
+      teamStrength: 11,
+      events: ['Office Painting Session', 'Shifted office', 'Bangalore Book Festival', '#EduSelfie - first organic viral campaign', 'Total Team Strength - 21', 'Rakesh Gawas Joined the Team', 'Gautam Joined the Team', 'Total Team Strength - 5', 'Team Outing - Goa Trip', 'Turning Point - Got our first 6 Digit Retainer'],
+    },
+    {
+      year: 2013,
+      teamStrength: 5,
+      events: ['15 Days single seat sofa with no AC, Lights & Fan', 'First Cheque - Vinegar', 'Hogiliscious Website', 'Pehla Office - 09-09-13 - Ganesh Chaturthi', 'First Computer / First AC', 'First Retainer', 'Three wise men - Nikita', 'Game Changer Launch - Scare Crow + pagadi', 'One Pager Website', 'Rutul First Version Logo',],
+    },
+    {
+      year: 2012,
+      // teamStrength: 45,
+      events: ['Domain Booked', 'Diary & White Board Planning', 'Dining Table Set Up', 'A09 Logo',],
     },
   ];
 
