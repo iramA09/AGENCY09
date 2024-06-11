@@ -144,7 +144,7 @@ const Opportunities = () => {
 
   return (
     <>
-    <Accordion defaultActiveKey="0">
+    <Accordion>
       {jobData.map(job => (
         <Accordion.Item eventKey={job.key} key={job.key}>
           <Accordion.Header>{job.title}</Accordion.Header>

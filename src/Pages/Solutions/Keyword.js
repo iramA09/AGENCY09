@@ -381,7 +381,7 @@ const faqsData = [
             <LogosSlider />
 
             <div className='btnSpaceEx center'>     
-               <Link to="#" className="btnDark fontM ripple-button"><span>View All</span></Link>
+               <Link to="../work/our-clients" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
         </div></section> 
         {/* Work Logos End */} 
@@ -422,7 +422,7 @@ const faqsData = [
 
                         
                     <div className='pt-30 center'>     
-                        <Link to="#" className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
+                        <Link to="../work/case-studies" className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
                     </div>
                 </div>
         </div></section> 

@@ -40,6 +40,7 @@ $yellow: #fff118;
 $blue: #006dea;
 $green: #69e879;
 $pink: #ec30b8;
+$purple: #9f00ff;
 // site color end
 
 // Common Style 
@@ -1795,7 +1796,7 @@ footer{
 .underline{position: relative;
     hr{
         position: absolute;
-        bottom: -8px;
+        bottom: 0;
         left: 0;
         width: 0%;
         animation: stretchWidth 4s infinite alternate;
@@ -2039,13 +2040,11 @@ footer{
                     border: 1px solid $lightgrey;
                     margin: 0;
                     display: flex;
-                    height: 130px;
                     img{
-                        width: fit-content;
                         display: block;
                         transition: all 0.2s ease-in-out;
                         filter: grayscale(100%);
-                        height: 100%;
+                        width: 100%;
                         object-fit: contain;
                     }
                     &:hover{
@@ -2218,13 +2217,16 @@ footer{
                 object-position: top center;
             }
             h2{
-                font-size: $sizeH4;
+                font-size: 17px;
                 padding: 10px 0 0;
                 margin: auto;
+                min-height: 70px;
             }
             p{
                 padding: 10px 0;
                 font-size: 14px;
+                color: #282828;
+                min-height: 70px;
             }
             hr{
                 height: 1px ;
@@ -2426,7 +2428,7 @@ footer{
 
 // Logos
 .hWorkLogos{
-    padding:100px 0 70px;
+    padding:100px 0 ;
     position: relative;
     .container{
         position: relative;
@@ -2446,15 +2448,23 @@ footer{
         }
     }
     .LogosSlider-slick{
-        padding: 20px 0px;
+        padding: 70px 0px ;
         .item{
-            height: 150px;
-            display: flex!important;
-            align-items: center;
-            align-content: center;
-            img{
-                margin: auto;
+            span{
+                display: block;
+                width: 160px;
+                padding:15px;
+                filter: grayscale(100%);
+                transition: all 0.3s ease-in-out;
+                img{
+                    margin: auto;
+                    width: 100%;
+                }
+                &:hover{
+                    filter: grayscale(0%);
+                }
             }
+           
         }
     }
 }
@@ -2528,10 +2538,19 @@ footer{
         position: relative;
         .item{
             padding: 10px;
+            text-align: center;
             img{
                 border-radius: 50px;
                 height: 300px;
                 object-fit: cover;
+            }
+            iframe{
+                width: 100%;
+                height: 300px;
+                border-radius: 15px;
+            }
+            h3{
+                padding: 10px 0;
             }
         }
     }
@@ -3239,31 +3258,37 @@ footer{
     padding: 90px 0;
 }
 .LifeAtA09Row{
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    width: 90%;
-    gap:30px;
-    .LifeAtA09Col{
-        width: 100%;
-        a{
-            display: block;
-            border-radius: 40px;
-            overflow: hidden;
+    width: 100%;
+    .slick-list{
+        overflow: inherit;
+    }
+    .item{
+        .LifeAtA09Col{
+            padding: 10px;
+            margin: auto;
+            display: flex;
+            height: 350px;
+
+            a{
+                display: block;
+                margin: auto;
+            }
             img{
                 width: 100%;
-                display: block;
-                transition: all 0.5s ease-in-out;
-            }
-            &:hover{
-                img{
-                    transform: scale(1.1);
-                    rotate: 3deg;
-                }
             }
         }
-
     }
+
 }
+
+
+
+.getSolutions{
+    padding: 100px 0;
+}
+
+
+
 .Opportunities{
     padding: 90px 0;
     .accordion {
@@ -3773,7 +3798,6 @@ footer{
         padding: 30px;
         .awardsCol{
             padding:80px 50px 40px;
-            text-align: center;
             display: flex;
             flex-direction:column;
             border-radius:50px;
@@ -3781,6 +3805,8 @@ footer{
             gap: 15px;
             background:#ffff;
             position: relative;
+            text-align: center;
+
             &::after{
                 content: '';
                 position: absolute;
@@ -3800,7 +3826,6 @@ footer{
             }
             p{
                 font-style: italic;
-
             }
             .awardsTag{
                 width: fit-content;margin:15px auto 0;
@@ -3809,19 +3834,32 @@ footer{
                     color: $black;
                 }
             }
-            .awardsYear{margin: 0px; text-transform: uppercase;margin-top: 20px;}
-            .awardsDesignation{
-                font-size: 14px;padding: 4px 0;
+            .textwithimg{
+                display: flex;
+                gap: 20px;
+            
+
+            }
+            .awardsData{
+                text-align: center;
+                width: 100%;
+                p{
+                    font-size: 14px;padding: 4px 0;
+                }
+                
             }
             .awardsImg{
-                width: 100px;
-                height: 60px;
-                margin-top: 10px;
+                width: 200px;
+                height:90px;
+                margin: auto;
                 img{
-                    width: fit-content;
+                    width: 100%;
                     height: 100%;
                     object-fit: contain;
                 }
+            }
+            .awardsText{
+                margin: 30px 0 0;
             }
         }
     }
@@ -4117,6 +4155,26 @@ footer{
             gap:60px;
         }
     }
+}
+
+.mainslider{
+    position: relative;
+    .slick-arrow{
+        background:url('../Images/icons/arrow-right2.png')no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        &.slick-prev{
+            top: 50%;
+            left: 0;
+        }
+        &.slick-next{
+            top: 50%;
+            right: 0;
+        }
+    }
+ 
 }
 // Case Study New End
 

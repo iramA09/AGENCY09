@@ -9,123 +9,77 @@ import mahindra_tsubaki1 from '../../../Assets/Images/work/mahindra_tsubaki/mahi
 export const techData = [
     {
         id: 1,
-        title: 'Making Complaint Management Simpler for Mahindra Tsubaki',
+        title: 'Lorem Ipsum is simply dummy text of the printing',
         tags: [
-            { name: 'Software', link: '/' },
-            { name: 'Digital Process Automation', link: '/' }
+            { name: 'Software', link: '' },
+            { name: 'Digital Process Automation', link: '' }
         ],
         image: mahindra_tsubaki1,
-        link: '/work/case-studys/mahindra-tsubaki',
-        brand: 'Mahindra Tsubaki',
+        link: '/work/case-studys/tata-trucks',
+        brand: 'TATA Trucks',
         department: 'Tech'
     },
     {
         id: 2,
         title: 'Lorem Ipsum is simply dummy text of the printing',
         tags: [
-            { name: 'Brand Strategy', link: '/' },
-            { name: 'Print AD', link: '/' },
-            { name: 'Digital', link: '/' }
+            { name: 'Brand Strategy', link: '' },
+            { name: 'Print AD', link: '' },
+            { name: 'Digital', link: '' }
         ],
         image: ourwork2,
-        link: '/work/case-studys/bitsom',
+        link: '/work/case-studys/ryangroup',
+        brand: 'Ryan International Group of Institutions',
+        department: 'Tech'
     },
     {
         id: 3,
         title: 'Lorem Ipsum is simply dummy text of the printing',
         tags: [
-            { name: 'Brand Strategy', link: '/' },
-            { name: 'Print AD', link: '/' },
-            { name: 'Digital', link: '/' }
+            { name: 'Brand Strategy', link: '' },
+            { name: 'Print AD', link: '' },
+            { name: 'Digital', link: '' }
         ],
-        image: ourwork3,
-        link: '/work/case-studys/demo'
+        image: ourwork2,
+        link: '/work/case-studys/groupsoft',
+        brand: 'Groupsoft US Inc',
+        department: 'Tech'
+
     },
     {
         id: 4,
         title: 'Lorem Ipsum is simply dummy text of the printing',
         tags: [
-            { name: 'Brand Strategy', link: '/' },
-            { name: 'Print AD', link: '/' },
-            { name: 'Digital', link: '/' }
+            { name: 'Brand Strategy', link: '' },
+            { name: 'Print AD', link: '' },
+            { name: 'Digital', link: '' }
         ],
-        image: ourwork4,
-        link: '#'
+        image: ourwork2,
+        link: '/work/case-studys/siyaram',
+        brand: "Siyaram's",
+        department: 'Tech'
     },
     {
         id: 5,
         title: 'Lorem Ipsum is simply dummy text of the printing',
         tags: [
-            { name: 'Brand Strategy', link: '/' },
-            { name: 'Print AD', link: '/' },
-            { name: 'Digital', link: '/' }
+            { name: 'Brand Strategy', link: '' },
+            { name: 'Print AD', link: '' },
+            { name: 'Digital', link: '' }
         ],
-        image: ourwork4,
-        link: '#'
-    },
-    {
-        id: 6,
-        title: 'Lorem Ipsum is simply dummy text of the printing',
-        tags: [
-            { name: 'Brand Strategy', link: '/' },
-            { name: 'Print AD', link: '/' },
-            { name: 'Digital', link: '/' }
-        ],
-        image: ourwork4,
-        link: '#'
-    },
-    {
-        id: 7,
-        title: 'Lorem Ipsum is simply dummy text of the printing',
-        tags: [
-            { name: 'Brand Strategy', link: '/' },
-            { name: 'Print AD', link: '/' },
-            { name: 'Digital', link: '/' }
-        ],
-        image: ourwork4,
-        link: '#'
-    },
-    {
-        id: 8,
-        title: 'Lorem Ipsum is simply dummy text of the printing',
-        tags: [
-            { name: 'Brand Strategy', link: '/' },
-            { name: 'Print AD', link: '/' },
-            { name: 'Digital', link: '/' }
-        ],
-        image: ourwork4,
-        link: '#'
-    },
-    {
-        id: 9,
-        title: 'Lorem Ipsum is simply dummy text of the printing',
-        tags: [
-            { name: 'Brand Strategy', link: '/' },
-            { name: 'Print AD', link: '/' },
-            { name: 'Digital', link: '/' }
-        ],
-        image: ourwork4,
-        link: '#'
-    },
-    {
-        id: 10,
-        title: 'Lorem Ipsum is simply dummy text of the printing',
-        tags: [
-            { name: 'Brand Strategy', link: '/' },
-            { name: 'Print AD', link: '/' },
-            { name: 'Digital', link: '/' }
-        ],
-        image: ourwork4,
-        link: '#'
+        image: ourwork2,
+        link: '/work/case-studys/bits-pilani',
+        brand: "Bits Pilani",
+        department: 'Tech'
     },
 ];
 
 // State for each tab
 
 const Tech = () => {
-    const [visibleTechItems, setVisibleTechItems] = useState(5);
+    const [visibleTechItems, setVisibleTechItems] = useState(4);
     const loadMoreTechItems = () => {
-        setVisibleTechItems((prev) => prev + 5);
+        setVisibleTechItems((prev) => prev + 4);
     };
 
   return (

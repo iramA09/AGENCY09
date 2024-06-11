@@ -12,7 +12,7 @@ import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
 import starY from '../../../Assets/Images/icons/star.png';
 
-import logo from "../../../Assets/Images/logos/mahindra_tsubaki.png"
+import logo from "../../../Assets/Images/logos/work/tataMotors2.png"
 import ourwork1 from '../../../Assets/Images/work/tata-trucks/tata-main.jpg';
 import ourwork2 from '../../../Assets/Images/work/tata-trucks/tata-slide1.jpg';
 import ourwork3 from '../../../Assets/Images/work/tata-trucks/tata-slide2.jpg';

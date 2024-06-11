@@ -517,6 +517,8 @@ const faqsData = [
             </div>
         </section>  
          
+     
+
         {/* TESTIMONIALS */}   
         <section className='greenB testimonialSec'>
                 <div className='container'>
@@ -534,24 +536,28 @@ const faqsData = [
           {testimonialData.map((testimonial, index) => (
             <div key={index} className='item'>
               <div className='awardsCol'>
-              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
               <div className='textwithimg'>
-                <div className='awardsYear'><h5>{testimonial.name}</h5></div>
-                <div className='awardsDesignation'><p>{testimonial.designation}</p></div>
-                <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
-                </div>
+              <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
+               
+                <div className='awardsData'>
+                  <h5>{testimonial.name}</h5>
+                  <p>{testimonial.designation}</p></div>
+              </div>
+              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
+
               </div>
             </div>
           ))}
         </Slider>
 
-        <div className='btnSpaceEx center'>     
+        {/* <div className='btnSpaceEx center'>     
             <Link to="#" className="btnDark fontM ripple-button"><span>View All</span></Link>
-        </div>
+        </div> */}
 
 
         </div></section> 
         {/* TESTIMONIALS End */} 
+ 
 
         
         <section className='mdlogoSec'>
@@ -624,7 +630,7 @@ const faqsData = [
             <LogosSlider />
 
             <div className='btnSpaceEx center'>     
-               <Link to="#" className="btnDark fontM ripple-button"><span>View All</span></Link>
+               <Link to="../work/our-clients" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
         </div></section> 
         {/* Work Logos End */} 
@@ -685,7 +691,7 @@ const faqsData = [
 
                         
                     <div className='pt-30 center'>     
-                        <Link to="#" className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
+                        <Link to="../work/case-studies" className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
                     </div>
                 </div>
         </div></section> 

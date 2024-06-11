@@ -39,7 +39,7 @@ export const workItems = [
     ],
     image: ourwork1,
     link: '/',
-    brand: 'Mahindra Tsubaki',
+    brand: 'Tata Motors CV',
     department: 'Tech'
   },
   {
@@ -52,7 +52,7 @@ export const workItems = [
     ],
     image: ourwork2,
     link: '/',
-    brand: 'Mahindra Tsubaki',
+    brand: 'Godrej Laffaire',
     department: 'Tech'
   },
   {
@@ -65,7 +65,7 @@ export const workItems = [
     ],
     image: ourwork3,
     link: '/',
-    brand: 'Mahindra Tsubaki',
+    brand: 'BARC India',
     department: 'Tech'
   },
   {
@@ -78,7 +78,7 @@ export const workItems = [
     ],
     image: ourwork4,
     link: '/',
-    brand: 'Mahindra Tsubaki',
+    brand: 'TribeVibe',
     department: 'Tech'
   },
   
@@ -92,7 +92,7 @@ export const workItems = [
     ],
     image: ourwork4,
     link: '/',
-    brand: 'Mahindra Tsubaki',
+    brand: 'Aditya Birla Capital',
     department: 'Tech'
   },
 ];

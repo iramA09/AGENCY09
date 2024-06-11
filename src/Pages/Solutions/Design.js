@@ -325,7 +325,7 @@ const faqsData = [
         <LogosSlider />
 
         <div className='btnSpaceEx center'>     
-           <Link to="#" className="btnDark fontM ripple-button"><span>View All</span></Link>
+           <Link to="../work/our-clients" className="btnDark fontM ripple-button"><span>View All</span></Link>
         </div>
         </div></section> 
         {/* Work Logos End */}             
@@ -345,7 +345,7 @@ const faqsData = [
             <div className='Heading center HeadingIcon'>
                  <h2 className='sizeH1 uppercase'>
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    Case studies
+                      Case studies
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
                 </h2>
             </div>
@@ -374,7 +374,7 @@ const faqsData = [
                 </Slider>
 
             <div className='btnSpaceEx center'>     
-                <Link to="/work" className="btnDark fontM ripple-button"><span>View All</span></Link>
+                <Link to="../work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
 
             </div>

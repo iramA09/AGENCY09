@@ -137,7 +137,7 @@ const calculatData = [
 
 
 
-        <Accordion defaultActiveKey="0">
+        <Accordion>
           <Accordion.Item eventKey="0">
             <Accordion.Header>1. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
             <Accordion.Body>

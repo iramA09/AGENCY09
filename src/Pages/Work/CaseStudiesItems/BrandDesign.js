@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import ourwork2 from '../../../Assets/Images/work/ourwork-2.jpg';
-import ourwork3 from '../../../Assets/Images/work/ourwork-3.jpg';
-import ourwork4 from '../../../Assets/Images/work/ourwork-4.jpg';
 import mahindra_tsubaki1 from '../../../Assets/Images/work/mahindra_tsubaki/mahindra_tsubaki1.png';
 
 // Tech

@@ -638,7 +638,7 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
             <LogosSlider />
 
             <div className='btnSpaceEx center'>     
-               <Link to="#" className="btnDark fontM ripple-button"><span>View All</span></Link>
+               <Link to="../work/our-clients" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
         </div></section> 
         {/* Work Logos End */} 
@@ -682,7 +682,7 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                 </Slider>
 
             <div className='btnSpaceEx center'>     
-                <Link to="/work" className="btnDark fontM ripple-button"><span>View All</span></Link>
+                <Link to="../work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
 
             </div>
@@ -712,20 +712,23 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
           {testimonialData.map((testimonial, index) => (
             <div key={index} className='item'>
               <div className='awardsCol'>
-              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
               <div className='textwithimg'>
-                <div className='awardsYear'><h5>{testimonial.name}</h5></div>
-                <div className='awardsDesignation'><p>{testimonial.designation}</p></div>
-                <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
-                </div>
+              <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
+               
+                <div className='awardsData'>
+                  <h5>{testimonial.name}</h5>
+                  <p>{testimonial.designation}</p></div>
+              </div>
+              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
+
               </div>
             </div>
           ))}
         </Slider>
 
-        <div className='btnSpaceEx center'>     
+        {/* <div className='btnSpaceEx center'>     
             <Link to="#" className="btnDark fontM ripple-button"><span>View All</span></Link>
-        </div>
+        </div> */}
 
 
         </div></section> 
@@ -739,13 +742,19 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                 <div className='freeAuditSecCol'>
                     <h3 className='sizeH5 uppercase bold pb-20 white'>Free Audit</h3>
                     <h2 className='sizeH1 uppercase white'>Interested in optimizing your tech infrastructure? </h2>
+                    <div className='pt-30 '>     
+                        <Link to="#" className="btnBlue fontM ripple-button"><span>Click Here</span></Link>
+                    </div>
                 </div>
 
-                <div className='freeAuditSecCol'>
+                {/* <div className='freeAuditSecCol'>
                     <Link to=''>
                       <img src={clickHere} alt='Click Here' />
                     </Link>
-                </div>
+                </div> */}
+
+                        
+             
             </div>
         </div></section> 
         {/* Free Audit End */} 

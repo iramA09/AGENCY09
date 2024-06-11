@@ -1,12 +1,7 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 
-const WorkingWithUsData = [
-  {
-    key: "0",
-    header: "Paid Leaves & National Holidays:",
-    body: "Take a break with 21 days of paid time off, plus national holidays!"
-  },
+const WorkingWithUsDataGrowth = [
   {
     key: "1",
     header: "Work from Home Policy: ",
@@ -18,29 +13,9 @@ const WorkingWithUsData = [
     body: "Flex your schedule to balance work and life your way."
   },
   {
-    key: "3",
-    header: "Maternity Leave: ",
-    body: "Enjoy 184 days paid time off for your little one's arrival."
-  },
-  {
-    key: "4",
-    header: "Paternity Leave: ",
-    body: "New dads, take 7 days paid time off for your newborn!"
-  },
-  {
-    key: "5",
-    header: "Menstrual Leaves: ",
-    body: "Ladies, take it easy with 12 paid menstrual leaves a year."
-  },
-  {
     key: "6",
     header: "Birthday Off:  ",
     body: "Celebrate your birthday with a full day off—cake is on us!"
-  },
-  {
-    key: "7",
-    header: "Christmas Leaves:  ",
-    body: "Enjoy extra time off to jingle all the way."
   },
   {
     key: "8",
@@ -61,6 +36,34 @@ const WorkingWithUsData = [
     key: "11",
     header: "Rewards & Recognition: ",
     body: "Shine bright and get rewarded for your awesome work."
+  }
+];
+
+const WorkingWithUsDataLeaves = [
+  {
+    key: "0",
+    header: "Paid Leaves & National Holidays:",
+    body: "Take a break with 21 days of paid time off, plus national holidays!"
+  },
+  {
+    key: "3",
+    header: "Maternity Leave: ",
+    body: "Enjoy 184 days paid time off for your little one's arrival."
+  },
+  {
+    key: "4",
+    header: "Paternity Leave: ",
+    body: "New dads, take 7 days paid time off for your newborn!"
+  },
+  {
+    key: "5",
+    header: "Menstrual Leaves: ",
+    body: "Ladies, take it easy with 12 paid menstrual leaves a year."
+  },
+  {
+    key: "7",
+    header: "Christmas Leaves:  ",
+    body: "Enjoy extra time off to jingle all the way."
   },
   {
     key: "12",
@@ -79,8 +82,8 @@ const WorkingWithUs = () => {
 
     <h4 className='sizeH5 bold pb-10 uppercase'>Growth</h4>
 
-    <Accordion defaultActiveKey="0">
-    {WorkingWithUsData.map(item => (
+    <Accordion>
+    {WorkingWithUsDataGrowth.map(item => (
       <Accordion.Item eventKey={item.key} key={item.key}>
         <Accordion.Header>{item.header}</Accordion.Header>
         <Accordion.Body>
@@ -92,8 +95,8 @@ const WorkingWithUs = () => {
 
 
     <h4 className='sizeH5 bold pb-10 pt-40 uppercase'>Leaves</h4>
-    <Accordion defaultActiveKey="0">
-    {WorkingWithUsData.map(item => (
+    <Accordion>
+    {WorkingWithUsDataLeaves.map(item => (
     <Accordion.Item eventKey={item.key} key={item.key}>
     <Accordion.Header>{item.header}</Accordion.Header>
     <Accordion.Body>

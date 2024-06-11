@@ -13,12 +13,13 @@ import Design from './Pages/Solutions/Design'
 import Media from './Pages/Solutions/Media'
 import Production from './Pages/Solutions/Production'
 import Keyword from './Pages/Solutions/Keyword'
-import Bitsom from './Pages/Work/CaseStudy/Bitsom'
-import Demo from './Pages/Work/CaseStudy/Demo'
-import MahindraTsubaki from './Pages/Work/CaseStudy/MahindraTsubaki'
 import CaseStudies from './Pages/Work/CaseStudies'
 import OurClients from './Pages/Work/OurClients'
-
+import Ryangroup from './Pages/Work/CaseStudy/Ryangroup'
+import TataTrucks from './Pages/Work/CaseStudy/TataTrucks'
+import Siyaram from './Pages/Work/CaseStudy/Siyaram'
+import Groupsoft from './Pages/Work/CaseStudy/Groupsoft'
+import Bitspilani from './Pages/Work/CaseStudy/Bitspilani'
 
 import Error from './Pages/Error'
 import Sitemap09 from './Pages/Sitemap09'
@@ -46,17 +47,17 @@ function App() {
           <Route exact path='/solutions/media' element={<Media />} />
           <Route exact path='/solutions/production' element={<Production />} />
           <Route exact path='/solutions/keyword' element={<Keyword />} />
-          <Route exact path='/work/case-studys/bitsom' element={<Bitsom />} />
-          <Route exact path='/work/case-studys/demo' element={<Demo />} />
-          <Route exact path='/work/case-studys/mahindra-tsubaki' element={<MahindraTsubaki />} />
+          <Route exact path='/work/case-studys/tata-trucks' element={<TataTrucks />} />
+          <Route exact path='/work/case-studys/ryangroup' element={<Ryangroup />} />
+          <Route exact path='/work/case-studys/groupsoft' element={<Groupsoft />} />
+          <Route exact path='/work/case-studys/siyaram' element={<Siyaram />} />
+          <Route exact path='/work/case-studys/bitspilani' element={<Bitspilani />} />
           <Route exact path='/work/case-studies' element={<CaseStudies />} />
           <Route exact path='/work/our-clients' element={<OurClients />} />
-          
           <Route exact path='/sitemap' element={<Sitemap09 />} />
           <Route exact path='*' element={<Error />} />
         </Routes>
-        </AnimatePresence>
-
+      </AnimatePresence>
     </div>
   );
 }

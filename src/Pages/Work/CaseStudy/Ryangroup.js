@@ -12,7 +12,7 @@ import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
 import starY from '../../../Assets/Images/icons/star.png';
 
-import logo from "../../../Assets/Images/logos/mahindra_tsubaki.png"
+import logo from "../../../Assets/Images/logos/work/education/ryan.png"
 import ourwork1 from '../../../Assets/Images/work/ryan-group/ryangroup-main.jpg';
 import ourwork2 from '../../../Assets/Images/work/ryan-group/ryanslide-1.jpg';
 import ourwork3 from '../../../Assets/Images/work/ryan-group/ryanslide-2.jpg';
