@@ -119,7 +119,7 @@ const TataTrucks = () => {
                 </div>
 
                 <div className='cSsecMinHead m0'>
-                    <h1 className='sizeH4'>Making Complaint Management Simpler for Mahindra Tsubaki</h1>
+                    <h1 className='sizeH4'>Modernizing Digital Identity: Revamped Website for Global SaaS Company Groupsoft</h1>
                 </div>
 
                 <div className='cSsecMinInfo m0'>
@@ -138,40 +138,20 @@ const TataTrucks = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>Mahindra Tsubaki Conveyor Systems (MTC) is a Joint Venture between Mahindra Group and Tsubakimoto Chain Company – Japan. With rise in customer interactions and collection of feedback for Mahindra Tsubaki, it was difficult to keep track of all the complaints and address them efficiently and to understand the reasons of the complaint</p>
-
-
-                    </div>
-
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Industry - Steel</h4>
+                        <p>We collaborated with Groupsoft to revamp their website, aligning it with their new brand identity. The objective was to create a modern, technically adept, and visually impressive website that reflects Groupsoft's core beliefs and philosophies. As a technology company, it was crucial to integrate the latest technical advancements and create a distinct tone and imagery.</p>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Services</h4>
-                        <p>Software, Digital Process Automation</p>
+                        <h4>Key Highlights</h4>
+                        <ul>
+                            <li><b> Mobile First: </b> Ensured the website is optimized for mobile devices, providing a seamless experience across all platforms.</li>
+                            <li><b>Engaging UI: </b> Developed a visually engaging user interface that captivates visitors and enhances user interaction.</li>
+                            <li><b>Mapped User Journey: </b> Carefully mapped out user journeys to ensure intuitive navigation and a cohesive experience.</li>
+                        </ul>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                          <h4>Year: <i>2023</i></h4>
-                    </div>
-
-
-                    <div className='cSsecMinBCol'>
-                        <h4 >Objective</h4>
-                        <p>Software, Digital Process Automation</p>
-                    </div>
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Challenges</h4>
-                        <p>Software, Digital Process Automation  Software, <br/>Digital Process Automation</p>
-                    </div>
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Results</h4>
-                        <p>Making Complaint Management Simpler for Mahindra Tsubaki Making Complaint Management Simpler for Mahindra Tsubaki Making Complaint Management Simpler for Mahindra Tsubaki</p>
-
+                       <p>Web Design & Development, UI/UX Design</p>
                     </div>
 
 

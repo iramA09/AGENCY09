@@ -4,18 +4,18 @@ import mahindra_tsubaki1 from '../../../Assets/Images/work/mahindra_tsubaki/mahi
 
 // Content
 export const ContentData = [
-    {
-        id: 1,
-        title: 'Making Complaint Management Simpler for Mahindra Tsubaki',
-        tags: [
-            { name: 'Software', link: '/' },
-            { name: 'Digital Process Automation', link: '/' }
-        ],
-        image: mahindra_tsubaki1,
-        link: '/work/case-studys/mahindra-tsubaki',
-        brand: 'Mahindra Tsubaki',
-        department: 'Content'
-    }
+    // {
+    //     id: 1,
+    //     title: 'Making Complaint Management Simpler for Mahindra Tsubaki',
+    //     tags: [
+    //         { name: 'Software', link: '/' },
+    //         { name: 'Digital Process Automation', link: '/' }
+    //     ],
+    //     image: mahindra_tsubaki1,
+    //     link: '/work/case-studys/mahindra-tsubaki',
+    //     brand: 'Mahindra Tsubaki',
+    //     department: 'Content'
+    // }
 ];
 
 // State for each tab

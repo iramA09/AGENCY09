@@ -130,7 +130,7 @@ const Header = () => {
             <div className='menu09Item menu09Item01'>
               <ul>
                 <li><Link className={`minFont ${location.pathname === '/about' ? 'active' : ''}`} to='/about'  >About</Link></li>
-                <li><Link className={`minFont ${location.pathname === '/work' ? 'active' : ''}`} to='/work'>Work</Link></li>
+                <li><Link className={`minFont ${location.pathname === '/work' ? 'active' : ''}`} to='/work/case-studies'>Work</Link></li>
                 <li><Link className={`minFont ${location.pathname === '/careers' ? 'active' : ''}`} to='/careers'>Careers <span className='sideFont'>Hiring!</span></Link></li>
                 <li><Link className='minFont' to='https://www.agency09.co/simplifyingtheweb/' target='_blank'>Simplifyingtheweb  <span className='sideFont'>Blog</span></Link></li>
                 <li><Link className={`minFont ${location.pathname === '/connect' ? 'active' : ''}`} to='/connect'>Connect</Link></li>
@@ -196,9 +196,9 @@ const Header = () => {
 
             <div className='menu09Item menu09Item01'>
               <ul>
-                <li><Link to='/'>REQUEST A SERVICE</Link></li>
-                <li><Link to='/'>Partner with US</Link></li>
-                <li><Link to='/join-the-team' className={location.pathname === '/join-the-team' ? 'active' : ''} >Join the team</Link></li>
+              <li><Link to='/connect#form'>REQUEST A SERVICE</Link></li>
+              <li><Link to='/connect#form'>JOIN THE TEAM</Link></li>
+              <li><Link to='/connect#form'>PARTNER WITH US</Link></li>
               </ul>
             </div>
 
@@ -224,12 +224,10 @@ const Header = () => {
 
                   <TabPanel>
                     <p>Media City,<br/>Dubai </p>
-                    <Link to='https://maps.google.com/maps?ll=25.076022,55.227488&z=4&t=m&hl=en&gl=IN&mapclient=embed&q=Dubai%20United%20Arab%20Emirates' target='_blank'>View Map</Link>  
                   </TabPanel>
 
                   <TabPanel>
                     <p>North Adelaide,<br/>Adelaide 5006</p>
-                    <Link to='https://maps.google.com/maps?ll=-34.906967,138.594298&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=6105002202757528315' target='_blank'>View Map</Link>  
                   </TabPanel>
 
                 </Tabs>

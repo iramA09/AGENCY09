@@ -15,7 +15,14 @@ const awardsSlider = {
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 1400,
+      breakpoint: 1500,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      },
+    },
+    {
+      breakpoint: 1000,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,

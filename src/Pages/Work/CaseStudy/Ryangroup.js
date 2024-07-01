@@ -119,7 +119,7 @@ const Ryangroup = () => {
                 </div>
 
                 <div className='cSsecMinHead m0'>
-                    <h1 className='sizeH4'>Making Complaint Management Simpler for Mahindra Tsubaki</h1>
+                    <h1 className='sizeH4'>Streamlining Digital Presence: 100+ Websites & CMS for Ryan International School</h1>
                 </div>
 
                 <div className='cSsecMinInfo m0'>
@@ -138,42 +138,21 @@ const Ryangroup = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>Mahindra Tsubaki Conveyor Systems (MTC) is a Joint Venture between Mahindra Group and Tsubakimoto Chain Company – Japan. With rise in customer interactions and collection of feedback for Mahindra Tsubaki, it was difficult to keep track of all the complaints and address them efficiently and to understand the reasons of the complaint</p>
-
-
+                        <p>We partnered with Ryan Group to design and develop a comprehensive digital solution for Ryan International School. This project involved creating the main website for the school and a powerful CMS dashboard to manage over 100 individual school websites under the Ryan Group umbrella. The goal was to provide a cohesive and efficient system for managing the online presence of each school while maintaining consistency and ease of use.</p>
                     </div>
 
 
                     <div className='cSsecMinBCol'>
-                        <h4>Industry - Steel</h4>
+                        <h4>Key Highlights</h4>
+                        <ul>
+                            <li><b> User Management: </b> Implemented a robust user management system to ensure secure and efficient handling of user access and permissions across multiple websites.</li>
+                            <li><b>School Page Creation & Management: </b>Developed a user-friendly interface for creating and managing individual school pages, allowing for easy updates and customization.</li>
+                            <li><b>CMS Dashboard for Admin Team: </b>Built a comprehensive CMS dashboard to enable the admin team to oversee and manage content across all school websites efficiently.</li>
+                        </ul>
                     </div>
-
                     <div className='cSsecMinBCol'>
-                        <h4>Services</h4>
-                        <p>Software, Digital Process Automation</p>
+                       <p>Web Design & Development, Content Management Systems</p>
                     </div>
-
-                    <div className='cSsecMinBCol'>
-                          <h4>Year: <i>2023</i></h4>
-                    </div>
-
-
-                    <div className='cSsecMinBCol'>
-                        <h4 >Objective</h4>
-                        <p>Software, Digital Process Automation</p>
-                    </div>
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Challenges</h4>
-                        <p>Software, Digital Process Automation  Software, <br/>Digital Process Automation</p>
-                    </div>
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Results</h4>
-                        <p>Making Complaint Management Simpler for Mahindra Tsubaki Making Complaint Management Simpler for Mahindra Tsubaki Making Complaint Management Simpler for Mahindra Tsubaki</p>
-
-                    </div>
-
 
                 </div>
 

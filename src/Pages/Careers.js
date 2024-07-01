@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import useLenisScroll from '../Hooks/useLenisScroll';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import { GoNorthStar } from "react-icons/go";
@@ -10,9 +9,20 @@ import WorkingWithUs from '../Components/WorkingWithUs';
 import LifeAtA09 from '../Components/LifeAtA09';
 import Opportunities from '../Components/Opportunities';
 import Accordion from 'react-bootstrap/Accordion';
+import useLenisScroll from '../Hooks/useLenisScroll';
 
 const Careers = () => {
-useLenisScroll();
+  useLenisScroll();
+  const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash === "#Opportunities") {
+            const element = document.getElementById("Opportunities");
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
 
 
 
@@ -77,12 +87,12 @@ const calculatData = [
     {/* Calculat End */}
 
     {/* LifeAtA09 */}
-    <section className='LifeAtA09'><div className='container'>
-        <div className='Heading center HeadingIcon pb-30'>
+    <section className='LifeAtA09' id='LifeAtA09'><div className='container'>
+        <div className='Heading center HeadingIcon'>
         <h2 className='sizeH1 uppercase'>
-            <span className='iconSVG yellow'><GoNorthStar /></span>
+            <span className='iconSVG blue'><GoNorthStar /></span>
              Life at 09
-            <span className='iconSVG yellow'><GoNorthStar /></span>
+            <span className='iconSVG blue'><GoNorthStar /></span>
         </h2>
         </div>
         <LifeAtA09 />
@@ -91,9 +101,9 @@ const calculatData = [
 
     
     {/* LifeAtA09 */}
-    <section className='LifeAtA09'><div className='container'>
+    <section className='checkPlay'><div className='container'>
         <div className='Heading center HeadingIcon pb-30'>
-        <Link to='/' className='sizeH1 uppercase btn'>
+        <Link to='https://www.youtube.com/@agency09official/playlists' target='_blank'  className='sizeH1 uppercase btn'>
              Check out our playlist on YouTube
         </Link>
         </div>
@@ -103,7 +113,7 @@ const calculatData = [
 
     
     {/* Opportunities */}
-    <section className='Opportunities greenB'><div className='container'>
+    <section className='Opportunities greenB' id='Opportunities'><div className='container'>
         <div className='Heading center HeadingIcon pb-30'>
         <h2 className='sizeH1 uppercase'>
             <span className='iconSVG white'><GoNorthStar /></span>

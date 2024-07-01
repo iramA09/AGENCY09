@@ -18,11 +18,9 @@ import ourwork1 from '../../Assets/Images/work/ourwork-2.jpg';
 import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 
-
 // Tabs
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-
 
 // CaseStudySlider 
 const CaseStudySlider = {
@@ -52,7 +50,6 @@ const CaseStudySlider = {
     ],
 };
 // CaseStudySlider End
-
 
 //CaseStudy Data
 const CaseStudyData = [
@@ -191,15 +188,19 @@ const CaseStudies = () => {
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
                                 <div className='CaseStudyImg'><img src={CaseStudy.image}/>
-                                
+                                <div className='workGridItemHover'>
+                                    <div className='workGridItemHoverIn'>
+                                        <h3>{CaseStudy.title}</h3>
+                                        <h4>{CaseStudy.brand}</h4>
+                                        <p>{CaseStudy.department}</p>
+                                    </div>
+                                </div>
                                 </div>
                                 <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
                                 <div className='textTag'><p>{CaseStudy.tag}
-                                
-                                {CaseStudy.tags.map((tag, index) => (
-                                  <span key={index}>{tag.name}</span>
-                                ))}
-                                
+                                    {CaseStudy.tags.map((tag, index) => (
+                                    <span key={index}>{tag.name}</span>
+                                    ))}
                                 </p></div>
                             </Link>
                         </div>
@@ -207,9 +208,9 @@ const CaseStudies = () => {
                     ))}
                 </Slider>
 
-            <div className='btnSpaceEx center'>     
+            {/* <div className='btnSpaceEx center'>     
                 <Link to="/work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
-            </div>
+            </div> */}
 
             </div>
 

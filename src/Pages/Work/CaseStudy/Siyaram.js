@@ -119,7 +119,7 @@ const TataTrucks = () => {
                 </div>
 
                 <div className='cSsecMinHead m0'>
-                    <h1 className='sizeH4'>Making Complaint Management Simpler for Mahindra Tsubaki</h1>
+                    <h1 className='sizeH4'>Elevating Men's Fashion: A Visually Captivating Website for Siyaram's</h1>
                 </div>
 
                 <div className='cSsecMinInfo m0'>
@@ -138,41 +138,24 @@ const TataTrucks = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>Mahindra Tsubaki Conveyor Systems (MTC) is a Joint Venture between Mahindra Group and Tsubakimoto Chain Company – Japan. With rise in customer interactions and collection of feedback for Mahindra Tsubaki, it was difficult to keep track of all the complaints and address them efficiently and to understand the reasons of the complaint</p>
-
-
-                    </div>
-
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Industry - Steel</h4>
+                        <p>Siyaram's, a leader in men’s clothing, aims to understand and cater to the diverse needs of its customers. By staying on the cutting edge of innovation and technology, Siyaram's continually strives to turn their customers' fashion dreams into reality. Our task was to design a visually captivating website that embraces a user-centric approach to its information architecture while effectively showcasing the brand's rich legacy.</p>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Services</h4>
-                        <p>Software, Digital Process Automation</p>
+                        <h4>Key Highlights</h4>
+                        <ul>
+                            <li><b> Dynamic Content Population: </b>  Enabled real-time updates and dynamic content display to keep the website fresh and engaging.</li>
+                            <li><b>Modern UI: </b> Developed a sleek and contemporary user interface that aligns with the brand’s innovative image.</li>
+                            <li><b> Quick Loading:  </b>Ensured fast loading times for a seamless user experience.</li>
+                            <li><b>Mobile First Approach: </b> Optimized the website for mobile devices to provide a consistent and high-quality experience across all platforms.</li>
+                        </ul>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                          <h4>Year: <i>2023</i></h4>
+                    <p>Web Design & Development, UI/UX Design</p>
                     </div>
 
-
-                    <div className='cSsecMinBCol'>
-                        <h4 >Objective</h4>
-                        <p>Software, Digital Process Automation</p>
-                    </div>
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Challenges</h4>
-                        <p>Software, Digital Process Automation  Software, <br/>Digital Process Automation</p>
-                    </div>
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Results</h4>
-                        <p>Making Complaint Management Simpler for Mahindra Tsubaki Making Complaint Management Simpler for Mahindra Tsubaki Making Complaint Management Simpler for Mahindra Tsubaki</p>
-
-                    </div>
+ 
 
 
                 </div>

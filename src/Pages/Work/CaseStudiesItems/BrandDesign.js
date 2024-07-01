@@ -1,21 +1,36 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import mahindra_tsubaki1 from '../../../Assets/Images/work/mahindra_tsubaki/mahindra_tsubaki1.png';
+import TataMotors from '../../../Assets/Images/work/TataMotors.jpg';
+import Ryan from '../../../Assets/Images/work/Ryan.jpg';
 
 // Tech
 export const BrandDesignData = [
     {
         id: 1,
-        title: 'Making Complaint Management Simpler for Mahindra Tsubaki',
+        title: "Driving Visibility and Engagement for Tata Motors' Commercial Vehicle Lineup",
         tags: [
-            { name: 'Software', link: '/' },
-            { name: 'Digital Process Automation', link: '/' }
+            { name: 'Digital Strategy', link: '' },
+            { name: 'Web Development', link: '' }
         ],
-        image: mahindra_tsubaki1,
-        link: '/work/case-studys/mahindra-tsubaki',
-        brand: 'Mahindra Tsubaki',
-        department: 'BrandDesign'
-    }
+        image: TataMotors,
+        link: '/work/case-studys/tata-trucks',
+        brand: 'TATA Trucks',
+        department: 'Tech'
+    },
+    {
+        id: 2,
+        title: 'Streamlining Digital Presence: 100+ Websites & CMS for Ryan International School',
+        tags: [
+            { name: 'Web Design', link: '' },
+            { name: 'Web Development', link: '' },
+            { name: 'Content Management Systems', link: '' }
+        ],
+        image: Ryan,
+        link: '/work/case-studys/ryangroup',
+        brand: 'Ryan International Group of Institutions',
+        department: 'Tech'
+    },
 ];
 
 // State for each tab

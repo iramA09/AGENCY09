@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import useLenisScroll from '../Hooks/useLenisScroll';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import GetInTouch from '../Components/Forms/GetInTouch';
 import StartAProjectForm from '../Components/Forms/StartAProjectForm';
+import PartnerWithUs from '../Components/Forms/PartnerWithUs';
+
 import { PiArrowCircleRightThin } from "react-icons/pi";
 import RippleButton from '../Hooks/RippleButton';
 import { GoNorthStar } from "react-icons/go";
@@ -19,6 +21,19 @@ import 'react-tabs/style/react-tabs.css';
 
 const Connect = () => {
   useLenisScroll();
+
+
+  const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash === "#form") {
+            const element = document.getElementById("form");
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
+
   return (
     <>
       <Header />
@@ -47,32 +62,29 @@ const Connect = () => {
           <ul>
             <li>
             <div className='textI'>
-              <FaLocationDot/>
-              <p>Mumbai:<br/>
+              <p><b className='yellow'>Mumbai:</b><br/>
               101, Meghdoot, Junction of Linking & Turner Rd.,<br/>
               Above Bank of Baroda Bank, Opp HP Petrol Pump<br/>
               Bandra West, Mumbai - 400 050</p>
             </div>
-            <p>UAE | Australia</p>
             </li>
             <li>
-            <div className='textI'>
-              <IoCall />
-              <p><Link to='tellto:02226440909' target='_blank'>02226440909</Link></p>
+            <div className=''>
+               <p><b className='yellow'>Office Tel:</b><br/><Link to='tellto:02226440909' target='_blank'>02226440909</Link></p>
             </div>
             </li>
             <li>
-              <p className='yellow'>Write to Us<br/>
+              <p className=''><b className='yellow'>Write to Us:</b><br/>
               <Link to='mailto:info@agency09.in' target='_blank'>info@agency09.in</Link>
               </p>
             </li>
             <li>
-              <p className='yellow'>Finance<br/>
+              <p className=''><b className='yellow'>Finance:</b><br/>
               <Link to='mailto:finance@agency09.in' target='_blank'>finance@agency09.in</Link>
               </p>
             </li>
             <li>
-              <p className='yellow'>Culture<br/>
+              <p className=''><b className='yellow'>Culture:</b><br/>
               <Link to='mailto:archita@agency09.in' target='_blank'>archita@agency09.in</Link>
               </p>
             </li>
@@ -85,7 +97,7 @@ const Connect = () => {
 
 
 
-      <section className='conatcWrapTab'><div className='container'>
+      <section className='conatcWrapTab' id='form'><div className='container'>
       <Tabs>
             <TabList>
 
@@ -97,6 +109,9 @@ const Connect = () => {
             <TabPanel>
               <StartAProjectForm />
             </TabPanel>
+            <TabPanel>
+              <PartnerWithUs />
+            </TabPanel>     
             <TabPanel>
               <GetInTouch />
             </TabPanel>

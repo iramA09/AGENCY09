@@ -51,6 +51,8 @@ $purple: #9f00ff;
     outline: none;
     box-sizing: border-box;
 }
+.lg-outer{
+}
 .App{
     overflow: hidden;
 }
@@ -820,7 +822,7 @@ header{
     display: flex;
     position: fixed;
     width: 100%;
-    z-index: 10000;
+    z-index: 1000;
     &.MenuActive{
         backdrop-filter: blur(0rem);
         transition: all 0.1s;
@@ -890,7 +892,7 @@ header{
                     .subMenu{
                         position: absolute;
                         top: 100%;
-                        left: -50px;
+                        left: -35px;
                         width: 180px;
                         text-align: center;
                         padding-top: 20px;
@@ -1403,7 +1405,7 @@ header{
 
 footer{
     background: $blue;
-    padding: 60px 0 0;
+    padding: 100px 0 0;
     font-size: 12px;
     color: $white;
     a{
@@ -1657,12 +1659,13 @@ footer{
             height: 100%;
         }
         .slick-dots{
-            left: 15%;
+            left: 0;
+            right: 0;
             bottom: 10%;
             gap: 10px;
             li{
                 width: 50px;
-                height: 4px;
+                height: 6px;
                 button{
                     border-radius: 10px;
                     background: #7ce1d5;
@@ -1698,8 +1701,6 @@ footer{
         }
         .item{
             position: relative;   
-            &:active{
-            }
             .HeroImage{
                 position: relative;
                 overflow: hidden;   
@@ -1721,7 +1722,22 @@ footer{
             }
             img{
                 width: 100%;
+                object-fit: contain;
                 height: 100%;
+            }
+            .videoBg{
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                margin: auto;
+                height: 100%;
+                width: 100%;
+                video{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
             }
             .Herobg{
                 position: absolute;
@@ -1732,11 +1748,9 @@ footer{
                 width: fit-content;
             }
             .HerobgLogo{
-                width: 190px;
+                width: 170px;
                 height: fit-content;
-                position: absolute;
-                right: 5%;
-                top: 5vh;
+                margin: 20px 0;
                 img{
                     width: 100%;
                     height: auto;
@@ -1751,10 +1765,9 @@ footer{
                 height: fit-content;
                 h1{
                     font-size: 35px;
-                    line-height: 35px;
                     font-family: $regular;
                     color: $white;
-                    text-transform: uppercase;
+                    text-transform: capitalize;
                     padding-bottom: 10px;
                 }
                 p{
@@ -1763,7 +1776,7 @@ footer{
                 }
             }
             .HeroBtn{
-                padding-top: 50px;
+                padding-top: 30px;
             }
 
         }
@@ -1868,64 +1881,58 @@ footer{
                     
                 }
             }
-            .workGridItemHover{
-                background: #69e87ae7;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                margin: auto;
-                inset: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                opacity: 0;
-                transition: all 0.5s ease-in-out;
-                padding: 30px;
-                .workGridItemHoverIn{
-                    text-align: center;
-                    h3{
-                        padding: 10px 0;
-                        font-size: $sizeH4;
-                        color: $blue;
-
-                    }
-                    h4{
-                        font-size: $sizeH5;
-                        font-family: $bold;
-                    }
-                    p{
-                        font-weight: normal;
-                        border: 1px solid $yellow;
-                        background-color: yellow;
-                        display: block;
-                        width: fit-content;
-                        padding: 8px 20px;
-                        border-radius: 50px;
-                        margin-top: 20px;
-                        font-size: 14px;
-                        text-transform: uppercase;
-                        &:empty{
-                            display: none;
-                        }
-                    }
-                }
-            }
-          
-            &:hover{
-                .workGridItemImg{
-                    img{
-                        transform: scale(1.1);
-                        rotate: 1.1deg;
-                    }
-                }
-                .workGridItemHover{
-                    opacity: 1;
-                }
-            }
+         
         }
 
     }
 
+}
+.workGridItemHover{
+    background: #69e87ae7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    padding: 30px;
+    .workGridItemHoverIn{
+        text-align: center;
+        h3{
+            padding: 10px 0;
+            font-size: $sizeH4;
+            color: $blue;
+
+        }
+        h4{
+            font-size: $sizeH5;
+            font-family: $bold;
+        }
+        p{
+            font-weight: normal;
+            border: 1px solid $yellow;
+            background-color: yellow;
+            display: block;
+            width: fit-content;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            &:empty{
+                display: none;
+            }
+        }
+    }
+}
+.workGridItem:hover, .CaseStudyCol:hover{
+    .workGridItemHover{
+        opacity: 1;
+    }
 }
 .workGrid{
     display: grid;
@@ -1936,7 +1943,7 @@ footer{
     .workGridItemImg{   
         overflow: hidden;
         transition: all 0.5s;
-        img{width: 100%;object-fit: cover;}
+        img{width: 100%;object-fit: cover;object-position: center top;}
     }
     .workGridItemText{
         h3{
@@ -1957,9 +1964,7 @@ footer{
     .workGridItem{
         margin: 0;
         height: fit-content;
-        &:nth-child(4n + 2) img,&:nth-child(4n + 3) img{height: 400px;}
-        &:nth-child(4n + 1) img,&:nth-child(4n + 4) img{height: 800px;}
-        &:nth-child(4n + 4) {margin-top: -400px;}
+        &:nth-child(4n + 4) {margin-top: -35%;}
     }
 }
 .navBarC{
@@ -1986,48 +1991,49 @@ footer{
         }
     }
 }
-.ourClientsL{
-    .ourClientsLnav{
-        ul{
-            border: none;
-            width: fit-content;
+.ourClientsLnav{
+    ul{
+        border: none;
+        width: fit-content;
+        margin: 0;
+        display: flex;
+        grid-template-columns: repeat(6,1fr);
+        gap: 20px;
+        padding: 30px 0 0;
+        flex-wrap: wrap;
+        text-align: center;
+        list-style-type: none;
+        li{
+            font-size: 12px;
             margin: 0;
-            display: grid;
-            grid-template-columns: repeat(6,1fr);
-            gap: 20px;
-            padding: 30px 0 0;
-            flex-wrap: wrap;
-            text-align: center;
-            list-style-type: none;
-            li{
-                font-size: 12px;
-                margin: 0;
-                padding: 0;
-                text-transform: capitalize;
-                span{
-                    padding: 10px 25px;
-                    display: block;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    border: 1px solid $black;
-                    border-radius: 40px;
-                    transition: all 0.5s;
-                    cursor: pointer;
-                    &.active{
-                        background: $yellow;
-                        border: 1px solid $yellow;
-                    }
-                    &:hover{
-                        background: $yellow;
-                    }
+            padding: 0;
+            text-transform: capitalize;
+            span{
+                padding: 10px 25px;
+                display: block;
+                font-size: 14px;
+                text-transform: uppercase;
+                overflow: hidden;
+                white-space: nowrap;
+                border: 1px solid $black;
+                border-radius: 40px;
+                transition: all 0.5s;
+                cursor: pointer;
+                &.active{
+                    background: $yellow;
+                    border: 1px solid $yellow;
                 }
-              
+                &:hover{
+                    background: $yellow;
+                }
             }
-            
+          
         }
+        
     }
+}
+.ourClientsL{
+
     .ourClientsR{
         padding: 70px 0 100px;
             display: grid;
@@ -2368,7 +2374,7 @@ footer{
     }
 }
 .ServicesList{
-    padding: 100px 0 60px;
+    padding: 100px 0 ;
     ul{
         margin: auto;
         padding: 0;
@@ -2428,7 +2434,7 @@ footer{
 
 // Logos
 .hWorkLogos{
-    padding:100px 0 ;
+    padding:100px 0 60px;
     position: relative;
     .container{
         position: relative;
@@ -2448,7 +2454,7 @@ footer{
         }
     }
     .LogosSlider-slick{
-        padding: 70px 0px ;
+        padding: 30px 0px ;
         .item{
             span{
                 display: block;
@@ -2472,7 +2478,7 @@ footer{
 
 // Calculat
 .Calculat{
-    padding: 50px 0 50px;
+    padding: 100px 0 50px;
     .A09{
         font-size: 100px;
         font-family: $bold;
@@ -2705,7 +2711,7 @@ footer{
         position: absolute;
         background: url('../Images/icons/arrow-right2.png') no-repeat;
         background-position: center;
-          background-size: 26%;
+        background-size: 26%;
         width: 40px;
         height: 40px;
         bottom: 5%;
@@ -3255,27 +3261,101 @@ footer{
 
 // Careers
 .LifeAtA09{
-    padding: 90px 0;
+    padding: 80px 0;
+    background: $lightgrey2;
+    
+}
+.checkPlay{
+    padding: 70px 0 40px;
+    a{  transition: all 0.2s ease-in-out;
+        border-bottom: 3px solid $black;
+        &:hover{
+            color: $red;
+            border-color: $red;
+        }
+    }
 }
 .LifeAtA09Row{
-    width: 100%;
+    width: 90%;
     .slick-list{
         overflow: inherit;
     }
     .item{
         .LifeAtA09Col{
-            padding: 10px;
+            padding: 20px;
             margin: auto;
-            display: flex;
-            height: 350px;
-
-            a{
+            width: 100%;
+            .react_lightgallery_item{
                 display: block;
                 margin: auto;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                cursor: zoom-in;
+                width: 100%;
+                    .LifeAt09Text{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 10px;
+                        color: $white;
+                        text-align: center;
+                        width: 100%;
+                        margin: auto;
+                        z-index: 1;
+                        display: flex;
+                        transition: all 0.5s ease-in-out;
+                        min-height: 20px;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            opacity: 1;
+                            z-index: -1;
+                        }
+                        h3{
+                            margin:auto; 
+                            font-size: $sizeH5;  
+                        }
+                    }
+                    &:hover{
+                        .LifeAt09Text{
+                            min-height: 100%;
+                            &::before{
+                                opacity: 0.9;
+                            }
+                        }
+                    }
             }
             img{
                 width: 100%;
+                height:250px;
+                object-fit: cover;
             }
+        }
+    }
+    .slick-slide{
+        opacity: 0.6;
+        scale: 0.9;
+        transition: all 0.5s ease-in-out;
+        &:nth-of-type(2n+1){
+            div:first-child .item .LifeAt09Text::before{background: $blue;}
+            div:last-child .item .LifeAt09Text{color: $black;&::before{background: $yellow;}}
+        }
+      
+        &:nth-of-type(2n+2){
+            div:first-child .item .LifeAt09Text{color: $black;&::before{background: $green;}}
+            div:last-child .item .LifeAt09Text::before{background: $pink;}
+        }
+
+
+        &.slick-active{
+            opacity: 1;
+            scale: 1;
         }
     }
 
@@ -3295,7 +3375,7 @@ footer{
         font-size: 14px;
        .accordion-header button{
         font-size: $sizeH2;
-        text-transform: uppercase;
+        text-transform: capitalize;
        }
        .accordion-body{
         padding: 20px 0;
@@ -3707,6 +3787,7 @@ footer{
                     .CaseStudyImg{
                         width: 100%;
                         overflow: hidden;
+                        position: relative;
                         img{
                             width: 100%;
                             display: block;
@@ -3738,10 +3819,7 @@ footer{
                     &:hover{
                         color: $blue;
                         .CaseStudyImg{
-                            img{
-                                transform: scale(1.1);
-                                rotate: 3deg;
-                            }
+                            
                         }
                     }
                 }
@@ -4071,7 +4149,7 @@ footer{
     .cSsecMinInfo{
       
         img{
-            width: 100px;
+            width: 140px;
             height: 70px;
             object-fit: contain;
             margin-top: -20px;
@@ -4103,6 +4181,9 @@ footer{
         .cSsecMinBCol{
             width: 20%;
             margin: 0;
+            ul{
+                padding: 0 10px;
+            }
             &:first-child{
                 width: 25%;
             }
@@ -4110,7 +4191,6 @@ footer{
             &:nth-child(5){
                 width: 25%;
             }
-
             // &:last-child{
             //     width: 30%;
             // }
@@ -4216,6 +4296,9 @@ footer{
         }
         .form-group .form-control{
             color: $white;
+            option{
+                color: $black;
+            }
             &::placeholder{
                 color: $white!important;
                 opacity: 1;
@@ -4233,6 +4316,73 @@ footer{
 
 
 
+// Testimonials
+.testimonialsPgRow{
+    gap:60px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 160px;
+
+    .testimonialsPgCol{
+        border:$green 2px solid;
+        margin-bottom: 100px;
+        border-radius: 60px;
+        padding:100px 40px 40px;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        &::after{
+            content: '';
+            display: block;
+            background: url('../Images/icons/Vector.png') no-repeat;
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 15%;
+            top: -8%;
+            z-index: 22;
+        }
+        p{
+            font-style: italic;
+        }
+        h3{
+            font-family: $bold;
+            margin: 20px auto 0;
+            font-size: 17px;
+            
+        }
+        h5{
+            font-family: $regular;
+            font-weight: normal;
+            font-size: 16px;
+            
+        }
+        .testimonial-logo{
+            border:$green 2px solid;
+            width: 150px;
+            border-radius: 100%;
+            height:150px;
+            overflow: hidden;
+            display:flex;
+            margin-top:-175px;
+            background-color: $white;
+            margin-bottom: 20px;
+            img{
+                width:80%; 
+                height:80%; 
+                object-fit: contain;
+            }
+
+        }
+        &:hover{
+            background: $green;
+        }
+    }
+
+}
+
+// Testimonials End
 
 
 // Solutions End
@@ -4262,8 +4412,9 @@ footer{
     .menu_row .menu09 .menu09Content,.menu_row .menu09 .menu09Content2{flex-wrap: wrap;}
 }
 
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1600px) {
     header .container nav ul{gap: 45px;}
+    header .container .rightMenu a{font-size: 30px;}
 }
 @media screen and (max-width: 1200px) {
     header .container nav ul{li{display: none;&.logo{display: block;}}}
@@ -4281,13 +4432,12 @@ footer{
     .ourWork .workTitle .arrowBtn svg{width: auto;height: auto;}
     // Font Size End
     .workGrid{gap: 20px;}
-    
-    .workGrid .workGridItem:nth-child(4n+1) img, .workGrid .workGridItem:nth-child(4n+4) img{  height:400px;}
-    .workGrid .workGridItem:nth-child(4n+2) img, .workGrid .workGridItem:nth-child(4n+3) img{  height: 200px;}
-    .workGrid .workGridItem:nth-child(4n+4){margin-top: -180px;}
-    .Calculat .CalculatRow{flex-wrap: wrap;gap: 40px;}
 
     .curve .locationName{font-size: 40px;}
+    .ourEcosystemDiv ul{  grid-template-columns: repeat(2, 1fr);}
+    .ourEcosystemDiv ul li:nth-of-type(2n+2){  border-right: 0px!important;}
+    .ourEcosystemDiv ul li:nth-of-type(3n+3){  border-right: 1px solid $grey;}
+    .ourEcosystemDiv ul li a .PartnerCompaniesImg{width: 100%;}
 }
 
 @media screen and (max-width:1000px) {
@@ -4313,9 +4463,10 @@ footer{
     .PartnerCompaniesSlider .item{padding: 20px;border: none;}
     .PartnerCompaniesSlider .item a .PartnerCompaniesImg{border: 1px solid $lightgrey;display: flex; margin-bottom: 15px;}
     .PartnerCompaniesSlider .item a .PartnerCompaniesImg img{width: 70%;}
-    .SolutionsSecAbout .SolutionsRow .SolutionsCol.SolutionsColImg{position: absolute;right: 0;top: 0;z-index: 0;opacity: 0.2;width: 50%;}
+    .SolutionsSecAbout .SolutionsRow .SolutionsCol.SolutionsColImg{position: absolute;right: 0;top: 100px;z-index: 0;opacity: 0.2;width: 50%;}
     .SolutionsSecAbout .SolutionsRow .SolutionsCol{z-index: 2;}
-    .SolutionsSecAbout .SolutionsRow .SolutionsColOurServies{z-index: 3;bottom: initial;top: 0%;width: 90px;}
+    .SolutionsSecAbout .SolutionsRow .SolutionsColOurServies{z-index: 3;width: 90px;}
+    .SolutionsSecAbout .SolutionsRow{padding: 0 0 100px;position: inherit;}
 }
 
 @media screen and (max-width: 768px) {
@@ -4336,23 +4487,23 @@ footer{
     .menu_row .menu09 .menu09Header .menu09HeaderRight .menuBtn{top: 0;}
     .menu_row .menu09{padding: 90px 0 0px;}
     header .container nav ul li.logo,.menu_row .menu09 .menu09Header .menu09HeaderLogo{width: 150px;}
-    header{height: 100px;}
+    header{height: 90px;background: $white;}
     header.fixed{height: 60px;}
     header .container .rightMenu .menuBtn{width: 37px;height: 37px;}
     .heroRow{  padding: 0}
     .hero .homescreen-slick .item .HeroText p{font-size: 18px;}
-    .hero .homescreen-slick .item .HeroText h1{font-size: 30px;line-height: 30px;padding-bottom: 10px;}
+    .hero .homescreen-slick .item .HeroText h1{font-size: 25px;line-height: 27px;padding-bottom: 10px;}
     .hero .homescreen-slick .item .HeroBtn{padding-top: 15px;}
     .ripple-button{padding: 10px 20px;font-size: 15px;}
-    .hero .homescreen-slick .item .HeroText{left: 5%;width: 65%; margin-bottom: 18%;}
+    .hero .homescreen-slick .item .HeroText{left: 5%;width:90%; margin-bottom: 18%;}
     .hero .homescreen-slick .container{width: 100%; }
-    .hero .homescreen-slick .item .HeroImage{border-radius: 0;padding-top: 100px;}
+    .hero .homescreen-slick .item .HeroImage{border-radius: 0;padding-top: 0;}
     .hero .homescreen-slick .slick-dots{left: 5%;}
-    .hero .homescreen-slick{height: 100vh;}
+    .hero .homescreen-slick{height: 75vh;}
     .hero .homescreen-slick .item .HerobgLogo{top: 15%;width: 120px;}
-    .hero .homescreen-slick .item .Herobg{height:70%;right: 10%;}
-
-
+    .hero .homescreen-slick .item .Herobg{height:50%;right: 10%;bottom: inherit;top:10px;}
+    .hero .homescreen-slick .item .HeroText h1 br{display: none;}
+    .testimonialSlider{padding-bottom: 50px; padding-top: 20px;}
         
     // Font Size
     .sizeH1 {font-size: 28px;line-height:37px;}
@@ -4364,36 +4515,37 @@ footer{
     .sizeH7 {font-size: 14px;line-height: 16px;}
     .sizeH8 {font-size: 12px;line-height: 14px;}
     // Font Size End
-
-
-    .workGrid .workGridItem:nth-child(4n+1) img, .workGrid .workGridItem:nth-child(4n+4) img{  height:300px;}
-    .workGrid .workGridItem:nth-child(4n+2) img, .workGrid .workGridItem:nth-child(4n+3) img{  height: 140px;}
+    .hWorkLogos{padding: 50px 0;}
+    .hero .homescreen-slick .item .HeroImage{position: relative;}
+    .hero .homescreen-slick .item .HeroImage::after{position: absolute;background: $black;content: '';width: 100%;height: 100%;display: block;top: 0;left: 0;opacity: 0.3;}
     .workGrid .workGridItem,.workGrid .workGridItem:nth-child(4n+4){margin-top: 20px;}
     .workGrid{grid-template-columns: repeat(1, 1fr);}
     .ripple-button.fontL{font-size: 22px;}
     .btnSpaceEx{padding: 30px 0;}
-
+    .hero .homescreen-slick .container{position: relative; z-index: 2;}
     .hContTech .hContTechFix .hContTechRow .hContTechCol .sizeH1{font-size: 30px;line-height: 38px;}
     .hContTech{padding: 50px 0;}
     .hContTech .hContTechFix .hContTechRow .hContTechCol p br{display: none;}
     .hUpdates .UpdateSlider-slick .slick-list{overflow: inherit;}
     .hCreativity{padding: 50px 0;}
     .ServicesList{padding: 50px 0;}
-    .hWorkLogos .LogosSlider-slick{padding: 50px 0;}
+    .hWorkLogos .LogosSlider-slick{padding: 20px 0;}
     .ServicesList ul li.IStart svg{font-size: 40px;}
     .Calculat .CalculatRow .CalculatCol h4{font-size: 50px;}
-    .Calculat .CalculatRow{padding-bottom: 100px;}
+    .Calculat .CalculatRow{padding: 50px 0 70px;  flex-wrap: wrap;gap: 40px;}
+    .Calculat .CalculatRow .CalculatCol{width: 200px;}
     .Calculat{padding-top: 0;}
-    .Culture{padding-top: 0;}
-    .Culture .CultureSlider-slick{padding: 20px 0;}
+    .Culture{padding-top: 0;overflow: hidden;position: relative;}
+    .Culture .CultureSlider-slick{padding: 20px 0;width: 80%;  position: inherit;}
+    .Culture .CultureSlider-slick .slick-list{overflow: inherit;}
+.solutionsSecServices{padding-top: 0;}
     .marquee .slideContainer .slider p{font-size: 30px;}
     .marquee .slideContainer .slider p svg{font-size: 30px; margin: 0 5px;top: 5px;}
-    .marquee{height: 70px;}
+    .marquee{height: 110px;}
 
-    footer .footerWrap1 .footerRow .footerCol{width: 100%;text-align: center;margin-bottom: 30px;}
+    footer .footerWrap1 .footerRow .footerCol{width: 100%;text-align: center;margin-bottom: 60px;}
     footer .footerWrap1 .footerRow .footerCol .Spotify{width: 100%;}
     .ServicesList ul li .btnArrow{display: none;}
-    .hWorkLogos .LogosSlider-slick .item{height: 100px;}
 
     .ourWorkHm.ourWork .workTitle{font-size: 22px;line-height: 25px;}
     .ourWork .workTitle span{margin-right: 0;}
@@ -4419,7 +4571,7 @@ footer{
     .aboutS .aboutScol .arrowRightH{font-size: 35px;rotate: 90deg;}
     .aboutS .aboutScol{margin-bottom: 30px;}
     .workTabs .react-tabs__tab-list li span{font-size: 14px;}
-    .workTabs .react-tabs__tab-list{width: 100%;overflow: auto;}
+    .workTabs .react-tabs__tab-list{width: 100%;display: flex;flex-wrap: wrap;gap: 10px;}
     .WorkLogosRow{  grid-template-columns: repeat(3, 1fr);}
     .workTabs{padding-top: 0;}
     .workTabs .react-tabs__tab-list .lineA{margin: 0 5px;}
@@ -4439,13 +4591,13 @@ footer{
     .SolutionsSecAbout .SolutionsRow .SolutionsCol .trustedBy{display: block;}
     .SolutionsSecAbout .SolutionsRow .SolutionsCol .trustedBy h3{margin-bottom: 30px;text-align: center;margin-right: 0;}
     .SolutionsSecAbout .SolutionsRow .SolutionsCol .trustedBy ul{gap: 15px;}
-    .solutionsSecServices .solutionsSecServicesFaq .solutionsWrap .solutionsCol:last-child{display: none;}
     .toolsSlider{width: 80%;}
     .toolsSlider .slick-list {overflow: initial;}
     .solutionsSecTools{overflow: hidden;}
     .toolsSlider .item .toolsCol a .textDecoration{padding: 15px;}
-
-
+    .workGridItemHover .workGridItemHoverIn h3{font-size: 20px;}
+    .workGridItemHover .workGridItemHoverIn h4{font-size: 14px;}
+    .solutionsSecCaseStudy .solutionsSecCaseStudyList .item .CaseStudyCol a .CaseStudyTitale{font-size: 14px;}
     .solutionsSecApproach .solutionsSecApproachList ul{grid-template-columns: repeat(2, 1fr);}
     .solutionsSecApproach .solutionsSecApproachList ul:nth-child(2n) li:last-child::before {
         border-top: 2px dashed;
@@ -4457,6 +4609,8 @@ footer{
         z-index: 2;
         border-radius:  50px 0 0 50px ;
     }
+    .solutionsSecTools{padding-bottom: 60px;}
+    .solutionsSecApproach{padding: 40px 0;}
     .solutionsSecApproach .solutionsSecApproachList ul{text-align: center;}
     .solutionsSecApproach .solutionsSecApproachList ul:last-child li:last-child::before{border-left: 0px!important;}
     .solutionsSecApproach .solutionsSecApproachList ul li .solutionsSecApproachListCol .solutionsSecApproachListColText{
@@ -4464,16 +4618,15 @@ footer{
         p{font-size: 14px;}
     }
     .solutionsSecApproach .solutionsSecApproachList ul li .solutionsSecApproachListCol .solutionsSecApproachListColText{height: 170px;}
-    .solutionsSecCaseStudy{padding:0 ;}
-    .solutionsSecCaseStudyList, .testimonialSlider  {width: 80%;
+    .solutionsSecCaseStudy{padding:60px 0;}
+    .solutionsSecCaseStudyList, .testimonialSlider  {width: 95%;
         .slick-list {overflow: initial;}
     }
     .testimonialSlider .item{padding: 0;}
     .freeAuditSec{padding: 50px 0;}
     .freeAuditSecRow .freeAuditSecCol{width: 100%;}
-    .freeAuditSecRow .freeAuditSecCol:last-child{width: 30%;}
     .FormGridS1{display: block;}
-    header .container .rightMenu{top: 0;}
+    header .container .rightMenu{top: 11px}
     header .container nav ul{margin: 0;}
     .cSsecMinA{display: block;position: relative;}
     .cSsecMinA .cSsecMinHead{padding: 40px 0 0;text-align: left;width: 100%;}
@@ -4481,5 +4634,38 @@ footer{
     .cSsecMin{padding: 0;}
     .cSsecMinB .cSsecMinBRow .cSsecMinBCol:first-child{width: 100%;}
     .cSsecMinC .imgCol.imgCol2{flex-wrap: wrap;}
+
+    .testimonialsPgRow{  grid-template-columns: repeat(1, 1fr);}
+    .testimonialsPgRow .testimonialsPgCol::after{width: 30px;height: 30px;left: 12%;top: -3%;}
+    .testimonialsPgRow .testimonialsPgCol{  padding: 100px 20px 40px;font-size: 14px;}
+    .testimonialsPgRow .testimonialsPgCol .testimonial-logo{width: 120px;height: 120px;margin-top: -163px;}
+    .ourEcosystemDiv ul{  grid-template-columns: repeat(1, 1fr);}
+    .ourEcosystemDiv ul li{  border-right: 0px!important; border-top: 1px solid $grey; margin: auto;padding: 40px 30px;}
+    .ourWorkHm{border-radius: 50px 50px 0 0;}
+    .heroHome{padding-top: 90px!important;}
+    .ourWorkHm .btnSpaceEx{padding: 30px 0 50px;}
+    .hUpdates .UpdateSlider-slick{width: 90%;}
+    .navBarC{  flex-wrap: wrap;gap: 15px;}
+    .navBarC li a{font-size: 18px;padding: 10px 15px;}
+    .ourClientsLnav ul li span{font-size: 11px;  padding: 10px 15px;}
+    .ourClientsL .ourClientsR{  grid-template-columns: repeat(3, 1fr);padding: 40px 0;}
+    .ourClientsL .ourClientsR span{padding: 10px;}
+    .accordion .accordion-header button{font-size: 17px;}
+    .solutionsSecServices .solutionsSecServicesFaq .accordion-button{  font-size:20px;  padding:20px 40px 20px 0}
+    .cSsecMinB .cSsecMinBRow .cSsecMinBCol{width: 40%;}
+    .mainslider{margin-bottom: 60px;}
+    .SolutionsSecAbout .SolutionsRow .SolutionsColOurServies{display: none;}
+    .SolutionsSecAbout .SolutionsRow{padding: 0;}
+    .SolutionsSecAbout{padding-bottom: 30px;}
+    .testimonialSlider .item .awardsCol .textwithimg{display: block;}
+    .testimonialSlider .item .awardsCol .awardsImg{margin-bottom: 20px;}
+    .testimonialSlider .item .awardsCol .awardsText{margin: 10px 0;}
+    .testimonialSlider .item .awardsCol{padding: 50px 30px 20px;}
+    .pb-20{padding-bottom: 10px;}
+    .getSolutions{padding: 60px 0 40px;}
+    .Opportunities{padding: 60px 0;}
+    .checkPlay{background-color: $lightgrey;padding: 80px 0 40px;}
+    .faqContent .accordion-body{font-size: 14px;}
 }
+
 // Mobile Responsive css End

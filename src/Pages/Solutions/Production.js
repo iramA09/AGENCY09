@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
+import GetQuote from '../../Components/Forms/GetQuote';
+
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
@@ -16,25 +18,17 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 // Images
 import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/pattern.png';
+import pattern from '../../Assets/Images/icons/patternProduction.jpg';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
 import starY from '../../Assets/Images/icons/star.png';
-import corporateWebsite from '../../Assets/Images/corporateWebsite.jpg';
-
-import chatbot from '../../Assets/Images/tools/chatbot.png';
-import one_dashboard from '../../Assets/Images/tools/one_dashboard.png';
-import ticketing_system from '../../Assets/Images/tools/ticketing_system.png';
-import url_builder from '../../Assets/Images/tools/url_builder.png';
-import website_audit from '../../Assets/Images/tools/website_audit.png';
 
 import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
 import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
 import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
 
-import clickHere from '../../Assets/Images/icons/clickHere.png';
 // Images end
 
 // toolsSlider 
@@ -130,6 +124,7 @@ const testimonialSlider = {
 
 const Production = () => {
   useLenisScroll();
+  const [OpenModalGetQuote, setOpenModalGetQuote] = React.useState(false);
 
 
 
@@ -264,7 +259,7 @@ const faqsData = [
   },
   {
     key: "4",
-    question: "What is an after movie, and why should I consider producing one?",
+    question: "5. What is an after movie, and why should I consider producing one?",
     answer: "An after movie is a highlight video that captures the essence and energy of an event. It’s a great way to relive the experience, share it with attendees, and promote future events. After movies are especially effective for conferences, festivals, and corporate events."
   },
   {
@@ -274,7 +269,7 @@ const faqsData = [
   },
   {
     key: "6",
-    question: "7.Can you create videos in different styles and formats?",
+    question: "7. Can you create videos in different styles and formats?",
     answer: "Absolutely! We can produce videos in a variety of styles and formats, including animated videos, live-action videos, and mixed media. Whether you need a professional corporate video or a dynamic social media reel, we have the expertise to bring your vision to life."
   },
   {
@@ -408,22 +403,7 @@ const faqsData = [
         <div className='container'> <hr className='hrTop'/> </div>
 
         {/* Clients */}
-        <section className='hWorkLogos'><div className='container'>
-        
-            <div className='Heading center HeadingIcon'>
-              <h2 className='sizeH1 uppercase'>
-                  <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                  Clientele 
-                  <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-              </h2>
-            </div>
-   
             <LogosSlider />
-
-            <div className='btnSpaceEx center'>     
-               <Link to="../work/our-clients" className="btnDark fontM ripple-button"><span>View All</span></Link>
-            </div>
-        </div></section> 
         {/* Clients End */} 
 
 
@@ -460,7 +440,7 @@ const faqsData = [
                 <div className='Heading  HeadingIcon'>
                     <h2 className='sizeH3 uppercase'>Interested in optimizing your tech infrastructure? </h2>
                     <div className='pt-30 center'>     
-                        <Link to="../work/case-studies" className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
+                    <Link onClick={() => { setOpenModalGetQuote(true); }}  className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
                     </div>
                 </div>
         </div></section> 
@@ -468,6 +448,8 @@ const faqsData = [
 
 
       <Footer />
+      {OpenModalGetQuote && <GetQuote closeModal={setOpenModalGetQuote} />}
+
     </>
   );
 };

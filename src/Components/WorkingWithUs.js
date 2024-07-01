@@ -2,21 +2,7 @@ import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 
 const WorkingWithUsDataGrowth = [
-  {
-    key: "1",
-    header: "Work from Home Policy: ",
-    body: "Rock your PJs while you work from home (2 days a month)."
-  },
-  {
-    key: "2",
-    header: "Flexible Working Hours: ",
-    body: "Flex your schedule to balance work and life your way."
-  },
-  {
-    key: "6",
-    header: "Birthday Off:  ",
-    body: "Celebrate your birthday with a full day off—cake is on us!"
-  },
+
   {
     key: "8",
     header: "Career Advancement & Scholarships: ",
@@ -40,10 +26,21 @@ const WorkingWithUsDataGrowth = [
 ];
 
 const WorkingWithUsDataLeaves = [
+  
   {
     key: "0",
     header: "Paid Leaves & National Holidays:",
     body: "Take a break with 21 days of paid time off, plus national holidays!"
+  },
+  {
+    key: "1",
+    header: "Work from Home Policy: ",
+    body: "Rock your PJs while you work from home (2 days a month)."
+  },
+  {
+    key: "2",
+    header: "Flexible Working Hours: ",
+    body: "Flex your schedule to balance work and life your way."
   },
   {
     key: "3",
@@ -59,6 +56,11 @@ const WorkingWithUsDataLeaves = [
     key: "5",
     header: "Menstrual Leaves: ",
     body: "Ladies, take it easy with 12 paid menstrual leaves a year."
+  },
+  {
+    key: "6",
+    header: "Birthday Off:  ",
+    body: "Celebrate your birthday with a full day off—cake is on us!"
   },
   {
     key: "7",

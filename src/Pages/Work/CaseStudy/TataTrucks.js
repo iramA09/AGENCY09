@@ -120,7 +120,7 @@ const TataTrucks = () => {
                 </div>
 
                 <div className='cSsecMinHead m0'>
-                    <h1 className='sizeH4'>Making Complaint Management Simpler for Mahindra Tsubaki</h1>
+                    <h1 className='sizeH4'>Driving Visibility and Engagement for Tata Motors' Commercial Vehicle Lineup</h1>
                 </div>
 
                 <div className='cSsecMinInfo m0'>
@@ -139,42 +139,27 @@ const TataTrucks = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>Mahindra Tsubaki Conveyor Systems (MTC) is a Joint Venture between Mahindra Group and Tsubakimoto Chain Company – Japan. With rise in customer interactions and collection of feedback for Mahindra Tsubaki, it was difficult to keep track of all the complaints and address them efficiently and to understand the reasons of the complaint</p>
+                        <p>To enhance the online presence and brand visibility of Tata Motors' commercial vehicle range, we crafted five dynamic websites. These websites were designed to spotlight the diverse lineup of Tata Motors' commercial vehicles, including small trucks, medium trucks, and buses & vans. The goal was to drive online engagement, showcase the reliability and performance of the vehicles, and provide a seamless user experience.</p>
 
 
                     </div>
 
 
                     <div className='cSsecMinBCol'>
-                        <h4>Industry - Steel</h4>
+                        <h4>Each website features</h4>
+                        <ul>
+                            <li>High-quality visuals and comprehensive information about the vehicle range.</li>
+                            <li>Interactive elements to engage users and provide an in-depth look at each vehicle's features and benefits.</li>
+                            <li>Easy navigation and user-friendly design to ensure a seamless browsing experience.</li>
+                        </ul>
+
+                        <p>The outcome was a significant increase in online engagement, with users spending more time exploring the detailed features of Tata Motors' commercial vehicles. The enhanced online presence helped reinforce Tata Motors' position as a leader in the commercial vehicle market.</p>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Services</h4>
-                        <p>Software, Digital Process Automation</p>
+                        <h4>Capability</h4>
+                        <p>Digital Strategy & Web Development</p>
                     </div>
-
-                    <div className='cSsecMinBCol'>
-                          <h4>Year: <i>2023</i></h4>
-                    </div>
-
-
-                    <div className='cSsecMinBCol'>
-                        <h4 >Objective</h4>
-                        <p>Software, Digital Process Automation</p>
-                    </div>
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Challenges</h4>
-                        <p>Software, Digital Process Automation  Software, <br/>Digital Process Automation</p>
-                    </div>
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Results</h4>
-                        <p>Making Complaint Management Simpler for Mahindra Tsubaki Making Complaint Management Simpler for Mahindra Tsubaki Making Complaint Management Simpler for Mahindra Tsubaki</p>
-
-                    </div>
-
 
                 </div>
 

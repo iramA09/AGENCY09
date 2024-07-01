@@ -42,7 +42,19 @@ function ParterWithUs() {
       <div className='form-group'>
         <input className='form-control' placeholder='Email Id' type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
       </div>
+
+      <div className='form-group'>
+        <select className='form-control' >
+          <option value="Select">Select</option>
+          <option value="S1">S1</option>
+          <option value="S2">S2</option>
+          <option value="S3">S3</option>
+        </select>
+
+      </div>
     </div>
+
+
 
     <div  className='FormGridS1'>
       <div className='form-group'>

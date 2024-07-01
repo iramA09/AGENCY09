@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
+import GetQuote from '../../Components/Forms/GetQuote';
+
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
@@ -16,7 +18,7 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 // Images
 import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/pattern.png';
+import pattern from '../../Assets/Images/icons/patternContent.jpg';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
@@ -110,8 +112,8 @@ const testimonialSlider = {
     {
       breakpoint: 968,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
     },
     {
@@ -129,6 +131,7 @@ const testimonialSlider = {
 
 const Content = () => {
   useLenisScroll();
+  const [OpenModalGetQuote, setOpenModalGetQuote] = React.useState(false);
 
 
 // Services Data
@@ -380,32 +383,9 @@ const faqsData = [
 
 
 
-        <div className='container'>
-                <div className='strokeB'><SVGCurveLine/></div>      
-        </div>
+       
 
-        {/* Work Logos */}
-        <section className='hWorkLogos'><div className='container'>
-        
-            <div className='Heading center HeadingIcon'>
-              <h2 className='sizeH1 uppercase'>
-                  <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                  Clientele 
-                  <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-              </h2>
-            </div>
-   
-            <LogosSlider />
-
-            <div className='btnSpaceEx center'>     
-               <Link to="../work/our-clients" className="btnDark fontM ripple-button"><span>View All</span></Link>
-            </div>
-        </div></section> 
-        {/* Work Logos End */} 
-
-  <div className='container'>
-                <div className='strokeB'><SVGCurveLine/></div>      
-        </div>
+  
 
 
         <section className='solutionsSecCaseStudy'>
@@ -451,7 +431,13 @@ const faqsData = [
             </div>
         </section>  
 
+        <div className='container'>
+                <div className='strokeB'><SVGCurveLine/></div>      
+        </div>
 
+        {/* Work Logos */}
+            <LogosSlider />
+        {/* Work Logos End */} 
 
 
 
@@ -459,18 +445,16 @@ const faqsData = [
 
       
 
-        {/* TESTIMONIALS */}   
-        <section className='greenB testimonialSec'>
-                <div className='container'>
+      {/* TESTIMONIALS */}   
+      <section className='greenB testimonialSec'><div className='container'>
 
-                <div className='Heading center HeadingIcon'>
-                    <h2 className='sizeH1 uppercase'>
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                        TESTIMONIALS
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    </h2>
-                </div>
-
+        <div className='Heading center HeadingIcon'>
+            <h2 className='sizeH1 uppercase'>
+                <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                TESTIMONIALS
+                <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+            </h2>
+        </div>
 
         <Slider {...testimonialSlider} className='testimonialSlider slick-slider'>
           {testimonialData.map((testimonial, index) => (
@@ -478,7 +462,7 @@ const faqsData = [
               <div className='awardsCol'>
               <div className='textwithimg'>
               <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
-               
+              
                 <div className='awardsData'>
                   <h5>{testimonial.name}</h5>
                   <p>{testimonial.designation}</p></div>
@@ -490,16 +474,13 @@ const faqsData = [
           ))}
         </Slider>
 
-        {/* <div className='btnSpaceEx center'>     
-            <Link to="#" className="btnDark fontM ripple-button"><span>View All</span></Link>
-        </div> */}
+        <div className='btnSpaceEx center pb-0'>     
+            <Link to="../testimonials" className="btnDark fontM ripple-button"><span>View All</span></Link>
+        </div>
 
-
-        </div></section> 
-        {/* TESTIMONIALS End */} 
+      </div></section> 
+      {/* TESTIMONIALS End */} 
  
-       
-
 
       {/* FAQ */}
       <section className='faqContent'>
@@ -531,13 +512,15 @@ const faqsData = [
 
                         
                     <div className='pt-30 center'>     
-                        <Link to="#" className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
+                    <Link onClick={() => { setOpenModalGetQuote(true); }}  className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
                     </div>
                 </div>
         </div></section> 
         {/* Business End */} 
 
       <Footer />
+      {OpenModalGetQuote && <GetQuote closeModal={setOpenModalGetQuote} />}
+
     </>
   );
 };

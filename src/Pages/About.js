@@ -47,7 +47,7 @@ const About = () => {
     <div className='aboutInfoRow'>
       <h1 className='sizeH5 uppercase bold bottomS'>About Us</h1>
  
-        <h2 className='sizeH1 uppercase workTitle'><span>We</span> <span>grow</span> <span>brands</span> <span><i className="iconF arrowBtn"><SlArrowRightCircle /></i></span> <br/> <span><i className="iconF"><IoStarSharp /></i></span> <span>with</span>  <span className='underline'>ideas <hr/></span> <span>for</span> <span>content,</span> <span>technology,</span>
+        <h2 className='sizeH1 uppercase workTitle'><span>We</span> <span>grow</span> <span>brands</span> <span><i className="iconF arrowBtn"><SlArrowRightCircle /></i></span> <br/> <span><i className="iconF"><IoStarSharp /></i></span> <span>with</span>  <span className='underline'>ideas <hr/></span> <span>for</span> <span>content,</span> <span>technology, </span>
        <span>design & data.</span><span><i className="iconF"><IoStarSharp /></i></span></h2>
         
            </div>      
@@ -93,11 +93,9 @@ const About = () => {
 
     
 
-    <div className='container'>
-    <div className='strokeB'>
+    <div className='strokeB container'>
       <SVGCurveLine/>
     </div>
-     </div>
 
 
     <section>
@@ -112,12 +110,16 @@ const About = () => {
       </div>
     </section>
  
-
+    {/* 
     <section>
       <A09TeamList/>
-    </section>
+    </section> 
+    */}
 
-
+    <div div className='strokeB container'>
+      <SVGCurveLine/>
+    </div>
+    
     <section className='awards09'>
       <div className='container'>
         <Awards />

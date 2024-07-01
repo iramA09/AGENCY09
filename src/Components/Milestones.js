@@ -16,10 +16,17 @@ const MilestonesSlider = {
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 968,
+      breakpoint: 1400,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
+      },
+    },
+    {
+      breakpoint: 968,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
       },
     },
     {

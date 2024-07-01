@@ -38,14 +38,16 @@ const Social = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           arrows: true,
-          infinite: true
+          infinite: true,
         }
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          arrows: true,
+          infinite: true,
         }
       }
     ]
@@ -120,10 +122,10 @@ const Social = () => {
               who are well equipped to tackle the nuances of communicating with the thumb generation.
             </p>
             <div className='CultureRowBtn'>
-              <Link className="btnDark ripple-button" to='/'>
+              <Link className="btnDark ripple-button" to='/careers#LifeAtA09'>
                 <span>Our Culture</span>
               </Link>
-              <Link className="btnDark ripple-button" to='/'>
+              <Link className="btnDark ripple-button" to='/careers#Opportunities'>
                 <span>View Openings</span>
               </Link>
             </div>

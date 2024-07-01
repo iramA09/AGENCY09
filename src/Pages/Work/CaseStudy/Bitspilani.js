@@ -119,7 +119,7 @@ const TataTrucks = () => {
                 </div>
 
                 <div className='cSsecMinHead m0'>
-                    <h1 className='sizeH4'>Making Complaint Management Simpler for Mahindra Tsubaki</h1>
+                    <h1 className='sizeH4'>Transforming Digital Presence: Modern Website for India’s #1 Non-Govt. Technical Institute, BITS Pilani</h1>
                 </div>
 
                 <div className='cSsecMinInfo m0'>
@@ -138,42 +138,28 @@ const TataTrucks = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>Mahindra Tsubaki Conveyor Systems (MTC) is a Joint Venture between Mahindra Group and Tsubakimoto Chain Company – Japan. With rise in customer interactions and collection of feedback for Mahindra Tsubaki, it was difficult to keep track of all the complaints and address them efficiently and to understand the reasons of the complaint</p>
-
-
-                    </div>
-
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Industry - Steel</h4>
+                        <p>We undertook the challenge of revamping the website for BITS Pilani, India's premier non-government technical institute. The previous website design was outdated, non-mobile-friendly, and did not reflect the institute’s prestige or recent developments. Additionally, UI and UX issues made the browsing experience confusing for users.</p>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Services</h4>
-                        <p>Software, Digital Process Automation</p>
+                        <h4>Key Highlights</h4>
+                        <ul>
+                            <li><b> Simplified User Journey:</b> Streamlined navigation for all stakeholders with a mindful UI-UX approach, ensuring an intuitive and seamless browsing experience.</li>
+                            <li><b>Simplified Content Structure: </b>  Organized content to be easily accessible and relevant, enhancing the user experience.</li>
+                            <li><b>Elevated Design Language: </b> Introduced a modern design language that reflects the institute's prestige and forward-thinking approach.</li>
+                            <li><b>Cross-Device Compatibility: </b>Ensured the website is fully responsive, providing a consistent experience across all devices.</li>
+                            <li><b>Advanced Search: </b>Implemented a robust search function to facilitate easy access to information.</li>
+                            <li><b>Dynamic Content Population:   </b>Enabled real-time updates and dynamic content display to keep the website current and engaging.</li>
+                            <li><b>Modern UI: </b> Developed a sleek and user-friendly interface.</li>
+                            <li><b>Well-Mapped User Journey:  </b>Carefully mapped out user journeys to cater to different user groups.</li>
+                            <li><b>Robust CMS: </b>Built a powerful content management system to support ongoing updates and maintenance.</li>
+
+                        </ul>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                          <h4>Year: <i>2023</i></h4>
+                       <p>Web Design & Development, UI/UX Design</p>
                     </div>
-
-
-                    <div className='cSsecMinBCol'>
-                        <h4 >Objective</h4>
-                        <p>Software, Digital Process Automation</p>
-                    </div>
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Challenges</h4>
-                        <p>Software, Digital Process Automation  Software, <br/>Digital Process Automation</p>
-                    </div>
-
-                    <div className='cSsecMinBCol'>
-                        <h4>Results</h4>
-                        <p>Making Complaint Management Simpler for Mahindra Tsubaki Making Complaint Management Simpler for Mahindra Tsubaki Making Complaint Management Simpler for Mahindra Tsubaki</p>
-
-                    </div>
-
 
                 </div>
 

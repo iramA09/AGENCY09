@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
+import starY from '../Assets/Images/icons/star.png';
+import { Link } from 'react-router-dom';
+import SVGCurveLine from '../Hooks/SVGCurveLine'; 
 
 
 // Logos Images
@@ -100,60 +103,60 @@ const Logos09 = [
   {src: thakurTrusts},
 
   {src: americantourister},
-  {src: g2},
-  {src: gocheese},
-  {src: gowardhan},
-  {src: prideofcows},
-  {src: samsonite},
-  {src: siyarams},
+  // {src: g2},
+  // {src: gocheese},
+  // {src: gowardhan},
+  // {src: prideofcows},
+  // {src: samsonite},
+  // {src: siyarams},
   
-  {src: aldo},
-  {src: godrejlaffaire},
-  {src: hudobosshugo},
-  {src: lavie},
-  {src: missdiva},
-  {src: movado},
-  {src: tommyhilfiger},
+  // {src: aldo},
+  // {src: godrejlaffaire},
+  // {src: hudobosshugo},
+  // {src: lavie},
+  // {src: missdiva},
+  // {src: movado},
+  // {src: tommyhilfiger},
   
-  {src: jupiterhospital},
-  {src: stepsetgo},
-  {src: avvatarindia},
+  // {src: jupiterhospital},
+  // {src: stepsetgo},
+  // {src: avvatarindia},
 
-  {src: apolloenergy},
-  {src: athenarenewable},
-  {src: mahindrasolarize},
-  {src: senvion},
-  {src: susten},
-  {src: teqmahindra},
+  // {src: apolloenergy},
+  // {src: athenarenewable},
+  // {src: mahindrasolarize},
+  // {src: senvion},
+  // {src: susten},
+  // {src: teqmahindra},
   
-  {src: codashop},
-  {src: disney},
-  {src: lokmat},
-  {src: starwars},
-  {src: tips},
+  // {src: codashop},
+  // {src: disney},
+  // {src: lokmat},
+  // {src: starwars},
+  // {src: tips},
 
-  {src: ashargroup},
-  {src: credaimchi},
-  {src: ensaara},
-  {src: jpinfra},
-  {src: nahargroup},
-  {src: rajeshlifespaces},
-  {src: sunteck},
-  {src: supreme},
-  {src: ukrealty},
+  // {src: ashargroup},
+  // {src: credaimchi},
+  // {src: ensaara},
+  // {src: jpinfra},
+  // {src: nahargroup},
+  // {src: rajeshlifespaces},
+  // {src: sunteck},
+  // {src: supreme},
+  // {src: ukrealty},
 
-  {src: jupitermarathon},
-  {src: lakmefashionweek},
-  {src: mahamarathonlokmat},
-  {src: mahindraopensky},
-  {src: timesfashionweek},
-  {src: wethewomen},
+  // {src: jupitermarathon},
+  // {src: lakmefashionweek},
+  // {src: mahamarathonlokmat},
+  // {src: mahindraopensky},
+  // {src: timesfashionweek},
+  // {src: wethewomen},
 
-  {src: barci},
-  {src: chinesewok},
-  {src: hppetrol},
-  {src: mahycogrow},
-  {src: tribevibe},
+  // {src: barci},
+  // {src: chinesewok},
+  // {src: hppetrol},
+  // {src: mahycogrow},
+  // {src: tribevibe},
 ];
 
 
@@ -180,7 +183,8 @@ const LogosSlider = () => {
       },
       breakpoint: 768,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
+        rows: 2
       }
     }
   ]};
@@ -189,15 +193,34 @@ const LogosSlider = () => {
 
   return (
     <>
+
+  
+
     {/* Work Logos */}
-   
+    <section className='hWorkLogos'><div className='container'>
+          {/* <hr className='hrTop'/> */}
+      
+        <div className='Heading center HeadingIcon'>
+          <h2 className='sizeH1 uppercase'>
+              <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+              Clientele 
+              <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+          </h2>
+        </div>
         <Slider {...LogosSliders} className="LogosSlider-slick slick-slider arrowLRC">
         {Logos09.map((logo, index) => (
               <div className='item'> <span> <img src={logo.src} alt="" /></span> </div>
         ))}
         </Slider>
-                           
+
+        <div className='btnSpaceEx center'>     
+               <Link to="../work/our-clients" className="btnDark fontM ripple-button"><span>View All</span></Link>
+            </div>
+   
+    </div></section>                 
     {/* Work Logos End */}
+
+
     </>
   )
 }

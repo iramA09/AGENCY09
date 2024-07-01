@@ -1,4 +1,6 @@
 import {useRef, useEffect} from 'react'
+import React, { useState } from 'react';
+
 import { Link, useLocation } from 'react-router-dom'
 import { IoMdArrowForward, IoMdHeart } from "react-icons/io"
 import { BsClockFill } from "react-icons/bs";
@@ -14,12 +16,18 @@ import Instaw from '../Assets/Images/logos/insta-holidaysW.png'
 import OOw from '../Assets/Images/logos/octrine-organicsW.png'
 import PKAw from '../Assets/Images/logos/pk_aW.png'
 import LO9IX from '../Assets/Images/logos/l09ix_w.png'
+import GetQuote from '../Components/Forms/GetQuote';
+import ApplyNow from '../Components/Forms/ApplyNow'
 
 
 // Images
 
 
 const Footer = () => {
+  const [OpenModalGetQuote, setOpenModalGetQuote] = React.useState(false);
+  const [OpenModalApplyNow, setOpenModalApplyNow] = React.useState(false);
+
+
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -84,11 +92,11 @@ const Footer = () => {
       <div className='footerCol'>
         <h3 className='fHd'>Quick Links</h3>
         <ul>
-          <li><Link to='/'>Clients</Link></li>
-          <li><Link to='/'>Vacancies</Link></li>
-          <li><Link to='/'>Connect</Link></li>
-          <li><Link to='/'>Simplifying The Web</Link></li>
-          <li><Link to='/'>A09 Store</Link></li>
+          <li><Link to='/work/our-clients'>Clients</Link></li>
+          <li><Link to='/careers#Opportunities'>Vacancies</Link></li>
+          <li><Link to='/connect'>Connect</Link></li>
+          <li><Link to='https://www.agency09.co/simplifyingtheweb/' target='_blank'>Simplifying The Web</Link></li>
+          <li><Link to='https://www.a09store.com/'>A09 Store</Link></li>
         </ul>
       </div>
 
@@ -119,9 +127,9 @@ const Footer = () => {
     </div>
 
       <ul>
-      <li><Link to='#'>REQUEST A SERVICE</Link></li>
-      <li><Link to='#'>JOIN THE TEAM</Link></li>
-      <li><Link to='#'>PARTNER WITH US</Link></li>
+      <li><Link onClick={() => { setOpenModalGetQuote(true); }} >REQUEST A SERVICE</Link></li>
+      <li><Link onClick={() => { setOpenModalApplyNow(true); }} >JOIN THE TEAM</Link></li>
+      <li><Link to='/connect#form'>PARTNER WITH US</Link></li>
       </ul>
       <div className='strokeW'>
         <SVGCurveLine/>
@@ -216,6 +224,9 @@ const Footer = () => {
 
 
   </footer>
+  {OpenModalGetQuote && <GetQuote closeModal={setOpenModalGetQuote} />}
+  {OpenModalApplyNow && <ApplyNow closeModal={setOpenModalApplyNow} />}
+
 
     </>
   )
