@@ -15,7 +15,14 @@ const awardsSlider = {
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 1400,
+      breakpoint: 1500,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      },
+    },
+    {
+      breakpoint: 1000,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -33,32 +40,63 @@ const awardsSlider = {
 // awardsSlider End
 
 const Awards = () => {
-    const awardsData = [
-        {
-            year: 2024,
-            eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-        },
-        {
-            year: 2023,
-            eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-        },
-        {
-            year: 2022,
-            eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-        },
-        {
-            year: 2021,
-            eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-        },
-        {
-            year: 2020,
-            eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-        },   
-        {
-            year: 2019,
-            eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-        }
-      ];
+  const awardsData = [
+      {
+          year: '',
+          eventsText: 'Best use of Instagram',
+          eventAdmin: 'Reliance General Insurance'
+      },
+      {
+          year: '',
+          eventsText: 'Best Books',
+          eventAdmin: 'BARC India(Yearbook)'
+      },
+      {
+          year:  '',
+          eventsText: 'Best Corporate Website',
+          eventAdmin: 'Mahindra Susten'
+      },
+      {
+          year: '',
+          eventsText: 'Leveraging  Social Media to Boost ROI & Engagement.',
+          eventAdmin: 'Mahindra Solarize'
+      },
+      {
+          year: '',
+          eventsText: 'Best Packaging',
+          eventAdmin: 'Octarine Organics'
+      },   
+      {
+          year: '',
+          eventsText: 'Best Use of Influencers for Lifestyle Brands',
+          eventAdmin: 'American Tourister'
+      },
+      {
+          year: '',
+          eventsText: 'Best Use of Influencers on Instagram',
+          eventAdmin: 'Godrej Laffaire'
+      },
+      {
+          year: '',
+          eventsText:'Best Application of User Generated Content', 
+          eventAdmin: 'Reliance General Insurance'
+      },   
+      {
+          year: '',
+          eventsText: 'AWWWards Nominee',
+          eventAdmin: 'Siyarams India'
+      },
+      {
+          year: '',
+          eventsText: 'AWWWards Nominee',
+          eventAdmin: 'TribeVibe'
+      },
+      {
+          year: '2023',
+          eventsText: 'Idea Award Best Website 2023',
+          eventAdmin: 'Nahar Group'
+      }
+  ];
     
 
   return (
@@ -84,10 +122,12 @@ const Awards = () => {
           {awardsData.map((awards, index) => (
             <div key={index} className='item'>
               <div className='awardsCol'>
+                <div className='awardsColIn'>
                 <div className='awardsTag'><GiSevenPointedStar /></div>
                 <div className='awardsText'><p>{awards.eventsText}</p></div>
+                <div className='awardsText2'><p>- {awards.eventAdmin}</p></div>
                 <div className='awardsYear'><h5>{awards.year}</h5></div>
-              </div>
+              </div></div>
             </div>
           ))}
         </Slider>

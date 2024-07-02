@@ -2,45 +2,33 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
+import GetQuote from '../../Components/Forms/GetQuote';
+
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
-import Transitions from '../../Hooks/Transitions';
-import RippleButton from '../../Hooks/RippleButton';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import LogosSlider from '../../Components/LogosSlider';
+import { useMediaQuery } from 'react-responsive';
 
 import { PiStarFourFill } from "react-icons/pi";
 import { GoNorthStar } from "react-icons/go";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-// Tabs
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-// Tabs End
-
 // Images
 import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/pattern.png';
+import pattern from '../../Assets/Images/icons/patternProduction.jpg';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
 import starY from '../../Assets/Images/icons/star.png';
-import corporateWebsite from '../../Assets/Images/corporateWebsite.jpg';
-
-import chatbot from '../../Assets/Images/tools/chatbot.png';
-import one_dashboard from '../../Assets/Images/tools/one_dashboard.png';
-import ticketing_system from '../../Assets/Images/tools/ticketing_system.png';
-import url_builder from '../../Assets/Images/tools/url_builder.png';
-import website_audit from '../../Assets/Images/tools/website_audit.png';
 
 import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
 import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
 import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
 
-import clickHere from '../../Assets/Images/icons/clickHere.png';
 // Images end
 
 // toolsSlider 
@@ -136,89 +124,47 @@ const testimonialSlider = {
 
 const Production = () => {
   useLenisScroll();
+  const [OpenModalGetQuote, setOpenModalGetQuote] = React.useState(false);
 
-//Tools Data
-  const toolsData = [
-    {
-        link: '#',
-        image: chatbot,
-        titale: 'Chatbot',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: website_audit,
-        titale: 'website audit',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: url_builder,
-        titale: 'url builder',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: ticketing_system,
-        titale: 'ticketing system',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: one_dashboard,
-        titale: 'ONE Dashboard',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    }
-  ];
-//Tools Data End
 
-// Approach Data
-const ApproachData = [
+
+
+// Services Data
+  const servicesData = [
     {
-      number: '01',
-      tag: 'Preparation',
-      title: 'User Study',
-      text: 'Device Based & Psychological Insights'
+      key: "0",
+      header: "Corporate Videos",
+      description: "Capture the essence of your brand and communicate your message effectively with our corporate video production services. From company profiles to internal communications, we help you tell your story with clarity and impact.",
+      tags: [],
     },
     {
-      number: '02',
-      tag: 'Start',
-      title: 'User Study',
-      text: 'User Journey & WireFrame'
+      key: "1",
+      header: "Reels",
+      description: "Make a lasting impression on social media with engaging and visually stunning reels. Whether it's showcasing products, highlighting events, or sharing behind-the-scenes glimpses, we create reels that captivate and inspire.",
+      tags: [],
     },
     {
-      number: '03',
-      title: 'The User Interface',
-      text: 'Design & Proto Type'
+      key: "2",
+      header: "After Movie",
+      description: "Relive the excitement and energy of your events with our after movie production services. From conferences to festivals, we capture the highlights and emotions of your event, creating compelling videos that resonate with your audience.",
+      tags: [],
     },
     {
-      number: '04',
-      title: 'Development',
-      text: 'Coding'
+      key: "3",
+      header: "Product Video",
+      description: "Showcase your products in the best light with our product video production services. From explainer videos to demonstrations, we create visually appealing and informative videos that drive engagement and conversions.",
+      tags: [],
     },
     {
-      number: '05',
-      title: 'Quality Check',
-      text: 'VAPT - Browsers'
-    },
-    {
-      number: '06',
-      title: 'Pre Launch Check Points',
-      text: 'Search Related & Auto Responses'
-    },
-    {
-      number: '07',
-      tag: 'Finish',
-      title: 'Live',
-      text: 'Device Based and Psychological Insights '
-    },
-    {
-      number: '08',
-      title: 'Maintenance',
-      text: 'Device Based and Psychological Insights '
+      key: "4",
+      header: "Employer Branding:",
+      description: "Attract top talent and showcase your company culture with compelling employer branding videos. We highlight what makes your workplace unique and desirable, helping you stand out as an employer of choice.",
+      tags: [],
     },
   ];
-// Approach Data End
+// Services Data
+
+
 
 
 //CaseStudy Data
@@ -288,10 +234,66 @@ const testimonialData = [
 ];
 //testimonaialSlider End
 
+
+// FAQS
+const faqsData = [
+  {
+    key: "0",
+    question: "1. What types of video production services does AGENCY09 offer?",
+    answer: "AGENCY09 offers a wide range of video production services including corporate videos, reels, after movies, product videos, and employer branding videos. Each service is tailored to meet your specific needs and objectives."
+  },
+  {
+    key: "1",
+    question: "2. How do you ensure the quality of your video productions?",
+    answer: "We ensure the highest quality by using state-of-the-art equipment, employing experienced professionals, and adhering to industry best practices. Our team is dedicated to delivering visually stunning and engaging videos that align with your brand's vision and goals."
+  },
+  {
+    key: "2",
+    question: "3. Can you help with scriptwriting and storyboarding?",
+    answer: "Yes, we offer comprehensive pre-production services including scriptwriting, storyboarding, and concept development. Our creative team works closely with you to craft a compelling narrative that effectively communicates your message."
+  },
+  {
+    key: "3",
+    question: "4. How long does it typically take to produce a video?",
+    answer: "The production timeline varies depending on the complexity and scope of the project. A simple corporate video might take a few weeks, while a more complex production like an after movie or product video could take longer. We work diligently to meet your deadlines while maintaining high-quality standards."
+  },
+  {
+    key: "4",
+    question: "5. What is an after movie, and why should I consider producing one?",
+    answer: "An after movie is a highlight video that captures the essence and energy of an event. It’s a great way to relive the experience, share it with attendees, and promote future events. After movies are especially effective for conferences, festivals, and corporate events."
+  },
+  {
+    key: "5",
+    question: "6. How do reels differ from other types of video content?",
+    answer: "Reels are short, engaging videos designed specifically for social media platforms. They are typically 15-60 seconds long and are meant to capture attention quickly. Reels are ideal for showcasing products, events, or behind-the-scenes moments in a visually appealing way."
+  },
+  {
+    key: "6",
+    question: "7. Can you create videos in different styles and formats?",
+    answer: "Absolutely! We can produce videos in a variety of styles and formats, including animated videos, live-action videos, and mixed media. Whether you need a professional corporate video or a dynamic social media reel, we have the expertise to bring your vision to life."
+  },
+  {
+    key: "7",
+    question: "8. What is employer branding video production, and how can it benefit my company?",
+    answer: "Employer branding videos showcase your company culture, values, and work environment. These videos help attract top talent by providing a glimpse into what makes your company a great place to work. They can be used in recruitment campaigns, on your careers page, and in onboarding materials."
+  },
+  {
+    key: "8",
+    question: "9. How much does video production cost?",
+    answer: "The cost of video production varies depending on the project's scope, length, complexity, and other factors. Contact us for a personalized quote based on your specific needs and budget. We aim to deliver high-quality video content that fits within your financial parameters."
+  },
+  {
+    key: "9",
+    question: "10. How can I get started with AGENCY09's video production services?",
+    answer: "Getting started is easy! Reach out to us through our contact page or request a quote. We'll schedule a consultation to discuss your vision, goals, and requirements, and then develop a tailored plan to bring your project to life."
+  },
+];
+// FAQS End
+
+
   return (
     <>
       <Header />
-      <Transitions>
       <div className="spacer"></div>
 
         <section className='SolutionsSecAbout'>
@@ -299,13 +301,10 @@ const testimonialData = [
             <div className='SolutionsRow'>
                 <div className='SolutionsCol'>
                     <div className='SolutionsTag'><span className='blackB white'><GoNorthStar className='yellow'/> Production</span></div>
-                    <h1 className='sizeH1 uppercase'>Exceptional<br/>Digital Products</h1>
-                    <h3 className='sizeH4 uppercase pt-10 pb-10'>On-Time. On-Budget. On-Point.</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries creators of Logix</p>
+                    <h1 className='sizeH1 uppercase'>Lights, Camera, Action: Unleash Your Story</h1>
+                    <p>Creativity meets Execution. We specialize in bringing your vision to life through captivating and high-quality video production services. From corporate videos to product showcases, we're here to elevate your brand's storytelling and engage your audience like never before.</p>
                                 
-                    <div className='btnSpaceM pt-30'>     
-                        <RippleButton to="#" className="btnDark fontM"><span>Let’s Talk</span></RippleButton>
-                    </div>
+               
 
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
@@ -335,375 +334,122 @@ const testimonialData = [
         </div>
         </section>
 
-        {/* Calculat */}
-        <section className='Calculat'>
-            <div className='container'>
 
-            {/* Calculat */}
-            <div className='CalculatRow'>
-                <div className='CalculatCol CalculatColA bounce'>
-                <div className='CalculatColIn'><h4>500+</h4><p> Projects<br/> Delivered <PiStarFourFill /></p></div>
-                </div>
-                <div className='CalculatCol CalculatColB'>
-                <div className='CalculatColIn'><h4>11</h4><p>Years <br/>Of Experience <PiStarFourFill /></p></div>
-                </div>
-                <div className='CalculatCol CalculatColC'>
-                <div className='CalculatColIn'><h4>20+</h4><p>Technologies <br/>Supported <PiStarFourFill /></p></div>
-                </div>
-                <div className='CalculatCol CalculatColD'>
-                <div className='CalculatColIn'><h4>20+</h4><p>Tech <br/>Professionals <PiStarFourFill /></p></div>
-                </div>
-            </div>
-            {/* Calculat End */}
-            <div className='strokeB'>
-                <SVGCurveLine/>
-            </div>         
-            </div>
-        </section>
-        {/* Calculat End */}
+
+
+
+    
+
         
-        <section className='solutionsSecServices'>
-            <div className='container'>
-                
-                <div className='Heading center HeadingIcon'>
-                <h2 className='sizeH1 uppercase'>
-                Amplifying Business Progress<br/>
-                    <span className='iconSVG'>
-                    <i className='iconF'>
-                        <img src={starY} alt='Star Icon' />
-                    </i>
-                    </span>
-                    Through Smart Solutions
-                    <span className='iconSVG'>
-                    <i className='iconF'>
-                        <img src={starY} alt='Star Icon' />
-                    </i>
-                    </span>
-                </h2>
-                </div>
-
-                <div className='btnSpaceM pt-30 center pb-40'>     
-                    <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
-                </div>
-
-
-
-                <div className='solutionsSecServicesFaq'>
-                    <h3 className='sizeH5 uppercase bold'>Services</h3>
-                    <div className='solutionsSecServicesFaqList'>
-                    <Accordion defaultActiveKey="0">
-                    <Accordion.Item eventKey="0">
-                            <Accordion.Header>Corporate Website</Accordion.Header>
-                            <Accordion.Body>
-                                <div className='solutionsWrap'>
-                                    <div className='solutionsCol'>
-                                    <p>Explore our web development expertise to maximize your web presence which can help you captivate the audience by delivering unparalleled web experience</p>
-                                    <div className='solutionsWrapTag'>
-                                        <ul>
-                                            <li><Link>PHP</Link></li>
-                                            <li><Link>WordPress</Link></li>
-                                            <li><Link>Drupal</Link></li>
-                                            <li><Link>AngularJs</Link></li>
-                                            <li><Link>NodeJs</Link></li>
-                                            <li><Link>Laravel</Link></li>
-                                            <li><Link>ReactJs</Link></li>
-                                        </ul>
-                                    </div>
-                                    
-                                <div className='btnSpaceM pt-30 '>     
-                                    <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
-                                </div>
-                                </div>
-
-                                <div className='solutionsCol'>
-                                    <img src={corporateWebsite} alt="corporateWebsite" />
-                                </div>
-                                
-                                </div>    
-                            </Accordion.Body>
-                        </Accordion.Item>
-            
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>Ecommerce Development</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="2">
-                            <Accordion.Header>Web Application</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="3">
-                            <Accordion.Header>Mobile Applications</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="4">
-                            <Accordion.Header>ERP Systems</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="5">
-                            <Accordion.Header>Software</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="6">
-                            <Accordion.Header>HR Portal</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="7">
-                            <Accordion.Header>Marketing Automations</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-            
-                    </Accordion>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section className='solutionsSecTools'>
-            <div className='container'>
-                
-                <div className='Heading center HeadingIcon'>
-                <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                        TOOLS
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                </h2>
-                </div>
-
-
-
-            <Slider {...toolsSlider} className='toolsSlider slick-slider'>
-            {toolsData.map((tools, index) => (
-                <div key={index} className='item'>
-                <div className='toolsCol'>
-                    <Link to={tools.link}>
-                        <div className='toolsImg'><img src={tools.image}/></div>
-                        <div className='toolsTitale'>{tools.titale}</div>
-                        <div className='textDecoration'><p>{tools.decoration}</p></div>
-                        <div className='toolsBtn'><IoIosArrowDroprightCircle /></div>
-                    </Link>
-                </div>
-                </div>
-            ))}
-            </Slider>
-
-        </div>
-        </section>
-
-        <div className='container'>
-                <div className='strokeB'><SVGCurveLine/></div>      
-        </div>
-
-        <section className='solutionsSecApproach'>
+        <section className=''>
           <div className='container'>
-            <h3 className='sizeH5 uppercase bold'>A09 Approach</h3>
-            <div className='solutionsSecApproachList'>
-              {ApproachData.reduce((acc, item, index) => {
-                if (index % 4 === 0) {
-                  acc.push(<ul key={`ul-${index}`} className="solutionsSecApproachListRow">{[]}</ul>);
-                }
-                const ulIndex = Math.floor(index / 4);
-                acc[ulIndex].props.children.push(
-                  <li key={index}>
-                    <div className='solutionsSecApproachListCol'>
-                      <div className='solutionsSecApproachListColNum'><span>{item.number}</span> <span className='solutionsSecApproachListColNumTag'>{item.tag}</span></div>
-                      <div className='solutionsSecApproachListColText'>
-                        <h3>{item.title}</h3>
-                        <p>{item.text}</p>
-                      </div>    
-                    </div>
-                  </li>
-                );
-                return acc;
-              }, [])}
-            </div>
+
+          <div className='Heading center HeadingIcon'>
+              <h2 className='sizeH1 uppercase'>
+                  <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                  Showreel
+                  <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+              </h2>
           </div>
-        </section>       
 
-
-
-        <section className='solutionsSecCaseStudy'>
-            <div className='container'>
-
-            <div className='Heading center HeadingIcon'>
-            <h3 className='sizeH5 uppercase bold pb-20'>Case studies</h3>
-                <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    Lorem ipsum dolor
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                </h2>
-            </div>
-
-
-            <div className='solutionsSecCaseStudyList'>
-
-                <Slider {...CaseStudySlider} className='CaseStudySlider slick-slider'>
-                    {CaseStudyData.map((CaseStudy, index) => (
-                        <div key={index} className='item'>
-                        <div className='CaseStudyCol'>
-                            <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/></div>
-                                <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
-                                <div className='textTag'><p>{CaseStudy.tag}
-                                
-                                {CaseStudy.tags.map((tag, index) => (
-                                  <span key={index}>{tag.name}</span>
-                                ))}
-                                
-                                </p></div>
-                            </Link>
-                        </div>
-                        </div>
-                    ))}
-                </Slider>
-
-            <div className='btnSpaceEx center'>     
-                <RippleButton to="/work" className="btnDark fontM"><span>View All</span></RippleButton>
-            </div>
-
-            </div>
-
-            </div>
-        </section>  
-
-
-
-
-
-        {/* Work Logos */}
-        <section className='hWorkLogos'><div className='container'>
-            {/* <hr className='hrTop'/> */}
-            <div className='strokeB hrTop'>
-                <SVGCurveLine/>
-            </div>
-            
-            <LogosSlider />
-
-            <div className='strokeB hrBottom'>
-                <SVGCurveLine/>
-            </div>
-        </div></section> 
-        {/* Work Logos End */} 
-
-
-
-        {/* TESTIMONIALS */}   
-        <section className='greenB testimonialSec'>
-                <div className='container'>
-
-                <div className='Heading center HeadingIcon'>
-                    <h2 className='sizeH1 uppercase'>
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                        TESTIMONIALS
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    </h2>
-                </div>
-
-
-        <Slider {...testimonialSlider} className='testimonialSlider slick-slider'>
-          {testimonialData.map((testimonial, index) => (
-            <div key={index} className='item'>
-              <div className='awardsCol'>
-              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
-              <div className='textwithimg'>
-                <div className='awardsYear'><h5>{testimonial.name}</h5></div>
-                <div className='awardsDesignation'><p>{testimonial.designation}</p></div>
-                <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-
-        <div className='btnSpaceEx center'>     
-            <RippleButton to="#" className="btnDark fontM"><span>View All</span></RippleButton>
-        </div>
-
-
-        </div></section> 
-        {/* TESTIMONIALS End */} 
-
-        
-
-        {/* Free Audit */}   
-        <section className='pinkB freeAuditSec'><div className='container'>
-          <div className='freeAuditSecRow'>
-                <div className='freeAuditSecCol'>
-                    <h3 className='sizeH5 uppercase bold pb-20 white'>Free Audit</h3>
-                    <h2 className='sizeH1 uppercase white'>Uncover the untapped potential of your website</h2>
-                </div>
-
-                <div className='freeAuditSecCol'>
-                    <Link to=''>
-                      <img src={clickHere} alt='Click Here' />
-                    </Link>
-                </div>
-            </div>
-        </div></section> 
-        {/* Free Audit End */} 
-
-
-        
-      <section className='faqContent'><div className='container'>
-        <h2 className='sizeH5 uppercase bold pb-20'>FAQS</h2>
-        <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>1. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>2. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>3. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>4. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>5. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          </Accordion>
       </div></section>
 
 
-       {/* Free Audit */}   
-       <section className='yellowB center'><div className='container'>
-                <div className='Heading  HeadingIcon'>
-                    <h2 className='sizeH1 uppercase'><GoNorthStar className='pink' /> Lorem ipsum dolor sit amet, <GoNorthStar className='pink' /> <br/> consectetur adipiscing elit?</h2>
 
-                        
-                    <div className='btnSpaceEx center'>     
-                        <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
+        
+        <section className='solutionsSecServices' id='services'>
+            <div className='container'>
+                
+              <div className='solutionsSecServicesFaq'>
+
+              <div className='Heading center HeadingIcon pb-20'>
+                  <h2 className='sizeH1 uppercase'>
+                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      Services
+                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                  </h2>
+                </div>
+                
+                <div className='solutionsSecServicesFaqList'>
+                  <Accordion>
+                    {servicesData.map(service => (
+                      <Accordion.Item eventKey={service.key} key={service.key}>
+                        <Accordion.Header>{service.header}</Accordion.Header>
+                        <Accordion.Body>
+                          <div className='solutionsWrap'>
+                            <div className='solutionsCol'>
+                              <p>{service.description}</p>
+                              <div className='solutionsWrapTag'>
+                                <ul>
+                                  {service.tags.map((tag, index) => (
+                                    <li key={index}><Link>{tag}</Link></li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          
+                          </div>
+                        </Accordion.Body>
+                      </Accordion.Item>
+                    ))}
+                  </Accordion>
+                </div>
+              </div>
+
+            </div>
+        </section>
+
+
+        <div className='container'> <hr className='hrTop'/> </div>
+
+        {/* Clients */}
+            <LogosSlider />
+        {/* Clients End */} 
+
+
+        <div className='container'> <hr className='hrTop'/> </div>
+
+        
+
+      {/* FAQ */}
+      <section className='faqContent'>
+        <div className='container'>
+
+        <div className='Heading center HeadingIcon pb-20'><h2 className='sizeH1'>
+    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+        FAQs
+    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+  </h2></div>
+          <Accordion>
+            {faqsData.map(faq => (
+              <Accordion.Item eventKey={faq.key} key={faq.key}>
+                <Accordion.Header>{faq.question}</Accordion.Header>
+                <Accordion.Body>
+                  {faq.answer}
+                </Accordion.Body>
+              </Accordion.Item>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+      {/* FAQ */}
+
+      
+       {/* Business  */}   
+       <section className='yellowB center getSolutions'><div className='container'>
+                <div className='Heading  HeadingIcon'>
+                    <h2 className='sizeH3 uppercase'>Interested in optimizing your tech infrastructure? </h2>
+                    <div className='pt-30 center'>     
+                    <Link onClick={() => { setOpenModalGetQuote(true); }}  className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
                     </div>
                 </div>
         </div></section> 
-        {/* Free Audit End */} 
+        {/* Business End */} 
 
 
-      </Transitions>
       <Footer />
+      {OpenModalGetQuote && <GetQuote closeModal={setOpenModalGetQuote} />}
+
     </>
   );
 };

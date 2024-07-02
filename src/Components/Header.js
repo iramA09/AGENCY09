@@ -54,18 +54,18 @@ const Header = () => {
                 <Link to='/about'  className={location.pathname === '/about' ? 'active' : ''}>About</Link>
               </li>
               <li>
-                <Link to='/work' className={location.pathname === '/work' ? 'active' : ''}>Work</Link>
+                <Link to='/work/case-studies'>Work</Link>
               </li>
               <li>
-                <Link to='/' className={location.pathname === '/' ? 'active' : ''}>Solutions</Link>
+                <Link to='/solutions/tech'>Solutions <i/></Link>
                 <div className='subMenu'> 
                   <div className='subMenuInner'>
-                  <span><Link className={location.pathname === '/solutions/tech' ? 'active' : ''} to='/solutions/tech'>Tech</Link></span>
+                    <span><Link className={location.pathname === '/solutions/tech' ? 'active' : ''} to='/solutions/tech'>Tech</Link></span>
+                    <span><Link className={location.pathname === '/solutions/design' ? 'active' : ''} to='/solutions/design'>Design</Link></span>
                     <span><Link className={location.pathname === '/solutions/content' ? 'active' : ''} to='/solutions/content'>Content</Link></span>
-                    <span><Link className={location.pathname === '/solutions/brand-design' ? 'active' : ''} to='/solutions/brand-design'>Brand Design</Link></span>
                     <span><Link className={location.pathname === '/solutions/media' ? 'active' : ''} to='/solutions/media'>Media</Link></span>
                     <span><Link className={location.pathname === '/solutions/production' ? 'active' : ''} to='/solutions/production'>Production</Link></span>
-                    <span><Link className={location.pathname === '/solutions/logix' ? 'active' : ''} to='/solutions/logix'>Logix</Link></span>
+                    <span><Link className={location.pathname === '/solutions/keyword' ? 'active' : ''} to='/solutions/keyword'>Keyword</Link></span>
                   </div>
                 </div>
               </li>
@@ -85,7 +85,7 @@ const Header = () => {
           </nav>
           <div className='rightMenu'>
             <div className={`menuBtn ${isMenuOpen ? 'Open' : ''}`} onClick={toggleMenu}>
-              <Link><HiOutlineMenuAlt3 className='mOpen' /></Link>
+              <Link><span>Explore</span>  <HiOutlineMenuAlt3 className='mOpen' /></Link>
             </div>
           </div>
         </div>
@@ -130,9 +130,9 @@ const Header = () => {
             <div className='menu09Item menu09Item01'>
               <ul>
                 <li><Link className={`minFont ${location.pathname === '/about' ? 'active' : ''}`} to='/about'  >About</Link></li>
-                <li><Link className={`minFont ${location.pathname === '/work' ? 'active' : ''}`} to='/work'>Work</Link></li>
+                <li><Link className={`minFont ${location.pathname === '/work' ? 'active' : ''}`} to='/work/case-studies'>Work</Link></li>
                 <li><Link className={`minFont ${location.pathname === '/careers' ? 'active' : ''}`} to='/careers'>Careers <span className='sideFont'>Hiring!</span></Link></li>
-                <li><Link className='minFont' to='https://www.agency09.co/simplifyingtheweb/' target='_blank'>Blogs</Link></li>
+                <li><Link className='minFont' to='https://www.agency09.co/simplifyingtheweb/' target='_blank'>Simplifyingtheweb  <span className='sideFont'>Blog</span></Link></li>
                 <li><Link className={`minFont ${location.pathname === '/connect' ? 'active' : ''}`} to='/connect'>Connect</Link></li>
               </ul>
             </div>
@@ -142,10 +142,10 @@ const Header = () => {
               <ul>
                 <li><Link className={location.pathname === '/solutions/tech' ? 'active' : ''} to='/solutions/tech'>Tech</Link></li>
                 <li><Link className={location.pathname === '/solutions/content' ? 'active' : ''} to='/solutions/content'>Content</Link></li>
-                <li><Link className={location.pathname === '/solutions/brand-design' ? 'active' : ''} to='/solutions/brand-design'>Brand Design</Link></li>
+                <li><Link className={location.pathname === '/solutions/design' ? 'active' : ''} to='/solutions/design'>Design</Link></li>
                 <li><Link className={location.pathname === '/solutions/media' ? 'active' : ''} to='/solutions/media'>Media</Link></li>
                 <li><Link className={location.pathname === '/solutions/production' ? 'active' : ''} to='/solutions/production'>Production</Link></li>
-                <li><Link className={location.pathname === '/solutions/logix' ? 'active' : ''} to='/solutions/logix'>Logix</Link></li>
+                <li><Link className={location.pathname === '/solutions/Keyword' ? 'active' : ''} to='/solutions/keyword'>Keyword</Link></li>
               </ul>
             </div>
 
@@ -153,7 +153,7 @@ const Header = () => {
                 <ul>
                   <li>
                       <div className='NBItemTitle'>
-                        <span>Blogs</span> | 
+                        <span>Blog </span> | 
                         <Link to='https://www.agency09.co/simplifyingtheweb/' target='_blank' >View All</Link>
                       </div>
 
@@ -196,9 +196,9 @@ const Header = () => {
 
             <div className='menu09Item menu09Item01'>
               <ul>
-                <li><Link to='/'>Start a Project</Link></li>
-                <li><Link to='/'>Partner with US</Link></li>
-                <li><Link to='/join-the-team' className={location.pathname === '/join-the-team' ? 'active' : ''} >Join the team</Link></li>
+              <li><Link to='/connect#form'>REQUEST A SERVICE</Link></li>
+              <li><Link to='/connect#form'>JOIN THE TEAM</Link></li>
+              <li><Link to='/connect#form'>PARTNER WITH US</Link></li>
               </ul>
             </div>
 
@@ -224,12 +224,10 @@ const Header = () => {
 
                   <TabPanel>
                     <p>Media City,<br/>Dubai </p>
-                    <Link to='https://maps.google.com/maps?ll=25.076022,55.227488&z=4&t=m&hl=en&gl=IN&mapclient=embed&q=Dubai%20United%20Arab%20Emirates' target='_blank'>View Map</Link>  
                   </TabPanel>
 
                   <TabPanel>
                     <p>North Adelaide,<br/>Adelaide 5006</p>
-                    <Link to='https://maps.google.com/maps?ll=-34.906967,138.594298&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=6105002202757528315' target='_blank'>View Map</Link>  
                   </TabPanel>
 
                 </Tabs>

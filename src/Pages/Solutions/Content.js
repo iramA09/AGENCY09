@@ -2,33 +2,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
+import GetQuote from '../../Components/Forms/GetQuote';
+
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
-import Transitions from '../../Hooks/Transitions';
-import RippleButton from '../../Hooks/RippleButton';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import LogosSlider from '../../Components/LogosSlider';
+import { useMediaQuery } from 'react-responsive';
 
 import { PiStarFourFill } from "react-icons/pi";
 import { GoNorthStar } from "react-icons/go";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-// Tabs
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-// Tabs End
-
 // Images
 import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/pattern.png';
+import pattern from '../../Assets/Images/icons/patternContent.jpg';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
 import starY from '../../Assets/Images/icons/star.png';
-import corporateWebsite from '../../Assets/Images/corporateWebsite.jpg';
 
 import chatbot from '../../Assets/Images/tools/chatbot.png';
 import one_dashboard from '../../Assets/Images/tools/one_dashboard.png';
@@ -117,8 +112,8 @@ const testimonialSlider = {
     {
       breakpoint: 968,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
     },
     {
@@ -136,89 +131,50 @@ const testimonialSlider = {
 
 const Content = () => {
   useLenisScroll();
+  const [OpenModalGetQuote, setOpenModalGetQuote] = React.useState(false);
 
-//Tools Data
-  const toolsData = [
-    {
-        link: '#',
-        image: chatbot,
-        titale: 'Chatbot',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: website_audit,
-        titale: 'website audit',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: url_builder,
-        titale: 'url builder',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: ticketing_system,
-        titale: 'ticketing system',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: one_dashboard,
-        titale: 'ONE Dashboard',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    }
-  ];
-//Tools Data End
 
-// Approach Data
-const ApproachData = [
+// Services Data
+  const servicesData = [
     {
-      number: '01',
-      tag: 'Preparation',
-      title: 'User Study',
-      text: 'Device Based & Psychological Insights'
+      key: "0",
+      header: "Mainline Advertising",
+      description: "Focus on reaching your target audience through traditional mediums such as television, radio, print, and outdoor advertising. We create compelling campaigns that capture attention and drive results.",
+      tags: [],
     },
     {
-      number: '02',
-      tag: 'Start',
-      title: 'User Study',
-      text: 'User Journey & WireFrame'
+      key: "1",
+      header: "Social Communication",
+      description: "Harness the power of social media. Develop engaging content and strategic campaigns to connect with your audience on platforms like Facebook, Instagram, Twitter, LinkedIn and Youtube, maximizing brand visibility and engagement.",
+      tags: [],
     },
     {
-      number: '03',
-      title: 'The User Interface',
-      text: 'Design & Proto Type'
+      key: "2",
+      header: "HR Communication & Employer Branding",
+      description: "Strengthen your employer brand and enhance internal communication with our HR communication services. From employee engagement initiatives to employer branding campaigns - attract, retain, and motivate top talent.",
+      tags: [],
     },
     {
-      number: '04',
-      title: 'Development',
-      text: 'Coding'
+      key: "3",
+      header: "Channel and Distribution Communication",
+      description: "Optimize your channel and distribution communication strategies to drive sales and enhance partner relationships. Develop targeted communication plans and collateral to support your distribution channels and maximize market penetration.",
+      tags: [],
     },
     {
-      number: '05',
-      title: 'Quality Check',
-      text: 'VAPT - Browsers'
+      key: "4",
+      header: "Buildings IP’s",
+      description: "Unlock the potential of your brand through the creation of innovative content and digital-based intellectual properties (IP's). We specialize in developing unique and engaging content assets that resonate with your audience and reinforce your brand's identity",
+      tags: [],
     },
     {
-      number: '06',
-      title: 'Pre Launch Check Points',
-      text: 'Search Related & Auto Responses'
-    },
-    {
-      number: '07',
-      tag: 'Finish',
-      title: 'Live',
-      text: 'Device Based and Psychological Insights '
-    },
-    {
-      number: '08',
-      title: 'Maintenance',
-      text: 'Device Based and Psychological Insights '
+      key: "5",
+      header: "Amplifying Events",
+      description: "Elevate your brand's presence at events with our expert event coverage and content creation services. We specialize in capturing the essence of your events through compelling photography, videography, and live social media coverage.",
+      tags: [],
     },
   ];
-// Approach Data End
+// Services Data
+
 
 
 //CaseStudy Data
@@ -288,10 +244,57 @@ const testimonialData = [
 ];
 //testimonaialSlider End
 
+
+// FAQS
+const faqsData = [
+  {
+    key: "0",
+    question: "1. What sets AGENCY09 apart in the realm of brand communication?",
+    answer: "AGENCY09 distinguishes itself through a unique blend of creativity and strategic thinking. We leverage our expertise to craft communication solutions that not only captivate audiences but also drive tangible results for our clients."
+  },
+  {
+    key: "1",
+    question: "2. What types of services does AGENCY09 offer in brand communication?",
+    answer: "AGENCY09 offers a comprehensive range of services, including mainline advertising, social communication, HR communication & employer branding, channel and distribution communication, event coverage and content creation, and the creation of various content and digital-based intellectual properties (IP's)."
+  },
+  {
+    key: "2",
+    question: "3. How does AGENCY09 approach event coverage and content creation?",
+    answer: "When it comes to event coverage and content creation, we prioritize capturing the essence of each event through compelling photography, videography, and live social media coverage. Our goal is to create engaging event highlights and post-event content that resonates with your audience long after the event has ended."
+  },
+  {
+    key: "3",
+    question: "4. What industries does AGENCY09 serve?",
+    answer: "AGENCY09 serves clients across a diverse range of industries, including but not limited to technology, healthcare, consumer goods, finance, and entertainment. Our adaptable approach allows us to tailor our services to meet the unique needs of each industry."
+  },
+  {
+    key: "4",
+    question: "5. How can AGENCY09 help my brand stand out in a crowded marketplace?",
+    answer: "AGENCY09 specializes in developing impactful brand communication strategies that cut through the noise and resonate with your target audience. Whether it's through creative advertising campaigns, engaging social media content, or immersive event experiences, we're committed to helping your brand stand out and make a lasting impression."
+  },
+  {
+    key: "5",
+    question: "6. What is the process for requesting a quote from AGENCY09?",
+    answer: "Requesting a quote from AGENCY09 is simple. Just reach out to us through our contact page or email address, and one of our team members will be in touch to discuss your specific needs and provide you with a personalized quote tailored to your project requirements."
+  },
+  {
+    key: "6",
+    question: "7. Can I see examples of AGENCY09's past work?",
+    answer: "Absolutely! You can explore our case studies section to see real-world examples of how we've helped our clients achieve their goals through our brand communication solutions. From successful advertising campaigns to impactful employer branding initiatives, our case studies showcase the diverse range of industries and challenges we've tackled."
+  },
+  {
+    key: "7",
+    question: "8. How does AGENCY09 ensure consistency across different communication channels?",
+    answer: "At AGENCY09, we understand the importance of consistency in brand communication. That's why we develop comprehensive brand guidelines for our clients, which outline specifications for logos, color palettes, typography, and messaging. These guidelines ensure that your brand maintains a cohesive and recognizable identity across all touchpoints."
+  },
+];
+// FAQS End
+
+ 
+
   return (
     <>
       <Header />
-      <Transitions>
       <div className="spacer"></div>
 
         <section className='SolutionsSecAbout'>
@@ -299,13 +302,11 @@ const testimonialData = [
             <div className='SolutionsRow'>
                 <div className='SolutionsCol'>
                     <div className='SolutionsTag'><span className='blackB white'><GoNorthStar className='yellow'/> Content</span></div>
-                    <h1 className='sizeH1 uppercase'>Exceptional<br/>Digital Products</h1>
-                    <h3 className='sizeH4 uppercase pt-10 pb-10'>On-Time. On-Budget. On-Point.</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries creators of Logix</p>
+                    <h1 className='sizeH1 uppercase'>Transforming Communication: Where Creativity Meets Strategy</h1>
+                    <p>We believe that communication is more than just conveying a message—it's about creating connections, sparking conversations, and driving meaningful actions. With a blend of creativity and strategic thinking, we specialize in crafting communication solutions that resonate with your audience, leaving a lasting impact on your brand's journey.
+                    </p>
                                 
-                    <div className='btnSpaceM pt-30'>     
-                        <RippleButton to="#" className="btnDark fontM"><span>Let’s Talk</span></RippleButton>
-                    </div>
+               
 
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
@@ -335,208 +336,65 @@ const testimonialData = [
         </div>
         </section>
 
-        {/* Calculat */}
-        <section className='Calculat'>
-            <div className='container'>
-
-            {/* Calculat */}
-            <div className='CalculatRow'>
-                <div className='CalculatCol CalculatColA bounce'>
-                <div className='CalculatColIn'><h4>500+</h4><p> Projects<br/> Delivered <PiStarFourFill /></p></div>
-                </div>
-                <div className='CalculatCol CalculatColB'>
-                <div className='CalculatColIn'><h4>11</h4><p>Years <br/>Of Experience <PiStarFourFill /></p></div>
-                </div>
-                <div className='CalculatCol CalculatColC'>
-                <div className='CalculatColIn'><h4>20+</h4><p>Technologies <br/>Supported <PiStarFourFill /></p></div>
-                </div>
-                <div className='CalculatCol CalculatColD'>
-                <div className='CalculatColIn'><h4>20+</h4><p>Tech <br/>Professionals <PiStarFourFill /></p></div>
-                </div>
-            </div>
-            {/* Calculat End */}
-            <div className='strokeB'>
-                <SVGCurveLine/>
-            </div>         
-            </div>
-        </section>
-        {/* Calculat End */}
         
-        <section className='solutionsSecServices'>
+        <section className='solutionsSecServices' id='services'>
             <div className='container'>
-                
-                <div className='Heading center HeadingIcon'>
-                <h2 className='sizeH1 uppercase'>
-                Amplifying Business Progress<br/>
-                    <span className='iconSVG'>
-                    <i className='iconF'>
-                        <img src={starY} alt='Star Icon' />
-                    </i>
-                    </span>
-                    Through Smart Solutions
-                    <span className='iconSVG'>
-                    <i className='iconF'>
-                        <img src={starY} alt='Star Icon' />
-                    </i>
-                    </span>
-                </h2>
-                </div>
 
-                <div className='btnSpaceM pt-30 center pb-40'>     
-                    <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
+              <div className='solutionsSecServicesFaq'>
+
+
+              <div className='Heading center HeadingIcon pb-20'>
+                  <h2 className='sizeH1 uppercase'>
+                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      Services
+                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                  </h2>
                 </div>
 
 
 
-                <div className='solutionsSecServicesFaq'>
-                    <h3 className='sizeH5 uppercase bold'>Services</h3>
-                    <div className='solutionsSecServicesFaqList'>
-                    <Accordion defaultActiveKey="0">
-                    <Accordion.Item eventKey="0">
-                            <Accordion.Header>Corporate Website</Accordion.Header>
-                            <Accordion.Body>
-                                <div className='solutionsWrap'>
-                                    <div className='solutionsCol'>
-                                    <p>Explore our web development expertise to maximize your web presence which can help you captivate the audience by delivering unparalleled web experience</p>
-                                    <div className='solutionsWrapTag'>
-                                        <ul>
-                                            <li><Link>PHP</Link></li>
-                                            <li><Link>WordPress</Link></li>
-                                            <li><Link>Drupal</Link></li>
-                                            <li><Link>AngularJs</Link></li>
-                                            <li><Link>NodeJs</Link></li>
-                                            <li><Link>Laravel</Link></li>
-                                            <li><Link>ReactJs</Link></li>
-                                        </ul>
-                                    </div>
-                                    
-                                <div className='btnSpaceM pt-30 '>     
-                                    <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
-                                </div>
-                                </div>
-
-                                <div className='solutionsCol'>
-                                    <img src={corporateWebsite} alt="corporateWebsite" />
-                                </div>
-                                
-                                </div>    
-                            </Accordion.Body>
-                        </Accordion.Item>
-            
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>Ecommerce Development</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="2">
-                            <Accordion.Header>Web Application</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="3">
-                            <Accordion.Header>Mobile Applications</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="4">
-                            <Accordion.Header>ERP Systems</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="5">
-                            <Accordion.Header>Software</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="6">
-                            <Accordion.Header>HR Portal</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="7">
-                            <Accordion.Header>Marketing Automations</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-            
-                    </Accordion>
-
-                    </div>
+                <div className='solutionsSecServicesFaqList'>
+                  <Accordion >
+                    {servicesData.map(service => (
+                      <Accordion.Item eventKey={service.key} key={service.key}>
+                        <Accordion.Header>{service.header}</Accordion.Header>
+                        <Accordion.Body>
+                          <div className='solutionsWrap'>
+                            <div className='solutionsCol'>
+                              <p>{service.description}</p>
+                              <div className='solutionsWrapTag'>
+                                <ul>
+                                  {service.tags.map((tag, index) => (
+                                    <li key={index}><Link>{tag}</Link></li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </Accordion.Body>
+                      </Accordion.Item>
+                    ))}
+                  </Accordion>
                 </div>
+              </div>
 
             </div>
         </section>
 
-        <section className='solutionsSecTools'>
-            <div className='container'>
-                
-                <div className='Heading center HeadingIcon'>
-                <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                        TOOLS
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                </h2>
-                </div>
 
 
+       
 
-            <Slider {...toolsSlider} className='toolsSlider slick-slider'>
-            {toolsData.map((tools, index) => (
-                <div key={index} className='item'>
-                <div className='toolsCol'>
-                    <Link to={tools.link}>
-                        <div className='toolsImg'><img src={tools.image}/></div>
-                        <div className='toolsTitale'>{tools.titale}</div>
-                        <div className='textDecoration'><p>{tools.decoration}</p></div>
-                        <div className='toolsBtn'><IoIosArrowDroprightCircle /></div>
-                    </Link>
-                </div>
-                </div>
-            ))}
-            </Slider>
-
-        </div>
-        </section>
-
-        <div className='container'>
-                <div className='strokeB'><SVGCurveLine/></div>      
-        </div>
-
-        <section className='solutionsSecApproach'>
-          <div className='container'>
-            <h3 className='sizeH5 uppercase bold'>A09 Approach</h3>
-            <div className='solutionsSecApproachList'>
-              {ApproachData.reduce((acc, item, index) => {
-                if (index % 4 === 0) {
-                  acc.push(<ul key={`ul-${index}`} className="solutionsSecApproachListRow">{[]}</ul>);
-                }
-                const ulIndex = Math.floor(index / 4);
-                acc[ulIndex].props.children.push(
-                  <li key={index}>
-                    <div className='solutionsSecApproachListCol'>
-                      <div className='solutionsSecApproachListColNum'><span>{item.number}</span> <span className='solutionsSecApproachListColNumTag'>{item.tag}</span></div>
-                      <div className='solutionsSecApproachListColText'>
-                        <h3>{item.title}</h3>
-                        <p>{item.text}</p>
-                      </div>    
-                    </div>
-                  </li>
-                );
-                return acc;
-              }, [])}
-            </div>
-          </div>
-        </section>       
-
+  
 
 
         <section className='solutionsSecCaseStudy'>
             <div className='container'>
 
             <div className='Heading center HeadingIcon'>
-            <h3 className='sizeH5 uppercase bold pb-20'>Case studies</h3>
-                <h2 className='sizeH1 uppercase'>
+                 <h2 className='sizeH1 uppercase'>
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    Lorem ipsum dolor
+                    Case studies
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
                 </h2>
             </div>
@@ -565,7 +423,7 @@ const testimonialData = [
                 </Slider>
 
             <div className='btnSpaceEx center'>     
-                <RippleButton to="/work" className="btnDark fontM"><span>View All</span></RippleButton>
+                <Link to="../work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
 
             </div>
@@ -573,137 +431,96 @@ const testimonialData = [
             </div>
         </section>  
 
-
-
-
+        <div className='container'>
+                <div className='strokeB'><SVGCurveLine/></div>      
+        </div>
 
         {/* Work Logos */}
-        <section className='hWorkLogos'><div className='container'>
-            {/* <hr className='hrTop'/> */}
-            <div className='strokeB hrTop'>
-                <SVGCurveLine/>
-            </div>
-            
             <LogosSlider />
-
-            <div className='strokeB hrBottom'>
-                <SVGCurveLine/>
-            </div>
-        </div></section> 
         {/* Work Logos End */} 
 
 
 
-        {/* TESTIMONIALS */}   
-        <section className='greenB testimonialSec'>
-                <div className='container'>
 
-                <div className='Heading center HeadingIcon'>
-                    <h2 className='sizeH1 uppercase'>
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                        TESTIMONIALS
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    </h2>
-                </div>
 
+      
+
+      {/* TESTIMONIALS */}   
+      <section className='greenB testimonialSec'><div className='container'>
+
+        <div className='Heading center HeadingIcon'>
+            <h2 className='sizeH1 uppercase'>
+                <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                TESTIMONIALS
+                <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+            </h2>
+        </div>
 
         <Slider {...testimonialSlider} className='testimonialSlider slick-slider'>
           {testimonialData.map((testimonial, index) => (
             <div key={index} className='item'>
               <div className='awardsCol'>
-              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
               <div className='textwithimg'>
-                <div className='awardsYear'><h5>{testimonial.name}</h5></div>
-                <div className='awardsDesignation'><p>{testimonial.designation}</p></div>
-                <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
-                </div>
+              <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
+              
+                <div className='awardsData'>
+                  <h5>{testimonial.name}</h5>
+                  <p>{testimonial.designation}</p></div>
+              </div>
+              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
+
               </div>
             </div>
           ))}
         </Slider>
 
-        <div className='btnSpaceEx center'>     
-            <RippleButton to="#" className="btnDark fontM"><span>View All</span></RippleButton>
+        <div className='btnSpaceEx center pb-0'>     
+            <Link to="../testimonials" className="btnDark fontM ripple-button"><span>View All</span></Link>
         </div>
 
+      </div></section> 
+      {/* TESTIMONIALS End */} 
+ 
 
-        </div></section> 
-        {/* TESTIMONIALS End */} 
+      {/* FAQ */}
+      <section className='faqContent'>
+        <div className='container'>
 
-        
-
-        {/* Free Audit */}   
-        <section className='pinkB freeAuditSec'><div className='container'>
-          <div className='freeAuditSecRow'>
-                <div className='freeAuditSecCol'>
-                    <h3 className='sizeH5 uppercase bold pb-20 white'>Free Audit</h3>
-                    <h2 className='sizeH1 uppercase white'>Uncover the untapped potential of your website</h2>
-                </div>
-
-                <div className='freeAuditSecCol'>
-                    <Link to=''>
-                      <img src={clickHere} alt='Click Here' />
-                    </Link>
-                </div>
-            </div>
-        </div></section> 
-        {/* Free Audit End */} 
-
-
-        
-      <section className='faqContent'><div className='container'>
-        <h2 className='sizeH5 uppercase bold pb-20'>FAQS</h2>
-        <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>1. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>2. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>3. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>4. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>5. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
+        <div className='Heading center HeadingIcon pb-20'><h2 className='sizeH1'>
+          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+              FAQs
+          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+        </h2></div>
+          <Accordion>
+            {faqsData.map(faq => (
+              <Accordion.Item eventKey={faq.key} key={faq.key}>
+                <Accordion.Header>{faq.question}</Accordion.Header>
+                <Accordion.Body>
+                  {faq.answer}
+                </Accordion.Body>
+              </Accordion.Item>
+            ))}
           </Accordion>
-      </div></section>
+        </div>
+      </section>
+      {/* FAQ */}
 
-
-       {/* Free Audit */}   
-       <section className='yellowB center'><div className='container'>
+      {/* Business  */}   
+      <section className='yellowB center getSolutions'><div className='container'>
                 <div className='Heading  HeadingIcon'>
-                    <h2 className='sizeH1 uppercase'><GoNorthStar className='pink' /> Lorem ipsum dolor sit amet, <GoNorthStar className='pink' /> <br/> consectetur adipiscing elit?</h2>
+                    <h2 className='sizeH3 uppercase'>Ready to take your brand communication to the next level? <br/>Contact us today for a personalized quote </h2>
 
                         
-                    <div className='btnSpaceEx center'>     
-                        <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
+                    <div className='pt-30 center'>     
+                    <Link onClick={() => { setOpenModalGetQuote(true); }}  className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
                     </div>
                 </div>
         </div></section> 
-        {/* Free Audit End */} 
+        {/* Business End */} 
 
-
-      </Transitions>
       <Footer />
+      {OpenModalGetQuote && <GetQuote closeModal={setOpenModalGetQuote} />}
+
     </>
   );
 };

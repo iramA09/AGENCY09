@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import RippleButton from '../../Hooks/RippleButton';
-
+import { Link } from 'react-router-dom';
 function ParterWithUs() {
   const [errorMessage, setErrorMessage] = useState('');
   const [formData, setFormData] = useState({
@@ -122,6 +121,15 @@ function ParterWithUs() {
             />
             {errors.email && <span className='errorText'>{errors.email}</span>}
           </div>
+          <div className='form-group'>
+          <select className='form-control' >
+            <option value="Select">Select</option>
+            <option value="S1">S1</option>
+            <option value="S2">S2</option>
+            <option value="S3">S3</option>
+          </select>
+
+        </div>
         </div>
         <div className='FormGridS1'>
           <div className='form-group'>
@@ -144,6 +152,8 @@ function ParterWithUs() {
       <div className="form_response">
         {errorMessage && <span className="error">{errorMessage}</span>}
       </div>
+
+      
     </div>
   );
 }

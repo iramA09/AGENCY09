@@ -291,7 +291,6 @@ const testimonialData = [
   return (
     <>
       <Header />
-      <Transitions>
       <div className="spacer"></div>
 
         <section className='SolutionsSecAbout'>
@@ -702,7 +701,6 @@ const testimonialData = [
         {/* Free Audit End */} 
 
 
-      </Transitions>
       <Footer />
     </>
   );

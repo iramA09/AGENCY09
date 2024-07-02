@@ -1,76 +1,119 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Transitions from '../Hooks/Transitions';
-import useLenisScroll from '../Hooks/useLenisScroll';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import { GoNorthStar } from "react-icons/go";
-import RippleButton from '../Hooks/RippleButton';
+import { PiStarFourFill } from "react-icons/pi";
 import { PiArrowCircleRightThin } from "react-icons/pi";
-import Calculat from '../Components/Calculat';
 import WorkingWithUs from '../Components/WorkingWithUs';
 import LifeAtA09 from '../Components/LifeAtA09';
 import Opportunities from '../Components/Opportunities';
 import Accordion from 'react-bootstrap/Accordion';
+import useLenisScroll from '../Hooks/useLenisScroll';
 
 const Careers = () => {
-useLenisScroll();
+  useLenisScroll();
+  const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash === "#Opportunities") {
+            const element = document.getElementById("Opportunities");
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
+
+
+
+// Calculat Data
+const calculatData = [
+  {
+    key: "A",
+    number: "85+",
+    description: "Creative <br/>Minds",
+  },
+  {
+    key: "B",
+    number: "15+",
+    description: "Industry<br/> Awards",
+  },
+  {
+    key: "C",
+    number: "40%",
+    description: "Internal <br/>Promotions",
+  },
+  {
+    key: "D",
+    number: "120+",
+    description: "Training Programs<br/> Annually ",
+  }
+];
+// Calculat Data End
+
 
   return (
     <>
       <Header />
-      <Transitions>
       <div className="spacer"></div>
         
       <section><div className='container'>
       <div className='aboutS'>  
       <div className='aboutScol'>
-      <h1 className='sizeH1 uppercase'>People First</h1>  
+      <h1 className='sizeH1 uppercase'>People First,<br/> Creativity Always</h1>  
       <div className='arrowRightH'><PiArrowCircleRightThin /></div>
       </div>      
       <div className='aboutScol'>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy  </p>
+      <p>When you join AGENCY<b>09</b>, you’re not just starting a job – you’re becoming part of a vibrant, supportive ecosystem that values your ideas and helps you grow. We believe in keeping things fun and flexible, balancing hard work with plenty of play. From professional development opportunities to team outings and creative brainstorming sessions, we make sure our environment is as dynamic and engaging as the work we do. </p>
       </div> 
       </div> 
       </div></section>
 
     {/* Calculat */}
     <section className='Calculat pb-0'>
-        <div className='container'>
-           <Calculat /> 
+      <div className='container'>
+        <div className='CalculatRow'>
+            {calculatData.map(item => (
+              <div key={item.key} className={`CalculatCol CalculatCol${item.key}`}>
+                <div className='CalculatColIn'>
+                  <h4>{item.number}</h4>
+                  <p><span  dangerouslySetInnerHTML={{ __html: item.description }}></span> <PiStarFourFill /></p>
+                </div>
+              </div>
+            ))}
         </div>
+      </div>
     </section>
     {/* Calculat End */}
 
-
-    {/* WorkingWithUs */}
-    <section className='faqContent yellowB'><div className='container'>
-        <div className='Heading center HeadingIcon pb-30'>
-        <h2 className='sizeH1 uppercase'>
-            <span className='iconSVG white'><GoNorthStar /></span>
-             Working with Us 
-            <span className='iconSVG white'><GoNorthStar /></span>
-        </h2>
-        </div>
-        <WorkingWithUs />
-    </div></section>
-    {/* WorkingWithUs */}
-
     {/* LifeAtA09 */}
-    <section className='LifeAtA09'><div className='container'>
-        <div className='Heading center HeadingIcon pb-30'>
+    <section className='LifeAtA09' id='LifeAtA09'><div className='container'>
+        <div className='Heading center HeadingIcon'>
         <h2 className='sizeH1 uppercase'>
-            <span className='iconSVG yellow'><GoNorthStar /></span>
+            <span className='iconSVG blue'><GoNorthStar /></span>
              Life at 09
-            <span className='iconSVG yellow'><GoNorthStar /></span>
+            <span className='iconSVG blue'><GoNorthStar /></span>
         </h2>
         </div>
         <LifeAtA09 />
     </div></section>
     {/* LifeAtA09 */}
 
-    {/* WorkingWithUs */}
-    <section className='Opportunities greenB'><div className='container'>
+    
+    {/* LifeAtA09 */}
+    <section className='checkPlay'><div className='container'>
+        <div className='Heading center HeadingIcon pb-30'>
+        <Link to='https://www.youtube.com/@agency09official/playlists' target='_blank'  className='sizeH1 uppercase btn'>
+             Check out our playlist on YouTube
+        </Link>
+        </div>
+    </div></section>
+    {/* LifeAtA09 */}
+
+
+    
+    {/* Opportunities */}
+    <section className='Opportunities greenB' id='Opportunities'><div className='container'>
         <div className='Heading center HeadingIcon pb-30'>
         <h2 className='sizeH1 uppercase'>
             <span className='iconSVG white'><GoNorthStar /></span>
@@ -80,12 +123,31 @@ useLenisScroll();
         </div>
         <Opportunities />
     </div></section>
+    {/* Opportunities */}
+
+    {/* WorkingWithUs */}
+    <section className='faqContent '><div className='container'>
+        <div className='Heading center HeadingIcon pb-30'>
+        <h2 className='sizeH1 uppercase'>
+            <span className='iconSVG yellow'><GoNorthStar /></span>
+             Working with Us 
+            <span className='iconSVG yellow'><GoNorthStar /></span>
+        </h2>
+        <p className='sizeH4'>We are an independent agency combining content & tech to implement  strategies with results.</p>
+        </div>
+        <WorkingWithUs />
+    </div></section>
     {/* WorkingWithUs */}
 
+
+
     
-    <section className='faqContent'><div className='container'>
+    <section className='faqContent yellowB'><div className='container'>
         <h2 className='sizeH5 uppercase bold pb-20'>FAQS</h2>
-        <Accordion defaultActiveKey="0">
+
+
+
+        <Accordion>
           <Accordion.Item eventKey="0">
             <Accordion.Header>1. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
             <Accordion.Body>
@@ -119,7 +181,6 @@ useLenisScroll();
           </Accordion>
       </div></section>
 
-      </Transitions>
       <Footer />
     </>
   )

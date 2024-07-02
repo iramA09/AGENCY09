@@ -1,93 +1,96 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import HeroBanner from '../Components/HeroBanner';
 import Services from '../Components/Services';
 import ServicesList from '../Components/ServicesList';
 import LogosSlider from '../Components/LogosSlider';
 import Social from '../Components/Social';
-import { motion } from 'framer-motion'; 
 import Calculat from '../Components/Calculat';
 import Items from '../Components/WhatsNew';
 import WeMakeIdeasPerform from '../Components/WeMakeIdeasPerform';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
 import useLenisScroll from '../Hooks/useLenisScroll';
-import RippleButton from '../Hooks/RippleButton';
 import animateGsap from '../Components/Animation/HomeGsap'; 
-import Transitions from '../Hooks/Transitions';
 import { IoStarSharp } from "react-icons/io5";
 import { SlArrowRightCircle } from "react-icons/sl";
 import SVGCurveLine from '../Hooks/SVGCurveLine'; 
-
 // Images
-import rgiBG from '../Assets/Images/hero/rgi-bg.png';
-import rgiLogo from '../Assets/Images/hero/rgi-logo.png';
-import ourwork1 from '../Assets/Images/work/ourwork-1.jpg';
-import ourwork2 from '../Assets/Images/work/ourwork-2.jpg';
-import ourwork3 from '../Assets/Images/work/ourwork-3.jpg';
-import ourwork4 from '../Assets/Images/work/ourwork-4.jpg';
+import BARC from '../Assets/Images/work/BARC.jpg';
+import Laffaire from '../Assets/Images/work/Laffaire.jpg';
+import TataMotors from '../Assets/Images/work/TataMotors.jpg';
+import TribeVibe from '../Assets/Images/work/TribeVibe.jpg';
 // Images end
-
 
 // Array of work items
 export const workItems = [
   {
     id: 1,
-    title: 'Lorem Ipsum is simply dummy text of the printing 2',
+    title: '5 Tailored Websites for Tata Motors CV',
     tags: [
       { name: 'Brand Strategy', link: '/' },
       { name: 'Print AD', link: '/' },
       { name: 'Digital', link: '/' }
     ],
-    image: ourwork1,
-    link: '/'
+    image: TataMotors,
+    link: '/work/case-studys/tata-trucks',
+    brand: 'Tata Motors CV',
+    department: 'Tech'
   },
   {
     id: 2,
-    title: 'Lorem Ipsum is simply dummy text of the printing',
+    title: 'Crafting a unique IP for Godrej Laffaire',
     tags: [
       { name: 'Brand Strategy', link: '/' },
       { name: 'Print AD', link: '/' },
       { name: 'Digital', link: '/' }
     ],
-    image: ourwork2,
-    link: '/'
+    image: Laffaire,
+    link: '/work/case-studys',
+    brand: 'Godrej Laffaire',
+    department: 'Tech'
   },
   {
     id: 3,
-    title: 'Lorem Ipsum is simply dummy text of the printing',
+    title: 'Award-Winning Annual Report for BARC India',
     tags: [
       { name: 'Brand Strategy', link: '/' },
       { name: 'Print AD', link: '/' },
       { name: 'Digital', link: '/' }
     ],
-    image: ourwork3,
-    link: '/'
+    image: BARC,
+    link: '/work/case-studys',
+    brand: 'BARC India',
+    department: 'Tech'
   },
   {
     id: 4,
-    title: 'Lorem Ipsum is simply dummy text of the printing',
+    title: 'Tech based Campaign Ambassador Program for Tribevibe',
     tags: [
       { name: 'Brand Strategy', link: '/' },
       { name: 'Print AD', link: '/' },
       { name: 'Digital', link: '/' }
     ],
-    image: ourwork4,
-    link: '/'
+    image: TribeVibe,
+    link: '/work/case-studys',
+    brand: 'TribeVibe',
+    department: 'Tech'
   },
   
-  {
-    id: 5,
-    title: 'Lorem Ipsum is simply dummy text of the printing',
-    tags: [
-      { name: 'Brand Strategy', link: '/' },
-      { name: 'Print AD', link: '/' },
-      { name: 'Digital', link: '/' }
-    ],
-    image: ourwork4,
-    link: '/'
-  },
+  // {
+  //   id: 5,
+  //   title: 'Elevated Employer Branding Content for Aditya Birla Capital',
+  //   tags: [
+  //     { name: 'Brand Strategy', link: '/' },
+  //     { name: 'Print AD', link: '/' },
+  //     { name: 'Digital', link: '/' }
+  //   ],
+  //   image: ABC,
+  //   link: '/',
+  //   brand: 'Aditya Birla Capital',
+  //   department: 'Tech'
+  // },
+  
 ];
 
 const Home = () => {
@@ -99,83 +102,13 @@ const Home = () => {
   }, []);
 
 
-  // Hero
-  const homescreenSliderSettings = {
-    dots: true,
-    arrows: false,
-    infinite: false,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    speed: 1000,
-    draggable: true,
-    swipe: true,
-    touchMove: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  }; 
-
-  const slideData = [
-    { 
-      image: rgiBG,
-      imageLogo: rgiLogo,
-      title: "Reliance<br> General<br> Insurance<br> Products",
-      description: 'Lorem Ipsum is simply dummy text of the printing ',
-      btnLink: '#',
-      className: 'rgiSlider',
-    },
-    { 
-      image: '',
-      imageLogo: '',
-      title: "Lakme <br/>Fashion <br/>Week",
-      description: 'Lorem Ipsum is simply dummy text of the printing ',
-      btnLink: '#',
-      className: 'lakmeSlider',
-    },
-  ];
-  // Hero End
-
-
-  
 
   return (
     <>
       <Header />
-        <div className='background'></div>
-
-
-      <Transitions>
 
       {/* Hero */}
-        <section className='heroRow'>
-        <div className='hero heroHome'>
-          <div className='HeroSlider'>
-            <Slider {...homescreenSliderSettings} className="homescreen-slick slick-slider">
-              {slideData.map((slide, index) => (
-                <motion.div 
-                  key={index} 
-                  className={`item ${slide.className}`} 
-                  whileDrag={{ scale: 0.97 }}
-                  whileTap={{ scale: 0.97}} 
-                >
-                  <div className='container'>
-                    <div className='HeroImage'>
-                      <div className='Herobg'><img src={slide.image} alt={`Slide ${index} - ${slide.image}`} /></div>
-                      <div className='HerobgLogo'><img src={slide.imageLogo} alt={`Slide ${index} - ${slide.image}`} /></div>
-                      <div className='HeroText'>
-                        {slide.title && <h1 dangerouslySetInnerHTML={{ __html: slide.title }} />}
-                        {slide.description && <p>{slide.description}</p>}
-                        <div className='HeroBtn'>
-                          {slide.btnLink && <RippleButton className="btnWhite" to={slide.href}><span>Know More</span></RippleButton>}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-        </section>
+        <HeroBanner/>
       {/* Hero */}
         
 
@@ -184,13 +117,11 @@ const Home = () => {
       <div className='container'>
         <div className='Heading center'>  
           
-        <h2 className='sizeH1 uppercase workTitle'><span>We</span> <span>grow</span> <span>brands</span> <span><i className="iconF arrowBtn"><SlArrowRightCircle /></i></span> <br/> <span>with</span> <span className='underline'>ideas <hr/></span> <span>for</span> <span>content,</span> <span>technology,</span> <br /> 
-        <span><i className="iconF"><IoStarSharp /></i></span><span>design & data.</span><span><i className="iconF"><IoStarSharp /></i></span></h2>
-
+        <h2 className='sizeH1 uppercase workTitle'><span>We</span> <span>grow</span> <span>brands</span> <span><i className="iconF arrowBtn"><SlArrowRightCircle /></i></span> <br/> <span><i className="iconF"><IoStarSharp /></i></span> <span>with</span>  <span className='underline'>ideas <hr/></span> <span>for</span> <span>content,</span> <span>technology, </span>
+       <span>design & data.</span><span><i className="iconF"><IoStarSharp /></i></span></h2>
           <div className='btnSpaceEx'>     
             <div className="btnDark ripple-button titalBtn"><span>Our Work</span></div>
           </div>
-
         </div>
 
 
@@ -202,6 +133,13 @@ const Home = () => {
                     <div className='cursor09'></div>
                     <div className='workGridItemImg'>
                       <img src={item.image} alt={item.title}/>
+                      <div className='workGridItemHover'>
+                          <div className='workGridItemHoverIn'>
+                              <h3>{item.title}</h3>
+                              <h4>{item.brand}</h4>
+                              <p>{item.department}</p>
+                          </div>
+                      </div>
                     </div>
                     <div className='workGridItemText'>
                       <h3>{item.title}</h3>
@@ -218,7 +156,7 @@ const Home = () => {
           </div>
 
           <div className='btnSpaceEx center'>     
-            <RippleButton to="/work" className="btnDark fontL"><span>See More Work</span></RippleButton>
+            <Link to="/work/case-studies" className="btnDark fontL ripple-button"><span>See More Work</span></Link>
           </div>
 
       </div>
@@ -245,18 +183,13 @@ const Home = () => {
     
 
     {/* Work Logos */}
-    <section className='hWorkLogos'><div className='container'>
-          {/* <hr className='hrTop'/> */}
-          <div className='strokeB hrTop'>
-            <SVGCurveLine/>
-          </div>
-          
-           <LogosSlider />
-
-           <div className='strokeB hrBottom'>
-            <SVGCurveLine/>
-          </div>
-    </div></section> 
+    <div className='strokeB container'>
+          <SVGCurveLine/>
+    </div>
+       <LogosSlider />
+    <div className='strokeB container'>
+          <SVGCurveLine/>
+    </div>
     {/* Work Logos End */}
 
 
@@ -276,7 +209,6 @@ const Home = () => {
       <Social />                  
     {/* Social End */}
       
-      </Transitions>
       
       <Footer />
     </>

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Services from '../Components/Services';
-import Transitions from '../Hooks/Transitions';
 import useLenisScroll from '../Hooks/useLenisScroll';
 import WorkWithUsForm from '../Components/Forms/WorkWithUsForm';
 
@@ -17,7 +16,6 @@ const WorkWithUs = () => {
   return (
     <>
     <Header />
-    <Transitions>
     <div className="spacer"></div>
 
     <section><div className='container'>
@@ -67,7 +65,6 @@ const WorkWithUs = () => {
         <h1 className='sizeH1 uppercase center'>Testimonials</h1>
       </div>
     </section>
-    </Transitions>
 
     <Footer />
       

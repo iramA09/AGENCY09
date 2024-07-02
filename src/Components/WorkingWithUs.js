@@ -1,84 +1,118 @@
-import React from 'react'
+import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 
+const WorkingWithUsDataGrowth = [
+
+  {
+    key: "8",
+    header: "Career Advancement & Scholarships: ",
+    body: "Grow your career with our support and scholarships."
+  },
+  {
+    key: "9",
+    header: "Training & Career Growth:  ",
+    body: "Level up your skills with continuous training."
+  },
+  {
+    key: "10",
+    header: "Team Medical Insurance:  ",
+    body: "We've got your health covered with team insurance."
+  },
+  {
+    key: "11",
+    header: "Rewards & Recognition: ",
+    body: "Shine bright and get rewarded for your awesome work."
+  }
+];
+
+const WorkingWithUsDataLeaves = [
+  
+  {
+    key: "0",
+    header: "Paid Leaves & National Holidays:",
+    body: "Take a break with 21 days of paid time off, plus national holidays!"
+  },
+  {
+    key: "1",
+    header: "Work from Home Policy: ",
+    body: "Rock your PJs while you work from home (2 days a month)."
+  },
+  {
+    key: "2",
+    header: "Flexible Working Hours: ",
+    body: "Flex your schedule to balance work and life your way."
+  },
+  {
+    key: "3",
+    header: "Maternity Leave: ",
+    body: "Enjoy 184 days paid time off for your little one's arrival."
+  },
+  {
+    key: "4",
+    header: "Paternity Leave: ",
+    body: "New dads, take 7 days paid time off for your newborn!"
+  },
+  {
+    key: "5",
+    header: "Menstrual Leaves: ",
+    body: "Ladies, take it easy with 12 paid menstrual leaves a year."
+  },
+  {
+    key: "6",
+    header: "Birthday Off:  ",
+    body: "Celebrate your birthday with a full day off—cake is on us!"
+  },
+  {
+    key: "7",
+    header: "Christmas Leaves:  ",
+    body: "Enjoy extra time off to jingle all the way."
+  },
+  {
+    key: "12",
+    header: "Bereavement Leave:  ",
+    body: "Take 12 days paid time off to heal."
+  }
+];
 
 const WorkingWithUs = () => {
   return (
-    <>
-        <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>Health & Wellbeing</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>Professional Growth</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>Profit Sharing</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>Time Off</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>Leaves</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="5">
-            <Accordion.Header>Parental Leave</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="6">
-            <Accordion.Header>Hardship Leave</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="7">
-            <Accordion.Header>Women’s - Menstrual & Maternity Leaves</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="8">
-            <Accordion.Header>Retirement</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="9">
-            <Accordion.Header>Scholarship Programs - Courses</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="10">
-            <Accordion.Header>Professional Growth</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
+
+
+<>
 
 
 
+    <h4 className='sizeH5 bold pb-10 uppercase'>Growth</h4>
 
-          </Accordion>
-    </>
-  )
+    <Accordion>
+    {WorkingWithUsDataGrowth.map(item => (
+      <Accordion.Item eventKey={item.key} key={item.key}>
+        <Accordion.Header>{item.header}</Accordion.Header>
+        <Accordion.Body>
+          <p>{item.body}</p>
+        </Accordion.Body>
+      </Accordion.Item>
+    ))}
+    </Accordion>
+
+
+    <h4 className='sizeH5 bold pb-10 pt-40 uppercase'>Leaves</h4>
+    <Accordion>
+    {WorkingWithUsDataLeaves.map(item => (
+    <Accordion.Item eventKey={item.key} key={item.key}>
+    <Accordion.Header>{item.header}</Accordion.Header>
+    <Accordion.Body>
+    <p>{item.body}</p>
+    </Accordion.Body>
+    </Accordion.Item>
+    ))}
+    </Accordion>
+
+
+
+</>
+
+  );
 }
 
-export default WorkingWithUs
+export default WorkingWithUs;

@@ -4,15 +4,18 @@ import Footer from '../Components/Footer';
 import Milestones from '../Components/Milestones';
 import Awards from '../Components/Awards';
 import PartnerCompanies from '../Components/PartnerCompanies';
+import WeMakeIdeasPerform from '../Components/WeMakeIdeasPerform';
+
 import ServicesList from '../Components/ServicesList';
+import A09TeamList from '../Components/A09TeamList';
 import SVGCurveLine from '../Hooks/SVGCurveLine'; 
 import Calculat from '../Components/Calculat';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useLenisScroll from '../Hooks/useLenisScroll';
-import RippleButton from '../Hooks/RippleButton';
-import Transitions from '../Hooks/Transitions';
 
+import { IoStarSharp } from "react-icons/io5";
+import { SlArrowRightCircle } from "react-icons/sl";
 // Images
 import ourpurpose from '../Assets/Images/our-purpose.jpg';
 // Images end
@@ -32,45 +35,54 @@ const About = () => {
   }, []);
 
 
-  // Marquee Data
-  const marqueeContent = "<span>Pradnya Satle, Jr. Graphic Designer</span> <span>Aniket Sakpal, Sr. Manager - Strategy</span> <span>Aditya Jadhav, Sr. Art Director</span> <span>Imran Shaikh, Sr. Content Creater</span> <span>Pradnya Satle, Jr. Graphic Designer</span> <span>Aniket Sakpal, Sr. Manager - Strategy</span> <span>Aditya Jadhav, Sr. Art Director</span> <span>Imran Shaikh, Sr. Content Creater</span>"; 
-  // Marquee Data End
-
-
 
   return (
   <>
     <Header />
 
-
-    <Transitions>
     <div className="spacer"></div>
 
  
     <section className='aboutInfo center aboutInfoS1'><div className='container'>
     <div className='aboutInfoRow'>
       <h1 className='sizeH5 uppercase bold bottomS'>About Us</h1>
-      <h2 className='sizeH1 uppercase'>We Grow brands <br /> With ideasa for content, technology, <br />Design, DATA.</h2>  
-    </div>      
+ 
+        <h2 className='sizeH1 uppercase workTitle'><span>We</span> <span>grow</span> <span>brands</span> <span><i className="iconF arrowBtn"><SlArrowRightCircle /></i></span> <br/> <span><i className="iconF"><IoStarSharp /></i></span> <span>with</span>  <span className='underline'>ideas <hr/></span> <span>for</span> <span>content,</span> <span>technology, </span>
+       <span>design & data.</span><span><i className="iconF"><IoStarSharp /></i></span></h2>
+        
+           </div>      
     </div></section>
 
     {/* Calculat */}
     <section className='Calculat'>
         <div className='container'>
            <Calculat /> 
-           <div className='strokeB'>
-             <SVGCurveLine/>
-           </div>         
         </div>
     </section>
     {/* Calculat End */}
 
+  
+
     
-    <section className='aboutInfo center aboutInfoS2'><div className='container'>
-    <div className='aboutInfoRow'>
-      <h2 className='sizeH1 uppercase'>We are an independent <br /> agency combining <br />content & tech to implement  <br /> growth strategies.</h2>  
-    </div>      
-    </div></section>
+    {/* content & tech */}
+    <section className='hContTech'>
+        <div className='hContTechPin'></div>
+        <div className='hContTechColorBox'></div>
+
+          <div className='hContTechFix'>
+          <div className='container'>
+
+          <div className='hContTechRow'>
+              <div className='hContTechCol hContTechColText'>
+                <h3 className='sizeH1 uppercase'>We make <span className='underline'>ideas<hr/></span> perform</h3>
+                <p>We are an independent agency combining <br/> <b><i>content & tech</i></b> to implement growth strategies with results.</p>
+              </div>              
+          </div>
+        </div>
+        <div className='hContTechBackground'></div>          
+        </div>
+      </section>     {/* content & tech */}
+
 
 
     {/* ServicesList */}
@@ -81,11 +93,9 @@ const About = () => {
 
     
 
-    <div className='container'>
-    <div className='strokeB'>
+    <div className='strokeB container'>
       <SVGCurveLine/>
     </div>
-     </div>
 
 
     <section>
@@ -99,17 +109,17 @@ const About = () => {
            <Milestones />
       </div>
     </section>
+ 
+    {/* 
+    <section>
+      <A09TeamList/>
+    </section> 
+    */}
 
-    <section className='aboutMarquee'>
-      <div dangerouslySetInnerHTML={{ __html: `<div>${marqueeContent}</div>` }} />   
-      <div dangerouslySetInnerHTML={{ __html: `<div>${marqueeContent}</div>` }} />   
-      <div dangerouslySetInnerHTML={{ __html: `<div>${marqueeContent}</div>` }} />      
-      <div dangerouslySetInnerHTML={{ __html: `<div>${marqueeContent}</div>` }} />   
-      <div dangerouslySetInnerHTML={{ __html: `<div>${marqueeContent}</div>` }} />   
-      <div dangerouslySetInnerHTML={{ __html: `<div>${marqueeContent}</div>` }} />      
-    </section>
-
-
+    <div div className='strokeB container'>
+      <SVGCurveLine/>
+    </div>
+    
     <section className='awards09'>
       <div className='container'>
         <Awards />
@@ -117,18 +127,11 @@ const About = () => {
     </section>
 
 
-    <div className='container'>
-    <div className='strokeB'>
-      <SVGCurveLine/>
-    </div>
-     </div>
-
 
     <section className='pillars09 center'><div className='container'>
       <PartnerCompanies />
     </div></section>
 
-    </Transitions>
 
     <Footer />
   </>

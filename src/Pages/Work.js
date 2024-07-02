@@ -112,7 +112,6 @@ const Work = () => {
   return (
     <>
       <Header />
-      <Transitions>
       <div className="spacer"></div>
       <section><div className='container'>
         <div className='aboutS'>  
@@ -353,7 +352,6 @@ const Work = () => {
 
 
 
-      </Transitions>
       <Footer />
     </>
   )

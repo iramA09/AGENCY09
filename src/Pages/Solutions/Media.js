@@ -2,14 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
+import GetQuote from '../../Components/Forms/GetQuote';
+
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
-import Transitions from '../../Hooks/Transitions';
-import RippleButton from '../../Hooks/RippleButton';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import LogosSlider from '../../Components/LogosSlider';
+import { useMediaQuery } from 'react-responsive';
 
 import { PiStarFourFill } from "react-icons/pi";
 import { GoNorthStar } from "react-icons/go";
@@ -22,25 +23,48 @@ import 'react-tabs/style/react-tabs.css';
 
 // Images
 import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/pattern.png';
+import pattern from '../../Assets/Images/icons/patternMedia.jpg';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
 import starY from '../../Assets/Images/icons/star.png';
-import corporateWebsite from '../../Assets/Images/corporateWebsite.jpg';
-
-import chatbot from '../../Assets/Images/tools/chatbot.png';
-import one_dashboard from '../../Assets/Images/tools/one_dashboard.png';
-import ticketing_system from '../../Assets/Images/tools/ticketing_system.png';
-import url_builder from '../../Assets/Images/tools/url_builder.png';
-import website_audit from '../../Assets/Images/tools/website_audit.png';
-
 import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
 import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
 import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
 
-import clickHere from '../../Assets/Images/icons/clickHere.png';
+
+// Partners
+import GooglePremierPartner from '../../Assets/Images/logos/partners/GooglePremierPartner.png';
+import MetaVerifiedPartner from '../../Assets/Images/logos/partners/MetaVerifiedPartner.png';
+import LinkedInMarketingPartner from '../../Assets/Images/logos/partners/LinkedInMarketingPartner.png';
+import TwitterAdPartner from '../../Assets/Images/logos/partners/TwitterAdPartner.png';
+import SnapchatCertifiedPartner from '../../Assets/Images/logos/partners/SnapchatCertifiedPartner.png';
+import AmazonAdvertisingPartner from '../../Assets/Images/logos/partners/AmazonAdvertisingPartner.png';
+import HubSpotAgencyPartner from '../../Assets/Images/logos/partners/HubSpotAgencyPartner.png';
+import MicrosoftAdvertisingPartner from '../../Assets/Images/logos/partners/MicrosoftAdvertisingPartner.png';
+// Partners End
+
+
+// Platforms
+import Meta from '../../Assets/Images/logos/platforms/Meta.png';
+import LinkedIn from '../../Assets/Images/logos/platforms/LinkedIn.png';
+import YouTube from '../../Assets/Images/logos/platforms/YouTube.png';
+import GoogleAds from '../../Assets/Images/logos/platforms/GoogleAds.png';
+import Twitter from '../../Assets/Images/logos/platforms/Twitter.png';
+import Snapchat from '../../Assets/Images/logos/platforms/Snapchat.png';
+import Pinterest from '../../Assets/Images/logos/platforms/Pinterest.png';
+import MicrosoftAdvertising from '../../Assets/Images/logos/platforms/MicrosoftAdvertising.png';
+import AmazonAdvertising from '../../Assets/Images/logos/platforms/AmazonAdvertising.png';
+import Taboola from '../../Assets/Images/logos/platforms/Taboola.png';
+import Outbrain from '../../Assets/Images/logos/platforms/Outbrain.png';
+import SpotifyAdStudio from '../../Assets/Images/logos/platforms/SpotifyAdStudio.png';
+import QuoraAds from '../../Assets/Images/logos/platforms/QuoraAds.png';
+import RedditAds from '../../Assets/Images/logos/platforms/RedditAds.png';
+// Platforms End
+
+
+
 // Images end
 
 // toolsSlider 
@@ -136,89 +160,87 @@ const testimonialSlider = {
 
 const Media = () => {
   useLenisScroll();
+  const [OpenModalGetQuote, setOpenModalGetQuote] = React.useState(false);
 
-//Tools Data
-  const toolsData = [
+
+
+// Calculat Data
+const calculatData = [
+  {
+    key: "A",
+    number: "500+",
+    description: "Projects<br/> Delivered",
+  },
+  {
+    key: "B",
+    number: "11",
+    description: "Years <br/>Of Experience",
+  },
+  {
+    key: "C",
+    number: "20+",
+    description: "Technologies <br/>Supported",
+  },
+  {
+    key: "D",
+    number: "20+",
+    description: "Tech <br/>Professionals",
+  }
+];
+// Calculat Data End
+
+// Services Data
+  const servicesData = [
     {
-        link: '#',
-        image: chatbot,
-        titale: 'Chatbot',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
+      key: "0",
+      header: "Performance Marketing",
+      description: "Our data-driven approach ensures that every campaign is optimized for maximum ROI, driving measurable results and tangible business growth. From precise audience targeting to continuous optimization, we empower you to achieve your marketing objectives efficiently and effectively.",
+      tags: [],
+    },
     {
-        link: '#',
-        image: website_audit,
-        titale: 'website audit',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
+      key: "1",
+      header: "Lead Generation",
+      description: "Generate high-quality leads that are primed for conversion. Leveraging advanced targeting techniques and compelling messaging, we capture the interest of your target audience and guide them seamlessly through the conversion funnel. With our performance-driven approach, you can expect a steady flow of leads that fuel your sales pipeline and drive business growth.",
+      tags: [],
+    },
     {
-        link: '#',
-        image: url_builder,
-        titale: 'url builder',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
+      key: "2",
+      header: "Conversion Campaigns",
+      description: "Turn prospects into customers and drive meaningful actions. Whether it's making a purchase, signing up for a newsletter, or downloading an app, we craft campaigns that inspire action and deliver tangible results. Through strategic messaging, creative assets, and continuous optimization, we help you achieve your conversion goals and maximize ROI.",
+      tags: [],
+    },
     {
-        link: '#',
-        image: ticketing_system,
-        titale: 'ticketing system',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
+      key: "3",
+      header: "App Downloads",
+      description: "Boost visibility and drive installations for your mobile app. Using targeted advertising and app promotion strategies, we reach your ideal audience and encourage them to download and engage with your app. From driving app installs to increasing user retention, we help you unlock the full potential of your mobile application and achieve success in the competitive app marketplace.",
+      tags: [],
+    },
     {
-        link: '#',
-        image: one_dashboard,
-        titale: 'ONE Dashboard',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
+      key: "4",
+      header: "Influencer Marketing",
+      description: "Amplify your brand message and reach a wider audience authentically. By partnering with relevant influencers in your industry, we create genuine connections with your target audience and drive engagement and conversions. From product endorsements to sponsored content, we leverage the influence of trusted voices to elevate your brand's presence and impact.",
+      tags: [],
+    },
+    {
+      key: "5",
+      header: "Humane Reviews",
+      description: "Build trust and credibility with your audience. We facilitate genuine customer feedback and reviews that highlight the positive aspects of your products or services. By showcasing real experiences and testimonials, we create a compelling narrative that resonates with potential customers and drives conversions.",
+      tags: [],
+    },
+    {
+      key: "6",
+      header: "Store Walk-ins",
+      description: "Increase foot traffic to your physical locations. Through targeted digital campaigns and location-based targeting, we drive local customers to your stores and encourage them to make purchases. Whether it's promoting exclusive offers or highlighting store events, we help you create engaging experiences that drive real-world visits and sales.",
+      tags: [],
+    },
+    {
+      key: "7",
+      header: "Video Views",
+      description: "Capture audience attention and drive engagement. Whether it's on social media platforms or video advertising networks, we create compelling video content that resonates with your audience and drives views and interactions. From brand storytelling to product demonstrations, we help you leverage the power of video to increase brand awareness and drive conversions.",
+      tags: [],
     }
   ];
-//Tools Data End
-
-// Approach Data
-const ApproachData = [
-    {
-      number: '01',
-      tag: 'Preparation',
-      title: 'User Study',
-      text: 'Device Based & Psychological Insights'
-    },
-    {
-      number: '02',
-      tag: 'Start',
-      title: 'User Study',
-      text: 'User Journey & WireFrame'
-    },
-    {
-      number: '03',
-      title: 'The User Interface',
-      text: 'Design & Proto Type'
-    },
-    {
-      number: '04',
-      title: 'Development',
-      text: 'Coding'
-    },
-    {
-      number: '05',
-      title: 'Quality Check',
-      text: 'VAPT - Browsers'
-    },
-    {
-      number: '06',
-      title: 'Pre Launch Check Points',
-      text: 'Search Related & Auto Responses'
-    },
-    {
-      number: '07',
-      tag: 'Finish',
-      title: 'Live',
-      text: 'Device Based and Psychological Insights '
-    },
-    {
-      number: '08',
-      title: 'Maintenance',
-      text: 'Device Based and Psychological Insights '
-    },
-  ];
-// Approach Data End
+// Services Data
 
 
 //CaseStudy Data
@@ -288,10 +310,63 @@ const testimonialData = [
 ];
 //testimonaialSlider End
 
+
+// FAQS
+const faqsData = [
+  {
+    key: "0",
+    question: "1. What types of results can I expect from performance marketing campaigns?",
+    answer: "The results of performance marketing campaigns vary depending on your goals and objectives. Common outcomes include increased website traffic, lead generation, conversions, app downloads, and sales. Our team works closely with you to define clear KPIs and optimize campaigns for maximum performance."
+  },
+  {
+    key: "1",
+    question: "2. How do you measure the success of performance marketing campaigns?",
+    answer: "We measure the success of performance marketing campaigns using a variety of key performance indicators (KPIs) tailored to your objectives. These may include metrics such as click-through rate (CTR), conversion rate, cost per acquisition (CPA), return on ad spend (ROAS), and more. Our robust analytics and reporting tools provide transparent insights into campaign performance."
+  },
+  {
+    key: "2",
+    question: "3. What targeting options do you offer for performance marketing campaigns?",
+    answer: "We offer a range of targeting options to ensure your performance marketing campaigns reach the right audience. This includes demographic targeting, geographic targeting, interest targeting, behavior targeting, retargeting (remarketing), and lookalike audience targeting. By segmenting your audience effectively, we maximize campaign effectiveness and ROI."
+  },
+  {
+    key: "3",
+    question: "4. How do you optimize performance marketing campaigns for maximum results?",
+    answer: "We employ a continuous optimization approach to performance marketing campaigns, leveraging data-driven insights and A/B testing to refine targeting, messaging, and creative elements. Our team monitors campaign performance in real-time, making adjustments to maximize performance and achieve your goals efficiently."
+  },
+  {
+    key: "4",
+    question: "5. Can you work with my existing marketing technology stack?",
+    answer: "Yes, we can integrate with your existing marketing technology stack to streamline campaign management, tracking, and reporting. Whether you use CRM systems, marketing automation platforms, or analytics tools, we ensure seamless integration to optimize campaign performance and ROI."
+  },
+  {
+    key: "5",
+    question: "6. What sets your performance marketing services apart from competitors?",
+    answer: "Our performance marketing services are distinguished by our strategic approach, data-driven methodologies, and relentless focus on delivering measurable results. We prioritize transparency, collaboration, and innovation to drive success for our clients, ensuring maximum ROI and business impact."
+  },
+  {
+    key: "6",
+    question: "7. How do you stay updated with the latest trends and best practices in performance marketing?",
+    answer: "Our team is dedicated to staying at the forefront of industry trends and best practices in performance marketing. We regularly attend industry conferences, participate in training programs, and engage with industry experts to ensure we're leveraging the latest strategies and technologies to drive success for our clients."
+  },
+  {
+    key: "7",
+    question: "8. What industries have you worked with in your performance marketing campaigns? ",
+    answer: "We have experience working with clients across a wide range of industries, including e-commerce, technology, healthcare, finance, travel, and more. Our adaptable approach allows us to tailor performance marketing strategies to meet the unique needs and objectives of each industry vertical."
+  },
+  {
+    key: "8",
+    question: "9. How can I get started with performance marketing services for my business?",
+    answer: "Getting started with performance marketing services is simple. Contact us today to schedule a consultation with one of our experts. We'll discuss your goals, objectives, and budget, and develop a customized strategy to drive success for your business through performance marketing."
+  },
+];
+// FAQS End
+
+
+
+
   return (
     <>
       <Header />
-      <Transitions>
       <div className="spacer"></div>
 
         <section className='SolutionsSecAbout'>
@@ -299,13 +374,10 @@ const testimonialData = [
             <div className='SolutionsRow'>
                 <div className='SolutionsCol'>
                     <div className='SolutionsTag'><span className='blackB white'><GoNorthStar className='yellow'/> Media</span></div>
-                    <h1 className='sizeH1 uppercase'>Exceptional<br/>Digital Products</h1>
-                    <h3 className='sizeH4 uppercase pt-10 pb-10'>On-Time. On-Budget. On-Point.</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries creators of Logix</p>
+                    <h1 className='sizeH1 uppercase'>Harness the potential of digital platforms to propel your brand to new heights</h1>
+                    <p>Performance marketing strategies are meticulously crafted to deliver unparalleled results for your brand. With a data-driven approach and a relentless pursuit of ROI, we empower businesses to thrive in the competitive digital landscape. From maximizing conversions to optimizing ad spend, we're here to elevate your brand's performance and propel your success to new heights</p>
                                 
-                    <div className='btnSpaceM pt-30'>     
-                        <RippleButton to="#" className="btnDark fontM"><span>Let’s Talk</span></RippleButton>
-                    </div>
+               
 
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
@@ -335,197 +407,73 @@ const testimonialData = [
         </div>
         </section>
 
-        {/* Calculat */}
+      
+        {/* Quick Facts  */}
         <section className='Calculat'>
-            <div className='container'>
-
-            {/* Calculat */}
+          <div className='container'>
             <div className='CalculatRow'>
-                <div className='CalculatCol CalculatColA bounce'>
-                <div className='CalculatColIn'><h4>500+</h4><p> Projects<br/> Delivered <PiStarFourFill /></p></div>
+              {calculatData.map(item => (
+                <div key={item.key} className={`CalculatCol CalculatCol${item.key}`}>
+                  <div className='CalculatColIn'>
+                    <h4>{item.number}</h4>
+                    <p><span  dangerouslySetInnerHTML={{ __html: item.description }}></span> <PiStarFourFill /></p>
+                  </div>
                 </div>
-                <div className='CalculatCol CalculatColB'>
-                <div className='CalculatColIn'><h4>11</h4><p>Years <br/>Of Experience <PiStarFourFill /></p></div>
-                </div>
-                <div className='CalculatCol CalculatColC'>
-                <div className='CalculatColIn'><h4>20+</h4><p>Technologies <br/>Supported <PiStarFourFill /></p></div>
-                </div>
-                <div className='CalculatCol CalculatColD'>
-                <div className='CalculatColIn'><h4>20+</h4><p>Tech <br/>Professionals <PiStarFourFill /></p></div>
-                </div>
+              ))}
             </div>
-            {/* Calculat End */}
             <div className='strokeB'>
-                <SVGCurveLine/>
-            </div>         
+              <SVGCurveLine />
             </div>
+          </div>
         </section>
-        {/* Calculat End */}
+        {/* Quick Facts  End */}
         
-        <section className='solutionsSecServices'>
+        <section className='solutionsSecServices' id='services'>
             <div className='container'>
-                
-                <div className='Heading center HeadingIcon'>
-                <h2 className='sizeH1 uppercase'>
-                Amplifying Business Progress<br/>
-                    <span className='iconSVG'>
-                    <i className='iconF'>
-                        <img src={starY} alt='Star Icon' />
-                    </i>
-                    </span>
-                    Through Smart Solutions
-                    <span className='iconSVG'>
-                    <i className='iconF'>
-                        <img src={starY} alt='Star Icon' />
-                    </i>
-                    </span>
-                </h2>
+
+              <div className='solutionsSecServicesFaq'>
+
+              <div className='Heading center HeadingIcon pb-20'>
+                  <h2 className='sizeH1 uppercase'>
+                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      Services
+                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                  </h2>
                 </div>
 
-                <div className='btnSpaceM pt-30 center pb-40'>     
-                    <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
+                <div className='solutionsSecServicesFaqList'>
+                  <Accordion defaultActiveKey="0">
+                    {servicesData.map(service => (
+                      <Accordion.Item eventKey={service.key} key={service.key}>
+                        <Accordion.Header>{service.header}</Accordion.Header>
+                        <Accordion.Body>
+                          <div className='solutionsWrap'>
+                            <div className='solutionsCol'>
+                              <p>{service.description}</p>
+                              <div className='solutionsWrapTag'>
+                                <ul>
+                                  {service.tags.map((tag, index) => (
+                                    <li key={index}><Link>{tag}</Link></li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+
+                          </div>
+                        </Accordion.Body>
+                      </Accordion.Item>
+                    ))}
+                  </Accordion>
                 </div>
-
-
-
-                <div className='solutionsSecServicesFaq'>
-                    <h3 className='sizeH5 uppercase bold'>Services</h3>
-                    <div className='solutionsSecServicesFaqList'>
-                    <Accordion defaultActiveKey="0">
-                    <Accordion.Item eventKey="0">
-                            <Accordion.Header>Corporate Website</Accordion.Header>
-                            <Accordion.Body>
-                                <div className='solutionsWrap'>
-                                    <div className='solutionsCol'>
-                                    <p>Explore our web development expertise to maximize your web presence which can help you captivate the audience by delivering unparalleled web experience</p>
-                                    <div className='solutionsWrapTag'>
-                                        <ul>
-                                            <li><Link>PHP</Link></li>
-                                            <li><Link>WordPress</Link></li>
-                                            <li><Link>Drupal</Link></li>
-                                            <li><Link>AngularJs</Link></li>
-                                            <li><Link>NodeJs</Link></li>
-                                            <li><Link>Laravel</Link></li>
-                                            <li><Link>ReactJs</Link></li>
-                                        </ul>
-                                    </div>
-                                    
-                                <div className='btnSpaceM pt-30 '>     
-                                    <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
-                                </div>
-                                </div>
-
-                                <div className='solutionsCol'>
-                                    <img src={corporateWebsite} alt="corporateWebsite" />
-                                </div>
-                                
-                                </div>    
-                            </Accordion.Body>
-                        </Accordion.Item>
-            
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>Ecommerce Development</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="2">
-                            <Accordion.Header>Web Application</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="3">
-                            <Accordion.Header>Mobile Applications</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="4">
-                            <Accordion.Header>ERP Systems</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="5">
-                            <Accordion.Header>Software</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="6">
-                            <Accordion.Header>HR Portal</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="7">
-                            <Accordion.Header>Marketing Automations</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-            
-                    </Accordion>
-
-                    </div>
-                </div>
+              </div>
 
             </div>
-        </section>
-
-        <section className='solutionsSecTools'>
-            <div className='container'>
-                
-                <div className='Heading center HeadingIcon'>
-                <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                        TOOLS
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                </h2>
-                </div>
-
-
-
-            <Slider {...toolsSlider} className='toolsSlider slick-slider'>
-            {toolsData.map((tools, index) => (
-                <div key={index} className='item'>
-                <div className='toolsCol'>
-                    <Link to={tools.link}>
-                        <div className='toolsImg'><img src={tools.image}/></div>
-                        <div className='toolsTitale'>{tools.titale}</div>
-                        <div className='textDecoration'><p>{tools.decoration}</p></div>
-                        <div className='toolsBtn'><IoIosArrowDroprightCircle /></div>
-                    </Link>
-                </div>
-                </div>
-            ))}
-            </Slider>
-
-        </div>
         </section>
 
         <div className='container'>
                 <div className='strokeB'><SVGCurveLine/></div>      
         </div>
 
-        <section className='solutionsSecApproach'>
-          <div className='container'>
-            <h3 className='sizeH5 uppercase bold'>A09 Approach</h3>
-            <div className='solutionsSecApproachList'>
-              {ApproachData.reduce((acc, item, index) => {
-                if (index % 4 === 0) {
-                  acc.push(<ul key={`ul-${index}`} className="solutionsSecApproachListRow">{[]}</ul>);
-                }
-                const ulIndex = Math.floor(index / 4);
-                acc[ulIndex].props.children.push(
-                  <li key={index}>
-                    <div className='solutionsSecApproachListCol'>
-                      <div className='solutionsSecApproachListColNum'><span>{item.number}</span> <span className='solutionsSecApproachListColNumTag'>{item.tag}</span></div>
-                      <div className='solutionsSecApproachListColText'>
-                        <h3>{item.title}</h3>
-                        <p>{item.text}</p>
-                      </div>    
-                    </div>
-                  </li>
-                );
-                return acc;
-              }, [])}
-            </div>
-          </div>
-        </section>       
 
 
 
@@ -533,10 +481,9 @@ const testimonialData = [
             <div className='container'>
 
             <div className='Heading center HeadingIcon'>
-            <h3 className='sizeH5 uppercase bold pb-20'>Case studies</h3>
                 <h2 className='sizeH1 uppercase'>
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    Lorem ipsum dolor
+                     Case studies
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
                 </h2>
             </div>
@@ -565,34 +512,15 @@ const testimonialData = [
                 </Slider>
 
             <div className='btnSpaceEx center'>     
-                <RippleButton to="/work" className="btnDark fontM"><span>View All</span></RippleButton>
+                <Link to="/work" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
 
             </div>
 
             </div>
         </section>  
-
-
-
-
-
-        {/* Work Logos */}
-        <section className='hWorkLogos'><div className='container'>
-            {/* <hr className='hrTop'/> */}
-            <div className='strokeB hrTop'>
-                <SVGCurveLine/>
-            </div>
-            
-            <LogosSlider />
-
-            <div className='strokeB hrBottom'>
-                <SVGCurveLine/>
-            </div>
-        </div></section> 
-        {/* Work Logos End */} 
-
-
+         
+     
 
         {/* TESTIMONIALS */}   
         <section className='greenB testimonialSec'>
@@ -611,99 +539,157 @@ const testimonialData = [
           {testimonialData.map((testimonial, index) => (
             <div key={index} className='item'>
               <div className='awardsCol'>
-              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
               <div className='textwithimg'>
-                <div className='awardsYear'><h5>{testimonial.name}</h5></div>
-                <div className='awardsDesignation'><p>{testimonial.designation}</p></div>
-                <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
-                </div>
+              <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
+               
+                <div className='awardsData'>
+                  <h5>{testimonial.name}</h5>
+                  <p>{testimonial.designation}</p></div>
+              </div>
+              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
+
               </div>
             </div>
           ))}
         </Slider>
 
-        <div className='btnSpaceEx center'>     
-            <RippleButton to="#" className="btnDark fontM"><span>View All</span></RippleButton>
+        <div className='btnSpaceEx center pb-0'>     
+            <Link to="../testimonials" className="btnDark fontM ripple-button"><span>View All</span></Link>
         </div>
+
 
 
         </div></section> 
         {/* TESTIMONIALS End */} 
+ 
 
         
+        <section className='mdlogoSec'>
+            <div className='container'>
+                    
+            <Tabs>
+                <TabList >
+                  <Tab><span>Partners</span></Tab>
+                  <Tab><span>Platforms</span></Tab>
+                </TabList>
+
+                <TabPanel>
+                  <div className='mdlogoList'>
+                    <ul>
+                      <li><img src={GooglePremierPartner}/></li>
+                      <li><img src={MetaVerifiedPartner}/></li>
+                      <li><img src={LinkedInMarketingPartner}/></li>
+                      <li><img src={TwitterAdPartner}/></li>
+                      <li><img src={SnapchatCertifiedPartner}/></li>
+                      <li><img src={AmazonAdvertisingPartner}/></li>
+                      <li><img src={HubSpotAgencyPartner}/></li>
+                      <li><img src={MicrosoftAdvertisingPartner}/></li>
+                    </ul>
+                  </div>
+                </TabPanel>
+
+                <TabPanel>
+                  <div className='mdlogoList'>
+                    <ul>
+                      <li><img src={Meta}/></li>
+                      <li><img src={LinkedIn}/></li>
+                      <li><img src={YouTube}/></li>
+                      <li><img src={GoogleAds}/></li>
+                      <li><img src={Twitter}/></li>
+                      <li><img src={Snapchat}/></li>
+                      <li><img src={MicrosoftAdvertising}/></li>
+                      <li><img src={Pinterest}/></li>
+                      <li><img src={AmazonAdvertising}/></li>
+                      <li><img src={Taboola}/></li>
+                      <li><img src={Outbrain}/></li>
+                      <li><img src={SpotifyAdStudio}/></li>
+                      <li><img src={QuoraAds}/></li>
+                      <li><img src={RedditAds}/></li>
+                    </ul>
+                  </div>
+                </TabPanel>
+            
+            </Tabs>
+              
+            </div>            
+        </section>
+
+
+        <div className='container'>
+                <div className='strokeB'><SVGCurveLine/></div>      
+        </div>
+
+
+        {/* Work Logos */}
+            <LogosSlider />
+        {/* Work Logos End */} 
+
+
+
 
         {/* Free Audit */}   
         <section className='pinkB freeAuditSec'><div className='container'>
           <div className='freeAuditSecRow'>
                 <div className='freeAuditSecCol'>
-                    <h3 className='sizeH5 uppercase bold pb-20 white'>Free Audit</h3>
-                    <h2 className='sizeH1 uppercase white'>Uncover the untapped potential of your website</h2>
+                <div className='Heading HeadingIcon'>
+              <h2 className='sizeH1 uppercase white center'>
+                  <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                  One Dashboard 
+                  <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+              </h2>
+            </div>
+                    <p className='white'>Simplify your media management with our integrated dashboard, providing comprehensive insights and analytics across all your campaigns and channels. </p>
                 </div>
 
-                <div className='freeAuditSecCol'>
-                    <Link to=''>
-                      <img src={clickHere} alt='Click Here' />
-                    </Link>
-                </div>
             </div>
         </div></section> 
         {/* Free Audit End */} 
 
 
-        
-      <section className='faqContent'><div className='container'>
-        <h2 className='sizeH5 uppercase bold pb-20'>FAQS</h2>
-        <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>1. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>2. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>3. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>4. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>5. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
+
+      {/* FAQ */}
+      <section className='faqContent'>
+        <div className='container'>
+
+        <div className='Heading center HeadingIcon pb-20'><h2 className='sizeH1'>
+          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+              FAQs
+          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+        </h2></div>
+          <Accordion>
+            {faqsData.map(faq => (
+              <Accordion.Item eventKey={faq.key} key={faq.key}>
+                <Accordion.Header>{faq.question}</Accordion.Header>
+                <Accordion.Body>
+                  {faq.answer}
+                </Accordion.Body>
+              </Accordion.Item>
+            ))}
           </Accordion>
-      </div></section>
+        </div>
+      </section>
+      {/* FAQ */}
 
 
-       {/* Free Audit */}   
-       <section className='yellowB center'><div className='container'>
+
+
+       {/* Business  */}   
+       <section className='yellowB center getSolutions'><div className='container'>
                 <div className='Heading  HeadingIcon'>
-                    <h2 className='sizeH1 uppercase'><GoNorthStar className='pink' /> Lorem ipsum dolor sit amet, <GoNorthStar className='pink' /> <br/> consectetur adipiscing elit?</h2>
+                    <h2 className='sizeH3 uppercase'>Ready to take your media strategy to the next level?<br/> Contact us today for a personalized quote.</h2>
 
                         
-                    <div className='btnSpaceEx center'>     
-                        <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
+                    <div className='pt-30 center'>     
+                    <Link onClick={() => { setOpenModalGetQuote(true); }}  className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
                     </div>
                 </div>
         </div></section> 
-        {/* Free Audit End */} 
+        {/* Business End */} 
 
 
-      </Transitions>
       <Footer />
+      {OpenModalGetQuote && <GetQuote closeModal={setOpenModalGetQuote} />}
+
     </>
   );
 };

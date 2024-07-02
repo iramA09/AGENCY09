@@ -1,4 +1,6 @@
 import {useRef, useEffect} from 'react'
+import React, { useState } from 'react';
+
 import { Link, useLocation } from 'react-router-dom'
 import { IoMdArrowForward, IoMdHeart } from "react-icons/io"
 import { BsClockFill } from "react-icons/bs";
@@ -13,11 +15,19 @@ import AZ9w from '../Assets/Images/logos/academy-zero-nineW.png'
 import Instaw from '../Assets/Images/logos/insta-holidaysW.png'
 import OOw from '../Assets/Images/logos/octrine-organicsW.png'
 import PKAw from '../Assets/Images/logos/pk_aW.png'
+import LO9IX from '../Assets/Images/logos/l09ix_w.png'
+import GetQuote from '../Components/Forms/GetQuote';
+import ApplyNow from '../Components/Forms/ApplyNow'
+
 
 // Images
 
 
 const Footer = () => {
+  const [OpenModalGetQuote, setOpenModalGetQuote] = React.useState(false);
+  const [OpenModalApplyNow, setOpenModalApplyNow] = React.useState(false);
+
+
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -68,8 +78,8 @@ const Footer = () => {
   <div className="marquee">
     <div className='slideContainer'>
       <div className='slider' ref={slider}>
-      <p ref={firstText}>WE CREATE <i className='green'>BRAND</i> EXPERIENCES <span>THAT PEOPLE LOVE</span> <IoMdHeart className='pink'/> </p>
-      <p ref={secondText}>WE CREATE <i className='green'>BRAND</i> EXPERIENCES <span>THAT PEOPLE LOVE</span> <IoMdHeart className='yellow'/></p>
+      <p ref={firstText}>WE CREATE <i className='green'>BRAND</i> EXPERIENCES <span>THAT PEOPLE LOVE</span> <IoMdHeart className='pink'/> WE CREATE <i className='green'>BRAND</i> EXPERIENCES <span>THAT PEOPLE LOVE</span> <IoMdHeart className='yellow'/></p>
+      <p ref={secondText}> WE CREATE <i className='green'>BRAND</i> EXPERIENCES <span>THAT PEOPLE LOVE</span> <IoMdHeart className='pink'/> WE CREATE <i className='green'>BRAND</i> EXPERIENCES <span>THAT PEOPLE LOVE</span> <IoMdHeart className='yellow'/> </p>
       </div>
     </div>
   </div>
@@ -82,21 +92,21 @@ const Footer = () => {
       <div className='footerCol'>
         <h3 className='fHd'>Quick Links</h3>
         <ul>
-          <li><Link to='/'>Clients</Link></li>
-          <li><Link to='/'>Vacancies</Link></li>
-          <li><Link to='/'>Connect</Link></li>
-          <li><Link to='/'>Simplifying The Web</Link></li>
-          <li><Link to='/'>A09 Store</Link></li>
+          <li><Link to='/work/our-clients'>Clients</Link></li>
+          <li><Link to='/careers#Opportunities'>Vacancies</Link></li>
+          <li><Link to='/connect'>Connect</Link></li>
+          <li><Link to='https://www.agency09.co/simplifyingtheweb/' target='_blank'>Simplifying The Web</Link></li>
+          <li><Link to='https://www.a09store.com/'>A09 Store</Link></li>
         </ul>
       </div>
 
       <div className='footerCol footerColSos'>
         <h3 className='fHd'>We are available here</h3>
         <ul>
-        <li><Link to='https://www.linkedin.com/company/agency09/' target='_blank'><IoMdArrowForward/> LinkedIn</Link></li>
-        <li><Link to='https://www.instagram.com/agency09/' target='_blank'><IoMdArrowForward/> Instagram</Link></li>
-        <li><Link to='https://www.youtube.com/channel/UCT7wE543Vl0LSrpCmpMzZrg' target='_blank'><IoMdArrowForward/> YouTube</Link></li>
-        <li><Link to='https://twitter.com/AGENCY09' target='_blank'><IoMdArrowForward/> Twitter</Link></li>
+        <li><Link to='https://www.linkedin.com/company/agency09/' target='_blank'> LinkedIn</Link></li>
+        <li><Link to='https://www.instagram.com/agency09/' target='_blank'> Instagram</Link></li>
+        <li><Link to='https://www.youtube.com/channel/UCT7wE543Vl0LSrpCmpMzZrg' target='_blank'> YouTube</Link></li>
+        <li><Link to='https://twitter.com/AGENCY09' target='_blank'> Twitter</Link></li>
 
         </ul>
       </div>
@@ -104,7 +114,7 @@ const Footer = () => {
       <div className='footerCol'>
         <h3 className='fHd'>Play Music</h3>
         <div className='Spotify'>
-          <iframe src="https://open.spotify.com/embed/playlist/6YwHfFlzVMhMjz95nUdaNY?utm_source=generator&theme=0" width="100%"  frameBorder="1" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe src="https://open.spotify.com/embed/playlist/6YwHfFlzVMhMjz95nUdaNY?utm_source=generator&theme=0" width="100%"   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
 
@@ -117,9 +127,9 @@ const Footer = () => {
     </div>
 
       <ul>
-      <li><Link to='#'>START A PROJECT</Link></li>
-      <li><Link to='#'>JOIN THE TEAM</Link></li>
-      <li><Link to='#'>PARTNER WITH US</Link></li>
+      <li><Link onClick={() => { setOpenModalGetQuote(true); }} >REQUEST A SERVICE</Link></li>
+      <li><Link onClick={() => { setOpenModalApplyNow(true); }} >JOIN THE TEAM</Link></li>
+      <li><Link to='/connect#form'>PARTNER WITH US</Link></li>
       </ul>
       <div className='strokeW'>
         <SVGCurveLine/>
@@ -136,7 +146,6 @@ const Footer = () => {
           <div className='text'>
             <h4>Office - <b>Dubai</b></h4>
             <p>Media City, Dubai</p>
-            <Link to='https://maps.google.com/maps?ll=25.076022,55.227488&z=4&t=m&hl=en&gl=IN&mapclient=embed&q=Dubai%20United%20Arab%20Emirates' target='_blank'>View Map</Link>  
           </div>
       </li>
       <li>
@@ -152,7 +161,6 @@ const Footer = () => {
           <div className='text'>
             <h4>Office - <b>Australia</b></h4>
             <p>North Adelaide, Adelaide 5006</p>
-            <Link to='https://maps.google.com/maps?ll=-34.906967,138.594298&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=6105002202757528315' target='_blank'>View Map</Link>  
           </div>
       </li>
 
@@ -180,11 +188,12 @@ const Footer = () => {
 
     <div className='footerWrap5'><div className='container'>
     <div className='footerRow'>
-      <h5>Partner Companies</h5>
+      <h5>Our Ecosystem</h5>
       <ul>
-        <li><Link to='https://www.academy09.com/' target='_blank'><img src={AZ9w} alt={AZ9w} /></Link></li>
         <li><Link to='https://www.a09store.com/' target='_blank'><img src={a09storeW} alt={a09storeW} /></Link></li>
         <li><Link to='https://www.instaholidays.in/' target='_blank'><img src={Instaw} alt={Instaw} /></Link></li>
+        <li><Link to='https://www.academy09.com/' target='_blank'><img src={AZ9w} alt={AZ9w} /></Link></li>
+        <li><Link to='#' target='_blank'><img src={LO9IX} alt={LO9IX} /></Link></li>
         <li><Link to='https://www.pk-a.in/' target='_blank'><img src={PKAw} alt={PKAw} /></Link></li>
         <li><Link to='https://www.octarineorganics.com/' target='_blank'><img src={OOw} alt={OOw} /></Link></li>
       </ul>
@@ -199,7 +208,7 @@ const Footer = () => {
     <div className='footerRow'>
 
       <div className='footerCol'>
-        <p>©AGENCY<b>09</b>. All rights reserved 2024</p>
+        <p>©AGENCY<b>09</b>.  All Rights Reserved 2024</p>
       </div>
 
       <div className='footerCol'>
@@ -215,6 +224,9 @@ const Footer = () => {
 
 
   </footer>
+  {OpenModalGetQuote && <GetQuote closeModal={setOpenModalGetQuote} />}
+  {OpenModalApplyNow && <ApplyNow closeModal={setOpenModalApplyNow} />}
+
 
     </>
   )

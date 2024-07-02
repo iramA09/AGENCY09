@@ -25,47 +25,10 @@ const SVGCurveLine = () => {
     }
   };
 
-  const manageMouseEnter = () => {
-    if (reqId) {
-      window.cancelAnimationFrame(reqId);
-      resetAnimation();
-    }
-  };
-
-  const manageMouseMove = (e) => {
-    const { movementY, clientX } = e;
-    const { left, width } = path.current.getBoundingClientRect();
-    x = (clientX - left) / width;
-    progress = movementY;
-    setPath(progress);
-  };
-
-  const manageMouseLeave = () => {
-    animateOut();
-  };
-
-  const lerp = (x, y, a) => x * (1 - a) + y * a;
-
-  const animateOut = () => {
-    const newProgress = progress * Math.sin(time);
-    time += 0.2;
-    setPath(newProgress);
-    progress = lerp(progress, 0, 0.025);
-    if (Math.abs(progress) > 0.75) {
-      reqId = window.requestAnimationFrame(animateOut);
-    } else {
-      resetAnimation();
-    }
-  };
-
-  const resetAnimation = () => {
-    time = Math.PI / 2;
-    progress = 0;
-  };
 
   return (
-    <div className='line' onMouseEnter={manageMouseEnter}>
-      <div className='box' onMouseMove={manageMouseMove} onMouseLeave={manageMouseLeave}></div>
+    <div className='line' >
+      <div className='box'></div>
       <svg>
         <path ref={path}></path>
       </svg>

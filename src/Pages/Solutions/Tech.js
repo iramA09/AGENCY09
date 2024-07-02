@@ -4,8 +4,8 @@ import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
-import Transitions from '../../Hooks/Transitions';
-import RippleButton from '../../Hooks/RippleButton';
+import GetQuote from '../../Components/Forms/GetQuote';
+
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -16,14 +16,9 @@ import { PiStarFourFill } from "react-icons/pi";
 import { GoNorthStar } from "react-icons/go";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-// Tabs
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-// Tabs End
-
 // Images
 import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/pattern.png';
+import pattern from '../../Assets/Images/icons/patternTech.jpg';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
@@ -40,8 +35,6 @@ import website_audit from '../../Assets/Images/tools/website_audit.png';
 import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
 import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
 import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
-
-import clickHere from '../../Assets/Images/icons/clickHere.png';
 // Images end
 
 // toolsSlider 
@@ -136,7 +129,90 @@ const testimonialSlider = {
  
 
 const Tech = () => {
+  const [OpenModalGetQuote, setOpenModalGetQuote] = React.useState(false);
+
   useLenisScroll();
+
+
+
+// Calculat Data
+const calculatData = [
+  {
+    key: "A",
+    number: "500+",
+    description: "Projects<br/> Delivered",
+  },
+  {
+    key: "B",
+    number: "11",
+    description: "Years <br/>Of Experience",
+  },
+  {
+    key: "C",
+    number: "20+",
+    description: "Technologies <br/>Supported",
+  },
+  {
+    key: "D",
+    number: "20+",
+    description: "Tech <br/>Professionals",
+  }
+];
+// Calculat Data End
+
+// Services Data
+  const servicesData = [
+    {
+      key: "0",
+      header: "Corporate Website",
+      description: "Professional, responsive websites that reflect your brand's identity and engage your audience effectively. Our websites are designed for optimal performance and user experience.",
+      tags: ["PHP", "WordPress", "Drupal", "AngularJs", "NodeJs", "Laravel", "ReactJs"],
+    },
+    {
+      key: "1",
+      header: "eCommerce",
+      description: "eCommerce solutions tailored to create seamless shopping experiences. We develop secure, scalable online stores that boost sales and enhance customer satisfaction.",
+      tags: ["Magento", "Shopify", "WooCommerce", "OpenCart", "PrestaShop", "BigCommerce", "osCommerce"],
+    },
+    {
+      key: "2",
+      header: "ERP Systems",
+      description: "Streamline your business operations with our custom ERP systems. We design and implement integrated solutions that improve efficiency and provide real-time insights.",
+      tags: ["Custom ERP", "Oracle", "Microsoft Dynamics", "Odoo", "Infor", "NetSuite", "Sage"],
+    },
+    {
+      key: "3",
+      header: "Software Development",
+      description: "Bespoke software solutions that address your specific business challenges. Our software development services ensure functionality, scalability, and reliability.",
+      tags: [],
+    },
+    {
+      key: "4",
+      header: "HR Portal",
+      description: "Enhance your human resources management with our advanced HR portals. We create user-friendly platforms that simplify HR processes and improve employee engagement.",
+      tags: [],
+    },
+    {
+      key: "5",
+      header: "Marketing Automations",
+      description: "Automate your marketing efforts with our innovative solutions. We help you streamline campaigns, track performance, and increase ROI with minimal effort.",
+      tags: [],
+    },
+    {
+      key: "6",
+      header: "Web Application",
+      description: "Web applications designed to provide dynamic and interactive user experiences. We develop robust applications that meet your business requirements and exceed user expectations.",
+      tags: ["ReactJs", "AngularJs", "VueJs", "NodeJs", "Django", "Ruby on Rails", "ASP.NET", "ASP.Flask"],
+    },
+    {
+      key: "7",
+      header: "Mobile Applications",
+      description: "Intuitive and powerful mobile applications for iOS and Android. Built to provide seamless user experiences and drive engagement on the go.",
+      tags: ["Swift (iOS)", "Kotlin (Android)", "React Native", "Flutter", "Xamarin", "Ionic", "Java", "Sage"],
+    }
+  ];
+// Services Data
+
 
 //Tools Data
   const toolsData = [
@@ -289,6 +365,74 @@ const testimonialData = [
 ];
 //testimonaialSlider End
 
+
+// FAQS
+const faqsData = [
+  {
+    key: "0",
+    question: "1. What technologies do you use for developing corporate websites?",
+    answer: "We specialize in PHP, WordPress, Drupal, AngularJs, NodeJs, Laravel, and ReactJs to build professional, responsive, and high-performance corporate websites."
+  },
+  {
+    key: "1",
+    question: "2. What eCommerce platforms do you work with?",
+    answer: "We work with a variety of eCommerce platforms including Magento, Shopify, WooCommerce, OpenCart, PrestaShop, BigCommerce, and osCommerce to create secure and scalable online stores."
+  },
+  {
+    key: "2",
+    question: "3. What programming languages and frameworks do you use for software development?",
+    answer: "We develop custom software solutions using Java, Python, C#, Ruby on Rails, .NET, Golang, and Swift, ensuring functionality, scalability, and reliability."
+  },
+  {
+    key: "3",
+    question: "4. What technologies do you use for web applications?",
+    answer: "Our web applications are built using modern technologies such as ReactJs, AngularJs, VueJs, NodeJs, Django, Ruby on Rails, ASP.NET, and Flask to deliver dynamic and interactive user experiences."
+  },
+  {
+    key: "4",
+    question: "5. Which frameworks and languages do you use for mobile app development?",
+    answer: "For mobile applications, we use Swift for iOS, Kotlin for Android, and cross-platform frameworks like React Native, Flutter, Xamarin, Ionic, and Java to create intuitive and powerful mobile apps."
+  },
+  {
+    key: "5",
+    question: "6. How do you ensure the security of eCommerce platforms? ",
+    answer: "We prioritize security by implementing best practices in data encryption, secure payment gateways, SSL certificates, and regular security audits to protect your eCommerce platform from threats."
+  },
+  {
+    key: "6",
+    question: "7. Can you integrate existing systems with new ERP solutions? ",
+    answer: "Yes, we specialize in integrating existing systems with new ERP solutions to ensure seamless operation and data flow across your business processes."
+  },
+  {
+    key: "7",
+    question: "8. Do you provide maintenance and support for the software and applications you develop? ",
+    answer: "Absolutely. We offer comprehensive maintenance and support services to ensure your software and applications run smoothly and remain up-to-date with the latest technologies and security measures."
+  },
+  {
+    key: "8",
+    question: "9. Can you customize HR portals to fit our specific needs?",
+    answer: "Yes, we provide fully customizable HR portals tailored to meet the unique requirements of your organization, enhancing efficiency and employee satisfaction."
+  },
+  {
+    key: "9",
+    question: "10. How do you approach a new tech project?",
+    answer: "We start with a thorough analysis of your business needs and goals, followed by detailed planning, design, development, testing, and deployment. We maintain close communication with you throughout the process to ensure the final product meets your expectations."
+  },
+  {
+    key: "10",
+    question: "11. Do you offer free audits for our existing tech infrastructure?",
+    answer: "Yes, we offer free audits to evaluate your current tech infrastructure and provide recommendations for enhancements to optimize your digital capabilities."
+  },
+  {
+    key: "11",
+    question: "12. How do you handle project timelines and delivery? ",
+    answer: "We follow an agile development methodology to ensure timely delivery and flexibility. Regular updates and feedback loops are maintained to keep the project on track and aligned with your business objectives."
+  }
+];
+// FAQS End
+
+
+
 // Approach Section 
 const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const groupSize = isMobile ? 2 : 4;
@@ -320,7 +464,6 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   return (
     <>
       <Header />
-      <Transitions>
       <div className="spacer"></div>
 
         <section className='SolutionsSecAbout'>
@@ -328,13 +471,10 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
             <div className='SolutionsRow'>
                 <div className='SolutionsCol'>
                     <div className='SolutionsTag'><span className='blackB white'><GoNorthStar className='yellow'/> Tech</span></div>
-                    <h1 className='sizeH1 uppercase'>Exceptional<br/>Digital Products</h1>
-                    <h3 className='sizeH4 uppercase pt-10 pb-10'>On-Time. On-Budget. On-Point.</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries creators of Logix</p>
+                    <h1 className='sizeH1 uppercase'>Innovative Tech, Unleashing Creative Possibilities</h1>
+                    <p>Tech solutions designed to drive innovation and efficiency. We combine creativity & technology with expert knowledge to deliver customized solutions that meet your unique needs. From corporate websites to mobile applications, we provide comprehensive tech services that empower your business to thrive in the digital age.</p>
                                 
-                    <div className='btnSpaceM pt-30'>     
-                        <RippleButton to="tech#services" className="btnDark fontM"><span>Let’s Talk</span></RippleButton>
-                    </div>
+               
 
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
@@ -364,133 +504,65 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
         </div>
         </section>
 
-        {/* Calculat */}
+        {/* Quick Facts  */}
         <section className='Calculat'>
-            <div className='container'>
-
-            {/* Calculat */}
+          <div className='container'>
             <div className='CalculatRow'>
-                <div className='CalculatCol CalculatColA bounce'>
-                <div className='CalculatColIn'><h4>500+</h4><p> Projects<br/> Delivered <PiStarFourFill /></p></div>
+              {calculatData.map(item => (
+                <div key={item.key} className={`CalculatCol CalculatCol${item.key}`}>
+                  <div className='CalculatColIn'>
+                    <h4>{item.number}</h4>
+                    <p><span  dangerouslySetInnerHTML={{ __html: item.description }}></span> <PiStarFourFill /></p>
+                  </div>
                 </div>
-                <div className='CalculatCol CalculatColB'>
-                <div className='CalculatColIn'><h4>11</h4><p>Years <br/>Of Experience <PiStarFourFill /></p></div>
-                </div>
-                <div className='CalculatCol CalculatColC'>
-                <div className='CalculatColIn'><h4>20+</h4><p>Technologies <br/>Supported <PiStarFourFill /></p></div>
-                </div>
-                <div className='CalculatCol CalculatColD'>
-                <div className='CalculatColIn'><h4>20+</h4><p>Tech <br/>Professionals <PiStarFourFill /></p></div>
-                </div>
+              ))}
             </div>
-            {/* Calculat End */}
             <div className='strokeB'>
-                <SVGCurveLine/>
-            </div>         
+              <SVGCurveLine />
             </div>
+          </div>
         </section>
-        {/* Calculat End */}
+        {/* Quick Facts  End */}
         
         <section className='solutionsSecServices' id='services'>
             <div className='container'>
                 
-                <div className='Heading center HeadingIcon'>
-                <h2 className='sizeH1 uppercase'>
-                Amplifying Business Progress<br/>
-                    <span className='iconSVG'>
-                    <i className='iconF'>
-                        <img src={starY} alt='Star Icon' />
-                    </i>
-                    </span>
-                    Through Smart Solutions
-                    <span className='iconSVG'>
-                    <i className='iconF'>
-                        <img src={starY} alt='Star Icon' />
-                    </i>
-                    </span>
-                </h2>
+
+
+              <div className='solutionsSecServicesFaq'>
+
+                <div className='Heading center HeadingIcon pb-20'>
+                  <h2 className='sizeH1 uppercase'>
+                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      Services
+                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                  </h2>
                 </div>
 
-                <div className='btnSpaceM pt-30 center pb-40'>     
-                    <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
+                <div className='solutionsSecServicesFaqList'>
+                  <Accordion>
+                    {servicesData.map(service => (
+                      <Accordion.Item eventKey={service.key} key={service.key}>
+                        <Accordion.Header>{service.header}</Accordion.Header>
+                        <Accordion.Body>
+                          <div className='solutionsWrap'>
+                            <div className='solutionsCol'>
+                              <p>{service.description}</p>
+                              <div className='solutionsWrapTag'>
+                                <ul>
+                                  {service.tags.map((tag, index) => (
+                                    <li key={index}><Link>{tag}</Link></li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </Accordion.Body>
+                      </Accordion.Item>
+                    ))}
+                  </Accordion>
                 </div>
-
-
-
-                <div className='solutionsSecServicesFaq'>
-                    <h3 className='sizeH5 uppercase bold'>Services</h3>
-                    <div className='solutionsSecServicesFaqList'>
-                    <Accordion defaultActiveKey="0">
-                    <Accordion.Item eventKey="0">
-                            <Accordion.Header>Corporate Website</Accordion.Header>
-                            <Accordion.Body>
-                                <div className='solutionsWrap'>
-                                    <div className='solutionsCol'>
-                                    <p>Explore our web development expertise to maximize your web presence which can help you captivate the audience by delivering unparalleled web experience</p>
-                                    <div className='solutionsWrapTag'>
-                                        <ul>
-                                            <li><Link>PHP</Link></li>
-                                            <li><Link>WordPress</Link></li>
-                                            <li><Link>Drupal</Link></li>
-                                            <li><Link>AngularJs</Link></li>
-                                            <li><Link>NodeJs</Link></li>
-                                            <li><Link>Laravel</Link></li>
-                                            <li><Link>ReactJs</Link></li>
-                                        </ul>
-                                    </div>
-                                    
-                                <div className='btnSpaceM pt-30 '>     
-                                    <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
-                                </div>
-                                </div>
-
-                                <div className='solutionsCol'>
-                                    <img src={corporateWebsite} alt="corporateWebsite" />
-                                </div>
-                                
-                                </div>    
-                            </Accordion.Body>
-                        </Accordion.Item>
-            
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>Ecommerce Development</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="2">
-                            <Accordion.Header>Web Application</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="3">
-                            <Accordion.Header>Mobile Applications</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="4">
-                            <Accordion.Header>ERP Systems</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="5">
-                            <Accordion.Header>Software</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="6">
-                            <Accordion.Header>HR Portal</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-                        
-                        <Accordion.Item eventKey="7">
-                            <Accordion.Header>Marketing Automations</Accordion.Header>
-                            <Accordion.Body></Accordion.Body>
-                        </Accordion.Item>
-            
-                    </Accordion>
-
-                    </div>
-                </div>
+              </div>
 
             </div>
         </section>
@@ -532,12 +604,33 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
         <section className='solutionsSecApproach'>
           <div className='container'>
-            <h3 className='sizeH5 uppercase bold'>A09 Approach</h3>
+
+
+
+          <div className='Heading center HeadingIcon'>
+              <h2 className='sizeH1 uppercase'>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    A09 Approach
+                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+              </h2>
+          </div>
+
+
             <div className='solutionsSecApproachList'>
               {groupedItems}
             </div>
           </div>
         </section>       
+
+        <div className='container'>
+                <div className='strokeB'><SVGCurveLine/></div>      
+        </div>
+
+
+
+
+
+
 
 
 
@@ -545,10 +638,9 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
             <div className='container'>
 
             <div className='Heading center HeadingIcon'>
-            <h3 className='sizeH5 uppercase bold pb-20'>Case studies</h3>
                 <h2 className='sizeH1 uppercase'>
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    Lorem ipsum dolor
+                    Case studies
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
                 </h2>
             </div>
@@ -564,11 +656,9 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                                 <div className='CaseStudyImg'><img src={CaseStudy.image}/></div>
                                 <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
                                 <div className='textTag'><p>{CaseStudy.tag}
-                                
-                                {CaseStudy.tags.map((tag, index) => (
-                                  <span key={index}>{tag.name}</span>
-                                ))}
-                                
+                                  {CaseStudy.tags.map((tag, index) => (
+                                    <span key={index}>{tag.name}</span>
+                                  ))}
                                 </p></div>
                             </Link>
                         </div>
@@ -577,7 +667,7 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                 </Slider>
 
             <div className='btnSpaceEx center'>     
-                <RippleButton to="/work" className="btnDark fontM"><span>View All</span></RippleButton>
+                <Link to="../work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
 
             </div>
@@ -588,20 +678,8 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
 
 
-
         {/* Work Logos */}
-        <section className='hWorkLogos'><div className='container'>
-            {/* <hr className='hrTop'/> */}
-            <div className='strokeB hrTop'>
-                <SVGCurveLine/>
-            </div>
-            
-            <LogosSlider />
-
-            <div className='strokeB hrBottom'>
-                <SVGCurveLine/>
-            </div>
-        </div></section> 
+        <LogosSlider />
         {/* Work Logos End */} 
 
 
@@ -623,19 +701,22 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
           {testimonialData.map((testimonial, index) => (
             <div key={index} className='item'>
               <div className='awardsCol'>
-              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
               <div className='textwithimg'>
-                <div className='awardsYear'><h5>{testimonial.name}</h5></div>
-                <div className='awardsDesignation'><p>{testimonial.designation}</p></div>
-                <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
-                </div>
+              <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
+               
+                <div className='awardsData'>
+                  <h5>{testimonial.name}</h5>
+                  <p>{testimonial.designation}</p></div>
+              </div>
+              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
+
               </div>
             </div>
           ))}
         </Slider>
 
-        <div className='btnSpaceEx center'>     
-            <RippleButton to="#" className="btnDark fontM"><span>View All</span></RippleButton>
+        <div className='btnSpaceEx center pb-0'>     
+            <Link to="../testimonials" className="btnDark fontM ripple-button"><span>View All</span></Link>
         </div>
 
 
@@ -649,73 +730,67 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
           <div className='freeAuditSecRow'>
                 <div className='freeAuditSecCol'>
                     <h3 className='sizeH5 uppercase bold pb-20 white'>Free Audit</h3>
-                    <h2 className='sizeH1 uppercase white'>Uncover the untapped potential of your website</h2>
+                    <h2 className='sizeH1 uppercase white'>Interested in optimizing your tech infrastructure? </h2>
+                    <div className='pt-30 '>     
+                        <Link   className="btnBlue fontM ripple-button"><span>Click Here</span></Link>
+                    </div>
                 </div>
 
-                <div className='freeAuditSecCol'>
+                {/* <div className='freeAuditSecCol'>
                     <Link to=''>
                       <img src={clickHere} alt='Click Here' />
                     </Link>
-                </div>
+                </div> */}
+
+                        
+             
             </div>
         </div></section> 
         {/* Free Audit End */} 
 
 
-        
-      <section className='faqContent'><div className='container'>
-        <h2 className='sizeH5 uppercase bold pb-20'>FAQS</h2>
-        <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>1. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>2. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>3. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>4. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>5. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
-            <Accordion.Body>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </Accordion.Body>
-          </Accordion.Item>
+      {/* FAQ */}
+      <section className='faqContent'>
+        <div className='container'>
+
+        <div className='Heading center HeadingIcon pb-20'><h2 className='sizeH1'>
+          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+              FAQs
+          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+        </h2></div>
+
+
+          <Accordion>
+            {faqsData.map(faq => (
+              <Accordion.Item eventKey={faq.key} key={faq.key}>
+                <Accordion.Header>{faq.question}</Accordion.Header>
+                <Accordion.Body>
+                  {faq.answer}
+                </Accordion.Body>
+              </Accordion.Item>
+            ))}
           </Accordion>
-      </div></section>
+        </div>
+      </section>
+      {/* FAQ */}
 
 
-       {/* Free Audit */}   
-       <section className='yellowB center'><div className='container'>
+       {/* Business  */}   
+       <section className='yellowB center getSolutions'><div className='container'>
                 <div className='Heading  HeadingIcon'>
-                    <h2 className='sizeH1 uppercase'><GoNorthStar className='pink' /> Lorem ipsum dolor sit amet, <GoNorthStar className='pink' /> <br/> consectetur adipiscing elit?</h2>
+                    <h2 className='sizeH3 uppercase'>Ready to Transform Your Business with Cutting-Edge Tech Solutions? </h2>
 
                         
-                    <div className='btnSpaceEx center'>     
-                        <RippleButton to="#" className="btnBlue fontM"><span>Request a Quote</span></RippleButton>
+                    <div className='pt-30 center'>     
+                        <Link onClick={() => { setOpenModalGetQuote(true); }}  className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
                     </div>
                 </div>
         </div></section> 
-        {/* Free Audit End */} 
+        {/* Business End */} 
 
-
-      </Transitions>
       <Footer />
+      {OpenModalGetQuote && <GetQuote closeModal={setOpenModalGetQuote} />}
+
     </>
   );
 };
