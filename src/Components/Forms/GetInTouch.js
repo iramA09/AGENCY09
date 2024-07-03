@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-function ParterWithUs() {
+
+function GetInTouch() {
   const [errorMessage, setErrorMessage] = useState('');
+  const [buttonText, setButtonText] = useState('Submit');
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
   const [formData, setFormData] = useState({
     name: '',
     mobile: '',
     email: '',
+    service: '',
     message: ''
   });
 
@@ -13,6 +17,7 @@ function ParterWithUs() {
     name: '',
     mobile: '',
     email: '',
+    service: '',
   });
 
   const handleChange = (e) => {
@@ -21,72 +26,74 @@ function ParterWithUs() {
       ...prevState,
       [name]: value
     }));
-    // Reset error message when user starts typing
     setErrors(prevErrors => ({
       ...prevErrors,
       [name]: '',
     }));
   };
 
+  const handleValidation = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.mobile) newErrors.mobile = 'Mobile number is required';
+    else if (!/^\d{10}$/.test(formData.mobile)) newErrors.mobile = 'Mobile number must be 10 digits';
+    if (!formData.email) newErrors.email = 'Email is required';
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Invalid email format';
+    if (!formData.service) newErrors.service = 'Service is required';
+    return newErrors;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newErrors = {};
-    // Basic validation
-    if (!formData.name) {
-      newErrors.name = 'Name is required';
-    }
-    if (!formData.mobile) {
-      newErrors.mobile = 'Mobile number is required';
-    } else if (!/^\d{10}$/.test(formData.mobile)) {
-      newErrors.mobile = 'Mobile number must be 10 digits';
-    }
-    if (!formData.email) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Invalid email format';
-    }
 
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+    const validationErrors = handleValidation();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
       return;
     }
 
-    try {
-      // Send form data to the API
-      const response = await fetch('http://localhost/react/test_api/getInApi.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
+    setButtonText('Processing...');
+    setIsButtonDisabled(true);
 
-      if (!response.ok) {
-        throw new Error('Failed to submit form');
-      } else {
-        // Parse the JSON response
+    const grecaptcha = window.grecaptcha;
+    grecaptcha.ready(async () => {
+      const token = await grecaptcha.execute('6LelbAYqAAAAAGvo7ZJ_k3t_R1z4rJKA7Aeu7ojF', { action: 'submit' });
+
+      const formDataToSend = { ...formData, recaptcha_token: token };
+
+      try {
+        const response = await fetch('http://localhost/react/test_api/getInApi.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formDataToSend)
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to submit form');
+        }
+
         const responseData = await response.json();
-        // Now you can access the response data
         if (responseData.status === 1) {
-          console.log(responseData.message);
-          setErrorMessage(responseData.message);
-          // Reset form data upon successful submission
           setFormData({
             name: '',
             mobile: '',
             email: '',
+            service: '',
             message: ''
           });
+          setErrorMessage(responseData.message);
         } else {
-          console.log(responseData.message);
           setErrorMessage(responseData.message);
         }
+      } catch (error) {
+        console.error('Error submitting form:', error.message);
+      } finally {
+        setButtonText('Submit');
+        setIsButtonDisabled(false);
       }
-
-    } catch (error) {
-      console.error('Error submitting form:', error.message);
-      // Optionally, you can set an error state here for displaying error feedback to the user
-    }
+    });
   };
 
   return (
@@ -94,7 +101,15 @@ function ParterWithUs() {
       <form onSubmit={handleSubmit}>
         <div className='FormGridTwo'>
           <div className='form-group'>
-            <input className='form-control' placeholder='Name' type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+            <input
+              className='form-control'
+              placeholder='Name'
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
             {errors.name && <span className='errorText'>{errors.name}</span>}
           </div>
           <div className='form-group'>
@@ -122,14 +137,20 @@ function ParterWithUs() {
             {errors.email && <span className='errorText'>{errors.email}</span>}
           </div>
           <div className='form-group'>
-          <select className='form-control' >
-            <option value="Select">Select</option>
-            <option value="S1">S1</option>
-            <option value="S2">S2</option>
-            <option value="S3">S3</option>
-          </select>
-
-        </div>
+            <select className='form-control' id='service' name='service' value={formData.service} onChange={handleChange}>
+            <option value="">Select Service*</option>
+            <option value="Strategy">Strategy</option>
+            <option value="Content">Content</option>
+            <option value="Tech">Tech</option>
+            <option value="Media">Media</option>
+            <option value="Paperless">Paperless</option>
+            <option value="Films">Films</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Keyword">Keyword</option>
+            <option value="Analytics">Analytics</option>
+            </select>
+            {errors.service && <span className='errorText'>{errors.service}</span>}
+          </div>
         </div>
         <div className='FormGridS1'>
           <div className='form-group'>
@@ -145,17 +166,17 @@ function ParterWithUs() {
         </div>
         <div className='FormGridS1'>
           <div className='form-group-btn center'>
-            <RippleButton type="submit" className="btnBlack fontS"><span> Submit </span></RippleButton>
+            <button type="submit" className="btnBlack fontS ripple-button" disabled={isButtonDisabled}>
+              <span>{buttonText}</span>
+            </button>
           </div>
         </div>
       </form>
       <div className="form_response">
         {errorMessage && <span className="error">{errorMessage}</span>}
       </div>
-
-      
     </div>
   );
 }
 
-export default ParterWithUs;
+export default GetInTouch;

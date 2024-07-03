@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
-import GetQuote from '../../Components/Forms/GetQuote';
+import StartAProjectFormPopup from '../../Components/Forms/StartAProjectFormPopup';
 
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
@@ -131,7 +131,7 @@ const testimonialSlider = {
 
 const Content = () => {
   useLenisScroll();
-  const [OpenModalGetQuote, setOpenModalGetQuote] = React.useState(false);
+  const [OpenModalStartAProjectFormPopup, setOpenModalStartAProjectFormPopup] = React.useState(false);
 
 
 // Services Data
@@ -512,14 +512,14 @@ const faqsData = [
 
                         
                     <div className='pt-30 center'>     
-                    <Link onClick={() => { setOpenModalGetQuote(true); }}  className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
+                    <Link onClick={() => { setOpenModalStartAProjectFormPopup(true); }}  className="btnBlue fontM ripple-button"><span>Get Quote</span></Link>
                     </div>
                 </div>
         </div></section> 
         {/* Business End */} 
 
       <Footer />
-      {OpenModalGetQuote && <GetQuote closeModal={setOpenModalGetQuote} />}
+      {OpenModalStartAProjectFormPopup && <StartAProjectFormPopup closeModal={setOpenModalStartAProjectFormPopup} defaultService="Content" />}
 
     </>
   );

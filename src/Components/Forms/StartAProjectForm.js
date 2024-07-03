@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function StartAProjectForm() {
@@ -25,13 +25,15 @@ function StartAProjectForm() {
     service: '',
   });
 
+  const [buttonText, setButtonText] = useState('Submit');
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
       [name]: value
     }));
-    // Reset error message when user starts typing
     setErrors(prevErrors => ({
       ...prevErrors,
       [name]: '',
@@ -40,8 +42,8 @@ function StartAProjectForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     const newErrors = {};
-    // Basic validation
     if (!formData.name) {
       newErrors.name = 'Name is required';
     }
@@ -75,49 +77,53 @@ function StartAProjectForm() {
       setErrors(newErrors);
       return;
     }
+    // Change button text and disable it
+    setButtonText('Processing...');
+    setIsButtonDisabled(true);
 
     try {
-      // Send form data to the API
-      const response = await fetch('https://www.agency09.in/test_api/enquiryApi.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
+      
+      const grecaptcha = window.grecaptcha;
+      grecaptcha.ready(async () => {
+        const token = await grecaptcha.execute('6LelbAYqAAAAAGvo7ZJ_k3t_R1z4rJKA7Aeu7ojF', { action: 'submit' });
 
-      if (!response.ok) {
-        throw new Error('Failed to submit form');
-      }else{
-        // Parse the JSON response
-        const responseData = await response.json();
-        // Now you can access the response data
-        if(responseData.status == 1){
-          console.log(responseData.message);
-          setErrorMessage(responseData.message);
-          // Reset form data upon successful submission
-          setFormData({
-            name: '',
-            companyName: '',
-            number: '',
-            email: '',
-            website: '',
-            country: '',
-            service: '',
-            budget: '',
-            message: ''
-          });
-        }else{
-          console.log(responseData.message);
-          setErrorMessage(responseData.message);
+        const response = await fetch('http://localhost/react/test_api/enquiryApi.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ ...formData, recaptcha_token: token })
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to submit form');
+        } else {
+          const responseData = await response.json();
+          if (responseData.status == 1) {
+            setErrorMessage(responseData.message);
+            setFormData({
+              name: '',
+              companyName: '',
+              number: '',
+              email: '',
+              website: '',
+              country: '',
+              service: '',
+              budget: '',
+              message: ''
+            });
+          } else {
+            setErrorMessage(responseData.message);
+          }
         }
-        // Optionally, you can handle success feedback here
-        //console.log('Form submitted successfully');
-      }
-
+      });
     } catch (error) {
       console.error('Error submitting form:', error.message);
-      // Optionally, you can set an error state here for displaying error feedback to the user
+      setErrorMessage('Error submitting form');
+    } finally {
+      // Reset button text and re-enable it
+      setButtonText('Submit');
+      setIsButtonDisabled(false);
     }
   };
 
@@ -183,7 +189,9 @@ function StartAProjectForm() {
         </div>
         <div className='FormGridS1'>
           <div className='form-group-btn center'>
-            <RippleButton type="submit" className="btnBlack fontS "><span> Submit </span></RippleButton>
+          <button type="submit" className="btnBlack fontS ripple-button" disabled={isButtonDisabled}>
+            <span>{buttonText}</span>
+          </button>
           </div>
         </div>
       </form>
