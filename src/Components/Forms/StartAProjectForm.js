@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 function StartAProjectForm() {
   const [errorMessage, setErrorMessage] = useState('');
@@ -23,6 +22,7 @@ function StartAProjectForm() {
     website: '',
     country: '',
     service: '',
+    budget: ''
   });
 
   const [buttonText, setButtonText] = useState('Submit');
@@ -36,20 +36,16 @@ function StartAProjectForm() {
     }));
     setErrors(prevErrors => ({
       ...prevErrors,
-      [name]: '',
+      [name]: ''
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const newErrors = {};
-    if (!formData.name) {
-      newErrors.name = 'Name is required';
-    }
-    if (!formData.companyName) {
-      newErrors.companyName = 'Company name is required';
-    }
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.companyName) newErrors.companyName = 'Company name is required';
     if (!formData.number) {
       newErrors.number = 'Phone number is required';
     } else if (!/^\d{10}$/.test(formData.number)) {
@@ -60,33 +56,24 @@ function StartAProjectForm() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Invalid email format';
     }
-    if (!formData.website) {
-      newErrors.website = 'Website is required';
-    }
-    if (!formData.country) {
-      newErrors.country = 'Country is required';
-    }
-    if (!formData.service) {
-      newErrors.service = 'Service is required';
-    }
-    if (!formData.budget) {
-      newErrors.budget = 'Budget is required';
-    }
+    if (!formData.website) newErrors.website = 'Website is required';
+    if (!formData.country) newErrors.country = 'Country is required';
+    if (!formData.service) newErrors.service = 'Service is required';
+    if (!formData.budget) newErrors.budget = 'Budget is required';
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
-    // Change button text and disable it
+
     setButtonText('Processing...');
     setIsButtonDisabled(true);
 
-    try {
-      
-      const grecaptcha = window.grecaptcha;
-      grecaptcha.ready(async () => {
-        const token = await grecaptcha.execute('6LelbAYqAAAAAGvo7ZJ_k3t_R1z4rJKA7Aeu7ojF', { action: 'submit' });
-
+    
+    const grecaptcha = window.grecaptcha;
+    grecaptcha.ready(async () => {
+      const token = await grecaptcha.execute('6LelbAYqAAAAAGvo7ZJ_k3t_R1z4rJKA7Aeu7ojF', { action: 'submit' });
+      try {
         const response = await fetch('https://www.agency09.in/test_api/enquiryApi.php', {
           method: 'POST',
           headers: {
@@ -97,34 +84,34 @@ function StartAProjectForm() {
 
         if (!response.ok) {
           throw new Error('Failed to submit form');
-        } else {
-          const responseData = await response.json();
-          if (responseData.status == 1) {
-            setErrorMessage(responseData.message);
-            setFormData({
-              name: '',
-              companyName: '',
-              number: '',
-              email: '',
-              website: '',
-              country: '',
-              service: '',
-              budget: '',
-              message: ''
-            });
-          } else {
-            setErrorMessage(responseData.message);
-          }
         }
-      });
-    } catch (error) {
-      console.error('Error submitting form:', error.message);
-      setErrorMessage('Error submitting form');
-    } finally {
-      // Reset button text and re-enable it
-      setButtonText('Submit');
-      setIsButtonDisabled(false);
-    }
+
+        const responseData = await response.json();
+        if (responseData.status === 1) {
+          setErrorMessage(responseData.message);
+          setFormData({
+            name: '',
+            companyName: '',
+            number: '',
+            email: '',
+            website: '',
+            country: '',
+            service: '',
+            budget: '',
+            message: ''
+          });
+        } else {
+          setErrorMessage(responseData.message);
+        }
+      
+      } catch (error) {
+        console.error('Error submitting form:', error.message);
+        setErrorMessage('Error submitting form');
+      } finally {
+        setButtonText('Submit');
+        setIsButtonDisabled(false);
+      }
+    });
   };
 
   const countries = [
@@ -189,14 +176,13 @@ function StartAProjectForm() {
         </div>
         <div className='FormGridS1'>
           <div className='form-group-btn center'>
-          <button type="submit" className="btnBlack fontS ripple-button" disabled={isButtonDisabled}>
-            <span>{buttonText}</span>
-          </button>
+            <button type="submit" className="btnBlack fontS ripple-button" disabled={isButtonDisabled}>
+              <span>{buttonText}</span>
+            </button>
           </div>
         </div>
       </form>
       <div className="form_response">
-        {/* Display error message */}
         {errorMessage && <span className="error">{errorMessage}</span>}
       </div>
     </div>
