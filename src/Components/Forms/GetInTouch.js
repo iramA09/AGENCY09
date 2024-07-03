@@ -62,7 +62,7 @@ function GetInTouch() {
       const formDataToSend = { ...formData, recaptcha_token: token };
 
       try {
-        const response = await fetch('http://localhost/react/test_api/getInApi.php', {
+        const response = await fetch('https://www.agency09.in/test_api/getInApi.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

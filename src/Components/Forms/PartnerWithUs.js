@@ -70,7 +70,7 @@ function PartnerWithUs() {
       formDataToSend.append('recaptcha_token', token);
 
       try {
-        const response = await fetch('http://localhost/react/test_api/partnerApi.php', {
+        const response = await fetch('https://www.agency09.in/test_api/partnerApi.php', {
           method: 'POST',
           body: formDataToSend,
         });

@@ -84,7 +84,7 @@ const ApplyNow = ({ closeModal }) => {
       formDataToSend.append('recaptcha_token', token);
 
       try {
-        const response = await fetch('http://localhost/react/test_api/applyApi.php', {
+        const response = await fetch('https://www.agency09.in/test_api/applyApi.php', {
           method: 'POST',
           body: formDataToSend,
         });
