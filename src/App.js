@@ -27,7 +27,7 @@ import Tribevibe from './Pages/Work/CaseStudy/Tribevibe'
 import ProductCommunicationforRelianceGeneralInsurance from './Pages/Work/CaseStudy/ProductCommunicationforRelianceGeneralInsurance'
 import LakmeFashionWeek from './Pages/Work/CaseStudy/LakmeFashionWeek'
 import AmericanTourister from './Pages/Work/CaseStudy/AmericanTourister'
-
+import PrivacyPolicy from './Pages/PrivacyPolicy'
 import Error from './Pages/Error'
 import Sitemap09 from './Pages/Sitemap09'
 
@@ -68,6 +68,7 @@ function App() {
           <Route exact path='/work/case-studys/american-tourister' element={<AmericanTourister />} />
           <Route exact path='/work/case-studies' element={<CaseStudies />} />
           <Route exact path='/work/our-clients' element={<OurClients />} />
+          <Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route exact path='/sitemap' element={<Sitemap09 />} />
           <Route exact path='*' element={<Error />} />
         </Routes>

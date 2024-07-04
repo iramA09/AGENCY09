@@ -10,31 +10,39 @@ const filteredData = [
     {
         category: 'Tech', 
         logo: tatamotors, 
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat .”', 
-        name: 'Vinay Dholakia', 
+        description: "Working with AGENCY09 has significantly improved our online visibility. Their comprehensive digital marketing strategies and consistent optimization have driven more traffic to our website and increased our brand's reach.", 
+        name: 'Shuchiraa Rao',
         role: 'Head - Digital Marketing & Media'
     },
 
     {
         category: 'Tech', 
         logo: tatamotors, 
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat .”', 
+        description: 'The creativity and innovation that AGENCY09 brought to our project were outstanding. Their ability to translate our vision into compelling content and visually appealing designs exceeded our expectations.', 
+        name: 'Vinay Dholakia',
+        role: 'Head - Digital Marketing & Media'
+    },
+    {
+        category: 'Tech', 
+        logo: tatamotors, 
+        description:'The team at AGENCY09 is professional, responsive, and truly understands the needs of their clients. Their proactive approach and excellent communication made the entire process seamless and enjoyable.', 
+        name: 'Shuchiraa Rao',
+        role: 'Head - Digital Marketing & Media'
+    },
+    {
+        category: 'Tech', 
+        logo: tatamotors, 
+        description: "AGENCY09's results-driven approach has delivered measurable success for our campaigns. Their data-driven strategies and insightful analytics have helped us achieve our marketing goals effectively.", 
         name: 'Vinay Dholakia', 
         role: 'Head - Digital Marketing & Media'
     },
     {
         category: 'Tech', 
         logo: tatamotors, 
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat .”', 
-        name: 'Vinay Dholakia', 
+        description: 'From web development to social media management, AGENCY09 offers a full suite of digital services. Their expertise across multiple domains has provided us with a cohesive and integrated marketing solution.', 
+        name: 'Shuchiraa Rao',
         role: 'Head - Digital Marketing & Media'
-    },
-    {
-        category: 'Tech', 
-        logo: tatamotors, 
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat .”', 
-        name: 'Vinay Dholakia', 
-        role: 'Head - Digital Marketing & Media'
+
     },
 
   ];
@@ -73,7 +81,7 @@ const Testimonials = () => {
             <section><div className='container'>
 
             <div className='testimonialsPg'>
-            <div className='ourClientsLnav'>
+            {/* <div className='ourClientsLnav'>
                 <ul>
                     <li><span className={selectedCategory === 'All' ? 'active' : ''} onClick={() => handleCategoryClick('All')}>All</span></li>
                     <li><span className={selectedCategory === 'Tech' ? 'active' : ''} onClick={() => handleCategoryClick('Tech')}>Tech</span></li>
@@ -82,7 +90,7 @@ const Testimonials = () => {
                     <li><span className={selectedCategory === 'Media' ? 'active' : ''} onClick={() => handleCategoryClick('Media')}>Media</span></li>
                     <li><span className={selectedCategory === 'Production' ? 'active' : ''} onClick={() => handleCategoryClick('Production')}>Production</span></li>
                 </ul>
-            </div>
+            </div> */}
 
             <div className='testimonialsPgRow'>
                 {filteredMin.slice(0, visibleTechItems).map((data, index) => (
@@ -93,7 +101,7 @@ const Testimonials = () => {
                     <span className='testimonialsPgColText'>
                         <p>{data.description}</p>
                         <h3>{data.name}</h3>
-                        <h5>{data.role}</h5>
+                        {/* <h5>{data.role}</h5> */}
                     </span>
                 </div>
                 ))}

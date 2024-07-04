@@ -101,13 +101,13 @@ const calculatData = [
 
     
     {/* LifeAtA09 */}
-    <section className='checkPlay'><div className='container'>
+    {/* <section className='checkPlay'><div className='container'>
         <div className='Heading center HeadingIcon pb-30'>
         <Link to='https://www.youtube.com/@agency09official/playlists' target='_blank'  className='sizeH1 uppercase btn'>
              Check out our playlist on YouTube
         </Link>
         </div>
-    </div></section>
+    </div></section> */}
     {/* LifeAtA09 */}
 
 
@@ -139,14 +139,11 @@ const calculatData = [
     </div></section>
     {/* WorkingWithUs */}
 
-
+{/* 
 
     
     <section className='faqContent yellowB'><div className='container'>
         <h2 className='sizeH5 uppercase bold pb-20'>FAQS</h2>
-
-
-
         <Accordion>
           <Accordion.Item eventKey="0">
             <Accordion.Header>1. Branding: Lorem Ipsum is simply dummy text</Accordion.Header>
@@ -179,7 +176,7 @@ const calculatData = [
             </Accordion.Body>
           </Accordion.Item>
           </Accordion>
-      </div></section>
+      </div></section> */}
 
       <Footer />
     </>

@@ -197,7 +197,7 @@ const Tribevibe = () => {
         </div>
     </section>
 
-
+{/* 
     <div className='container'>
     <div className='strokeB'>
               <SVGCurveLine />
@@ -246,7 +246,7 @@ const Tribevibe = () => {
             </div>
 
             </div>
-        </section>  
+        </section>   */}
 
 
 

@@ -62,7 +62,7 @@ const PartnerCompanies = [
     {
       link: '#',  
       image: l09ix,
-      Text: "Pioneering organic mushroom farming with a focus on health and sustainability. Bringing the best of nature's superfoods to your table.",
+      Text: "Logix is a leading tech company specializing in the development of custom software, mobile applications, and enterprise resource planning (ERP) systems, designed to streamline operations and enhance business productivity. Our innovative solutions cater to various industries, providing scalable and efficient tools to drive growth and optimize resources.",
     },
 
     {

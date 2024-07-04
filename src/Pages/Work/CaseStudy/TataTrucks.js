@@ -208,7 +208,7 @@ const TataTrucks = () => {
         </div>
     </section>
 
-
+{/* 
     <div className='container'>
     <div className='strokeB'>
               <SVGCurveLine />
@@ -259,7 +259,7 @@ const TataTrucks = () => {
             </div>
         </section>  
 
-
+ */}
 
 
     <Footer/>

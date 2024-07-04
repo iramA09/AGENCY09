@@ -1,23 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import mahindra_tsubaki1 from '../../../Assets/Images/work/mahindra_tsubaki/mahindra_tsubaki1.png';
-import Ryan from '../../../Assets/Images/work/Ryan.jpg';
+
 
 // Keyword
 export const KeywordData = [
-    {
-        id: 1,
-        title: 'Streamlining Digital Presence: 100+ Websites & CMS for Ryan International School',
-        tags: [
-            { name: 'Web Design', link: '' },
-            { name: 'Web Development', link: '' },
-            { name: 'Content Management Systems', link: '' }
-        ],
-        image: Ryan,
-        link: '/work/case-studys/ryangroup',
-        brand: 'Ryan International Group of Institutions',
-        department: 'Keyword'
-    },
+
 ];
 
 // State for each tab

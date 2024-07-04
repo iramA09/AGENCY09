@@ -198,7 +198,7 @@ const Ryangroup = () => {
         </div>
     </section>
 
-
+{/* 
     <div className='container'>
     <div className='strokeB'>
               <SVGCurveLine />
@@ -247,7 +247,7 @@ const Ryangroup = () => {
             </div>
 
             </div>
-        </section>  
+        </section>   */}
 
 
 

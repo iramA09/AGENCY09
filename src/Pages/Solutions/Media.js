@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import StartAProjectFormPopup from '../../Components/Forms/StartAProjectFormPopup';
+import Testimonias from '../../Components/Testimonias';
 
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
@@ -25,9 +26,7 @@ import 'react-tabs/style/react-tabs.css';
 import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
 import pattern from '../../Assets/Images/icons/patternMedia.jpg';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
-import ryan from '../../Assets/Images/logos/work/ryan.png';
-import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
-import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
+
 import starY from '../../Assets/Images/icons/star.png';
 import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
 import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
@@ -64,6 +63,10 @@ import RedditAds from '../../Assets/Images/logos/platforms/RedditAds.png';
 // Platforms End
 
 
+import chinesewok from '../../Assets/Images/logos/work/others/chinese-wok.png';
+import credaimchi from '../../Assets/Images/logos/work/real-estate/credai-mchi.png';
+import stepsetgo from '../../Assets/Images/logos/work/health_wellness/stepsetgo.png';
+import aldo from '../../Assets/Images/logos/work/fashion_lifestyle/aldo.png';
 
 // Images end
 
@@ -126,35 +129,6 @@ const CaseStudySlider = {
 };
 // CaseStudySlider End
 
-
-//testimonaialSlider
-const testimonialSlider = {
-  dots: false,
-  arrows: true,
-  infinite: true,
-  autoplay: false,
-  autoplaySpeed: 7000,
-  speed: 700,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 968,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-// testimonaialSlider End
 
  
 
@@ -268,48 +242,7 @@ const CaseStudyData = [
     },
   ];
 //CaseStudy Data End
-
-// testimonaialSlider
-const testimonialData = [
-  {
-      eventsText: 'We rank AGENCY09’s work very highly, and ultimately chose to continue working with them over the last three years.”',
-      name: 'Shuchiraa Rao',
-      designation:'Digital Marketing Head',
-      image:ryan,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Vinay Dholakia',
-      designation:'Head - Digital Marketing & Media',
-      image:tataMotors2,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Shuchiraa Rao',
-      designation:'Digital Marketing Head',
-      image:bitsPilani,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Vinay Dholakia',
-      designation:'Head - Digital Marketing & Media',
-      image:ryan,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Shuchiraa Rao',
-      designation:'Digital Marketing Head',
-      image:tataMotors2,
-  },   
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Vinay Dholakia',
-      designation:'Head - Digital Marketing & Media',
-      image:bitsPilani,
-  }
-];
-//testimonaialSlider End
-
+ 
 
 // FAQS
 const faqsData = [
@@ -377,15 +310,14 @@ const faqsData = [
                     <h1 className='sizeH1 uppercase'>Harness the potential of digital platforms to propel your brand to new heights</h1>
                     <p>Performance marketing strategies are meticulously crafted to deliver unparalleled results for your brand. With a data-driven approach and a relentless pursuit of ROI, we empower businesses to thrive in the competitive digital landscape. From maximizing conversions to optimizing ad spend, we're here to elevate your brand's performance and propel your success to new heights</p>
                                 
-               
-
+                    
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
                         <ul className='trustedByLogos'>
-                            <li><img src={bitsPilani} alt=""/></li>
-                            <li><img src={tataMotors2} alt=""/></li>
-                            <li><img src={ryan} alt=""/></li>
-                            <li><img src={mahindraAccelo} alt=""/></li>
+                            <li><img src={chinesewok} alt=""/></li>
+                            <li><img src={aldo} alt=""/></li>
+                            <li><img src={stepsetgo} alt=""/></li>
+                            <li><img src={credaimchi} alt=""/></li>
                         </ul>
                     </div>
                 </div>
@@ -470,12 +402,11 @@ const faqsData = [
             </div>
         </section>
 
+{/* 
+
         <div className='container'>
                 <div className='strokeB'><SVGCurveLine/></div>      
         </div>
-
-
-
 
         <section className='solutionsSecCaseStudy'>
             <div className='container'>
@@ -483,7 +414,7 @@ const faqsData = [
             <div className='Heading center HeadingIcon'>
                 <h2 className='sizeH1 uppercase'>
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                     Case studies
+                    Case studies
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
                 </h2>
             </div>
@@ -496,14 +427,19 @@ const faqsData = [
                         <div key={index} className='item'>
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/></div>
+                                <div className='CaseStudyImg'><img src={CaseStudy.image}/>
+                                <div className='workGridItemHover'>
+                                    <div className='workGridItemHoverIn'>
+                                        <h3>{CaseStudy.title}</h3>
+                                        <h4>{CaseStudy.brand}</h4>
+                                        <p>{CaseStudy.department}</p>
+                                    </div>
+                                </div></div>
                                 <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
                                 <div className='textTag'><p>{CaseStudy.tag}
-                                
-                                {CaseStudy.tags.map((tag, index) => (
-                                  <span key={index}>{tag.name}</span>
-                                ))}
-                                
+                                  {CaseStudy.tags.map((tag, index) => (
+                                    <span key={index}>{tag.name}</span>
+                                  ))}
                                 </p></div>
                             </Link>
                         </div>
@@ -512,55 +448,16 @@ const faqsData = [
                 </Slider>
 
             <div className='btnSpaceEx center'>     
-                <Link to="/work" className="btnDark fontM ripple-button"><span>View All</span></Link>
+                <Link to="../work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
 
             </div>
 
             </div>
-        </section>  
-         
+        </section>   */}
      
 
-        {/* TESTIMONIALS */}   
-        <section className='greenB testimonialSec'>
-                <div className='container'>
-
-                <div className='Heading center HeadingIcon'>
-                    <h2 className='sizeH1 uppercase'>
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                        TESTIMONIALS
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    </h2>
-                </div>
-
-
-        <Slider {...testimonialSlider} className='testimonialSlider slick-slider'>
-          {testimonialData.map((testimonial, index) => (
-            <div key={index} className='item'>
-              <div className='awardsCol'>
-              <div className='textwithimg'>
-              <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
-               
-                <div className='awardsData'>
-                  <h5>{testimonial.name}</h5>
-                  <p>{testimonial.designation}</p></div>
-              </div>
-              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
-
-              </div>
-            </div>
-          ))}
-        </Slider>
-
-        <div className='btnSpaceEx center pb-0'>     
-            <Link to="../testimonials" className="btnDark fontM ripple-button"><span>View All</span></Link>
-        </div>
-
-
-
-        </div></section> 
-        {/* TESTIMONIALS End */} 
+    
  
 
         
@@ -614,16 +511,15 @@ const faqsData = [
             </div>            
         </section>
 
+        
+        <Testimonias/>
 
-        <div className='container'>
-                <div className='strokeB'><SVGCurveLine/></div>      
-        </div>
 
+     
 
         {/* Work Logos */}
             <LogosSlider />
         {/* Work Logos End */} 
-
 
 
 

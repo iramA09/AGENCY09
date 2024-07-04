@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import StartAProjectFormPopup from '../../Components/Forms/StartAProjectFormPopup';
+import Testimonias from '../../Components/Testimonias';
 
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
@@ -24,18 +25,15 @@ import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
 import starY from '../../Assets/Images/icons/star.png';
+import godrejlaffaire from '../../Assets/Images/work/Laffaire.jpg';
+import RGI from '../../Assets/Images/work/rgi.jpg';
+import lakme from '../../Assets/Images/work/lakme.jpg';
 
-import chatbot from '../../Assets/Images/tools/chatbot.png';
-import one_dashboard from '../../Assets/Images/tools/one_dashboard.png';
-import ticketing_system from '../../Assets/Images/tools/ticketing_system.png';
-import url_builder from '../../Assets/Images/tools/url_builder.png';
-import website_audit from '../../Assets/Images/tools/website_audit.png';
+import adityabirla from '../../Assets/Images/logos/work/BFSI/aditya-birla.png';
+import samsonite from '../../Assets/Images/logos/work/retail_fmcg/samsonite.png';
+import lakmefashionweek from '../../Assets/Images/logos/work/events/lakme-fashion-week.png';
+import disney from '../../Assets/Images/logos/work/media_entertainment_gaming/disney.png';
 
-import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
-import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
-import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
-
-import clickHere from '../../Assets/Images/icons/clickHere.png';
 // Images end
 
 // toolsSlider 
@@ -96,37 +94,6 @@ const CaseStudySlider = {
     ],
 };
 // CaseStudySlider End
-
-
-//testimonaialSlider
-const testimonialSlider = {
-  dots: false,
-  arrows: true,
-  infinite: true,
-  autoplay: false,
-  autoplaySpeed: 7000,
-  speed: 700,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 968,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-// testimonaialSlider End
-
  
 
 const Content = () => {
@@ -179,72 +146,48 @@ const Content = () => {
 
 //CaseStudy Data
 const CaseStudyData = [
-    {
-        link: '#',
-        image: ourwork1,
-        titale: 'Brand led site for a Banking Solutions Firm',
-        tags: [{ name: 'BFSI' },],
-    },  
-    {
-        link: '#',
-        image: ourwork2,
-        titale: 'A dynamic website for India’s biggest truck company',
-        tags: [
-            { name: 'Automobile' },
-        ],
-    },  
-    {
-        link: '#',
-        image: ourwork3,
-        titale: 'Revamped Website for one of the India’s biggest institution',
-        tags: [{ name: 'Education' },],
+  {
+    id: 6,
+    title: 'Unearthing India’s Next Big Content Creator with Godrej L’Affaire Select',
+    tags: [
+        { name: 'Brand Strategy', },
+        { name: 'Community Management', },
+        { name: 'IP Creation', }
+    ],
+    image: godrejlaffaire,
+    link: '/work/case-studys/godrej-laffaire',
+    brand: "Godrej Laffaire",
+    department: 'Content'
+},
 
-    },
+{
+    id: 9,
+    title: 'Innovative Product Communication for Enhanced Brand Visibility',
+    tags: [
+        { name: 'Product Development', link: '' },
+        { name: 'Multi-Channel Communication', link: '' }
+    ],
+    image: RGI,
+    link: '/work/case-studys/product-communication-for-reliance-general-insurance',
+    brand: "Product Communication for Reliance General Insurance",
+    department: 'Content'
+},
+{
+    id: 10,
+    title: 'Capturing the Glamour: Content Creation and Event Coverage for Lakme Fashion Week',
+    tags: [
+        { name: 'Content Creation', link: '' },
+        { name: 'Event Coverage', link: '' }
+    ],
+    image: lakme,
+    link: '/work/case-studys/lakme-fashionweek',
+    brand: "Lakme Fashion Week",
+    department: 'Content'
+},
+
   ];
 //CaseStudy Data End
-
-// testimonaialSlider
-const testimonialData = [
-  {
-      eventsText: 'We rank AGENCY09’s work very highly, and ultimately chose to continue working with them over the last three years.”',
-      name: 'Shuchiraa Rao',
-      designation:'Digital Marketing Head',
-      image:ryan,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Vinay Dholakia',
-      designation:'Head - Digital Marketing & Media',
-      image:tataMotors2,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Shuchiraa Rao',
-      designation:'Digital Marketing Head',
-      image:bitsPilani,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Vinay Dholakia',
-      designation:'Head - Digital Marketing & Media',
-      image:ryan,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Shuchiraa Rao',
-      designation:'Digital Marketing Head',
-      image:tataMotors2,
-  },   
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Vinay Dholakia',
-      designation:'Head - Digital Marketing & Media',
-      image:bitsPilani,
-  }
-];
-//testimonaialSlider End
-
-
+ 
 // FAQS
 const faqsData = [
   {
@@ -306,15 +249,15 @@ const faqsData = [
                     <p>We believe that communication is more than just conveying a message—it's about creating connections, sparking conversations, and driving meaningful actions. With a blend of creativity and strategic thinking, we specialize in crafting communication solutions that resonate with your audience, leaving a lasting impact on your brand's journey.
                     </p>
                                 
-               
+     
 
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
                         <ul className='trustedByLogos'>
-                            <li><img src={bitsPilani} alt=""/></li>
-                            <li><img src={tataMotors2} alt=""/></li>
-                            <li><img src={ryan} alt=""/></li>
-                            <li><img src={mahindraAccelo} alt=""/></li>
+                            <li><img src={adityabirla} alt=""/></li>
+                            <li><img src={samsonite} alt=""/></li>
+                            <li><img src={lakmefashionweek} alt=""/></li>
+                            <li><img src={disney} alt=""/></li>
                         </ul>
                     </div>
                 </div>
@@ -386,13 +329,11 @@ const faqsData = [
        
 
   
-
-
         <section className='solutionsSecCaseStudy'>
             <div className='container'>
 
             <div className='Heading center HeadingIcon'>
-                 <h2 className='sizeH1 uppercase'>
+                <h2 className='sizeH1 uppercase'>
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
                     Case studies
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
@@ -407,14 +348,19 @@ const faqsData = [
                         <div key={index} className='item'>
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/></div>
+                                <div className='CaseStudyImg'><img src={CaseStudy.image}/>
+                                <div className='workGridItemHover'>
+                                    <div className='workGridItemHoverIn'>
+                                        <h3>{CaseStudy.title}</h3>
+                                        <h4>{CaseStudy.brand}</h4>
+                                        <p>{CaseStudy.department}</p>
+                                    </div>
+                                </div></div>
                                 <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
                                 <div className='textTag'><p>{CaseStudy.tag}
-                                
-                                {CaseStudy.tags.map((tag, index) => (
-                                  <span key={index}>{tag.name}</span>
-                                ))}
-                                
+                                  {CaseStudy.tags.map((tag, index) => (
+                                    <span key={index}>{tag.name}</span>
+                                  ))}
                                 </p></div>
                             </Link>
                         </div>
@@ -443,43 +389,10 @@ const faqsData = [
 
 
 
-      
-
-      {/* TESTIMONIALS */}   
-      <section className='greenB testimonialSec'><div className='container'>
-
-        <div className='Heading center HeadingIcon'>
-            <h2 className='sizeH1 uppercase'>
-                <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                TESTIMONIALS
-                <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-            </h2>
-        </div>
-
-        <Slider {...testimonialSlider} className='testimonialSlider slick-slider'>
-          {testimonialData.map((testimonial, index) => (
-            <div key={index} className='item'>
-              <div className='awardsCol'>
-              <div className='textwithimg'>
-              <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
-              
-                <div className='awardsData'>
-                  <h5>{testimonial.name}</h5>
-                  <p>{testimonial.designation}</p></div>
-              </div>
-              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
-
-              </div>
-            </div>
-          ))}
-        </Slider>
-
-        <div className='btnSpaceEx center pb-0'>     
-            <Link to="../testimonials" className="btnDark fontM ripple-button"><span>View All</span></Link>
-        </div>
-
-      </div></section> 
-      {/* TESTIMONIALS End */} 
+            {/* TESTIMONIALS */}   
+            <Testimonias/>
+        {/* TESTIMONIALS End */} 
+        
  
 
       {/* FAQ */}

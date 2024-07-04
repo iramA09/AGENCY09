@@ -43,11 +43,11 @@ const Connect = () => {
       <div className='aboutS'>  
       <div className='aboutScol'>
       <h1 className='sizeH1 uppercase'>Connect</h1>  
-      <div className='arrowRightH'><PiArrowCircleRightThin /></div>
+      {/* <div className='arrowRightH'><PiArrowCircleRightThin /></div> */}
       </div>      
-      <div className='aboutScol'>
+      {/* <div className='aboutScol'>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy  </p>
-      </div> 
+      </div>  */}
       </div> 
       </div></section>
     
@@ -70,7 +70,7 @@ const Connect = () => {
             </li>
             <li>
             <div className=''>
-               <p><b className='yellow'>Office Tel:</b><br/><Link to='tellto:02226440909' target='_blank'>02226440909</Link></p>
+               <p><b className='yellow'>Office Tel:</b><br/><Link to='tellto:02226440909' target='_blank'>022 2644 09 09</Link> | <Link to='tellto:9892108119' target='_blank'>989 210 8119</Link></p>
             </div>
             </li>
             <li>
@@ -134,7 +134,7 @@ const Connect = () => {
         </section>
 
 
-
+{/* 
       <section className='faqContent'><div className='container'>
         <h2 className='sizeH5 uppercase bold pb-20'>FAQS</h2>
         <Accordion defaultActiveKey="0">
@@ -169,7 +169,7 @@ const Connect = () => {
             </Accordion.Body>
           </Accordion.Item>
           </Accordion>
-      </div></section>
+      </div></section> */}
 
 
       <Footer />

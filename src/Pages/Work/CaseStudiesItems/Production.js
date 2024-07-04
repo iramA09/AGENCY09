@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import mahindra_tsubaki1 from '../../../Assets/Images/work/mahindra_tsubaki/mahindra_tsubaki1.png';
+import americanTourister from '../../../Assets/Images/work/AmericanTourister.jpg';
 
 // Production
 export const ProductionData = [
-    // {
-    //     id: 1,
-    //     title: 'Making Complaint Management Simpler for Mahindra Tsubaki',
-    //     tags: [
-    //         { name: 'Software', link: '/' },
-    //         { name: 'Digital Process Automation', link: '/' }
-    //     ],
-    //     image: mahindra_tsubaki1,
-    //     link: '/work/case-studys/mahindra-tsubaki',
-    //     brand: 'Mahindra Tsubaki',
-    //     department: 'Production'
-    // }
+
+    {
+        id: 11,
+        title: 'Showcasing Excellence: Captivating Product Films for American Tourister',
+        tags: [
+            { name: 'Product Film Production', link: '' },
+            { name: 'Content Creation', link: '' }
+        ],
+        image: americanTourister,
+        link: '/work/case-studys/american-tourister',
+        brand: "American Tourister",
+        department: 'Production'
+    },
+
 ];
 
 // State for each tab

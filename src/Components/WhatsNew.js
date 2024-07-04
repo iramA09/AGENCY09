@@ -8,11 +8,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 // Images
-import ideasPerform from '../Assets/Images/growth/ideas-perform.jpg';
+import ideasPerform from '../Assets/Images/growth/mediaA09.jpg';
 import ideasPerform1 from '../Assets/Images/growth/ideas-perform1.jpg';
+import sportday from '../Assets/Images/growth/sportday.jpg';
 import ideasPerform2 from '../Assets/Images/growth/ideas-perform2.jpg';
-import ideasPerform3 from '../Assets/Images/growth/ideas-perform3.jpg';
+import kinjal from '../Assets/Images/growth/kinjal.jpg';
 import starY from '../Assets/Images/icons/star.png';
+
+
 // Images
 const WhatsNew = () => {
   
@@ -85,13 +88,13 @@ useEffect(() => {
     },
     {
       link: '/',
-      image: ideasPerform2,
+      image: sportday,
       title: 'Bat, Ball & Balle Balle',
       description: "Sports Day at AGENCY09",
     },
     {
       link: '/',
-      image: ideasPerform3,
+      image: kinjal,
       title: 'AGENCY09 Signs up as Social Media Partner for Kinjal Group',
       description: "Strengthens real estate portfolio",
     },
@@ -113,12 +116,12 @@ useEffect(() => {
     <Slider {...UpdateSlider} className="UpdateSlider-slick slick-slider">
     {UpdateData.map((item, index) => (
       <div className='item' key={index}>
-        <Link to={item.link}>
+        <Link>
           <img src={item.image} alt={item.title} />
           <h2>{item.title}</h2>
-          <p>{item.description}</p>
-          <hr/>
-          <div className='btnItem'>Know More <PiArrowCircleRightThin /></div>
+          {/* <p>{item.description}</p> */}
+          {/* <hr/>
+          <div className='btnItem'>Know More <PiArrowCircleRightThin /></div> */}
         </Link>
       </div>
     ))}

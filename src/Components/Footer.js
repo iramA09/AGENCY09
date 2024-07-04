@@ -106,7 +106,7 @@ const Footer = () => {
         <li><Link to='https://www.linkedin.com/company/agency09/' target='_blank'> LinkedIn</Link></li>
         <li><Link to='https://www.instagram.com/agency09/' target='_blank'> Instagram</Link></li>
         <li><Link to='https://www.youtube.com/channel/UCT7wE543Vl0LSrpCmpMzZrg' target='_blank'> YouTube</Link></li>
-        <li><Link to='https://twitter.com/AGENCY09' target='_blank'> Twitter</Link></li>
+        <li><Link to='https://twitter.com/AGENCY09' target='_blank'> X</Link></li>
 
         </ul>
       </div>
@@ -114,7 +114,9 @@ const Footer = () => {
       <div className='footerCol'>
         <h3 className='fHd'>Play Music</h3>
         <div className='Spotify'>
-          <iframe src="https://open.spotify.com/embed/playlist/6YwHfFlzVMhMjz95nUdaNY?utm_source=generator&theme=0" width="100%"   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+   
+
+          <iframe src="https://open.spotify.com/embed/playlist/5EEeVOhLD3WyqS7o1xn1sC?utm_source=generator&theme=0" width="100%" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
 
@@ -127,7 +129,7 @@ const Footer = () => {
     </div>
 
       <ul>
-      <li><Link onClick={() => { setOpenModalGetQuote(true); }} >REQUEST A SERVICE</Link></li>
+      <li><Link to='/connect#form'>REQUEST A SERVICE</Link></li>
       <li><Link onClick={() => { setOpenModalApplyNow(true); }} >JOIN THE TEAM</Link></li>
       <li><Link to='/connect#form'>PARTNER WITH US</Link></li>
       </ul>
@@ -213,9 +215,9 @@ const Footer = () => {
 
       <div className='footerCol'>
         <ul>
-          <li><Link to='/sitemap'>Sitemap</Link></li>
-          <li><Link to='/'>Privacy Policy</Link></li>
-          <li><Link to='/'>Terms of Service</Link></li>
+          {/* <li><Link to='/sitemap'>Sitemap</Link></li> */}
+          <li><Link to='/privacy-policy'>Privacy Policy</Link></li>
+          {/* <li><Link to='/'>Terms of Service</Link></li> */}
         </ul>
       </div>
 

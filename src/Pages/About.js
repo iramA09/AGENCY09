@@ -103,14 +103,14 @@ const About = () => {
         <img src={ourpurpose} alt='our purpose' />
       </div>
     </section>
-
+{/* 
     <section className='milestone09'>
       <div className='container'>
            <Milestones />
       </div>
-    </section>
+    </section> */}
  
-    {/* 
+{/*     
     <section>
       <A09TeamList/>
     </section> 

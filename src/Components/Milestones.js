@@ -8,7 +8,7 @@ import { GrStar } from "react-icons/gr";
 const MilestonesSlider = {
   dots: false,
   arrows: true,
-  infinite: true,
+  infinite: false,
   autoplay: false,
   autoplaySpeed: 7000,
   speed: 700,

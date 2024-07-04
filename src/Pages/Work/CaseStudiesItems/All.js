@@ -6,22 +6,40 @@ import GroupSoft from '../../../Assets/Images/work/GroupSoft.jpg';
 import Siyarams from '../../../Assets/Images/work/siyarams.jpg';
 import Bitspilani from '../../../Assets/Images/work/Bitspilani.jpg';
 import Tribevibe from '../../../Assets/Images/work/TribeVibe.jpg';
+import americanTourister from '../../../Assets/Images/work/AmericanTourister.jpg';
+import godrejlaffaire from '../../../Assets/Images/work/Laffaire.jpg';
+import RGI from '../../../Assets/Images/work/rgi.jpg';
+import lakme from '../../../Assets/Images/work/lakme.jpg';
+import barc from '../../../Assets/Images/work/BARC.jpg';
 
 // Tech
-export const techData = [
+export const allData = [
     {
-        id: 1,
-        title: "Driving Visibility and Engagement for Tata Motors' Commercial Vehicle Lineup",
+        id: 5,
+        title: 'Transforming Digital Presence: Modern Website for India’s #1 Non-Govt. Technical Institute, BITS Pilani',
         tags: [
             { name: 'Digital Strategy', },
             { name: 'UI/UX', },
             { name: 'Web Development', }
         ],
-        image: TataMotors,
-        link: '/work/case-studys/tata-trucks',
-        brand: 'TATA Trucks',
+        image: Bitspilani,
+        link: '/work/case-studys/bits-pilani',
+        brand: "Bits Pilani",
         department: 'Tech'
+    }, {
+        id: 6,
+        title: 'Unearthing India’s Next Big Content Creator with Godrej L’Affaire Select',
+        tags: [
+            { name: 'Brand Strategy', },
+            { name: 'Community Management', },
+            { name: 'IP Creation', }
+        ],
+        image: godrejlaffaire,
+        link: '/work/case-studys/godrej-laffaire',
+        brand: "Godrej Laffaire",
+        department: 'Content'
     },
+   
     {
         id: 2,
         title: 'Streamlining Digital Presence: 100+ Websites & CMS for Ryan International School',
@@ -36,47 +54,18 @@ export const techData = [
         department: 'Tech'
     },
     {
-        id: 3,
-        title: 'Modernizing Digital Identity: Revamped Website for Global SaaS Company Groupsoft',
-        tags: [
-            { name: 'Web Design', link: '' },
-            { name: 'Web Development', link: '' },
-            { name: 'UI/UX Design', link: '' }
-        ],
-        image: GroupSoft,
-        link: '/work/case-studys/groupsoft',
-        brand: 'Groupsoft US Inc',
-        department: 'Tech'
-
-    },
-    {
-        id: 4,
-        title: "Elevating Men's Fashion: A Visually Captivating Website for Siyaram's",
-        tags: [
-            { name: 'Web Design', link: '' },
-            { name: 'Web Development', link: '' },
-            { name: 'UI/UX Design', link: '' }
-        ],
-        image: Siyarams,
-        link: '/work/case-studys/siyaram',
-        brand: "Siyaram's",
-        department: 'Tech'
-    },
-    {
-        id: 5,
-        title: 'Transforming Digital Presence: Modern Website for India’s #1 Non-Govt. Technical Institute, BITS Pilani',
+        id: 1,
+        title: "Driving Visibility and Engagement for Tata Motors' Commercial Vehicle Lineup",
         tags: [
             { name: 'Digital Strategy', },
             { name: 'UI/UX', },
             { name: 'Web Development', }
         ],
-        image: Bitspilani,
-        link: '/work/case-studys/bits-pilani',
-        brand: "Bits Pilani",
+        image: TataMotors,
+        link: '/work/case-studys/tata-trucks',
+        brand: 'TATA Trucks',
         department: 'Tech'
     },
-
-
     {
         id: 8,
         title: 'Empowering Campus Influencers: Tech-Driven Ambassador Program for TribeVibe',
@@ -91,13 +80,99 @@ export const techData = [
         department: 'Tech'
     },
    
+   
+   
+    {
+        id: 3,
+        title: 'Modernizing Digital Identity: Revamped Website for Global SaaS Company Groupsoft',
+        tags: [
+            { name: 'Web Design', link: '' },
+            { name: 'Web Development', link: '' },
+            { name: 'UI/UX Design', link: '' }
+        ],
+        image: GroupSoft,
+        link: '/work/case-studys/groupsoft',
+        brand: 'Groupsoft US Inc',
+        department: 'Tech'
 
+    },  
+    
+    
+    {
+        id: 4,
+        title: "Elevating Men's Fashion: A Visually Captivating Website for Siyaram's",
+        tags: [
+            { name: 'Web Design', link: '' },
+            { name: 'Web Development', link: '' },
+            { name: 'UI/UX Design', link: '' }
+        ],
+        image: Siyarams,
+        link: '/work/case-studys/siyaram',
+        brand: "Siyaram's",
+        department: 'Tech'
+    },
+  
+  
+
+
+    {
+        id: 7,
+        title: 'Visualizing Insights: Award-Winning Yearbook for BARC India',
+        tags: [
+            { name: 'Annual Report', },
+            { name: 'Book Design', },
+            { name: 'Infographics', }
+        ],
+        image: barc,
+        link: '/work/case-studys/barc-india-yearbook',
+        brand: "BARC India Yearbook",
+        department: 'Design'
+    },
+  
+   
+
+    {
+        id: 9,
+        title: 'Innovative Product Communication for Enhanced Brand Visibility',
+        tags: [
+            { name: 'Product Development', link: '' },
+            { name: 'Multi-Channel Communication', link: '' }
+        ],
+        image: RGI,
+        link: '/work/case-studys/product-communication-for-reliance-general-insurance',
+        brand: "Product Communication for Reliance General Insurance",
+        department: 'Content'
+    },
+    {
+        id: 10,
+        title: 'Capturing the Glamour: Content Creation and Event Coverage for Lakme Fashion Week',
+        tags: [
+            { name: 'Content Creation', link: '' },
+            { name: 'Event Coverage', link: '' }
+        ],
+        image: lakme,
+        link: '/work/case-studys/lakme-fashionweek',
+        brand: "Lakme Fashion Week",
+        department: 'Content'
+    },
+    {
+        id: 11,
+        title: 'Showcasing Excellence: Captivating Product Films for American Tourister',
+        tags: [
+            { name: 'Product Film Production', link: '' },
+            { name: 'Content Creation', link: '' }
+        ],
+        image: americanTourister,
+        link: '/work/case-studys/american-tourister',
+        brand: "American Tourister",
+        department: 'Production'
+    },
 
 ];
 
 // State for each tab
 
-const Tech = () => {
+const All = () => {
     const [visibleTechItems, setVisibleTechItems] = useState(20);
     const loadMoreTechItems = () => {
         setVisibleTechItems((prev) => prev + 20);
@@ -107,7 +182,7 @@ const Tech = () => {
     <>
         <section className='ourWork'>
         <div className='workGrid'>
-            {techData.slice(0, visibleTechItems).map((item) => (
+            {allData.slice(0, visibleTechItems).map((item) => (
                 <div className='workGridItem' key={item.id}>
                     <div className='workGridItemLink'>
                         <Link to={item.link} className='workGridItemLink'>
@@ -135,7 +210,7 @@ const Tech = () => {
                 </div>
             ))}
         </div>
-        {visibleTechItems < techData.length && (
+        {visibleTechItems < allData.length && (
             <div className='center btnSpaceEx'>
                 <button onClick={loadMoreTechItems} className="loadMoreButton btnDark fontM ripple-button">See More Work</button>
             </div>
@@ -145,4 +220,4 @@ const Tech = () => {
   )
 }
 
-export default Tech
+export default All

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
+import AllData from './CaseStudiesItems/All';
 import TechData from './CaseStudiesItems/Tech';
 import BrandDesignData from './CaseStudiesItems/BrandDesign';
 import ContentData from './CaseStudiesItems/Content';
@@ -12,11 +13,9 @@ import KeywordData from './CaseStudiesItems/Keyword';
 import { PiArrowCircleRightThin } from "react-icons/pi";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import starY from '../../Assets/Images/icons/star.png';
 import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
 import ourwork1 from '../../Assets/Images/work/ourwork-2.jpg';
 import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
-import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 
 // Tabs
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -116,6 +115,7 @@ const CaseStudies = () => {
                     {/* Case Studies */}
                     <Tabs>
                         <TabList >
+                            <Tab><span>All</span></Tab>
                             <Tab><span>Tech</span></Tab>
                             <Tab><span>Design</span></Tab>
                             <Tab><span>Content</span></Tab>
@@ -123,6 +123,12 @@ const CaseStudies = () => {
                             <Tab><span>Production</span></Tab>
                             <Tab><span>Keyword</span></Tab>
                         </TabList>
+                        
+                        {/* All */}
+                        <TabPanel>
+                          <AllData/>
+                        </TabPanel>
+                        {/* All */}
 
                         {/* Tech */}
                         <TabPanel>
@@ -144,6 +150,11 @@ const CaseStudies = () => {
 
                         {/* Media */}
                         <TabPanel>
+
+                            <div className='comingSoon'>
+                              <h2>Coming Soon...</h2>
+                            </div>
+
                             <MediaData/>
                         </TabPanel>
                         {/* Media */}
@@ -156,6 +167,10 @@ const CaseStudies = () => {
 
                         {/* Keyword */}
                         <TabPanel>
+                            
+                            <div className='comingSoon'>
+                                <h2>Coming Soon...</h2>
+                            </div>
                             <KeywordData/>
                         </TabPanel>
                         {/* Keyword */}
@@ -163,7 +178,7 @@ const CaseStudies = () => {
                     {/* Case Studies End */}
                 </div>
             </section>
-
+{/* 
             <div className='strokeB container'>
                 <SVGCurveLine/>
             </div>  
@@ -208,14 +223,14 @@ const CaseStudies = () => {
                     ))}
                 </Slider>
 
-            {/* <div className='btnSpaceEx center'>     
+            <div className='btnSpaceEx center'>     
                 <Link to="/work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
-            </div> */}
-
             </div>
 
             </div>
-        </section> 
+
+            </div>
+        </section>  */}
             <Footer />
         </>
     )

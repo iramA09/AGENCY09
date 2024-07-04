@@ -1,21 +1,49 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import mahindra_tsubaki1 from '../../../Assets/Images/work/mahindra_tsubaki/mahindra_tsubaki1.png';
-
+import godrejlaffaire from '../../../Assets/Images/work/Laffaire.jpg';
+import RGI from '../../../Assets/Images/work/rgi.jpg';
+import lakme from '../../../Assets/Images/work/lakme.jpg';
 // Content
 export const ContentData = [
-    // {
-    //     id: 1,
-    //     title: 'Making Complaint Management Simpler for Mahindra Tsubaki',
-    //     tags: [
-    //         { name: 'Software', link: '/' },
-    //         { name: 'Digital Process Automation', link: '/' }
-    //     ],
-    //     image: mahindra_tsubaki1,
-    //     link: '/work/case-studys/mahindra-tsubaki',
-    //     brand: 'Mahindra Tsubaki',
-    //     department: 'Content'
-    // }
+    {
+        id: 6,
+        title: 'Unearthing India’s Next Big Content Creator with Godrej L’Affaire Select',
+        tags: [
+            { name: 'Brand Strategy', },
+            { name: 'Community Management', },
+            { name: 'IP Creation', }
+        ],
+        image: godrejlaffaire,
+        link: '/work/case-studys/godrej-laffaire',
+        brand: "Godrej Laffaire",
+        department: 'Content'
+    },
+    
+    {
+        id: 9,
+        title: 'Innovative Product Communication for Enhanced Brand Visibility',
+        tags: [
+            { name: 'Product Development', link: '' },
+            { name: 'Multi-Channel Communication', link: '' }
+        ],
+        image: RGI,
+        link: '/work/case-studys/product-communication-for-reliance-general-insurance',
+        brand: "Product Communication for Reliance General Insurance",
+        department: 'Content'
+    },
+    {
+        id: 10,
+        title: 'Capturing the Glamour: Content Creation and Event Coverage for Lakme Fashion Week',
+        tags: [
+            { name: 'Content Creation', link: '' },
+            { name: 'Event Coverage', link: '' }
+        ],
+        image: lakme,
+        link: '/work/case-studys/lakme-fashionweek',
+        brand: "Lakme Fashion Week",
+        department: 'Content'
+    },
+
 ];
 
 // State for each tab

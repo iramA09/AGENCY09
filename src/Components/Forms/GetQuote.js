@@ -18,7 +18,7 @@ const GetQuote = ({ closeModal }) => {
                     <button className='modalClose' onClick={() => closeModal(false)}><IoCloseCircle/></button>
    
    <div className='center'>
-    <h4 className='yellow sizeH1'>Get Quote</h4>
+    <h4 className='yellow sizeH3'>Get Quote</h4>
     </div>
   <form>
     <div  className='FormGridS1'>

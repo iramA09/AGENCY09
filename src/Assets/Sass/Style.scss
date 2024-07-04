@@ -44,6 +44,20 @@ $purple: #9f00ff;
 // site color end
 
 // Common Style 
+
+.lg-outer,.lg-backdrop{
+    width: 80%!important;
+    height: 80%!important;
+    margin: auto!important;
+    right: 0!important;
+    bottom: 0!important;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#lg-download{display: none!important;}
+ .o0{opacity: 0;}
+
+
 * {
     margin: auto;
     padding: 0;
@@ -242,8 +256,9 @@ section {
 .alignLeft{text-align: left!important;}
 .lignRight{text-align: right!important;}
 
-
-
+.comingSoon{text-align: center;padding:120px 0 0;}
+.comingSoon h2{font-size: $sizeH1;}
+.grecaptcha-badge{opacity: 0;pointer-events: none;}
 
 
 h1,
@@ -276,7 +291,7 @@ p {
 
 .sizeH4 {
     font-size: $sizeH4;
-    line-height: $sizeH4;
+    line-height: 32px;
 }
 
 .sizeH5 {
@@ -970,7 +985,7 @@ header{
                         font-size: 17px;
                         position: absolute;
                         left: -80px;
-                        top: -10px;
+                        top: -8px;
                         bottom: 0;
                         margin: auto;
                         display: block;
@@ -989,6 +1004,7 @@ header{
                 display: block;
                 inset: 0;
                 height: fit-content;
+                width: fit-content;
             }
            }
         }
@@ -1183,6 +1199,7 @@ header{
                         display: flex;
                         gap: 60px;
                         li{
+                            width: 100%;
                             .NBItemTitle{
                                 display: flex;
                                 width: fit-content;
@@ -1212,19 +1229,13 @@ header{
                                     }
                                     .NBItemText{
                                         margin-top: 10px;
+                                        min-height: 50px;
                                         p{
                                             font-size: 14px;
                                             font-family: $bold;
                                         }
                                     }
-                                    &:hover{
-                                        .NBItemImg{
-                                            img{
-                                                transform: scale(1.1);
-                                                rotate: 1.5deg;
-                                            }
-                                        }
-                                    }
+                                  
                                 }
                             } 
                         }
@@ -2068,7 +2079,7 @@ footer{
         border: none;
         width: fit-content;
         margin: 0;
-        display: grid;
+        display: flex;
         grid-template-columns: repeat(6,1fr);
         gap: 20px;
         padding: 30px 0 0;
@@ -2218,7 +2229,6 @@ footer{
         
             img{
                 width: 100%;
-                height: 300px;
                 object-fit: cover;
                 object-position: top center;
             }
@@ -2930,9 +2940,10 @@ footer{
                     min-height: 80px;
                     p{
                         overflow: hidden;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 4;
-                        -webkit-box-orient: vertical;
+                        font-size: 14px;
+                        // display: -webkit-box;
+                        // -webkit-line-clamp: 4;
+                        // -webkit-box-orient: vertical;
                     }
                 }
                 .PartnerCompaniesUrl{
@@ -3079,15 +3090,23 @@ footer{
 // Form09
 .form-group{
     width: 100%;
+    position: relative;
+    .errorText{
+        position: absolute;
+        font-size: 12px;
+        color: red;
+        bottom: -20px;
+        left: 10px;
+    }
     .form-control{
-        padding: 20px 15px;
+        padding: 15px 15px;
         border: none;
         border-bottom: 1px solid $lightgrey;
         width: 100%;
         display: block;
         font-family: $regular;
         font-size: 14px;
-        height: 60px;
+        height: 45px;
         background-color: transparent;
         &.textarea{
             height: 100px;
@@ -3280,6 +3299,17 @@ footer{
     .slick-list{
         overflow: inherit;
     }
+.slick-arrow{
+    background-color: $green;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-size: 60%;
+    &.slick-disabled{
+        opacity: 0;
+    }
+}
+
     .item{
         .LifeAtA09Col{
             padding: 20px;
@@ -3452,6 +3482,9 @@ footer{
                     gap: 60px;
                     margin: 0;
                     width: 100%;
+                    img{
+                        height: 80px;
+                    }
                 }
             }
 
@@ -3573,7 +3606,7 @@ footer{
             a{
                 display: block;
                 text-align: center;
-                padding: 30px 0 10px;
+                padding: 30px 0 50px;
                 position: relative;
                 z-index: 2;
                 .toolsImg{
@@ -4145,7 +4178,7 @@ footer{
 
 .cSsecMinA {
     gap: 30px;
-   
+   .cSsecMinBtn,.cSsecMinHead,.cSsecMinInfo{margin: auto!important;}
     .cSsecMinInfo{
       
         img{
@@ -4179,27 +4212,35 @@ footer{
         gap:50px;
         flex-wrap: wrap;
         .cSsecMinBCol{
-            width: 20%;
+            width: 25%;
             margin: 0;
             ul{
                 padding: 0 10px;
             }
-            &:first-child{
-                width: 25%;
-            }
+            // &:first-child{
+            //     width: 25%;
+            // }
 
-            &:nth-child(5){
-                width: 25%;
-            }
-            // &:last-child{
+            // &:nth-child(5){
+            //     width: 25%;
+            // }
+            // // &:last-child{
             //     width: 30%;
             // }
             h4{
                 color: $black;
                 text-transform: uppercase;
+                font-family: $bold;
             }
             p{
                 color: #242323;
+                margin-bottom: 12px;
+            }
+            ul{
+                
+                li{
+                    padding-bottom:12px;
+                }
             }
         }
     }
@@ -4240,18 +4281,24 @@ footer{
 .mainslider{
     position: relative;
     .slick-arrow{
-        background:url('../Images/icons/arrow-right2.png')no-repeat;
+        background-image:url('../Images/icons/arrow-right2.png');
+        background-repeat: no-repeat;
         background-size: contain;
-        width: 25px;
-        height: 25px;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
         position: absolute;
+        background-color: $yellow;
+        background-position: center;
+        background-size: 20%;
+        opacity: 1;
         &.slick-prev{
             top: 50%;
-            left: 0;
+            left: 2%;
         }
         &.slick-next{
             top: 50%;
-            right: 0;
+            right: 2%;
         }
     }
  
@@ -4281,9 +4328,9 @@ footer{
 
         .modalClose{
             position: absolute;
-            right: 3px;
-            top: 3px;
-            font-size: 50px;
+            right: 8px;
+            top: 8px;
+            font-size: 30px;
             color: $white;
             background: none;
             border: 0px;
@@ -4305,9 +4352,15 @@ footer{
             }
         }
         .FormGridS1{
-            margin: 20px auto;
+            margin: 15px auto;
         }
 
+    }
+}
+.FormGridS{
+    .ripple-button{
+        font-size: 16px;
+        padding: 9px 25px;
     }
 }
 
@@ -4384,6 +4437,25 @@ footer{
 
 // Testimonials End
 
+// privacy
+.privacy{
+    .aboutS{
+        padding-bottom: 30px;
+    }
+    p{
+        padding-bottom: 10px;
+    }
+    ul{
+        padding-left: 35px;
+        padding-bottom: 20px;
+        li{
+            padding-bottom: 5px;
+        }
+    }
+}
+// privacy
+
+
 
 // Solutions End
 @media screen and (max-width: 5000px) and (min-width: 900px) and (max-height: 750px)  {
@@ -4415,6 +4487,13 @@ footer{
 @media screen and (max-width: 1600px) {
     header .container nav ul{gap: 45px;}
     header .container .rightMenu a{font-size: 30px;}
+}
+@media screen and (max-width: 1500px) {
+    header .container .rightMenu a{font-size: 20px;}
+    header .container nav ul li a{font-size: 14px;}
+    header .container .rightMenu a span{font-size: 14px;left: -62px;}
+    header .container nav ul .logo{  margin-left: 10px;}
+    
 }
 @media screen and (max-width: 1200px) {
     header .container nav ul{li{display: none;&.logo{display: block;}}}
@@ -4507,19 +4586,19 @@ footer{
         
     // Font Size
     .sizeH1 {font-size: 28px;line-height:37px;}
-    .sizeH2 {font-size: 24px;line-height: 26px;}
-    .sizeH3 {font-size: 22px;line-height: 24px;}
-    .sizeH4 {font-size: 20px;line-height: 22px;}
+    .sizeH2 {font-size: 24px;line-height: 28px;}
+    .sizeH3 {font-size: 22px;line-height: 26px;}
+    .sizeH4 {font-size: 20px;line-height: 27px;}
     .sizeH5 {font-size: 18px;line-height: 20px;}
-    .sizeH6 {font-size: 16px;line-height: 18px;}
-    .sizeH7 {font-size: 14px;line-height: 16px;}
-    .sizeH8 {font-size: 12px;line-height: 14px;}
+    .sizeH6 {font-size: 16px;line-height: 20px;}
+    .sizeH7 {font-size: 14px;line-height: 18px;}
+    .sizeH8 {font-size: 12px;line-height: 16px;}
     // Font Size End
     .hWorkLogos{padding: 50px 0;}
     .hero .homescreen-slick .item .HeroImage{position: relative;}
     .hero .homescreen-slick .item .HeroImage::after{position: absolute;background: $black;content: '';width: 100%;height: 100%;display: block;top: 0;left: 0;opacity: 0.3;}
     .workGrid .workGridItem,.workGrid .workGridItem:nth-child(4n+4){margin-top: 20px;}
-    .workGrid{grid-template-columns: repeat(1, 1fr);}
+    .workGrid{grid-template-columns: repeat(1, 1fr);display: block;}
     .ripple-button.fontL{font-size: 22px;}
     .btnSpaceEx{padding: 30px 0;}
     .hero .homescreen-slick .container{position: relative; z-index: 2;}
@@ -4531,9 +4610,10 @@ footer{
     .ServicesList{padding: 50px 0;}
     .hWorkLogos .LogosSlider-slick{padding: 20px 0;}
     .ServicesList ul li.IStart svg{font-size: 40px;}
-    .Calculat .CalculatRow .CalculatCol h4{font-size: 50px;}
+    .Calculat .CalculatRow .CalculatCol h4{font-size: 40px;}
     .Calculat .CalculatRow{padding: 50px 0 70px;  flex-wrap: wrap;gap: 40px;}
-    .Calculat .CalculatRow .CalculatCol{width: 200px;}
+    .Calculat .CalculatRow .CalculatCol{width: 150px;font-size: 12px;}
+
     .Calculat{padding-top: 0;}
     .Culture{padding-top: 0;overflow: hidden;position: relative;}
     .Culture .CultureSlider-slick{padding: 20px 0;width: 80%;  position: inherit;}
@@ -4551,7 +4631,7 @@ footer{
     .ourWork .workTitle span{margin-right: 0;}
     .workGrid .workGridItemText h3{font-size: 16px;}
     .workGrid .workGridItemTags a{font-size: 10px;padding: 5px 10px;white-space: nowrap;}
-    .Calculat .CalculatRow .CalculatCol p svg{font-size: 15px;right: -25px;}
+    .Calculat .CalculatRow .CalculatCol p svg{font-size: 11px;right: -17px;}
     .aboutInfo.aboutInfoS2{padding-top: 0;}
 
     .MilestonesSlider {width: 80%;margin: 0;}
@@ -4652,7 +4732,7 @@ footer{
     .ourClientsL .ourClientsR span{padding: 10px;}
     .accordion .accordion-header button{font-size: 17px;}
     .solutionsSecServices .solutionsSecServicesFaq .accordion-button{  font-size:20px;  padding:20px 40px 20px 0}
-    .cSsecMinB .cSsecMinBRow .cSsecMinBCol{width: 40%;}
+    .cSsecMinB .cSsecMinBRow .cSsecMinBCol{width: 100%;}
     .mainslider{margin-bottom: 60px;}
     .SolutionsSecAbout .SolutionsRow .SolutionsColOurServies{display: none;}
     .SolutionsSecAbout .SolutionsRow{padding: 0;}
@@ -4666,6 +4746,7 @@ footer{
     .Opportunities{padding: 60px 0;}
     .checkPlay{background-color: $lightgrey;padding: 80px 0 40px;}
     .faqContent .accordion-body{font-size: 14px;}
+    .fixForm .modalContainer{width: 95%;overflow: auto;max-height: 95%;}
 }
 .errorText {
     color : red;

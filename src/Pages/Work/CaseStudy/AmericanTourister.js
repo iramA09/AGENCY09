@@ -166,99 +166,9 @@ const AmericanTourister = () => {
             </div>
 
 
-            <div className='cSsecMinC'>
-
-                <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork1} /></span>
-                </div>
-
-                
-
-            </div>
-
-
-<div className='mainslider'>
-    <Slider {...mainSlider} className='clientelSlider slick-slider'>
-    <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork2} /></span>
-                </div>
-
-                <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork3} /></span>
-                </div>
-
-                <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork4} /></span>
-                </div>
-
-                <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork5} /></span>
-                </div>
-
-                <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork6} /></span>
-                </div>
-
-                <div className ='imgCol1 imgCol'>
-                    <span><img src={ourwork7}/></span>
-                </div>
-    </Slider>
-</div>
 
         </div>
     </section>
-
-
-    <div className='container'>
-    <div className='strokeB'>
-              <SVGCurveLine />
-    </div>
-    </div>
-
-    
-    <section className='solutionsSecCaseStudy'>
-            <div className='container'>
-
-            <div className='Heading center HeadingIcon'>
-                <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    Related Work
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                </h2>
-            </div>
-
-
-            <div className='solutionsSecCaseStudyList'>
-
-                <Slider {...CaseStudySlider} className='CaseStudySlider slick-slider'>
-                    {CaseStudyData.map((CaseStudy, index) => (
-                        <div key={index} className='item'>
-                        <div className='CaseStudyCol'>
-                            <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/></div>
-                                <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
-                                <div className='textTag'><p>{CaseStudy.tag}
-                                
-                                {CaseStudy.tags.map((tag, index) => (
-                                  <span key={index}>{tag.name}</span>
-                                ))}
-                                
-                                </p></div>
-                            </Link>
-                        </div>
-                        </div>
-                    ))}
-                </Slider>
-
-            <div className='btnSpaceEx center'>     
-                <Link to="/work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
-            </div>
-
-            </div>
-
-            </div>
-        </section>  
-
 
 
 

@@ -1,35 +1,21 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import mahindra_tsubaki1 from '../../../Assets/Images/work/mahindra_tsubaki/mahindra_tsubaki1.png';
-import TataMotors from '../../../Assets/Images/work/TataMotors.jpg';
-import Ryan from '../../../Assets/Images/work/Ryan.jpg';
+import barc from '../../../Assets/Images/work/BARC.jpg';
 
 // Tech
 export const BrandDesignData = [
     {
-        id: 1,
-        title: "Driving Visibility and Engagement for Tata Motors' Commercial Vehicle Lineup",
+        id: 7,
+        title: 'Visualizing Insights: Award-Winning Yearbook for BARC India',
         tags: [
-            { name: 'Digital Strategy', link: '' },
-            { name: 'Web Development', link: '' }
+            { name: 'Annual Report', },
+            { name: 'Book Design', },
+            { name: 'Infographics', }
         ],
-        image: TataMotors,
-        link: '/work/case-studys/tata-trucks',
-        brand: 'TATA Trucks',
-        department: 'Tech'
-    },
-    {
-        id: 2,
-        title: 'Streamlining Digital Presence: 100+ Websites & CMS for Ryan International School',
-        tags: [
-            { name: 'Web Design', link: '' },
-            { name: 'Web Development', link: '' },
-            { name: 'Content Management Systems', link: '' }
-        ],
-        image: Ryan,
-        link: '/work/case-studys/ryangroup',
-        brand: 'Ryan International Group of Institutions',
-        department: 'Tech'
+        image: barc,
+        link: '/work/case-studys/barc-india-yearbook',
+        brand: "BARC India Yearbook",
+        department: 'Design'
     },
 ];
 

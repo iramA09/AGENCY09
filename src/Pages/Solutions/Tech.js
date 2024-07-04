@@ -5,6 +5,7 @@ import Footer from '../../Components/Footer';
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 import StartAProjectFormPopup from '../../Components/Forms/StartAProjectFormPopup';
+import Testimonias from '../../Components/Testimonias';
 
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 import Slider from 'react-slick';
@@ -20,9 +21,6 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
 import pattern from '../../Assets/Images/icons/patternTech.jpg';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
-import ryan from '../../Assets/Images/logos/work/ryan.png';
-import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
-import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
 import starY from '../../Assets/Images/icons/star.png';
 import corporateWebsite from '../../Assets/Images/corporateWebsite.jpg';
 
@@ -32,9 +30,17 @@ import ticketing_system from '../../Assets/Images/tools/ticketing_system.png';
 import url_builder from '../../Assets/Images/tools/url_builder.png';
 import website_audit from '../../Assets/Images/tools/website_audit.png';
 
-import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
-import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
-import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
+import TataMotors from '../../Assets/Images/work/TataMotors.jpg';
+import Ryan from '../../Assets/Images/work/Ryan.jpg';
+import GroupSoft from '../../Assets/Images/work/GroupSoft.jpg';
+import Siyarams from '../../Assets/Images/work/siyarams.jpg';
+import Bitspilani from '../../Assets/Images/work/Bitspilani.jpg';
+import Tribevibe from '../../Assets/Images/work/TribeVibe.jpg';
+
+import bitsPilani from '../../Assets/Images/logos/work/education/bitspilani.png';
+import tataMotors2 from '../../Assets/Images/logos/work/automative/tatamotors.png';
+import ryan from '../../Assets/Images/logos/work/education/ryan.png';
+
 // Images end
 
 // toolsSlider 
@@ -96,35 +102,6 @@ const CaseStudySlider = {
 };
 // CaseStudySlider End
 
-
-//testimonaialSlider
-const testimonialSlider = {
-  dots: false,
-  arrows: true,
-  infinite: true,
-  autoplay: false,
-  autoplaySpeed: 7000,
-  speed: 700,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 968,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-// testimonaialSlider End
 
  
 
@@ -300,70 +277,90 @@ const ApproachData = [
 
 //CaseStudy Data
 const CaseStudyData = [
-    {
-        link: '#',
-        image: ourwork1,
-        titale: 'Brand led site for a Banking Solutions Firm',
-        tags: [{ name: 'BFSI' },],
-    },  
-    {
-        link: '#',
-        image: ourwork2,
-        titale: 'A dynamic website for India’s biggest truck company',
-        tags: [
-            { name: 'Automobile' },
-        ],
-    },  
-    {
-        link: '#',
-        image: ourwork3,
-        titale: 'Revamped Website for one of the India’s biggest institution',
-        tags: [{ name: 'Education' },],
+  {
+    id: 1,
+    title: "Driving Visibility and Engagement for Tata Motors' Commercial Vehicle Lineup",
+    tags: [
+        { name: 'Digital Strategy', },
+        { name: 'UI/UX', },
+        { name: 'Web Development', }
+    ],
+    image: TataMotors,
+    link: '/work/case-studys/tata-trucks',
+    brand: 'TATA Trucks',
+    department: 'Tech'
+},
+{
+    id: 2,
+    title: 'Streamlining Digital Presence: 100+ Websites & CMS for Ryan International School',
+    tags: [
+        { name: 'Web Design', link: '' },
+        { name: 'Web Development', link: '' },
+        { name: 'Content Management Systems', link: '' }
+    ],
+    image: Ryan,
+    link: '/work/case-studys/ryangroup',
+    brand: 'Ryan International Group of Institutions',
+    department: 'Tech'
+},
+{
+    id: 3,
+    title: 'Modernizing Digital Identity: Revamped Website for Global SaaS Company Groupsoft',
+    tags: [
+        { name: 'Web Design', link: '' },
+        { name: 'Web Development', link: '' },
+        { name: 'UI/UX Design', link: '' }
+    ],
+    image: GroupSoft,
+    link: '/work/case-studys/groupsoft',
+    brand: 'Groupsoft US Inc',
+    department: 'Tech'
 
-    },
+},
+{
+    id: 4,
+    title: "Elevating Men's Fashion: A Visually Captivating Website for Siyaram's",
+    tags: [
+        { name: 'Web Design', link: '' },
+        { name: 'Web Development', link: '' },
+        { name: 'UI/UX Design', link: '' }
+    ],
+    image: Siyarams,
+    link: '/work/case-studys/siyaram',
+    brand: "Siyaram's",
+    department: 'Tech'
+},
+{
+    id: 5,
+    title: 'Transforming Digital Presence: Modern Website for India’s #1 Non-Govt. Technical Institute, BITS Pilani',
+    tags: [
+        { name: 'Digital Strategy', },
+        { name: 'UI/UX', },
+        { name: 'Web Development', }
+    ],
+    image: Bitspilani,
+    link: '/work/case-studys/bits-pilani',
+    brand: "Bits Pilani",
+    department: 'Tech'
+},
+
+
+{
+    id: 8,
+    title: 'Empowering Campus Influencers: Tech-Driven Ambassador Program for TribeVibe',
+    tags: [
+        { name: 'Digital Strategy', },
+        { name: 'UI/UX', },
+        { name: 'Web Development', }
+    ],
+    image: Tribevibe,
+    link: '/work/case-studys/tribevibe',
+    brand: "Tribevibe",
+    department: 'Tech'
+},
+
   ];
 //CaseStudy Data End
-
-// testimonaialSlider
-const testimonialData = [
-  {
-      eventsText: 'We rank AGENCY09’s work very highly, and ultimately chose to continue working with them over the last three years.”',
-      name: 'Shuchiraa Rao',
-      designation:'Digital Marketing Head',
-      image:ryan,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Vinay Dholakia',
-      designation:'Head - Digital Marketing & Media',
-      image:tataMotors2,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Shuchiraa Rao',
-      designation:'Digital Marketing Head',
-      image:bitsPilani,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Vinay Dholakia',
-      designation:'Head - Digital Marketing & Media',
-      image:ryan,
-  },
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Shuchiraa Rao',
-      designation:'Digital Marketing Head',
-      image:tataMotors2,
-  },   
-  {
-      eventsText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-      name: 'Vinay Dholakia',
-      designation:'Head - Digital Marketing & Media',
-      image:bitsPilani,
-  }
-];
-//testimonaialSlider End
 
 
 // FAQS
@@ -584,11 +581,11 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
             {toolsData.map((tools, index) => (
                 <div key={index} className='item'>
                 <div className='toolsCol'>
-                    <Link to={tools.link}>
+                    <Link >
                         <div className='toolsImg'><img src={tools.image}/></div>
                         <div className='toolsTitale'>{tools.titale}</div>
-                        <div className='textDecoration'><p>{tools.decoration}</p></div>
-                        <div className='toolsBtn'><IoIosArrowDroprightCircle /></div>
+                        {/* <div className='textDecoration'><p>{tools.decoration}</p></div>
+                        <div className='toolsBtn'><IoIosArrowDroprightCircle /></div> */}
                     </Link>
                 </div>
                 </div>
@@ -627,13 +624,6 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
         </div>
 
 
-
-
-
-
-
-
-
         <section className='solutionsSecCaseStudy'>
             <div className='container'>
 
@@ -653,7 +643,14 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                         <div key={index} className='item'>
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/></div>
+                                <div className='CaseStudyImg'><img src={CaseStudy.image}/>
+                                <div className='workGridItemHover'>
+                                    <div className='workGridItemHoverIn'>
+                                        <h3>{CaseStudy.title}</h3>
+                                        <h4>{CaseStudy.brand}</h4>
+                                        <p>{CaseStudy.department}</p>
+                                    </div>
+                                </div></div>
                                 <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
                                 <div className='textTag'><p>{CaseStudy.tag}
                                   {CaseStudy.tags.map((tag, index) => (
@@ -677,51 +674,18 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
 
 
+     
+
+        {/* TESTIMONIALS */}   
+        <Testimonias/>
+        {/* TESTIMONIALS End */} 
+
 
         {/* Work Logos */}
         <LogosSlider />
         {/* Work Logos End */} 
 
 
-
-        {/* TESTIMONIALS */}   
-        <section className='greenB testimonialSec'>
-                <div className='container'>
-
-                <div className='Heading center HeadingIcon'>
-                    <h2 className='sizeH1 uppercase'>
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                        TESTIMONIALS
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                    </h2>
-                </div>
-
-
-        <Slider {...testimonialSlider} className='testimonialSlider slick-slider'>
-          {testimonialData.map((testimonial, index) => (
-            <div key={index} className='item'>
-              <div className='awardsCol'>
-              <div className='textwithimg'>
-              <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
-               
-                <div className='awardsData'>
-                  <h5>{testimonial.name}</h5>
-                  <p>{testimonial.designation}</p></div>
-              </div>
-              <div className='awardsText'><p>{testimonial.eventsText}</p></div>
-
-              </div>
-            </div>
-          ))}
-        </Slider>
-
-        <div className='btnSpaceEx center pb-0'>     
-            <Link to="../testimonials" className="btnDark fontM ripple-button"><span>View All</span></Link>
-        </div>
-
-
-        </div></section> 
-        {/* TESTIMONIALS End */} 
 
         
 

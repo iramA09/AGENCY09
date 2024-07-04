@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import StartAProjectFormPopup from '../../Components/Forms/StartAProjectFormPopup';
+import Testimonias from '../../Components/Testimonias';
 
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
@@ -24,20 +25,19 @@ import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
 import starY from '../../Assets/Images/icons/star.png';
-import corporateWebsite from '../../Assets/Images/corporateWebsite.jpg';
+import barc from '../../Assets/Images/work/BARC.jpg';
 
-import chatbot from '../../Assets/Images/tools/chatbot.png';
-import one_dashboard from '../../Assets/Images/tools/one_dashboard.png';
-import ticketing_system from '../../Assets/Images/tools/ticketing_system.png';
-import url_builder from '../../Assets/Images/tools/url_builder.png';
-import website_audit from '../../Assets/Images/tools/website_audit.png';
 
-import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
-import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
-import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
+import wurthCarHaus from '../../Assets/Images/logos/work/automative/wurth-car-haus.png';
+import barci from '../../Assets/Images/logos/work/others/barci.png';
+import hudobosshugo from '../../Assets/Images/logos/work/fashion_lifestyle/hudo-boss-hugo.png';
+import movado from '../../Assets/Images/logos/work/fashion_lifestyle/movado.png';
 
-import clickHere from '../../Assets/Images/icons/clickHere.png';
+
 // Images end
+
+
+
 
 // toolsSlider 
 const toolsSlider = {
@@ -146,27 +146,19 @@ const Design = () => {
 
 //CaseStudy Data
 const CaseStudyData = [
-    {
-        link: '#',
-        image: ourwork1,
-        titale: 'Brand led site for a Banking Solutions Firm',
-        tags: [{ name: 'BFSI' },],
-    },  
-    {
-        link: '#',
-        image: ourwork2,
-        titale: 'A dynamic website for India’s biggest truck company',
-        tags: [
-            { name: 'Automobile' },
-        ],
-    },  
-    {
-        link: '#',
-        image: ourwork3,
-        titale: 'Revamped Website for one of the India’s biggest institution',
-        tags: [{ name: 'Education' },],
-
-    },
+  {
+    id: 7,
+    title: 'Visualizing Insights: Award-Winning Yearbook for BARC India',
+    tags: [
+        { name: 'Annual Report', },
+        { name: 'Book Design', },
+        { name: 'Infographics', }
+    ],
+    image: barc,
+    link: '/work/case-studys/barc-india-yearbook',
+    brand: "BARC India Yearbook",
+    department: 'Design'
+},
   ];
 //CaseStudy Data End
 
@@ -235,14 +227,16 @@ const faqsData = [
                     <div className='SolutionsTag'><span className='blackB white'><GoNorthStar className='yellow'/> Design</span></div>
                     <h1 className='sizeH1 uppercase'>Crafting Timeless Brands with Creative Excellence</h1>
                     <p>A strong brand is the cornerstone of any successful business. Our brand design services are tailored to create impactful and memorable brand identities that resonate with your audience. From concept to execution, we deliver creative solutions that elevate your brand to new heights.</p>
-                                
+       
+
+                         
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
                         <ul className='trustedByLogos'>
-                            <li><img src={bitsPilani} alt=""/></li>
-                            <li><img src={tataMotors2} alt=""/></li>
-                            <li><img src={ryan} alt=""/></li>
-                            <li><img src={mahindraAccelo} alt=""/></li>
+                            <li><img src={wurthCarHaus} alt=""/></li>
+                            <li><img src={barci} alt=""/></li>
+                            <li><img src={hudobosshugo} alt=""/></li>
+                            <li><img src={movado} alt=""/></li>
                         </ul>
                     </div>
                 </div>
@@ -317,9 +311,9 @@ const faqsData = [
             <div className='container'>
 
             <div className='Heading center HeadingIcon'>
-                 <h2 className='sizeH1 uppercase'>
+                <h2 className='sizeH1 uppercase'>
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
-                      Case studies
+                    Case studies
                     <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
                 </h2>
             </div>
@@ -332,14 +326,19 @@ const faqsData = [
                         <div key={index} className='item'>
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/></div>
+                                <div className='CaseStudyImg'><img src={CaseStudy.image}/>
+                                <div className='workGridItemHover'>
+                                    <div className='workGridItemHoverIn'>
+                                        <h3>{CaseStudy.title}</h3>
+                                        <h4>{CaseStudy.brand}</h4>
+                                        <p>{CaseStudy.department}</p>
+                                    </div>
+                                </div></div>
                                 <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
                                 <div className='textTag'><p>{CaseStudy.tag}
-                                
-                                {CaseStudy.tags.map((tag, index) => (
-                                  <span key={index}>{tag.name}</span>
-                                ))}
-                                
+                                  {CaseStudy.tags.map((tag, index) => (
+                                    <span key={index}>{tag.name}</span>
+                                  ))}
                                 </p></div>
                             </Link>
                         </div>
@@ -355,7 +354,6 @@ const faqsData = [
 
             </div>
         </section>  
-
 
         <div className='container'>
               <div className='strokeB'><SVGCurveLine/></div>      
@@ -375,9 +373,10 @@ const faqsData = [
 
 
 
-        <div className='container'>
-                <div className='strokeB'><SVGCurveLine/></div>      
-        </div>
+             {/* TESTIMONIALS */}   
+             <Testimonias/>
+        {/* TESTIMONIALS End */} 
+        
 
 
 

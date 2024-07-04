@@ -16,66 +16,69 @@ import { IoStarSharp } from "react-icons/io5";
 import { SlArrowRightCircle } from "react-icons/sl";
 import SVGCurveLine from '../Hooks/SVGCurveLine'; 
 // Images
-import BARC from '../Assets/Images/work/BARC.jpg';
-import Laffaire from '../Assets/Images/work/Laffaire.jpg';
+import barc from '../Assets/Images/work/BARC.jpg';
+import godrejlaffaire from '../Assets/Images/work/Laffaire.jpg';
 import TataMotors from '../Assets/Images/work/TataMotors.jpg';
-import TribeVibe from '../Assets/Images/work/TribeVibe.jpg';
+import Tribevibe from '../Assets/Images/work/TribeVibe.jpg';
+
 // Images end
 
 // Array of work items
 export const workItems = [
   {
     id: 1,
-    title: '5 Tailored Websites for Tata Motors CV',
+    title: "Driving Visibility and Engagement for Tata Motors' Commercial Vehicle Lineup",
     tags: [
-      { name: 'Brand Strategy', link: '/' },
-      { name: 'Print AD', link: '/' },
-      { name: 'Digital', link: '/' }
+        { name: 'Digital Strategy', },
+        { name: 'UI/UX', },
+        { name: 'Web Development', }
     ],
     image: TataMotors,
     link: '/work/case-studys/tata-trucks',
-    brand: 'Tata Motors CV',
+    brand: 'TATA Trucks',
     department: 'Tech'
-  },
-  {
-    id: 2,
-    title: 'Crafting a unique IP for Godrej Laffaire',
-    tags: [
-      { name: 'Brand Strategy', link: '/' },
-      { name: 'Print AD', link: '/' },
-      { name: 'Digital', link: '/' }
-    ],
-    image: Laffaire,
-    link: '/work/case-studys',
-    brand: 'Godrej Laffaire',
-    department: 'Tech'
-  },
-  {
-    id: 3,
-    title: 'Award-Winning Annual Report for BARC India',
-    tags: [
-      { name: 'Brand Strategy', link: '/' },
-      { name: 'Print AD', link: '/' },
-      { name: 'Digital', link: '/' }
-    ],
-    image: BARC,
-    link: '/work/case-studys',
-    brand: 'BARC India',
-    department: 'Tech'
-  },
-  {
-    id: 4,
-    title: 'Tech based Campaign Ambassador Program for Tribevibe',
-    tags: [
-      { name: 'Brand Strategy', link: '/' },
-      { name: 'Print AD', link: '/' },
-      { name: 'Digital', link: '/' }
-    ],
-    image: TribeVibe,
-    link: '/work/case-studys',
-    brand: 'TribeVibe',
-    department: 'Tech'
-  },
+},
+
+{
+  id: 2,
+  title: 'Unearthing India’s Next Big Content Creator with Godrej L’Affaire Select',
+  tags: [
+      { name: 'Brand Strategy', },
+      { name: 'Community Management', },
+      { name: 'IP Creation', }
+  ],
+  image: godrejlaffaire,
+  link: '/work/case-studys/godrej-laffaire',
+  brand: "Godrej Laffaire",
+  department: 'Content'
+},
+{
+  id: 3,
+  title: 'Visualizing Insights: Award-Winning Yearbook for BARC India',
+  tags: [
+      { name: 'Annual Report', },
+      { name: 'Book Design', },
+      { name: 'Infographics', }
+  ],
+  image: barc,
+  link: '/work/case-studys/barc-india-yearbook',
+  brand: "BARC India Yearbook",
+  department: 'Design'
+},
+
+{
+  id: 5,
+  title: 'Empowering Campus Influencers: Tech-Driven Ambassador Program for TribeVibe',
+  tags: [
+      { name: 'Digital Strategy', },
+      { name: 'UI/UX', },
+      { name: 'Web Development', }
+  ],
+  image: Tribevibe,
+  link: '/work/case-studys/tribevibe',
+  brand: "Tribevibe",
+  department: 'Tech'
+},
   
   // {
   //   id: 5,

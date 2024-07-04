@@ -166,50 +166,13 @@ const BARCIndiaYearbook = () => {
 
             </div>
 
-
-            <div className='cSsecMinC'>
-
-                <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork1} /></span>
-                </div>
-
-                
-
-            </div>
-
-
-<div className='mainslider'>
-    <Slider {...mainSlider} className='clientelSlider slick-slider'>
-    <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork2} /></span>
-                </div>
-
-                <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork3} /></span>
-                </div>
-
-                <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork4} /></span>
-                </div>
-
-                <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork5} /></span>
-                </div>
-
-                <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork6} /></span>
-                </div>
-
-                <div className ='imgCol1 imgCol'>
-                    <span><img src={ourwork7}/></span>
-                </div>
-    </Slider>
-</div>
+ 
+ 
 
         </div>
     </section>
 
-
+{/* 
     <div className='container'>
     <div className='strokeB'>
               <SVGCurveLine />
@@ -259,7 +222,7 @@ const BARCIndiaYearbook = () => {
 
             </div>
         </section>  
-
+ */}
 
 
 

@@ -10,7 +10,9 @@ import 'react-tabs/style/react-tabs.css';
 import caseStudies from '../Assets/Images/case_studies.jpg'
 import blog from '../Assets/Images/blog.jpg'
 
-
+import ideasPerform from '../Assets/Images/growth/mediaA09.jpg';
+import ideasPerform1 from '../Assets/Images/blog1.jpg';
+import sportday from '../Assets/Images/blog2.jpg';
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -57,7 +59,7 @@ const Header = () => {
                 <Link to='/work/case-studies'>Work</Link>
               </li>
               <li>
-                <Link to='/solutions/tech'>Solutions <i/></Link>
+                <Link to='/solutions/tech'>Solutions</Link>
                 <div className='subMenu'> 
                   <div className='subMenuInner'>
                     <span><Link className={location.pathname === '/solutions/tech' ? 'active' : ''} to='/solutions/tech'>Tech</Link></span>
@@ -109,7 +111,7 @@ const Header = () => {
               <Link to='https://www.linkedin.com/company/agency09/' target='_blank'>LinkedIn</Link>
               <Link to='https://www.instagram.com/agency09/' target='_blank'>Instagram</Link>
               <Link to='https://www.youtube.com/channel/UCT7wE543Vl0LSrpCmpMzZrg' target='_blank'>YouTube</Link>
-              <Link to='https://twitter.com/AGENCY09' target='_blank'>Twitter</Link>
+              <Link to='https://twitter.com/AGENCY09' target='_blank'>X</Link>
             </div>
 
             <div className={`menuBtn ${isMenuOpen ? 'Open' : ''}`} onClick={toggleMenu}>
@@ -153,17 +155,17 @@ const Header = () => {
                 <ul>
                   <li>
                       <div className='NBItemTitle'>
-                        <span>Blog </span> | 
-                        <Link to='https://www.agency09.co/simplifyingtheweb/' target='_blank' >View All</Link>
+                        <span>Blog </span>  
+                        <Link to='https://www.agency09.co/simplifyingtheweb/' target='_blank' ></Link>
                       </div>
 
                       <div className='NBItemContent'>
-                      <Link to='/'>
+                      <Link>
                           <div className='NBItemImg'>
-                            <img src={blog} alt='{blog}' />
+                            <img src={sportday} alt='{blog}' />
                           </div>
                           <div className='NBItemText'>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit?</p>
+                            <p>Bat, Ball & Balle Balle</p>
                           </div>
                         </Link>
                       </div>
@@ -171,17 +173,17 @@ const Header = () => {
 
                   <li>
                       <div className='NBItemTitle'>
-                        <span>Case Studies</span> | 
-                        <Link to='/work'>View All</Link>
+                        <span className='o0'>Blog</span> 
+                        <Link to='/work'></Link>
                       </div>
 
                       <div className='NBItemContent'>
-                        <Link to='/'>
+                        <Link>
                           <div className='NBItemImg'>
-                            <img src={caseStudies} alt='{caseStudies}' />
+                            <img src={ideasPerform1} alt='{caseStudies}' />
                           </div>
                           <div className='NBItemText'>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit?</p>
+                            <p>Tata Motors enlists A09 for their Smart City Project website</p>
                           </div>
                         </Link>
                       </div>

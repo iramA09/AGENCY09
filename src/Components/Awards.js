@@ -2,7 +2,7 @@ import React from 'react'
 import starY from '../Assets/Images/icons/star.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import { GiSevenPointedStar } from "react-icons/gi";
+import { GiLaurelsTrophy } from "react-icons/gi";
 // awardsSlider settings
 const awardsSlider = {
   dots: false,
@@ -92,7 +92,7 @@ const Awards = () => {
           eventAdmin: 'TribeVibe'
       },
       {
-          year: '2023',
+          year: '',
           eventsText: 'Idea Award Best Website 2023',
           eventAdmin: 'Nahar Group'
       }
@@ -123,7 +123,7 @@ const Awards = () => {
             <div key={index} className='item'>
               <div className='awardsCol'>
                 <div className='awardsColIn'>
-                <div className='awardsTag'><GiSevenPointedStar /></div>
+                <div className='awardsTag'><GiLaurelsTrophy /></div>
                 <div className='awardsText'><p>{awards.eventsText}</p></div>
                 <div className='awardsText2'><p>- {awards.eventAdmin}</p></div>
                 <div className='awardsYear'><h5>{awards.year}</h5></div>

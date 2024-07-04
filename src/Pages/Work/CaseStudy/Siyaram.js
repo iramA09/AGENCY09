@@ -200,7 +200,7 @@ const TataTrucks = () => {
 
         </div>
     </section>
-
+{/* 
 
     <div className='container'>
     <div className='strokeB'>
@@ -250,7 +250,7 @@ const TataTrucks = () => {
             </div>
 
             </div>
-        </section>  
+        </section>   */}
 
 
 
