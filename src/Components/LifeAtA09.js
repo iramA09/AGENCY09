@@ -288,13 +288,13 @@ const images = [
     src: A096thYearAnniversary_1,
     title: '6th Year Anniversary',
     group: 'A096thYearAnniversary',
-    additionalImages: [ A096thYearAnniversary_2, A096thYearAnniversary_3, A096thYearAnniversary_4, A096thYearAnniversary_5, A096thYearAnniversary_6, A096thYearAnniversary_7,  A096thYearAnniversary_8, A096thYearAnniversary_9, A096thYearAnniversary_10, A096thYearAnniversary_11, A096thYearAnniversary_12, A096thYearAnniversary_13, A096thYearAnniversary_14, A096thYearAnniversary_15,],
+    additionalImages: [ A096thYearAnniversary_2, A096thYearAnniversary_3, A096thYearAnniversary_4, A096thYearAnniversary_5, A096thYearAnniversary_6, A096thYearAnniversary_7,  A096thYearAnniversary_8, A096thYearAnniversary_9, A096thYearAnniversary_10, A096thYearAnniversary_11,  A096thYearAnniversary_13, A096thYearAnniversary_14, A096thYearAnniversary_15,],
   },
   {
     src: A097thYearAnniversary_1,
     title: '7th Year Anniversary',
     group: 'A097thYearAnniversary',
-    additionalImages: [ A097thYearAnniversary_2, A097thYearAnniversary_3, A097thYearAnniversary_4, A097thYearAnniversary_5, A097thYearAnniversary_6, A097thYearAnniversary_7,  A097thYearAnniversary_8, A097thYearAnniversary_9, A097thYearAnniversary_10, A097thYearAnniversary_11, A097thYearAnniversary_12, A097thYearAnniversary_13, A097thYearAnniversary_14, A097thYearAnniversary_15,],
+    additionalImages: [ A097thYearAnniversary_2, A097thYearAnniversary_4, A097thYearAnniversary_5, A097thYearAnniversary_6, A097thYearAnniversary_7,  A097thYearAnniversary_8, A097thYearAnniversary_9, A097thYearAnniversary_10, A097thYearAnniversary_12, A097thYearAnniversary_14, A097thYearAnniversary_15,],
   },
   {
     src: Christmas2021_1,
@@ -342,13 +342,13 @@ const images = [
     src: Goa2023_1,
     title: 'Goa 2023',
     group: 'Goa2023',
-    additionalImages: [ Goa2023_2, Goa2023_3, Goa2023_4, Goa2023_5, Goa2023_6, Goa2023_7,  Goa2023_8, Goa2023_9, Goa2023_10, Goa2023_11, Goa2023_12, Goa2023_13, Goa2023_14, Goa2023_15,],
+    additionalImages: [ Goa2023_2, Goa2023_3, Goa2023_4, Goa2023_5, Goa2023_6, Goa2023_7,  Goa2023_8, Goa2023_9, Goa2023_10, Goa2023_11, Goa2023_12, Goa2023_13, ],
   },
   {
     src: Holi2022_1,
     title: 'Holi 2022',
     group: 'Holi2022',
-    additionalImages: [ Holi2022_2, Holi2022_3, Holi2022_4, Holi2022_5, Holi2022_6, Holi2022_7,  Holi2022_8, Holi2022_9, Holi2022_10,],
+    additionalImages: [ Holi2022_4, Holi2022_8, Holi2022_10,],
   },
   {
     src: LastDayOldOffice_1,

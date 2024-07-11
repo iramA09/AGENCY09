@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Milestones from '../Components/Milestones';
@@ -38,6 +39,31 @@ const About = () => {
 
   return (
   <>
+
+
+    <Helmet>
+      <title> About Us | Digital Marketing Agency | Web Development Company -  AGENC09 </title>
+      <link rel="canonical" href="https://www.agency09.in/about"/>
+      <meta name="robots" content="index, follow"/> 
+
+      <meta name="description" content="AGENCY09 is a digital marketing agency for 10+ years, with 85+ members, which has delivered 450+ projects across 4 continents including the UAE & Australia."/>
+      <meta property="og:title" content=" About Us | Digital Marketing Agency | Web Development Company -  AGENC09"/> 
+      <meta property="og:description" content="AGENCY09 is a digital marketing agency for 10+ years, with 85+ members, which has delivered 450+ projects across 4 continents including the UAE & Australia."/> 
+      <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
+      <meta property="og:type" content="website"/> 
+
+
+      <meta name="twitter:card" content="summary"/> 
+      <meta name="twitter:site" content="@AGENCY09"/> 
+      <meta name="twitter:creator" content="@AGENCY09"/> 
+      <meta name="twitter:url" content="https://www.agency09.in/about"/> 
+      <meta name="twitter:description" content=" AGENCY09 is a digital marketing agency for 10+ years, with 85+ members, which has delivered 450+ projects across 4 continents including the UAE & Australia."/> 
+      <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
+
+    </Helmet>
+
+
+
     <Header />
 
     <div className="spacer"></div>

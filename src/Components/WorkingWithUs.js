@@ -97,7 +97,7 @@ const WorkingWithUs = () => {
 
 
     <h4 className='sizeH5 bold pb-10 pt-40 uppercase'>Leaves</h4>
-    <Accordion>
+    {/* <Accordion>
     {WorkingWithUsDataLeaves.map(item => (
     <Accordion.Item eventKey={item.key} key={item.key}>
     <Accordion.Header>{item.header}</Accordion.Header>
@@ -106,8 +106,9 @@ const WorkingWithUs = () => {
     </Accordion.Body>
     </Accordion.Item>
     ))}
-    </Accordion>
-
+    </Accordion> */}
+    <p>At AGENCY09, we prioritize our employees' well-being and work-life balance. Our leaves include paid leaves, national holidays, a flexible work-from-home policy, and flexible working hours. </p>
+    <p>We also believe in celebrating special occasions, so we offer a day off for your birthday.</p>
 
 
 </>

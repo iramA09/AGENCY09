@@ -38,15 +38,13 @@ const jobData = [
       "A passion for words and communicating the essence of a story.",
       "Ability to self-manage, take initiative and prioritize tasks in a fast-paced environment."
     ],
-    salary: "As per Industry Standards",
     location: "Open for working from our office in Mumbai. (Bandra).",
-    joiningDate: "Immediate",
     applyEmail: "info@agency09.in"
   },
 
   {
     key: "1",
-    title: "Assistant Creative Copywriter",
+    title: "Assistant Creative Director",
     jobBrief: " AGENCY09 is looking for a creative director. Leading a team of thinkers and doers, the role requires a mix of marketing expertise and creative understanding, promoting the products and services of our valued clients. We’re looking for an experienced manager of people, someone that can inspire others, taking our creative thinking and execution to a new level as we continue to grow. The ideal candidate will have a natural eye for design, content and a drive to inspire dynamic ideas that connect with all types of audiences.",
     experience: " 07 years of relevant experience with 3+ years of creative direction in agency or corporate setting",
     responsibility: [],
@@ -70,9 +68,7 @@ const jobData = [
       "Highly skilled with leading a team of creative talent",
       "Strong creative vision with an understanding of business objectives"
     ],
-    salary: "As per Industry Standards",
     location: "Open for working from our office in Mumbai. (Bandra).",
-    joiningDate: "Immediate",
     applyEmail: "info@agency09.in"
   },
 
@@ -94,9 +90,7 @@ const jobData = [
       "Willingness to Learn new things, courses, tricks as a part of the profile.",
       "This is a long term and career oriented position.",
     ],
-    salary: "Fixed + Variable (Revenue Share)",
     location: "Mumbai Office. (Bandra)",
-    joiningDate: "Immediate",
     applyEmail: "info@agency09.in"
   },
 
@@ -112,9 +106,7 @@ const jobData = [
       "Well Versed with Designing Softwares like (Illustrator/Photoshop/CorelDraw/Dreamweaver/InDesign and others) - Working experience with Sketch, Invision, and Adobe design tools. Having knowledge of Typography and Layout",
       "Ability to have fun in the creating process",
     ],
-    salary: "As per Industry Standards",
     location: "Open for working from our office in Mumbai. (Bandra).",
-    joiningDate: "Immediate",
     applyEmail: "info@agency09.in"
   },
 
@@ -131,9 +123,7 @@ const jobData = [
       "Well Versed with Designing Softwares like (Illustrator/Photoshop/CorelDraw/Dreamweaver/InDesign and others) - Working experience with Sketch, Invision, and Adobe design tools. Having knowledge of Typography and Layout",
       "Ability to have fun in the creating process",
     ],
-    salary: "As per Industry Standards",
     location: "Open for working from our office in Mumbai. (Bandra).",
-    joiningDate: "Immediate",
     applyEmail: "info@agency09.in"
   },
 ];

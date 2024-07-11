@@ -28,6 +28,8 @@ import ProductCommunicationforRelianceGeneralInsurance from './Pages/Work/CaseSt
 import LakmeFashionWeek from './Pages/Work/CaseStudy/LakmeFashionWeek'
 import AmericanTourister from './Pages/Work/CaseStudy/AmericanTourister'
 import PrivacyPolicy from './Pages/PrivacyPolicy'
+import BlogDetail from './Pages/Blog/BlogDetail'
+import Blog from './Pages/Blog/Blog'
 import Error from './Pages/Error'
 import Sitemap09 from './Pages/Sitemap09'
 
@@ -71,6 +73,8 @@ function App() {
           <Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route exact path='/sitemap' element={<Sitemap09 />} />
           <Route exact path='*' element={<Error />} />
+          <Route exact path='/blog/' element={<Blog />} />
+          <Route exact path='/blog/blog-detail' element={<BlogDetail />} />
         </Routes>
       </AnimatePresence>
     </div>

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
@@ -208,6 +210,26 @@ const faqsData = [
 
   return (
     <>
+    <Helmet>
+      <title>Keyword Research | Search Engine Optimization Services – AGENCY09</title>
+      <meta name="robots" content="index, follow"/> 
+
+      <meta name="description" content="Being a digital marketing agency, we perform SEO keyword research to gain a higher ranking on Google by indexing more than 3000+ keywords. We’re also into App Store Optimisation."/>
+      <link rel="canonical" href="https://www.agency09.in/services/keyword.php"/>
+
+      <meta property="og:title" content="Keyword Research | Search Engine Optimization Services – AGENCY09"/> 
+      <meta property="og:description" content="Being a digital marketing agency, we perform SEO keyword research to gain a higher ranking on Google by indexing more than 3000+ keywords. We’re also into App Store Optimisation."/> 
+      <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
+      <meta property="og:type" content="website"/> 
+      <meta name="twitter:card" content="summary"/> 
+      <meta name="twitter:site" content="@AGENCY09"/> 
+      <meta name="twitter:creator" content="@AGENCY09"/> 
+      <meta name="twitter:url" content="https://www.agency09.in/services/keyword.php"/> 
+      <meta name="twitter:description" content="Being a digital marketing agency, we perform SEO keyword research to gain a higher ranking on Google by indexing more than 3000+ keywords. We’re also into App Store Optimisation."/> 
+      <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/>
+    </Helmet>
+
+
       <Header />
       <div className="spacer"></div>
 

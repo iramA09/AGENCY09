@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
@@ -299,6 +301,30 @@ const faqsData = [
 
   return (
     <>
+
+    <Helmet>
+      <title>Media Solutions | Performance Marketing Services - AGENCY09</title>
+      <meta name="robots" content="index, follow"/> 
+
+      <meta name="description" content="Being an advertising company, we covers all social media platforms through PPC campaigns, performance marketing, influencer marketing, and programmatic advertising."/>
+      <link rel="canonical" href="https://www.agency09.in/solutions/media"/>
+
+      <meta property="og:title" content="Media Solutions | Performance Marketing Services - AGENCY09"/> 
+      <meta property="og:description" content="Being an advertising company, we covers all social media platforms through PPC campaigns, performance marketing, influencer marketing, and programmatic advertising."/> 
+      <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
+      <meta property="og:type" content="website"/> 
+
+      <meta name="twitter:card" content="summary"/> 
+      <meta name="twitter:site" content="@AGENCY09"/> 
+      <meta name="twitter:creator" content="@AGENCY09"/> 
+      <meta name="twitter:url" content="https://www.agency09.in/solutions/media"/> 
+      <meta name="twitter:description" content="Being an advertising company, we covers all social media platforms through PPC campaigns, performance marketing, influencer marketing, and programmatic advertising."/> 
+      <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
+    </Helmet>
+
+
+
+
       <Header />
       <div className="spacer"></div>
 

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
+
 import { Link, useLocation } from 'react-router-dom';
 import useLenisScroll from '../../Hooks/useLenisScroll';
 import Header from '../../Components/Header';
@@ -171,6 +173,26 @@ const OurClients = () => {
 
   return (
     <>
+
+    <Helmet>
+      <title>Our Clients - AGENCY09</title>
+      <meta name="robots" content="index, follow"/> 
+      <meta name="description" content="We partner with our clients to grow businesses, to explore unchartered territories and to do the right thing in digital advertising."/>
+      <link rel="canonical" href="https://www.agency09.in/work/clients.php"/>
+
+      <meta property="og:title" content="Our Clients - AGENCY09"/> 
+      <meta property="og:description" content="We partner with our clients to grow businesses, to explore unchartered territories and to do the right thing in digital advertising."/> 
+      <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
+      <meta property="og:type" content="website"/> 
+
+      <meta name="twitter:card" content="summary"/> 
+      <meta name="twitter:site" content="@AGENCY09"/> 
+      <meta name="twitter:creator" content="@AGENCY09"/> 
+      <meta name="twitter:url" content="https://www.agency09.in/work/clients.php"/> 
+      <meta name="twitter:description" content="We partner with our clients to grow businesses, to explore unchartered territories and to do the right thing in digital advertising."/> 
+      <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
+    </Helmet>
+
       <Header />
       <div className="spacer"></div>
       <section>

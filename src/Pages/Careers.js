@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+
 import { Link, useLocation } from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
@@ -54,6 +56,28 @@ const calculatData = [
 
   return (
     <>
+
+    <Helmet>
+      <title>Life at 09 - AGENCY09</title>
+      <meta name="robots" content="index, follow"/> 
+
+      <meta name="description" content="The good news is that we take our weekends seriously, but the better news is that we take our weekdays even more seriously."/>
+      <link rel="canonical" href="https://www.agency09.in/careers"/>
+
+      <meta property="og:title" content="Life at 09 - AGENCY09"/> 
+      <meta property="og:description" content="The good news is that we take our weekends seriously, but the better news is that we take our weekdays even more seriously."/> 
+      <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
+      <meta property="og:type" content="website"/> 
+
+      <meta name="twitter:card" content="summary"/> 
+      <meta name="twitter:site" content="@AGENCY09"/> 
+      <meta name="twitter:creator" content="@AGENCY09"/> 
+      <meta name="twitter:url" content="https://www.agency09.in/careers"/> 
+      <meta name="twitter:description" content="The good news is that we take our weekends seriously, but the better news is that we take our weekdays even more seriously."/> 
+      <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
+    </Helmet>
+
+
       <Header />
       <div className="spacer"></div>
         

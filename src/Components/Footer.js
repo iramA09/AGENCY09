@@ -96,7 +96,7 @@ const Footer = () => {
           <li><Link to='/careers#Opportunities'>Vacancies</Link></li>
           <li><Link to='/connect'>Connect</Link></li>
           <li><Link to='https://www.agency09.co/simplifyingtheweb/' target='_blank'>Simplifying The Web</Link></li>
-          <li><Link to='https://www.a09store.com/'>A09 Store</Link></li>
+          <li><Link to='https://www.a09store.com/' target='_blank'>A09 Store</Link></li>
         </ul>
       </div>
 
@@ -107,6 +107,7 @@ const Footer = () => {
         <li><Link to='https://www.instagram.com/agency09/' target='_blank'> Instagram</Link></li>
         <li><Link to='https://www.youtube.com/channel/UCT7wE543Vl0LSrpCmpMzZrg' target='_blank'> YouTube</Link></li>
         <li><Link to='https://twitter.com/AGENCY09' target='_blank'> X</Link></li>
+        <li><Link to='https://www.facebook.com/agency09/' target='_blank'> Facebook</Link></li>
 
         </ul>
       </div>
@@ -114,8 +115,6 @@ const Footer = () => {
       <div className='footerCol'>
         <h3 className='fHd'>Play Music</h3>
         <div className='Spotify'>
-   
-
           <iframe src="https://open.spotify.com/embed/playlist/5EEeVOhLD3WyqS7o1xn1sC?utm_source=generator&theme=0" width="100%" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
@@ -460,6 +462,30 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <>
+
+    <Helmet>
+      <title>Tech Solutions | Software Development - AGENCY09</title>
+      <meta name="robots" content="index, follow"/> 
+
+      <meta name="description" content="Being a technology company we provides tech solutions such as chatbot development, ecommerce website design, software development, mobile app development and more."/>
+      <link rel="canonical" href="https://www.agency09.in/solutions/tech"/>
+
+      <meta property="og:title" content="Tech Solutions | Software Development - AGENCY09"/> 
+      <meta property="og:description" content="Being a technology company we provides tech solutions such as chatbot development, ecommerce website design, software development, mobile app development and more."/> 
+      <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
+      <meta property="og:type" content="website"/> 
+
+      <meta name="twitter:card" content="summary"/> 
+      <meta name="twitter:site" content="@AGENCY09"/> 
+      <meta name="twitter:creator" content="@AGENCY09"/> 
+      <meta name="twitter:url" content="https://www.agency09.in/solutions/tech"/> 
+      <meta name="twitter:description" content="Being a technology company we provides tech solutions such as chatbot development, ecommerce website design, software development, mobile app development and more."/> 
+      <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
+    </Helmet>
+
+
+
+
       <Header />
       <div className="spacer"></div>
 

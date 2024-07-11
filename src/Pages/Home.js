@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
@@ -79,21 +80,7 @@ export const workItems = [
   brand: "Tribevibe",
   department: 'Tech'
 },
-  
-  // {
-  //   id: 5,
-  //   title: 'Elevated Employer Branding Content for Aditya Birla Capital',
-  //   tags: [
-  //     { name: 'Brand Strategy', link: '/' },
-  //     { name: 'Print AD', link: '/' },
-  //     { name: 'Digital', link: '/' }
-  //   ],
-  //   image: ABC,
-  //   link: '/',
-  //   brand: 'Aditya Birla Capital',
-  //   department: 'Tech'
-  // },
-  
+
 ];
 
 const Home = () => {
@@ -105,9 +92,32 @@ const Home = () => {
   }, []);
 
 
-
   return (
     <>
+
+<Helmet>
+    <title> Advertising Agency | Brand Agency in Mumbai - AGENCY09 </title>
+    <meta name="robots" content="index, follow"/> 
+
+    <meta name="description" content="AGENCY09 is a leading advertising agency in Mumbai. We grow brands with ideas for content, technology, design & data."/>
+    <link rel="canonical" href="https://www.agency09.in/"/>
+
+    <meta property="og:title" content="Advertising Agency | Brand Agency in Mumbai - AGENCY09 "/> 
+    <meta property="og:description" content="AGENCY09 is a leading advertising agency in Mumbai. We grow brands with ideas for content, technology, design & data."/> 
+    <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
+    <meta property="og:type" content="website"/> 
+
+
+    <meta name="twitter:card" content="summary" /> 
+    <meta name="twitter:site" content="@AGENCY09" /> 
+    <meta name="twitter:creator" content="@AGENCY09" /> 
+    <meta name="twitter:url" content="https://www.agency09.in/"/> 
+    <meta name="twitter:description" content=" AGENCY09 is a leading advertising agency in Mumbai. We grow brands with ideas for content, technology, design & data."/> 
+    <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/>
+</Helmet>
+
+
+
       <Header />
 
       {/* Hero */}

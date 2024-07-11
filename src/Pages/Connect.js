@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+
 import { Link, useLocation } from 'react-router-dom';
 import useLenisScroll from '../Hooks/useLenisScroll';
 import Header from '../Components/Header';
@@ -36,6 +38,25 @@ const Connect = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Contact Us | Digital Agency in Bandra - AGENCY09</title>
+        <meta name="robots" content="index, follow"/> 
+        <link rel="canonical" href="https://www.agency09.in/connect"/> 
+              
+        <meta property="og:title" content="Contact Us | Digital Agency in Bandra - AGENCY09"/> 
+        <meta property="og:description" content="If you’re looking for a digital agency to help your business grow or you’ve got a specific query, fill up the form."/> 
+        <meta property="og:image" content="https://www.agency09.in/images/agency09-dark.png"/> 
+        <meta property="og:type" content="website"/> 
+
+
+        <meta name="twitter:card" content="summary"/> 
+        <meta name="twitter:site" content="@AGENCY09"/> 
+        <meta name="twitter:creator" content="@AGENCY09"/> 
+        <meta name="twitter:url" content="https://www.agency09.in/connect"/> 
+        <meta name="twitter:description" content="If you’re looking for a digital agency to help your business grow or you’ve got a specific query, fill up the form."/> 
+        <meta name="twitter:image" content="https://www.agency09.in/images/agency09-dark.png"/> 
+     </Helmet>
+
       <Header />
       <div className="spacer"></div>
 
