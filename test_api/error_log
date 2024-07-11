@@ -1,0 +1,6 @@
+[27-May-2024 20:17:49 Asia/Calcutta] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home1/agencyin/public_html/test_api/config.php:22
+Stack trace:
+#0 /home1/agencyin/public_html/test_api/config.php(22): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'db_agency09_in')
+#1 /home1/agencyin/public_html/test_api/enquiryApi.php(2): include('/home1/agencyin...')
+#2 {main}
+  thrown in /home1/agencyin/public_html/test_api/config.php on line 22

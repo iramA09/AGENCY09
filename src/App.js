@@ -1,42 +1,42 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
-import React from 'react'
-import './Assets/Sass/Style.scss'
-import Home from './Pages/Home'
-import About from './Pages/About'
-import Connect from './Pages/Connect'
-import WorkWithUs from './Pages/WorkWithUs'
-import JoinTheTeam from './Pages/JoinTheTeam'
-import Careers from './Pages/Careers'
-import Testimonials from './Pages/Testimonials'
-import Tech from './Pages/Solutions/Tech'
-import Content from './Pages/Solutions/Content'
-import Design from './Pages/Solutions/Design'
-import Media from './Pages/Solutions/Media'
-import Production from './Pages/Solutions/Production'
-import Keyword from './Pages/Solutions/Keyword'
-import CaseStudies from './Pages/Work/CaseStudies'
-import OurClients from './Pages/Work/OurClients'
-import Ryangroup from './Pages/Work/CaseStudy/Ryangroup'
-import TataTrucks from './Pages/Work/CaseStudy/TataTrucks'
-import Siyaram from './Pages/Work/CaseStudy/Siyaram'
-import Groupsoft from './Pages/Work/CaseStudy/Groupsoft'
-import Bitspilani from './Pages/Work/CaseStudy/Bitspilani'
-import GodrejLaffaire from './Pages/Work/CaseStudy/GodrejLaffaire'
-import BARCIndiaYearbook from './Pages/Work/CaseStudy/BARCIndiaYearbook'
-import Tribevibe from './Pages/Work/CaseStudy/Tribevibe'
-import ProductCommunicationforRelianceGeneralInsurance from './Pages/Work/CaseStudy/ProductCommunicationforRelianceGeneralInsurance'
-import LakmeFashionWeek from './Pages/Work/CaseStudy/LakmeFashionWeek'
-import AmericanTourister from './Pages/Work/CaseStudy/AmericanTourister'
-
-import Error from './Pages/Error'
-import Sitemap09 from './Pages/Sitemap09'
-
-
-import { AnimatePresence } from 'framer-motion'
+// src/App.js
+import { Routes, Route, useLocation } from 'react-router-dom';
+import React from 'react';
+import './Assets/Sass/Style.scss';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Connect from './Pages/Connect';
+import WorkWithUs from './Pages/WorkWithUs';
+import JoinTheTeam from './Pages/JoinTheTeam';
+import Careers from './Pages/Careers';
+import Testimonials from './Pages/Testimonials';
+import Tech from './Pages/Solutions/Tech';
+import Content from './Pages/Solutions/Content';
+import Design from './Pages/Solutions/Design';
+import Media from './Pages/Solutions/Media';
+import Production from './Pages/Solutions/Production';
+import Keyword from './Pages/Solutions/Keyword';
+import CaseStudies from './Pages/Work/CaseStudies';
+import OurClients from './Pages/Work/OurClients';
+import Ryangroup from './Pages/Work/CaseStudy/Ryangroup';
+import TataTrucks from './Pages/Work/CaseStudy/TataTrucks';
+import Siyaram from './Pages/Work/CaseStudy/Siyaram';
+import Groupsoft from './Pages/Work/CaseStudy/Groupsoft';
+import Bitspilani from './Pages/Work/CaseStudy/Bitspilani';
+import GodrejLaffaire from './Pages/Work/CaseStudy/GodrejLaffaire';
+import BARCIndiaYearbook from './Pages/Work/CaseStudy/BARCIndiaYearbook';
+import Tribevibe from './Pages/Work/CaseStudy/Tribevibe';
+import ProductCommunicationforRelianceGeneralInsurance from './Pages/Work/CaseStudy/ProductCommunicationforRelianceGeneralInsurance';
+import LakmeFashionWeek from './Pages/Work/CaseStudy/LakmeFashionWeek';
+import AmericanTourister from './Pages/Work/CaseStudy/AmericanTourister';
+import Blog from './Pages/Blog';
+import PostDetail from './Pages/PostDetail';
+import Error from './Pages/Error';
+import Sitemap09 from './Pages/Sitemap09';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const location = useLocation();
- 
+
   return (
     <div className="App">
       <AnimatePresence mode='wait'>
@@ -61,18 +61,21 @@ function App() {
           <Route exact path='/work/case-studys/siyaram' element={<Siyaram />} />
           <Route exact path='/work/case-studys/bits-pilani' element={<Bitspilani />} />
           <Route exact path='/work/case-studys/godrej-laffaire' element={<GodrejLaffaire />} />
-          <Route exact path='/work/case-studys/barc-india-yearbook' element={<BARCIndiaYearbook />} />
+          <Route exact path='/work/case-studys/barcindia-yearbook' element={<BARCIndiaYearbook />} />
           <Route exact path='/work/case-studys/tribevibe' element={<Tribevibe />} />
           <Route exact path='/work/case-studys/product-communication-for-reliance-general-insurance' element={<ProductCommunicationforRelianceGeneralInsurance />} />
-          <Route exact path='/work/case-studys/lakme-fashionweek' element={<LakmeFashionWeek />} />
+          <Route exact path='/work/case-studys/lakme-fashion-week' element={<LakmeFashionWeek />} />
           <Route exact path='/work/case-studys/american-tourister' element={<AmericanTourister />} />
-          <Route exact path='/work/case-studies' element={<CaseStudies />} />
           <Route exact path='/work/our-clients' element={<OurClients />} />
-          <Route exact path='/sitemap' element={<Sitemap09 />} />
+          <Route exact path='/work/case-studies' element={<CaseStudies />} />
+          <Route exact path='/blogs' element={<Blog />} />
+          <Route exact path='/blog/:id' element={<PostDetail />} />
+          <Route exact path='/sitemap09' element={<Sitemap09 />} />
           <Route exact path='*' element={<Error />} />
         </Routes>
       </AnimatePresence>
     </div>
   );
 }
+
 export default App;
