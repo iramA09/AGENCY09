@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import godrejlaffaire from '../../../Assets/Images/work/Laffaire.jpg';
-import RGI from '../../../Assets/Images/work/rgi.jpg';
-import lakme from '../../../Assets/Images/work/lakme.jpg';
+import godrejlaffaire from '../../../Assets/Images/work/Laffaire.webp';
+import RGI from '../../../Assets/Images/work/rgi.webp';
+import lakme from '../../../Assets/Images/work/lakme.webp';
 // Content
 export const ContentData = [
     {
@@ -14,7 +14,7 @@ export const ContentData = [
             { name: 'IP Creation', }
         ],
         image: godrejlaffaire,
-        link: '/work/case-studys/godrej-laffaire',
+        link: '/work/case-studies/godrej-laffaire',
         brand: "Godrej Laffaire",
         department: 'Content'
     },
@@ -27,7 +27,7 @@ export const ContentData = [
             { name: 'Multi-Channel Communication', link: '' }
         ],
         image: RGI,
-        link: '/work/case-studys/product-communication-for-reliance-general-insurance',
+        link: '/work/case-studies/product-communication-for-reliance-general-insurance',
         brand: "Product Communication for Reliance General Insurance",
         department: 'Content'
     },
@@ -39,7 +39,7 @@ export const ContentData = [
             { name: 'Event Coverage', link: '' }
         ],
         image: lakme,
-        link: '/work/case-studys/lakme-fashionweek',
+        link: '/work/case-studies/lakme-fashionweek',
         brand: "Lakme Fashion Week",
         department: 'Content'
     },

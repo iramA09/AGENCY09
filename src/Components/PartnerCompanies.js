@@ -8,7 +8,7 @@ import instaHolidays from '../Assets/Images/logos/insta-holidays.png';
 import a09store from '../Assets/Images/logos/a09store.png';
 import AcademyZeroNine from '../Assets/Images/logos/academy-zero-nine.png';
 import l09ix from '../Assets/Images/logos/l09ix.png';
-import starY from '../Assets/Images/icons/star.png';
+import starY from '../Assets/Images/icons/star.webp';
 
 
 

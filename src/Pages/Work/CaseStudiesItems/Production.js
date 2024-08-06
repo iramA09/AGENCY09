@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import americanTourister from '../../../Assets/Images/work/AmericanTourister.jpg';
+import americanTourister from '../../../Assets/Images/work/AmericanTourister.webp';
 
 // Production
 export const ProductionData = [
@@ -13,7 +13,7 @@ export const ProductionData = [
             { name: 'Content Creation', link: '' }
         ],
         image: americanTourister,
-        link: '/work/case-studys/american-tourister',
+        link: '/work/case-studies/american-tourister',
         brand: "American Tourister",
         department: 'Production'
     },

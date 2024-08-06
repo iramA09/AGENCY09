@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import TataMotors from '../../../Assets/Images/work/TataMotors.jpg';
-import Ryan from '../../../Assets/Images/work/Ryan.jpg';
-import GroupSoft from '../../../Assets/Images/work/GroupSoft.jpg';
-import Siyarams from '../../../Assets/Images/work/siyarams.jpg';
-import Bitspilani from '../../../Assets/Images/work/Bitspilani.jpg';
-import Tribevibe from '../../../Assets/Images/work/TribeVibe.jpg';
+import TataMotors from '../../../Assets/Images/work/TataMotors.webp';
+import Ryan from '../../../Assets/Images/work/Ryan.webp';
+import GroupSoft from '../../../Assets/Images/work/GroupSoft.webp';
+import Siyarams from '../../../Assets/Images/work/siyarams.webp';
+import Bitspilani from '../../../Assets/Images/work/Bitspilani.webp';
+import Tribevibe from '../../../Assets/Images/work/TribeVibe.webp';
 
 // Tech
 export const techData = [
@@ -18,7 +18,7 @@ export const techData = [
             { name: 'Web Development', }
         ],
         image: TataMotors,
-        link: '/work/case-studys/tata-trucks',
+        link: '/work/case-studies/tata-trucks',
         brand: 'TATA Trucks',
         department: 'Tech'
     },
@@ -31,7 +31,7 @@ export const techData = [
             { name: 'Content Management Systems', link: '' }
         ],
         image: Ryan,
-        link: '/work/case-studys/ryangroup',
+        link: '/work/case-studies/ryangroup',
         brand: 'Ryan International Group of Institutions',
         department: 'Tech'
     },
@@ -44,7 +44,7 @@ export const techData = [
             { name: 'UI/UX Design', link: '' }
         ],
         image: GroupSoft,
-        link: '/work/case-studys/groupsoft',
+        link: '/work/case-studies/groupsoft',
         brand: 'Groupsoft US Inc',
         department: 'Tech'
 
@@ -58,7 +58,7 @@ export const techData = [
             { name: 'UI/UX Design', link: '' }
         ],
         image: Siyarams,
-        link: '/work/case-studys/siyaram',
+        link: '/work/case-studies/siyaram',
         brand: "Siyaram's",
         department: 'Tech'
     },
@@ -71,7 +71,7 @@ export const techData = [
             { name: 'Web Development', }
         ],
         image: Bitspilani,
-        link: '/work/case-studys/bits-pilani',
+        link: '/work/case-studies/bits-pilani',
         brand: "Bits Pilani",
         department: 'Tech'
     },
@@ -86,7 +86,7 @@ export const techData = [
             { name: 'Web Development', }
         ],
         image: Tribevibe,
-        link: '/work/case-studys/tribevibe',
+        link: '/work/case-studies/tribevibe',
         brand: "Tribevibe",
         department: 'Tech'
     },

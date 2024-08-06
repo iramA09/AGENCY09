@@ -10,15 +10,15 @@ import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
-import starY from '../../../Assets/Images/icons/star.png';
+import starY from '../../../Assets/Images/icons/star.webp';
 
 import logo from "../../../Assets/Images/logos/work/siyarams.png"
-import ourwork1 from '../../../Assets/Images/work/siyaram/siyaram-master.jpg';
-import ourwork2 from '../../../Assets/Images/work/siyaram/1.jpg';
-import ourwork3 from '../../../Assets/Images/work/siyaram/2.jpg';
-import ourwork4 from '../../../Assets/Images/work/siyaram/3.jpg';
-import ourwork5 from '../../../Assets/Images/work/siyaram/4.jpg';
-import ourwork6 from '../../../Assets/Images/work/siyaram/5.jpg';
+import ourwork1 from '../../../Assets/Images/work/siyaram/siyaram-master.webp';
+import ourwork2 from '../../../Assets/Images/work/siyaram/1.webp';
+import ourwork3 from '../../../Assets/Images/work/siyaram/2.webp';
+import ourwork4 from '../../../Assets/Images/work/siyaram/3.webp';
+import ourwork5 from '../../../Assets/Images/work/siyaram/4.webp';
+import ourwork6 from '../../../Assets/Images/work/siyaram/5.webp';
 
 
 // CaseStudySlider 

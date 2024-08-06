@@ -25,14 +25,14 @@ import 'react-tabs/style/react-tabs.css';
 // Tabs End
 
 // Images
-import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/patternMedia.jpg';
+import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.webp';
+import pattern from '../../Assets/Images/icons/patternMedia.webp';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 
-import starY from '../../Assets/Images/icons/star.png';
-import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
-import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
-import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
+import starY from '../../Assets/Images/icons/star.webp';
+import ourwork1 from '../../Assets/Images/work/ourwork-4.webp';
+import ourwork2 from '../../Assets/Images/work/ourwork-1.webp';
+import ourwork3 from '../../Assets/Images/work/ourwork-3.webp';
 
 
 // Partners

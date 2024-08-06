@@ -17,10 +17,10 @@ import { IoStarSharp } from "react-icons/io5";
 import { SlArrowRightCircle } from "react-icons/sl";
 import SVGCurveLine from '../Hooks/SVGCurveLine'; 
 // Images
-import barc from '../Assets/Images/work/BARC.jpg';
-import godrejlaffaire from '../Assets/Images/work/Laffaire.jpg';
-import TataMotors from '../Assets/Images/work/TataMotors.jpg';
-import Tribevibe from '../Assets/Images/work/TribeVibe.jpg';
+import barc from '../Assets/Images/work/BARC.webp';
+import godrejlaffaire from '../Assets/Images/work/Laffaire.webp';
+import TataMotors from '../Assets/Images/work/TataMotors.webp';
+import Tribevibe from '../Assets/Images/work/TribeVibe.webp';
 
 // Images end
 
@@ -35,7 +35,7 @@ export const workItems = [
         { name: 'Web Development', }
     ],
     image: TataMotors,
-    link: '/work/case-studys/tata-trucks',
+    link: '/work/case-studies/tata-trucks',
     brand: 'TATA Trucks',
     department: 'Tech'
 },
@@ -49,7 +49,7 @@ export const workItems = [
       { name: 'IP Creation', }
   ],
   image: godrejlaffaire,
-  link: '/work/case-studys/godrej-laffaire',
+  link: '/work/case-studies/godrej-laffaire',
   brand: "Godrej Laffaire",
   department: 'Content'
 },
@@ -62,7 +62,7 @@ export const workItems = [
       { name: 'Infographics', }
   ],
   image: barc,
-  link: '/work/case-studys/barc-india-yearbook',
+  link: '/work/case-studies/barc-india-yearbook',
   brand: "BARC India Yearbook",
   department: 'Design'
 },
@@ -76,7 +76,7 @@ export const workItems = [
       { name: 'Web Development', }
   ],
   image: Tribevibe,
-  link: '/work/case-studys/tribevibe',
+  link: '/work/case-studies/tribevibe',
   brand: "Tribevibe",
   department: 'Tech'
 },

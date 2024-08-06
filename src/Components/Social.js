@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import { Link } from 'react-router-dom';
 
-import starY from '../Assets/Images/icons/star.png';
+import starY from '../Assets/Images/icons/star.webp';
 
 const Social = () => {
   const [hoveredVideo, setHoveredVideo] = useState(null);

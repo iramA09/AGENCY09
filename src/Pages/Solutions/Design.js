@@ -18,14 +18,14 @@ import { GoNorthStar } from "react-icons/go";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 // Images
-import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/patternDesign.jpg';
+import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.webp';
+import pattern from '../../Assets/Images/icons/patternDesign.webp';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
-import starY from '../../Assets/Images/icons/star.png';
-import barc from '../../Assets/Images/work/BARC.jpg';
+import starY from '../../Assets/Images/icons/star.webp';
+import barc from '../../Assets/Images/work/BARC.webp';
 
 
 import wurthCarHaus from '../../Assets/Images/logos/work/automative/wurth-car-haus.png';
@@ -155,7 +155,7 @@ const CaseStudyData = [
         { name: 'Infographics', }
     ],
     image: barc,
-    link: '/work/case-studys/barc-india-yearbook',
+    link: '/work/case-studies/barc-india-yearbook',
     brand: "BARC India Yearbook",
     department: 'Design'
 },

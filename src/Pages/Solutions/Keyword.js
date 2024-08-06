@@ -20,16 +20,16 @@ import { GoNorthStar } from "react-icons/go";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 // Images
-import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/patternTech.jpg';
+import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.webp';
+import pattern from '../../Assets/Images/icons/patternTech.webp';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
-import starY from '../../Assets/Images/icons/star.png';
+import starY from '../../Assets/Images/icons/star.webp';
 
 
-import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
-import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
-import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
+import ourwork1 from '../../Assets/Images/work/ourwork-4.webp';
+import ourwork2 from '../../Assets/Images/work/ourwork-1.webp';
+import ourwork3 from '../../Assets/Images/work/ourwork-3.webp';
 
 
 import igcb from '../../Assets/Images/logos/work/BFSI/igcb.png';

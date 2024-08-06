@@ -10,13 +10,13 @@ import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
-import starY from '../../../Assets/Images/icons/star.png';
+import starY from '../../../Assets/Images/icons/star.webp';
 import logo from '../../../Assets/Images/logos/work/others/tribe-vibe.png';
 
-import ourwork1 from '../../../Assets/Images/work/tribevibe/1.jpg';
-import ourwork2 from '../../../Assets/Images/work/tribevibe/2.jpg';
-import ourwork3 from '../../../Assets/Images/work/tribevibe/3.jpg';
-import ourwork4 from '../../../Assets/Images/work/tribevibe/4.jpg';
+import ourwork1 from '../../../Assets/Images/work/tribevibe/1.webp';
+import ourwork2 from '../../../Assets/Images/work/tribevibe/2.webp';
+import ourwork3 from '../../../Assets/Images/work/tribevibe/3.webp';
+import ourwork4 from '../../../Assets/Images/work/tribevibe/4.webp';
 
 
 // CaseStudySlider 

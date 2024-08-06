@@ -1,6 +1,6 @@
 import {useRef, useEffect} from 'react'
 import React, { useState } from 'react';
-
+import { IoGameController } from "react-icons/io5";
 import { Link, useLocation } from 'react-router-dom'
 import { IoMdArrowForward, IoMdHeart } from "react-icons/io"
 import { BsClockFill } from "react-icons/bs";
@@ -8,8 +8,7 @@ import SVGCurveLine from '../Hooks/SVGCurveLine';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 // Images
-import gaming from '../Assets/Images/icons/gaming.png'
-import AGENCY09W from '../Assets/Images/agency-light.png'
+import AGENCY09W from '../Assets/Images/agency-light.webp'
 import a09storeW from '../Assets/Images/logos/a09storeW.png'
 import AZ9w from '../Assets/Images/logos/academy-zero-nineW.png'
 import Instaw from '../Assets/Images/logos/insta-holidaysW.png'
@@ -18,14 +17,14 @@ import PKAw from '../Assets/Images/logos/pk_aW.png'
 import LO9IX from '../Assets/Images/logos/l09ix_w.png'
 import GetQuote from '../Components/Forms/GetQuote';
 import ApplyNow from '../Components/Forms/ApplyNow'
-
-
+import Breakout from '../Components/Breakout'
 // Images
 
 
 const Footer = () => {
   const [OpenModalGetQuote, setOpenModalGetQuote] = React.useState(false);
   const [OpenModalApplyNow, setOpenModalApplyNow] = React.useState(false);
+  const [OpenModalBreakout, setOpenModalBreakout] = React.useState(false);
 
 
   const firstText = useRef(null);
@@ -83,6 +82,15 @@ const Footer = () => {
       </div>
     </div>
   </div>
+
+<div className='game09'>
+  <Link onClick={() => { setOpenModalBreakout(true); }}><IoGameController /></Link>
+</div>
+
+
+<div id='gameMin'>
+  <iframe src="https://www.agency09.in/breakout/" title="Game09" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+</div>
 
   <footer>
  
@@ -227,8 +235,7 @@ const Footer = () => {
   </footer>
   {OpenModalGetQuote && <GetQuote closeModal={setOpenModalGetQuote} />}
   {OpenModalApplyNow && <ApplyNow closeModal={setOpenModalApplyNow} />}
-
-
+  {OpenModalBreakout && <Breakout closeModal={setOpenModalBreakout} />}
     </>
   )
 }

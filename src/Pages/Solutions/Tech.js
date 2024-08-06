@@ -20,24 +20,24 @@ import { GoNorthStar } from "react-icons/go";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 // Images
-import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/patternTech.jpg';
+import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.webp';
+import pattern from '../../Assets/Images/icons/patternTech.webp';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
-import starY from '../../Assets/Images/icons/star.png';
-import corporateWebsite from '../../Assets/Images/corporateWebsite.jpg';
+import starY from '../../Assets/Images/icons/star.webp';
+import corporateWebsite from '../../Assets/Images/corporateWebsite.webp';
 
-import chatbot from '../../Assets/Images/tools/chatbot.png';
-import one_dashboard from '../../Assets/Images/tools/one_dashboard.png';
-import ticketing_system from '../../Assets/Images/tools/ticketing_system.png';
-import url_builder from '../../Assets/Images/tools/url_builder.png';
-import website_audit from '../../Assets/Images/tools/website_audit.png';
+import chatbot from '../../Assets/Images/tools/chatbot.webp';
+import one_dashboard from '../../Assets/Images/tools/one_dashboard.webp';
+import ticketing_system from '../../Assets/Images/tools/ticketing_system.webp';
+import url_builder from '../../Assets/Images/tools/url_builder.webp';
+import website_audit from '../../Assets/Images/tools/website_audit.webp';
 
-import TataMotors from '../../Assets/Images/work/TataMotors.jpg';
-import Ryan from '../../Assets/Images/work/Ryan.jpg';
-import GroupSoft from '../../Assets/Images/work/GroupSoft.jpg';
-import Siyarams from '../../Assets/Images/work/siyarams.jpg';
-import Bitspilani from '../../Assets/Images/work/Bitspilani.jpg';
-import Tribevibe from '../../Assets/Images/work/TribeVibe.jpg';
+import TataMotors from '../../Assets/Images/work/TataMotors.webp';
+import Ryan from '../../Assets/Images/work/Ryan.webp';
+import GroupSoft from '../../Assets/Images/work/GroupSoft.webp';
+import Siyarams from '../../Assets/Images/work/siyarams.webp';
+import Bitspilani from '../../Assets/Images/work/Bitspilani.webp';
+import Tribevibe from '../../Assets/Images/work/TribeVibe.webp';
 
 import bitsPilani from '../../Assets/Images/logos/work/education/bitspilani.png';
 import tataMotors2 from '../../Assets/Images/logos/work/automative/tatamotors.png';
@@ -288,7 +288,7 @@ const CaseStudyData = [
         { name: 'Web Development', }
     ],
     image: TataMotors,
-    link: '/work/case-studys/tata-trucks',
+    link: '/work/case-studies/tata-trucks',
     brand: 'TATA Trucks',
     department: 'Tech'
 },
@@ -301,7 +301,7 @@ const CaseStudyData = [
         { name: 'Content Management Systems', link: '' }
     ],
     image: Ryan,
-    link: '/work/case-studys/ryangroup',
+    link: '/work/case-studies/ryangroup',
     brand: 'Ryan International Group of Institutions',
     department: 'Tech'
 },
@@ -314,7 +314,7 @@ const CaseStudyData = [
         { name: 'UI/UX Design', link: '' }
     ],
     image: GroupSoft,
-    link: '/work/case-studys/groupsoft',
+    link: '/work/case-studies/groupsoft',
     brand: 'Groupsoft US Inc',
     department: 'Tech'
 
@@ -328,7 +328,7 @@ const CaseStudyData = [
         { name: 'UI/UX Design', link: '' }
     ],
     image: Siyarams,
-    link: '/work/case-studys/siyaram',
+    link: '/work/case-studies/siyaram',
     brand: "Siyaram's",
     department: 'Tech'
 },
@@ -341,7 +341,7 @@ const CaseStudyData = [
         { name: 'Web Development', }
     ],
     image: Bitspilani,
-    link: '/work/case-studys/bits-pilani',
+    link: '/work/case-studies/bits-pilani',
     brand: "Bits Pilani",
     department: 'Tech'
 },
@@ -356,7 +356,7 @@ const CaseStudyData = [
         { name: 'Web Development', }
     ],
     image: Tribevibe,
-    link: '/work/case-studys/tribevibe',
+    link: '/work/case-studies/tribevibe',
     brand: "Tribevibe",
     department: 'Tech'
 },

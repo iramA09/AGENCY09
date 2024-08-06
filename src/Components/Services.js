@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import starY from '../Assets/Images/icons/star.png';
+import starY from '../Assets/Images/icons/star.webp';
 import { IoStarSharp } from "react-icons/io5";
 import { SlArrowRightCircle } from "react-icons/sl";
 const Services = () => {

@@ -57,24 +57,26 @@ function App() {
           <Route exact path='/solutions/media' element={<Media />} />
           <Route exact path='/solutions/production' element={<Production />} />
           <Route exact path='/solutions/keyword' element={<Keyword />} />
-          <Route exact path='/work/case-studys/tata-trucks' element={<TataTrucks />} />
-          <Route exact path='/work/case-studys/ryangroup' element={<Ryangroup />} />
-          <Route exact path='/work/case-studys/groupsoft' element={<Groupsoft />} />
-          <Route exact path='/work/case-studys/siyaram' element={<Siyaram />} />
-          <Route exact path='/work/case-studys/bits-pilani' element={<Bitspilani />} />
-          <Route exact path='/work/case-studys/godrej-laffaire' element={<GodrejLaffaire />} />
-          <Route exact path='/work/case-studys/barc-india-yearbook' element={<BARCIndiaYearbook />} />
-          <Route exact path='/work/case-studys/tribevibe' element={<Tribevibe />} />
-          <Route exact path='/work/case-studys/product-communication-for-reliance-general-insurance' element={<ProductCommunicationforRelianceGeneralInsurance />} />
-          <Route exact path='/work/case-studys/lakme-fashionweek' element={<LakmeFashionWeek />} />
-          <Route exact path='/work/case-studys/american-tourister' element={<AmericanTourister />} />
+          <Route exact path='/work/case-studies/tata-trucks' element={<TataTrucks />} />
+          <Route exact path='/work/case-studies/ryangroup' element={<Ryangroup />} />
+          <Route exact path='/work/case-studies/groupsoft' element={<Groupsoft />} />
+          <Route exact path='/work/case-studies/siyaram' element={<Siyaram />} />
+          <Route exact path='/work/case-studies/bits-pilani' element={<Bitspilani />} />
+          <Route exact path='/work/case-studies/godrej-laffaire' element={<GodrejLaffaire />} />
+          <Route exact path='/work/case-studies/barc-india-yearbook' element={<BARCIndiaYearbook />} />
+          <Route exact path='/work/case-studies/tribevibe' element={<Tribevibe />} />
+          <Route exact path='/work/case-studies/product-communication-for-reliance-general-insurance' element={<ProductCommunicationforRelianceGeneralInsurance />} />
+          <Route exact path='/work/case-studies/lakme-fashionweek' element={<LakmeFashionWeek />} />
+          <Route exact path='/work/case-studies/american-tourister' element={<AmericanTourister />} />
           <Route exact path='/work/case-studies' element={<CaseStudies />} />
           <Route exact path='/work/our-clients' element={<OurClients />} />
           <Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route exact path='/sitemap' element={<Sitemap09 />} />
           <Route exact path='*' element={<Error />} />
           <Route exact path='/blog/' element={<Blog />} />
+          <Route exact path='/blog/:cat_slug' element={<Blog />} />
           <Route exact path='/blog/blog-detail' element={<BlogDetail />} />
+          <Route exact path="/blog/:cat_slug/:post_id" element={<BlogDetail />} /> {/* Dynamic blog detail route */}
         </Routes>
       </AnimatePresence>
     </div>

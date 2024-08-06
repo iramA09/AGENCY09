@@ -8,12 +8,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 // Images
-import ideasPerform from '../Assets/Images/growth/mediaA09.jpg';
-import ideasPerform1 from '../Assets/Images/growth/ideas-perform1.jpg';
-import sportday from '../Assets/Images/growth/sportday.jpg';
-import ideasPerform2 from '../Assets/Images/growth/ideas-perform2.jpg';
-import kinjal from '../Assets/Images/growth/kinjal.jpg';
-import starY from '../Assets/Images/icons/star.png';
+import ideasPerform from '../Assets/Images/growth/mediaA09.webp';
+import ideasPerform1 from '../Assets/Images/growth/ideas-perform1.webp';
+import sportday from '../Assets/Images/growth/sportday.webp';
+import ideasPerform2 from '../Assets/Images/growth/ideas-perform2.webp';
+import kinjal from '../Assets/Images/growth/kinjal.webp';
+import starY from '../Assets/Images/icons/star.webp';
 
 
 // Images

@@ -135,7 +135,7 @@ const BlogDetail = () => {
               </aside>
               <div className="blog-body">
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
-
+                <div dangerouslySetInnerHTML={{ __html: post.description }} />
                 {post.tags.length > 0 && (
                   <div className="related-topics">
                     <h1 className="sizeH1 uppercase">Related Topics</h1>

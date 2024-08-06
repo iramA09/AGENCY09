@@ -20,16 +20,16 @@ import { GoNorthStar } from "react-icons/go";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 // Images
-import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/patternContent.jpg';
+import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.webp';
+import pattern from '../../Assets/Images/icons/patternContent.webp';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
-import starY from '../../Assets/Images/icons/star.png';
-import godrejlaffaire from '../../Assets/Images/work/Laffaire.jpg';
-import RGI from '../../Assets/Images/work/rgi.jpg';
-import lakme from '../../Assets/Images/work/lakme.jpg';
+import starY from '../../Assets/Images/icons/star.webp';
+import godrejlaffaire from '../../Assets/Images/work/Laffaire.webp';
+import RGI from '../../Assets/Images/work/rgi.webp';
+import lakme from '../../Assets/Images/work/lakme.webp';
 
 import adityabirla from '../../Assets/Images/logos/work/BFSI/aditya-birla.png';
 import samsonite from '../../Assets/Images/logos/work/retail_fmcg/samsonite.png';
@@ -157,7 +157,7 @@ const CaseStudyData = [
         { name: 'IP Creation', }
     ],
     image: godrejlaffaire,
-    link: '/work/case-studys/godrej-laffaire',
+    link: '/work/case-studies/godrej-laffaire',
     brand: "Godrej Laffaire",
     department: 'Content'
 },
@@ -170,7 +170,7 @@ const CaseStudyData = [
         { name: 'Multi-Channel Communication', link: '' }
     ],
     image: RGI,
-    link: '/work/case-studys/product-communication-for-reliance-general-insurance',
+    link: '/work/case-studies/product-communication-for-reliance-general-insurance',
     brand: "Product Communication for Reliance General Insurance",
     department: 'Content'
 },
@@ -182,7 +182,7 @@ const CaseStudyData = [
         { name: 'Event Coverage', link: '' }
     ],
     image: lakme,
-    link: '/work/case-studys/lakme-fashionweek',
+    link: '/work/case-studies/lakme-fashionweek',
     brand: "Lakme Fashion Week",
     department: 'Content'
 },

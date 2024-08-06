@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import starY from '../Assets/Images/icons/star.png';
+import starY from '../Assets/Images/icons/star.webp';
 import { Link } from 'react-router-dom';
 import SVGCurveLine from '../Hooks/SVGCurveLine'; 
 

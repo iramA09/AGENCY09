@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import barc from '../../../Assets/Images/work/BARC.jpg';
+import barc from '../../../Assets/Images/work/BARC.webp';
 
 // Tech
 export const BrandDesignData = [
@@ -13,7 +13,7 @@ export const BrandDesignData = [
             { name: 'Infographics', }
         ],
         image: barc,
-        link: '/work/case-studys/barc-india-yearbook',
+        link: '/work/case-studies/barc-india-yearbook',
         brand: "BARC India Yearbook",
         department: 'Design'
     },

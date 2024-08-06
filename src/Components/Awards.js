@@ -1,5 +1,5 @@
 import React from 'react'
-import starY from '../Assets/Images/icons/star.png';
+import starY from '../Assets/Images/icons/star.webp';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import { GiLaurelsTrophy } from "react-icons/gi";

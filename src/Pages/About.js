@@ -18,7 +18,7 @@ import useLenisScroll from '../Hooks/useLenisScroll';
 import { IoStarSharp } from "react-icons/io5";
 import { SlArrowRightCircle } from "react-icons/sl";
 // Images
-import ourpurpose from '../Assets/Images/our-purpose.jpg';
+import ourpurpose from '../Assets/Images/our-purpose.webp';
 // Images end
 
 const About = () => {

@@ -6,10 +6,10 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import RippleButton from '../Hooks/RippleButton';
 import { PiArrowCircleRightThin } from "react-icons/pi";
-import ourwork1 from '../Assets/Images/work/ourwork-1.jpg';
-import ourwork2 from '../Assets/Images/work/ourwork-2.jpg';
-import ourwork3 from '../Assets/Images/work/ourwork-3.jpg';
-import ourwork4 from '../Assets/Images/work/ourwork-4.jpg';
+import ourwork1 from '../Assets/Images/work/ourwork-1.webp';
+import ourwork2 from '../Assets/Images/work/ourwork-2.webp';
+import ourwork3 from '../Assets/Images/work/ourwork-3.webp';
+import ourwork4 from '../Assets/Images/work/ourwork-4.webp';
 
 import RGI from '../Assets/Images/logos/work/RGI.png';
 import TataMotors from '../Assets/Images/logos/work/TataMotors.png';

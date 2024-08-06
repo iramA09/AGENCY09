@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import ryan from '../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../Assets/Images/logos/work/bitsPilani.png';
-import starY from '../Assets/Images/icons/star.png';
+import starY from '../Assets/Images/icons/star.webp';
 import SVGCurveLine from '../Hooks/SVGCurveLine'; 
 
 

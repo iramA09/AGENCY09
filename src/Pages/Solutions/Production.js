@@ -20,14 +20,14 @@ import { GoNorthStar } from "react-icons/go";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 // Images
-import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/patternProduction.jpg';
+import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.webp';
+import pattern from '../../Assets/Images/icons/patternProduction.webp';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
-import starY from '../../Assets/Images/icons/star.png';
-import americanTourister from '../../Assets/Images/work/AmericanTourister.jpg';
+import starY from '../../Assets/Images/icons/star.webp';
+import americanTourister from '../../Assets/Images/work/AmericanTourister.webp';
 
 
 import americantourister from '../../Assets/Images/logos/work/retail_fmcg/american-tourister.png';
@@ -155,7 +155,7 @@ const CaseStudyData = [
         { name: 'Content Creation', link: '' }
     ],
     image: americanTourister,
-    link: '/work/case-studys/american-tourister',
+    link: '/work/case-studies/american-tourister',
     brand: "American Tourister",
     department: 'Production'
 },

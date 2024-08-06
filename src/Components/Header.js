@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import AGENCY09logo from '../Assets/Images/agency09.png';
-import AGENCY09logoLight from '../Assets/Images/agency-light.png';
+import AGENCY09logo from '../Assets/Images/agency09.webp';
+import AGENCY09logoLight from '../Assets/Images/agency-light.webp';
 
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoCloseOutline } from "react-icons/io5";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import caseStudies from '../Assets/Images/case_studies.jpg'
-import blog from '../Assets/Images/blog.jpg'
+import caseStudies from '../Assets/Images/case_studies.webp'
+import blog from '../Assets/Images/blog.webp'
 
-import ideasPerform from '../Assets/Images/growth/mediaA09.jpg';
-import ideasPerform1 from '../Assets/Images/blog1.jpg';
-import sportday from '../Assets/Images/blog2.jpg';
+import ideasPerform from '../Assets/Images/growth/mediaA09.webp';
+import ideasPerform1 from '../Assets/Images/blog1.webp';
+import sportday from '../Assets/Images/blog2.webp';
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);

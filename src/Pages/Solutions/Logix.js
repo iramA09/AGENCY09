@@ -21,26 +21,26 @@ import 'react-tabs/style/react-tabs.css';
 // Tabs End
 
 // Images
-import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.png';
-import pattern from '../../Assets/Images/icons/pattern.png';
+import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.webp';
+import pattern from '../../Assets/Images/icons/pattern.webp';
 import mahindraAccelo from '../../Assets/Images/logos/work/mahindraAccelo.png';
 import ryan from '../../Assets/Images/logos/work/ryan.png';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
-import starY from '../../Assets/Images/icons/star.png';
-import corporateWebsite from '../../Assets/Images/corporateWebsite.jpg';
+import starY from '../../Assets/Images/icons/star.webp';
+import corporateWebsite from '../../Assets/Images/corporateWebsite.webp';
 
-import chatbot from '../../Assets/Images/tools/chatbot.png';
-import one_dashboard from '../../Assets/Images/tools/one_dashboard.png';
-import ticketing_system from '../../Assets/Images/tools/ticketing_system.png';
-import url_builder from '../../Assets/Images/tools/url_builder.png';
-import website_audit from '../../Assets/Images/tools/website_audit.png';
+import chatbot from '../../Assets/Images/tools/chatbot.webp';
+import one_dashboard from '../../Assets/Images/tools/one_dashboard.webp';
+import ticketing_system from '../../Assets/Images/tools/ticketing_system.webp';
+import url_builder from '../../Assets/Images/tools/url_builder.webp';
+import website_audit from '../../Assets/Images/tools/website_audit.webp';
 
-import ourwork1 from '../../Assets/Images/work/ourwork-4.jpg';
-import ourwork2 from '../../Assets/Images/work/ourwork-1.jpg';
-import ourwork3 from '../../Assets/Images/work/ourwork-3.jpg';
+import ourwork1 from '../../Assets/Images/work/ourwork-4.webp';
+import ourwork2 from '../../Assets/Images/work/ourwork-1.webp';
+import ourwork3 from '../../Assets/Images/work/ourwork-3.webp';
 
-import clickHere from '../../Assets/Images/icons/clickHere.png';
+import clickHere from '../../Assets/Images/icons/clickHere.webp';
 // Images end
 
 // toolsSlider 
