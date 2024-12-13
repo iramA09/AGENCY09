@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
-import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 import StartAProjectFormPopup from '../../Components/Forms/StartAProjectFormPopup';
 import Testimonias from '../../Components/Testimonias';
@@ -110,8 +109,6 @@ const CaseStudySlider = {
 const Tech = () => {
   const [OpenModalStartAProjectFormPopup, setOpenModalStartAProjectFormPopup] = React.useState(false);
 
-  useLenisScroll();
-
 
 
 // Calculat Data
@@ -194,38 +191,38 @@ const calculatData = [
 
 
 //Tools Data
-  const toolsData = [
-    {
-        link: '#',
-        image: chatbot,
-        titale: 'Chatbot',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: website_audit,
-        titale: 'website audit',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: url_builder,
-        titale: 'url builder',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: ticketing_system,
-        titale: 'ticketing system',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    },    
-    {
-        link: '#',
-        image: one_dashboard,
-        titale: 'ONE Dashboard',
-        decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
-    }
-  ];
+    const toolsData = [
+      {
+          link: '#',
+          image: chatbot,
+          titale: 'Chatbot',
+          decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
+      },    
+      {
+          link: '#',
+          image: website_audit,
+          titale: 'website audit',
+          decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
+      },    
+      {
+          link: '../url-builder',
+          image: url_builder,
+          titale: 'url builder',
+          decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
+      },    
+      {
+          link: '#',
+          image: ticketing_system,
+          titale: 'ticketing system',
+          decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
+      },    
+      {
+          link: '#',
+          image: one_dashboard,
+          titale: 'ONE Dashboard',
+          decoration: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
+      }
+    ];
 //Tools Data End
 
 // Approach Data
@@ -464,14 +461,14 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     <>
 
     <Helmet>
-      <title>Tech Solutions | Software Development - AGENCY09</title>
+      <title>Tech Solutions | Website Development & E-commerce Website - AGENCY09</title>
       <meta name="robots" content="index, follow"/> 
 
-      <meta name="description" content="Being a technology company we provides tech solutions such as chatbot development, ecommerce website design, software development, mobile app development and more."/>
+      <meta name="description" content="We are a MarTech firm and provide services like website development, UI UX, software development services, eCommerce website developers, corporate websites and AI-driven marketing."/>
       <link rel="canonical" href="https://www.agency09.in/solutions/tech"/>
 
-      <meta property="og:title" content="Tech Solutions | Software Development - AGENCY09"/> 
-      <meta property="og:description" content="Being a technology company we provides tech solutions such as chatbot development, ecommerce website design, software development, mobile app development and more."/> 
+      <meta property="og:title" content="Tech Solutions | Website Development & E-commerce Website - AGENCY09"/> 
+      <meta property="og:description" content="We are a MarTech firm and provide services like website development, UI UX, software development services, eCommerce website developers, corporate websites and AI-driven marketing."/> 
       <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
       <meta property="og:type" content="website"/> 
 
@@ -479,7 +476,7 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
       <meta name="twitter:site" content="@AGENCY09"/> 
       <meta name="twitter:creator" content="@AGENCY09"/> 
       <meta name="twitter:url" content="https://www.agency09.in/solutions/tech"/> 
-      <meta name="twitter:description" content="Being a technology company we provides tech solutions such as chatbot development, ecommerce website design, software development, mobile app development and more."/> 
+      <meta name="twitter:description" content="We are a MarTech firm and provide services like website development, UI UX, software development services, eCommerce website developers, corporate websites and AI-driven marketing."/> 
       <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
     </Helmet>
 
@@ -502,10 +499,10 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
                         <ul className='trustedByLogos'>
-                            <li><img src={bitsPilani} alt=""/></li>
-                            <li><img src={tataMotors2} alt=""/></li>
-                            <li><img src={ryan} alt=""/></li>
-                            <li><img src={mahindraAccelo} alt=""/></li>
+                            <li><img loading='lazy' src={bitsPilani} alt=""/></li>
+                            <li><img loading='lazy' src={tataMotors2} alt=""/></li>
+                            <li><img loading='lazy' src={ryan} alt=""/></li>
+                            <li><img loading='lazy' src={mahindraAccelo} alt=""/></li>
                         </ul>
                     </div>
                 </div>
@@ -514,13 +511,13 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                         <span></span>
                     </div>
                     <div className='RoundIconB RoundIcon pinkB'></div>
-                    <img src={pattern} alt="pattern" className='pattern' />
+                    <img loading='lazy'  src={pattern} alt="pattern" className='pattern' />
                 </div>
 
 
                 <div className='SolutionsColOurServies'>
                     <Link to='#'>
-                        <img src={ourServiesBtn} alt="Our Servies" />
+                        <img loading='lazy'  src={ourServiesBtn} alt="Our Servies" />
                     </Link>
                 </div>
             </div>
@@ -556,9 +553,9 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
                 <div className='Heading center HeadingIcon pb-20'>
                   <h2 className='sizeH1 uppercase'>
-                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
                       Services
-                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
                   </h2>
                 </div>
 
@@ -595,9 +592,9 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                 
                 <div className='Heading center HeadingIcon'>
                 <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
                         TOOLS
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
                 </h2>
                 </div>
 
@@ -607,7 +604,7 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
             {toolsData.map((tools, index) => (
                 <div key={index} className='item'>
                 <div className='toolsCol'>
-                    <Link >
+                    <Link to={tools.link} >
                         <div className='toolsImg'><img src={tools.image}/></div>
                         <div className='toolsTitale'>{tools.titale}</div>
                         {/* <div className='textDecoration'><p>{tools.decoration}</p></div>
@@ -632,9 +629,9 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
           <div className='Heading center HeadingIcon'>
               <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
                     A09 Approach
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
               </h2>
           </div>
 
@@ -655,9 +652,9 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
             <div className='Heading center HeadingIcon'>
                 <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
                     Case studies
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
                 </h2>
             </div>
 
@@ -669,7 +666,7 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                         <div key={index} className='item'>
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/>
+                                <div className='CaseStudyImg'><img loading='lazy'  src={CaseStudy.image}/>
                                 <div className='workGridItemHover'>
                                     <div className='workGridItemHoverIn'>
                                         <h3>{CaseStudy.title}</h3>
@@ -690,7 +687,7 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                 </Slider>
 
             <div className='btnSpaceEx center'>     
-                <Link to="../work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
+                <Link to="../work/case-studies#tech" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
 
             </div>
@@ -722,7 +719,7 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
                     <h3 className='sizeH5 uppercase bold pb-20 white'>Free Audit</h3>
                     <h2 className='sizeH1 uppercase white'>Interested in optimizing your tech infrastructure? </h2>
                     <div className='pt-30 '>     
-                        <Link   className="btnBlue fontM ripple-button"><span>Click Here</span></Link>
+                        {/* <Link   className="btnBlue fontM ripple-button"><span>Click Here</span></Link> */}
                     </div>
                 </div>
 
@@ -744,9 +741,9 @@ const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
         <div className='container'>
 
         <div className='Heading center HeadingIcon pb-20'><h2 className='sizeH1'>
-          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+          <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
               FAQs
-          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+          <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
         </h2></div>
 
 

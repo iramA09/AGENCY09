@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
@@ -101,7 +100,6 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const ProductCommunicationforRelianceGeneralInsurance = () => {
-    useLenisScroll();
 
 
   return (
@@ -124,7 +122,7 @@ const ProductCommunicationforRelianceGeneralInsurance = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy' />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -139,29 +137,55 @@ const ProductCommunicationforRelianceGeneralInsurance = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>In a strategic effort to boost brand visibility and engage customers, we collaborated with Reliance General Insurance to develop unique product offerings and implement a comprehensive communication strategy. The initiative aimed to introduce innovative insurance products while effectively reaching and engaging the target audience through multiple channels.</p>
-
-
+                        <p>To boost brand visibility and engage customers, we collaborated with Reliance General Insurance to develop unique product offerings and implement a comprehensive communication strategy. The initiative focused on introducing innovative insurance products and reaching the target audience through a diverse range of communication channels.</p>
+                    </div>
+                    <div className='cSsecMinBCol'>
+                        <h4>Industry</h4>
+                        <p>Insurance</p>
                     </div>
 
-
                     <div className='cSsecMinBCol'>
-                        <h4>Key Highlights</h4>
+                        <h4>Services</h4>
                         <ul>
-                            <li>Developed unique product offerings such as "Insurance ka Power Bank," "Health Global," and "Super Top Up."</li>
-                            <li>Implemented a multi-channel communication strategy including Print Ads, Mailers, Channel Partner Communication, Social Media, and Digital ads.</li>
-                            <li>Increased brand awareness and visibility through creative product offerings.
-                            </li>
-                            <li>Enhanced customer engagement across various communication channels.</li>
-                            <li>Successful integration of innovative products with effective communication strategies.</li>
-                            <li>Positive reception from the target audience, leading to increased market presence for Reliance General Insurance.</li>
+                            <li>Product Development</li>
+                            <li>Multi-Channel Communication</li>
                         </ul>
-
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Capability</h4>
-                        <p>Product Development & Multi-Channel Communication</p>
+                        <h4>Objective</h4>
+                        <p>To enhance brand visibility and customer engagement by introducing innovative insurance products and implementing a multi-channel communication strategy.</p>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Creating distinctive and appealing product offerings in a competitive insurance market.</li>
+                            <li>Effectively reaching and engaging the target audience through various communication channels.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Approach</h4>
+                        <ul>
+                            <li>Developed unique product offerings such as "Insurance ka Power Bank," "Health Global," and "Super Top Up" to differentiate Reliance General Insurance in the market.</li>
+                            <li>Implemented a comprehensive multi-channel communication strategy, including Print Ads, Mailers, Channel Partner Communication, Social Media, and Digital Ads.</li>
+                            <li>Focused on creative and engaging messaging to increase brand awareness and visibility.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Results</h4>
+                        <ul>
+                            <li>Successfully introduced innovative insurance products that captured market interest.</li>
+                            <li>Enhanced brand visibility and customer engagement across multiple channels.</li>
+                            <li>Received positive feedback from the target audience, leading to a strengthened market presence for Reliance General Insurance.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Year</h4>
+                        <p>2023</p>
                     </div>
 
                 </div>

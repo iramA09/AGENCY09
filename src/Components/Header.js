@@ -13,6 +13,8 @@ import blog from '../Assets/Images/blog.webp'
 import ideasPerform from '../Assets/Images/growth/mediaA09.webp';
 import ideasPerform1 from '../Assets/Images/blog1.webp';
 import sportday from '../Assets/Images/blog2.webp';
+import blog1 from '../Assets/Images/must-have-tools.jpg';
+import blog2 from '../Assets/Images/elevate-print-marketing.jpg';
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -72,13 +74,13 @@ const Header = () => {
                 </div>
               </li>
               <li className='logo'>
-                <Link to='/' ><img src={AGENCY09logo} alt='AGENCY09' /></Link>
+                <Link to='/' ><img src={AGENCY09logo} loading='lazy' alt='AGENCY09' /></Link>
               </li>
               <li>
                 <Link to='/careers' className={location.pathname === '/careers' ? 'active' : ''}>Careers</Link>
               </li>
               <li>
-              <Link to='https://www.agency09.co/simplifyingtheweb/' target='_blank'>Blog</Link>
+              <a href='https://www.agency09.in/simplifyingtheweb/'>Blog</a>
               </li>
               <li>
                 <Link to='/connect' className={location.pathname === '/connect' ? 'active' : ''}>Connect</Link>
@@ -102,7 +104,7 @@ const Header = () => {
           
       <div className='menu09Header'>
           <div className='menu09HeaderLogo'>
-            <Link to='/'><img src={AGENCY09logoLight} alt='AGENCY09' /></Link>
+            <Link to='/'><img src={AGENCY09logoLight} loading='lazy' alt='AGENCY09' /></Link>
           </div>
 
           <div className='menu09HeaderRight'>
@@ -136,7 +138,7 @@ const Header = () => {
                 <li><Link className={`minFont ${location.pathname === '/about' ? 'active' : ''}`} to='/about'  >About</Link></li>
                 <li><Link className={`minFont ${location.pathname === '/work' ? 'active' : ''}`} to='/work/case-studies'>Work</Link></li>
                 <li><Link className={`minFont ${location.pathname === '/careers' ? 'active' : ''}`} to='/careers'>Careers <span className='sideFont'>Hiring!</span></Link></li>
-                <li><Link className='minFont' to='https://www.agency09.co/simplifyingtheweb/' target='_blank'>Simplifyingtheweb  <span className='sideFont'>Blog</span></Link></li>
+                <li><a className='minFont' href='https://www.agency09.in/simplifyingtheweb/' >Simplifyingtheweb  <span className='sideFont'>Blog</span></a></li>
                 <li><Link className={`minFont ${location.pathname === '/connect' ? 'active' : ''}`} to='/connect'>Connect</Link></li>
               </ul>
             </div>
@@ -158,18 +160,18 @@ const Header = () => {
                   <li>
                       <div className='NBItemTitle'>
                         <span>Blog </span>  
-                        <Link to='https://www.agency09.co/simplifyingtheweb/' target='_blank' ></Link>
+                        <Link className={location.pathname === '/blog' ? 'active' : ''} to='/blog' ></Link>
                       </div>
 
                       <div className='NBItemContent'>
-                      <Link>
+                      <a href='https://www.agency09.in/simplifyingtheweb/strategy/elevate-your-print-marketing-unleash-creativity-with-agency09/'>
                           <div className='NBItemImg'>
-                            <img src={sportday} alt='{blog}' />
+                            <img src={blog2} loading='lazy' alt='{blog}' />
                           </div>
                           <div className='NBItemText'>
-                            <p>Bat, Ball & Balle Balle</p>
+                            <p>Elevate Your Print Marketing: Unleash Creativity with AGENCY09</p>
                           </div>
-                        </Link>
+                        </a>
                       </div>
                   </li>
 
@@ -180,14 +182,14 @@ const Header = () => {
                       </div>
 
                       <div className='NBItemContent'>
-                        <Link>
+                        <a href='https://www.agency09.in/simplifyingtheweb/marketing/must-have-tools-for-social-media-marketers/'>
                           <div className='NBItemImg'>
-                            <img src={ideasPerform1} alt='{caseStudies}' />
+                            <img src={blog1} loading='lazy' alt='{caseStudies}' />
                           </div>
                           <div className='NBItemText'>
-                            <p>Tata Motors enlists A09 for their Smart City Project website</p>
+                            <p>Must have tools for Social Media Marketers</p>
                           </div>
-                        </Link>
+                        </a>
                       </div>
                   </li>
                 </ul>

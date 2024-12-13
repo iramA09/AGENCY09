@@ -7,7 +7,6 @@ import Footer from '../../Components/Footer';
 import StartAProjectFormPopup from '../../Components/Forms/StartAProjectFormPopup';
 import Testimonias from '../../Components/Testimonias';
 
-import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 import Slider from 'react-slick';
@@ -99,7 +98,6 @@ const CaseStudySlider = {
  
 
 const Content = () => {
-  useLenisScroll();
   const [OpenModalStartAProjectFormPopup, setOpenModalStartAProjectFormPopup] = React.useState(false);
 
 
@@ -241,14 +239,14 @@ const faqsData = [
     <>
 
     <Helmet>
-      <title>Content Marketing Services | Influencer Marketing - AGENCY09</title>
+      <title>Content Writing Services in Mumbai | Social Media Content & HR Communications – AGENCY09</title>
       <meta name="robots" content="index, follow"/> 
 
-      <meta name="description" content="We provide content creation services for all websites. We modify content, and approach everyday social media copy in order to solve challenges."/>
+      <meta name="description" content="AGENCY09 offers content marketing services, including Social Media Content, Content Writing, HR Communications & all types of content for brand"/>
       <link rel="canonical" href="https://www.agency09.in/solutions/content"/>
 
-      <meta property="og:title" content="Content Marketing Services | Influencer Marketing - AGENCY09"/> 
-      <meta property="og:description" content="We provide content creation services for all websites. We modify content, and approach everyday social media copy in order to solve challenges."/> 
+      <meta property="og:title" content="Content Writing Services in Mumbai | Social Media Content & HR Communications – AGENCY09"/> 
+      <meta property="og:description" content="AGENCY09 offers content marketing services, including Social Media Content, Content Writing, HR Communications & all types of content for brand"/> 
       <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
       <meta property="og:type" content="website"/> 
 
@@ -257,7 +255,7 @@ const faqsData = [
       <meta name="twitter:site" content="@AGENCY09"/> 
       <meta name="twitter:creator" content="@AGENCY09"/> 
       <meta name="twitter:url" content="https://www.agency09.in/solutions/content"/> 
-      <meta name="twitter:description" content="We provide content creation services for all websites. We modify content, and approach everyday social media copy in order to solve challenges."/> 
+      <meta name="twitter:description" content="AGENCY09 offers content marketing services, including Social Media Content, Content Writing, HR Communications & all types of content for brand"/> 
       <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
           </Helmet>
 
@@ -280,10 +278,10 @@ const faqsData = [
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
                         <ul className='trustedByLogos'>
-                            <li><img src={adityabirla} alt=""/></li>
-                            <li><img src={samsonite} alt=""/></li>
-                            <li><img src={lakmefashionweek} alt=""/></li>
-                            <li><img src={disney} alt=""/></li>
+                            <li><img src={adityabirla} loading='lazy' alt=""/></li>
+                            <li><img src={samsonite} loading='lazy' alt=""/></li>
+                            <li><img src={lakmefashionweek} loading='lazy' alt=""/></li>
+                            <li><img src={disney} loading='lazy' alt=""/></li>
                         </ul>
                     </div>
                 </div>
@@ -292,13 +290,13 @@ const faqsData = [
                         <span></span>
                     </div>
                     <div className='RoundIconB RoundIcon pinkB'></div>
-                    <img src={pattern} alt="pattern" className='pattern' />
+                    <img src={pattern} loading='lazy' alt="pattern" className='pattern' />
                 </div>
 
 
                 <div className='SolutionsColOurServies'>
                     <Link to='#'>
-                        <img src={ourServiesBtn} alt="Our Servies" />
+                        <img src={ourServiesBtn} loading='lazy' alt="Our Servies" />
                     </Link>
                 </div>
             </div>
@@ -314,9 +312,9 @@ const faqsData = [
 
               <div className='Heading center HeadingIcon pb-20'>
                   <h2 className='sizeH1 uppercase'>
-                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                       Services
-                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                   </h2>
                 </div>
 
@@ -360,9 +358,9 @@ const faqsData = [
 
             <div className='Heading center HeadingIcon'>
                 <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                     Case studies
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                 </h2>
             </div>
 
@@ -374,7 +372,7 @@ const faqsData = [
                         <div key={index} className='item'>
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/>
+                                <div className='CaseStudyImg'><img src={CaseStudy.image} loading='lazy' />
                                 <div className='workGridItemHover'>
                                     <div className='workGridItemHoverIn'>
                                         <h3>{CaseStudy.title}</h3>
@@ -395,7 +393,7 @@ const faqsData = [
                 </Slider>
 
             <div className='btnSpaceEx center'>     
-                <Link to="../work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
+                <Link to="../work/case-studies#content" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
 
             </div>
@@ -426,9 +424,9 @@ const faqsData = [
         <div className='container'>
 
         <div className='Heading center HeadingIcon pb-20'><h2 className='sizeH1'>
-          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+          <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
               FAQs
-          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+          <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
         </h2></div>
           <Accordion>
             {faqsData.map(faq => (

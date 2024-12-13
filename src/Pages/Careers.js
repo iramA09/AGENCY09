@@ -11,10 +11,8 @@ import WorkingWithUs from '../Components/WorkingWithUs';
 import LifeAtA09 from '../Components/LifeAtA09';
 import Opportunities from '../Components/Opportunities';
 import Accordion from 'react-bootstrap/Accordion';
-import useLenisScroll from '../Hooks/useLenisScroll';
 
 const Careers = () => {
-  useLenisScroll();
   const location = useLocation();
 
     useEffect(() => {
@@ -58,14 +56,14 @@ const calculatData = [
     <>
 
     <Helmet>
-      <title>Life at 09 - AGENCY09</title>
+      <title>Build Your Career at Top Advertising Agency in Mumbai | AGENCY09</title>
       <meta name="robots" content="index, follow"/> 
 
-      <meta name="description" content="The good news is that we take our weekends seriously, but the better news is that we take our weekdays even more seriously."/>
+      <meta name="description" content="Looking for a career in advertising? Explore exciting roles at AGENCY09, a leading advertising agency offering opportunities in digital marketing, branding, design and more."/>
       <link rel="canonical" href="https://www.agency09.in/careers"/>
 
-      <meta property="og:title" content="Life at 09 - AGENCY09"/> 
-      <meta property="og:description" content="The good news is that we take our weekends seriously, but the better news is that we take our weekdays even more seriously."/> 
+      <meta property="og:title" content="Build Your Career at Top Advertising Agency in Mumbai | AGENCY09"/> 
+      <meta property="og:description" content="Looking for a career in advertising? Explore exciting roles at AGENCY09, a leading advertising agency offering opportunities in digital marketing, branding, design and more."/> 
       <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
       <meta property="og:type" content="website"/> 
 
@@ -73,7 +71,7 @@ const calculatData = [
       <meta name="twitter:site" content="@AGENCY09"/> 
       <meta name="twitter:creator" content="@AGENCY09"/> 
       <meta name="twitter:url" content="https://www.agency09.in/careers"/> 
-      <meta name="twitter:description" content="The good news is that we take our weekends seriously, but the better news is that we take our weekdays even more seriously."/> 
+      <meta name="twitter:description" content="Looking for a career in advertising? Explore exciting roles at AGENCY09, a leading advertising agency offering opportunities in digital marketing, branding, design and more."/> 
       <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
     </Helmet>
 

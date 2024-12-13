@@ -202,14 +202,14 @@ const LogosSlider = () => {
       
         <div className='Heading center HeadingIcon'>
           <h2 className='sizeH1 uppercase'>
-              <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+              <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' loading='lazy' /></i></span>
               Clientele 
-              <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+              <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' loading='lazy' /></i></span>
           </h2>
         </div>
         <Slider {...LogosSliders} className="LogosSlider-slick slick-slider arrowLRC">
         {Logos09.map((logo, index) => (
-              <div className='item'> <span> <img src={logo.src} alt="" /></span> </div>
+              <div className='item'> <span> <img src={logo.src} alt="" loading='lazy' /></span> </div>
         ))}
         </Slider>
 

@@ -77,19 +77,19 @@ const Social = () => {
               <span>Young</span>
               <span>
                 <i className="iconF">
-                  <img src={starY} alt="Star Icon" />
+                  <img src={starY} loading='lazy' alt="Star Icon" />
                 </i>
               </span>
               <span>Inclusive</span>
               <span>
                 <i className="iconF">
-                  <img src={starY} alt="Star Icon" />
+                  <img src={starY} loading='lazy' alt="Star Icon" />
                 </i>
               </span>
               <span>Diverse</span>
               <span>
                 <i className="iconF">
-                  <img src={starY} alt="Star Icon" />
+                  <img src={starY} loading='lazy' alt="Star Icon" />
                 </i>
               </span>
               <span>Creative</span>
@@ -125,8 +125,8 @@ const Social = () => {
               <Link className="btnDark ripple-button" to='/careers#LifeAtA09'>
                 <span>Our Culture</span>
               </Link>
-              <Link className="btnDark ripple-button" to='/careers#Opportunities'>
-                <span>View Openings</span>
+              <Link className="btnDark ripple-button" to='https://www.youtube.com/@agency09official/playlists' target="_blank">
+                <span>View Playlist</span>
               </Link>
             </div>
           </div>

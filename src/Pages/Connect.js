@@ -2,19 +2,12 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
 import { Link, useLocation } from 'react-router-dom';
-import useLenisScroll from '../Hooks/useLenisScroll';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import GetInTouch from '../Components/Forms/GetInTouch';
 import StartAProjectForm from '../Components/Forms/StartAProjectForm';
 import PartnerWithUs from '../Components/Forms/PartnerWithUs';
-
-import { PiArrowCircleRightThin } from "react-icons/pi";
-import RippleButton from '../Hooks/RippleButton';
 import { GoNorthStar } from "react-icons/go";
-import { FaLocationDot } from "react-icons/fa6";
-import { IoCall } from "react-icons/io5";
-import Accordion from 'react-bootstrap/Accordion';
 
 // Tabs
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -22,8 +15,6 @@ import 'react-tabs/style/react-tabs.css';
 // Tabs End
 
 const Connect = () => {
-  useLenisScroll();
-
 
   const location = useLocation();
 
@@ -39,12 +30,14 @@ const Connect = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Digital Agency in Bandra - AGENCY09</title>
+        <title>Contact AGENCY09 for the Best Advertising Services in India</title>
         <meta name="robots" content="index, follow"/> 
+
+        <meta name="description" content="Connect with AGENCY09, a leading creative advertising agency. Reach out for innovative ways to  digital marketing, branding, and advertising solutions."/>
         <link rel="canonical" href="https://www.agency09.in/connect"/> 
               
-        <meta property="og:title" content="Contact Us | Digital Agency in Bandra - AGENCY09"/> 
-        <meta property="og:description" content="If you’re looking for a digital agency to help your business grow or you’ve got a specific query, fill up the form."/> 
+        <meta property="og:title" content="Contact AGENCY09 for the Best Advertising Services in India"/> 
+        <meta property="og:description" content="Connect with AGENCY09, a leading creative advertising agency. Reach out for innovative ways to  digital marketing, branding, and advertising solutions."/> 
         <meta property="og:image" content="https://www.agency09.in/images/agency09-dark.png"/> 
         <meta property="og:type" content="website"/> 
 
@@ -53,7 +46,7 @@ const Connect = () => {
         <meta name="twitter:site" content="@AGENCY09"/> 
         <meta name="twitter:creator" content="@AGENCY09"/> 
         <meta name="twitter:url" content="https://www.agency09.in/connect"/> 
-        <meta name="twitter:description" content="If you’re looking for a digital agency to help your business grow or you’ve got a specific query, fill up the form."/> 
+        <meta name="twitter:description" content="Connect with AGENCY09, a leading creative advertising agency. Reach out for innovative ways to  digital marketing, branding, and advertising solutions."/> 
         <meta name="twitter:image" content="https://www.agency09.in/images/agency09-dark.png"/> 
      </Helmet>
 
@@ -147,7 +140,7 @@ const Connect = () => {
               <div className='greenBoxCol greenBoxColText'>
                 <h3 className='sizeH1 uppercase'>Simplifying <span><i className="iconF"><GoNorthStar /></i> </span><span className='underline'>The Web<hr/></span> </h3>
                 <p>Get enlightened by reading our AGENCY09 blog on various topics like marketing,<br/> strategy, tech, design, and much more.</p>
-                <Link to="https://www.agency09.co/simplifyingtheweb/" target="_blank" className="btnDark ripple-button"><span>Visit Blog</span></Link>
+                <a href="https://www.agency09.in/simplifyingtheweb/" className="btnDark ripple-button"><span>Visit Blog</span></a>
               </div>              
           </div>
         </div>

@@ -7,7 +7,6 @@ import ServicesList from '../../Components/ServicesList';
 
 import Items from '../../Components/WhatsNew'; 
 import ServicesForm from '../../Components/Forms/ServicesForm';
-import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 import { PiArrowCircleRightThin } from "react-icons/pi";
 import RippleButton from '../../Hooks/RippleButton';
@@ -25,7 +24,6 @@ import media from '../../Assets/Images/media.jpg';
 
 
 const Design = () => {
-  useLenisScroll();
 
   return (
     <>
@@ -101,7 +99,7 @@ const Design = () => {
               <li>
                     <Link to="/">
                       <div className='imgGrid'>
-                        <img src={media} alt=""/>
+                        <img src={media} alt="" loading='lazy'/>
                       </div>
                       <div className='imgGridText'>
                         <h3>Lorem Ipsum is simply dummy text</h3>
@@ -113,7 +111,7 @@ const Design = () => {
                 <li>
                     <Link to="/">
                       <div className='imgGrid'>
-                        <img src={media} alt=""/>
+                        <img src={media} loading='lazy' alt=""/>
                       </div>
                       <div className='imgGridText'>
                         <h3>Lorem Ipsum is simply dummy text</h3>
@@ -125,7 +123,7 @@ const Design = () => {
                 <li>
                     <Link to="/">
                       <div className='imgGrid'>
-                        <img src={media} alt=""/>
+                        <img src={media} loading='lazy' alt=""/>
                       </div>
                       <div className='imgGridText'>
                         <h3>Lorem Ipsum is simply dummy text</h3>

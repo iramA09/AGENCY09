@@ -1,10 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Transitions from '../Hooks/Transitions';
-import useLenisScroll from '../Hooks/useLenisScroll';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import RippleButton from '../Hooks/RippleButton';
 import { PiArrowCircleRightThin } from "react-icons/pi";
 import ourwork1 from '../Assets/Images/work/ourwork-1.webp';
 import ourwork2 from '../Assets/Images/work/ourwork-2.webp';
@@ -107,7 +104,6 @@ export const workItems = [
 ];
 
 const Work = () => {
-  useLenisScroll();
 
   return (
     <>

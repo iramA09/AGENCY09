@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import useLenisScroll from '../Hooks/useLenisScroll';
 import { PiArrowCircleRightThin } from "react-icons/pi";
 import tatamotors from '../Assets/Images/logos/work/automative/tatamotors.png';
 
@@ -59,7 +57,6 @@ const Testimonials = () => {
         setVisibleTechItems((prev) => prev + 6);
     };
 
-    useLenisScroll();
     return (
         <>
             <Header />

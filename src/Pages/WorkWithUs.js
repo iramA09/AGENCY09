@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Services from '../Components/Services';
-import useLenisScroll from '../Hooks/useLenisScroll';
 import WorkWithUsForm from '../Components/Forms/WorkWithUsForm';
 
 
@@ -12,7 +11,6 @@ import WorkWithUsForm from '../Components/Forms/WorkWithUsForm';
 import { PiArrowCircleRightThin } from "react-icons/pi";
 
 const WorkWithUs = () => {
-    useLenisScroll();
   return (
     <>
     <Header />

@@ -13,7 +13,6 @@ import SVGCurveLine from '../Hooks/SVGCurveLine';
 import Calculat from '../Components/Calculat';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import useLenisScroll from '../Hooks/useLenisScroll';
 
 import { IoStarSharp } from "react-icons/io5";
 import { SlArrowRightCircle } from "react-icons/sl";
@@ -22,7 +21,6 @@ import ourpurpose from '../Assets/Images/our-purpose.webp';
 // Images end
 
 const About = () => {
-  useLenisScroll();
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -42,13 +40,13 @@ const About = () => {
 
 
     <Helmet>
-      <title> About Us | Digital Marketing Agency | Web Development Company -  AGENC09 </title>
+      <title> About Us | Creative Advertising Agency in Mumbai - AGENC09</title>
       <link rel="canonical" href="https://www.agency09.in/about"/>
       <meta name="robots" content="index, follow"/> 
 
-      <meta name="description" content="AGENCY09 is a digital marketing agency for 10+ years, with 85+ members, which has delivered 450+ projects across 4 continents including the UAE & Australia."/>
-      <meta property="og:title" content=" About Us | Digital Marketing Agency | Web Development Company -  AGENC09"/> 
-      <meta property="og:description" content="AGENCY09 is a digital marketing agency for 10+ years, with 85+ members, which has delivered 450+ projects across 4 continents including the UAE & Australia."/> 
+      <meta name="description" content="AGENCY09 is a top advertising agency in India for branding, tech, content, performance marketing, digital marketing, website solution, and more."/>
+      <meta property="og:title" content=" About Us | Creative Advertising Agency in Mumbai - AGENC09"/> 
+      <meta property="og:description" content="AGENCY09 is a top advertising agency in India for branding, tech, content, performance marketing, digital marketing, website solution, and more."/> 
       <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
       <meta property="og:type" content="website"/> 
 
@@ -57,7 +55,7 @@ const About = () => {
       <meta name="twitter:site" content="@AGENCY09"/> 
       <meta name="twitter:creator" content="@AGENCY09"/> 
       <meta name="twitter:url" content="https://www.agency09.in/about"/> 
-      <meta name="twitter:description" content=" AGENCY09 is a digital marketing agency for 10+ years, with 85+ members, which has delivered 450+ projects across 4 continents including the UAE & Australia."/> 
+      <meta name="twitter:description" content=" AGENCY09 is a top advertising agency in India for branding, tech, content, performance marketing, digital marketing, website solution, and more."/> 
       <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
 
     </Helmet>
@@ -126,7 +124,7 @@ const About = () => {
 
     <section>
       <div className='container'>
-        <img src={ourpurpose} alt='our purpose' />
+        <img src={ourpurpose} loading='lazy'  alt='our purpose' />
       </div>
     </section>
 {/* 

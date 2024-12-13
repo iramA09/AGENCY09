@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 import { Link, useLocation } from 'react-router-dom';
-import useLenisScroll from '../../Hooks/useLenisScroll';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import { PiArrowCircleRightThin } from "react-icons/pi";
@@ -41,6 +40,7 @@ import lavie from '../../Assets/Images/logos/work/fashion_lifestyle/lavie.png';
 import missdiva from '../../Assets/Images/logos/work/fashion_lifestyle/miss-diva.png';
 import movado from '../../Assets/Images/logos/work/fashion_lifestyle/movado.png';
 import tommyhilfiger from '../../Assets/Images/logos/work/fashion_lifestyle/tommy-hilfiger.png';
+import freyaa from '../../Assets/Images/logos/work/fashion_lifestyle/freyaa.jpg';
 
 import jupiterhospital from '../../Assets/Images/logos/work/health_wellness/jupiterhospital.png';
 import stepsetgo from '../../Assets/Images/logos/work/health_wellness/stepsetgo.png';
@@ -68,6 +68,7 @@ import rajeshlifespaces from '../../Assets/Images/logos/work/real-estate/rajesh-
 import sunteck from '../../Assets/Images/logos/work/real-estate/sunteck.png';
 import supreme from '../../Assets/Images/logos/work/real-estate/supreme.png';
 import ukrealty from '../../Assets/Images/logos/work/real-estate/uk-realty.png';
+import vihang from '../../Assets/Images/logos/work/real-estate/vihangahead.jpg';
 
 import jupitermarathon from '../../Assets/Images/logos/work/events/jupiter-marathon.png';
 import lakmefashionweek from '../../Assets/Images/logos/work/events/lakme-fashion-week.png';
@@ -81,9 +82,14 @@ import chinesewok from '../../Assets/Images/logos/work/others/chinese-wok.png';
 import hppetrol from '../../Assets/Images/logos/work/others/hp-petrol.png';
 import mahycogrow from '../../Assets/Images/logos/work/others/mahyco-grow.png';
 import tribevibe from '../../Assets/Images/logos/work/others/tribe-vibe.png';
+import cloudTv from '../../Assets/Images/logos/work/cloudtv.jpg';
 // Logos Images end
 
 const techLogos = [
+  {src: vihang, category: 'RealEstate'},
+  {src: freyaa, category: 'FashionLifestyle'},
+  {src: cloudTv, category: 'Others'},
+
   {src: tatamotors, category: 'Automotive'},
   {src: wurthCarHaus, category: 'Automotive'},
 
@@ -152,18 +158,17 @@ const techLogos = [
   {src: timesfashionweek, category: 'Events'},
   {src: wethewomen, category: 'Events'},
 
+  {src: tribevibe, category: 'Others'},
   {src: barci, category: 'Others'},
   {src: chinesewok, category: 'Others'},
   {src: hppetrol, category: 'Others'},
   {src: mahycogrow, category: 'Others'},
-  {src: tribevibe, category: 'Others'},
 ];
 
 const OurClients = () => {
   const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  useLenisScroll();
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -175,13 +180,13 @@ const OurClients = () => {
     <>
 
     <Helmet>
-      <title>Our Clients - AGENCY09</title>
+      <title>AGENCY09 Clients: From Startups to Global Brands</title>
       <meta name="robots" content="index, follow"/> 
-      <meta name="description" content="We partner with our clients to grow businesses, to explore unchartered territories and to do the right thing in digital advertising."/>
+      <meta name="description" content="Explore AGENCY09's clients, including BFSI, e-commerce, education, FMCG, automobile, real estate, solar energy, and more."/>
       <link rel="canonical" href="https://www.agency09.in/work/clients.php"/>
 
-      <meta property="og:title" content="Our Clients - AGENCY09"/> 
-      <meta property="og:description" content="We partner with our clients to grow businesses, to explore unchartered territories and to do the right thing in digital advertising."/> 
+      <meta property="og:title" content="AGENCY09 Clients: From Startups to Global Brands"/> 
+      <meta property="og:description" content="Explore AGENCY09's clients, including BFSI, e-commerce, education, FMCG, automobile, real estate, solar energy, and more."/> 
       <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
       <meta property="og:type" content="website"/> 
 
@@ -189,7 +194,7 @@ const OurClients = () => {
       <meta name="twitter:site" content="@AGENCY09"/> 
       <meta name="twitter:creator" content="@AGENCY09"/> 
       <meta name="twitter:url" content="https://www.agency09.in/work/clients.php"/> 
-      <meta name="twitter:description" content="We partner with our clients to grow businesses, to explore unchartered territories and to do the right thing in digital advertising."/> 
+      <meta name="twitter:description" content="Explore AGENCY09's clients, including BFSI, e-commerce, education, FMCG, automobile, real estate, solar energy, and more."/> 
       <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
     </Helmet>
 
@@ -238,7 +243,7 @@ const OurClients = () => {
           <div className='ourClientsR'>
             {filteredLogos.map((logo, index) => (
               <span key={index} className={`${selectedCategory === 'All' || logo.category === selectedCategory ? 'show' : ''} ${logo.category}`}>
-                <img src={logo.src} alt="" />
+                <img src={logo.src} loading='lazy' alt="" />
               </span>
             ))}
           </div>

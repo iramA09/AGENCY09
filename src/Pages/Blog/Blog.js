@@ -3,18 +3,17 @@ import axios from 'axios';
 import moment from 'moment';
 import { Helmet } from 'react-helmet';
 import { Link, useLocation, useParams } from 'react-router-dom';
-import useLenisScroll from '../../Hooks/useLenisScroll';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 
 const Blog = () => {
     const location = useLocation();
     const { cat_slug } = useParams();
-    useLenisScroll();
 
     const [categories, setCategories] = useState([]);
     const [posts, setPosts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [loading, setLoading] = useState(true); // State for loading indicator
     const postsPerPage = 5;
 
     useEffect(() => {
@@ -28,6 +27,7 @@ const Blog = () => {
         };
 
         const fetchPosts = async () => {
+            setLoading(true); // Start loading
             try {
                 let apiUrl = 'https://www.agency09.in/cms/api/getPosts';
                 if (cat_slug) {
@@ -37,6 +37,8 @@ const Blog = () => {
                 setPosts(response.data.posts);
             } catch (error) {
                 console.error('Error fetching posts:', error);
+            } finally {
+                setLoading(false); // Stop loading
             }
         };
 
@@ -49,15 +51,15 @@ const Blog = () => {
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-    // Pagination
-    const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(posts.length / postsPerPage); i++) {
-        pageNumbers.push(i);
-    }
-
     // Change page
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scrolling
+        });
+    };
+    
     return (
         <>
             <Helmet>
@@ -86,54 +88,89 @@ const Blog = () => {
                         </ul>
                     </div>
 
-                    <div className="blog-min-box">
-                        {currentPosts.map(post => (
-                            <div className="blog-list" key={post.id}>
-                                <Link to={`/blog/${post.cat_slug}/${post.slug}`}>
-                                    <div className="blog-img">
-                                        <div className='thumb-img'>
-                                        <img src={`https://www.agency09.in/cms/uploads/${post.featured_image}`} alt={post.post_name} width="1000" height="517" />
-                                        </div>
-                                        <div className="hover-overlay">
-                                            <div className="hover-text">
-                                                <h3>View Details</h3>
+                    {loading ? (
+                        <div className="loading">Loading...</div>
+                    ) : (
+                        <>
+                            <div className="blog-min-box">
+                                {currentPosts.map(post => (
+                                    <div className="blog-list" key={post.id}>
+                                        <Link to={`/blog/${post.cat_slug}/${post.slug}`}>
+                                            <div className="blog-img">
+                                                <div className='thumb-img'>
+                                                    <img src={`https://www.agency09.in/cms/uploads/${post.featured_image}`} alt={post.post_name} width="1000" height="517" />
+                                                </div>
+                                                <div className="hover-overlay">
+                                                    <div className="hover-text">
+                                                        <h3>View Details</h3>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
+                                            <div className="blog-list-heading">
+                                                {post.categories.length > 0 && (
+                                                    <span className="blog-category">
+                                                        {post.categories.map(category => category.name).join(' | ')}
+                                                    </span>
+                                                )}
+                                                <h2><a href="#">{post.post_name}</a></h2>
+                                                <ul>
+                                                    <li><a href="#">{moment(post.created_at).format('D-MMMM-YYYY')}</a></li>
+                                                    <li><a href="#">{post.view} VIEWS</a></li>
+                                                    <li><a href="#"><b>Author:</b> {post.user_name}</a></li>
+                                                </ul>
+                                                <div className="list-btn"><span>View Post</span></div>
+                                            </div>
+                                        </Link>
                                     </div>
-                                    <div className="blog-list-heading">
-                                        {post.categories.length > 0 && (
-                                            <span className="blog-category">
-                                            {post.categories.map(category => category.name).join(' | ')}
-                                            </span>
-                                        )}
-                                        {/* <span><a href="#">{post.cat_name || 'Uncategorized'}</a></span> */}
-                                        <h2><a href="#">{post.post_name}</a></h2>
-                                        <ul>
-                                            <li><a href="#">{moment(post.created_at).format('D-MMMM-YYYY')}</a></li>
-                                            <li><a href="#">{post.view} VIEWS</a></li>
-                                            <li><a href="#"><b>Author:</b> {post.user_name}</a></li>
-                                        </ul>
-                                        {/* <div className='blogDecription'>
-                                            <p>{post.description}</p>
-                                        </div> */}
-                                        <div className="list-btn"><span>View Post</span></div>
-                                    </div>
-                                </Link>
+                                ))}
                             </div>
-                        ))}
-                    </div>
 
-                    {/* Pagination */}
-                    <div className="pagination">
-                        {[...Array(Math.ceil(posts.length / postsPerPage)).keys()].map(number => (
-                            <button key={number + 1} onClick={() => paginate(number + 1)}>
-                                {number + 1}
-                            </button>
-                        ))}
-                    </div>
+                            {/* Pagination */}
+                            <div className="pagination">
+                                {[...Array(Math.ceil(posts.length / postsPerPage)).keys()].map(number => (
+                                    <button
+                                        key={number + 1}
+                                        onClick={() => paginate(number + 1)}
+                                        className={currentPage === number + 1 ? 'active' : ''}
+                                    >
+                                        {number + 1}
+                                    </button>
+                                ))}
+                            </div>
+                        </>
+                    )}
                 </div>
             </section>
             <Footer />
+            {/* Inline CSS */}
+            <style jsx>{`
+                .loading {
+                    text-align: center;
+                    padding: 50px 0;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #333;
+                }
+
+                .pagination button {
+                    margin: 0 5px;
+                    padding: 8px 16px;
+                    border: none;
+                    background-color: #f0f0f0;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                .pagination button.active {
+                    background-color: #007bff;
+                    color: #fff;
+                }
+
+                .pagination button:hover:not(.active) {
+                    background-color: #007bff;
+                    color: #fff;
+                }
+            `}</style>
         </>
     );
 };

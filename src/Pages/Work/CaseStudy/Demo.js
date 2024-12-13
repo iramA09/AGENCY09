@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiStarFourFill } from "react-icons/pi";
@@ -75,7 +74,6 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const Demo = () => {
-    useLenisScroll();
 
 
   return (
@@ -97,7 +95,7 @@ const Demo = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy' />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -133,12 +131,12 @@ const Demo = () => {
             <div className='cSsecMinC'>
 
             <div className='imgCol1 imgCol '>
-                <span><Link to='/' className='vIcon'><img src={ourwork1} /></Link></span>
+                <span><Link to='/' className='vIcon'><img src={ourwork1} loading='lazy' /></Link></span>
             </div>
 
             <div className='imgCol2 imgCol'>
-                <span><img src={ourwork1} /></span>
-                <span><img src={ourwork1} /></span>
+                <span><img src={ourwork1} loading='lazy' /></span>
+                <span><img src={ourwork1} loading='lazy' /></span>
             </div>
 
             </div>
@@ -162,9 +160,9 @@ const Demo = () => {
 
             <div className='Heading center HeadingIcon'>
                 <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' loading='lazy' /></i></span>
                     Related Work
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' loading='lazy' /></i></span>
                 </h2>
             </div>
 
@@ -176,7 +174,7 @@ const Demo = () => {
                         <div key={index} className='item'>
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/></div>
+                                <div className='CaseStudyImg'><img src={CaseStudy.image} loading='lazy' /></div>
                                 <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
                                 <div className='textTag'><p>{CaseStudy.tag}
                                 

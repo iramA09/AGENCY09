@@ -7,7 +7,6 @@ import Footer from '../../Components/Footer';
 import StartAProjectFormPopup from '../../Components/Forms/StartAProjectFormPopup';
 import Testimonias from '../../Components/Testimonias';
 
-import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 import Slider from 'react-slick';
@@ -25,7 +24,9 @@ import pattern from '../../Assets/Images/icons/patternTech.webp';
 import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
 import starY from '../../Assets/Images/icons/star.webp';
-
+import nahar from '../../Assets/Images/work/nahar.jpg';
+import ryan from '../../Assets/Images/work/Ryan.webp';
+import solarize from '../../Assets/Images/work/mahindrasolariz.jpg';
 
 import ourwork1 from '../../Assets/Images/work/ourwork-4.webp';
 import ourwork2 from '../../Assets/Images/work/ourwork-1.webp';
@@ -33,7 +34,7 @@ import ourwork3 from '../../Assets/Images/work/ourwork-3.webp';
 
 
 import igcb from '../../Assets/Images/logos/work/BFSI/igcb.png';
-import ryan from '../../Assets/Images/logos/work/education/ryan.png';
+import ryanGroup from '../../Assets/Images/logos/work/education/ryan.png';
 import athenarenewable from '../../Assets/Images/logos/work/energy/athena-renewable.png';
 import siyarams from '../../Assets/Images/logos/work/retail_fmcg/siyarams.png';
 
@@ -73,7 +74,6 @@ const CaseStudySlider = {
  
 
 const Keyword = () => {
-  useLenisScroll();
   const [OpenModalStartAProjectFormPopup, setOpenModalStartAProjectFormPopup] = React.useState(false);
 
 
@@ -127,26 +127,43 @@ const Keyword = () => {
 //CaseStudy Data
 const CaseStudyData = [
     {
-        link: '#',
-        image: ourwork1,
-        titale: 'Brand led site for a Banking Solutions Firm',
-        tags: [{ name: 'BFSI' },],
-    },  
-    {
-        link: '#',
-        image: ourwork2,
-        titale: 'A dynamic website for India’s biggest truck company',
-        tags: [
-            { name: 'Automobile' },
-        ],
-    },  
-    {
-        link: '#',
-        image: ourwork3,
-        titale: 'Revamped Website for one of the India’s biggest institution',
-        tags: [{ name: 'Education' },],
-
+      id:14,
+      title:'Massive Organic Growth for Nahar Group’s Search Presence',
+      tags:[
+        {name:'Digital Marketing'},
+        {name:'SEO'}
+      ],
+      image:nahar,
+      link:'/work/case-studies/massive-organic-growth-for-nahar-groups-search-presence',
+      brand:'Nahar Group',
+      department:'Keywords'
     },
+    {
+      id:15,
+      title:'Consolidation of 91+ Websites and Tremendous SEO Growth for Ryan Group',
+      tags:[
+        {name:'Digital Marketing'},
+        {name:'SEO'},
+        {name:'Website Consolidation'}
+      ],
+      image:ryanGroup,
+      link:'/work/case-studies/consolidation-of-91-plus-websites-and-tremendous-seo-growth-for-ryan-group',
+      brand:'Ryan Group',
+      department:'Keywords'
+    },
+    {
+      id:16,
+      title:'Industry Leading Organic Search Results from Scratch for Mahindra Solarize',
+      tags:[
+        {name:'Digital Marketing'},
+        {name:'SEO'},
+        {name:'Website Launch'}
+      ],
+      image:solarize,
+      link:'/work/case-studies/industry-leading-organic-search-results-from-scratch-for-mahindra-solarize',
+      brand:'Mahindra Solarize',
+      department:'Keywords'
+    }
   ];
 //CaseStudy Data End
  
@@ -211,21 +228,21 @@ const faqsData = [
   return (
     <>
     <Helmet>
-      <title>Keyword Research | Search Engine Optimization Services – AGENCY09</title>
+      <title>SEO Agency in Mumbai | Boost Organic Traffic & Keyword Rankings - AGENCY09</title>
       <meta name="robots" content="index, follow"/> 
 
-      <meta name="description" content="Being a digital marketing agency, we perform SEO keyword research to gain a higher ranking on Google by indexing more than 3000+ keywords. We’re also into App Store Optimisation."/>
+      <meta name="description" content="AGENCY09 helps grow website traffic with search engine optimization strategies including keyword research, google my business listing, Google Analytics 4, Increase DA, ORM and more."/>
       <link rel="canonical" href="https://www.agency09.in/services/keyword.php"/>
 
-      <meta property="og:title" content="Keyword Research | Search Engine Optimization Services – AGENCY09"/> 
-      <meta property="og:description" content="Being a digital marketing agency, we perform SEO keyword research to gain a higher ranking on Google by indexing more than 3000+ keywords. We’re also into App Store Optimisation."/> 
+      <meta property="og:title" content="SEO Agency in Mumbai | Boost Organic Traffic & Keyword Rankings - AGENCY09"/> 
+      <meta property="og:description" content="AGENCY09 helps grow website traffic with search engine optimization strategies including keyword research, google my business listing, Google Analytics 4, Increase DA, ORM and more."/> 
       <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
       <meta property="og:type" content="website"/> 
       <meta name="twitter:card" content="summary"/> 
       <meta name="twitter:site" content="@AGENCY09"/> 
       <meta name="twitter:creator" content="@AGENCY09"/> 
       <meta name="twitter:url" content="https://www.agency09.in/services/keyword.php"/> 
-      <meta name="twitter:description" content="Being a digital marketing agency, we perform SEO keyword research to gain a higher ranking on Google by indexing more than 3000+ keywords. We’re also into App Store Optimisation."/> 
+      <meta name="twitter:description" content="AGENCY09 helps grow website traffic with search engine optimization strategies including keyword research, google my business listing, Google Analytics 4, Increase DA, ORM and more."/> 
       <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/>
     </Helmet>
 
@@ -244,10 +261,10 @@ const faqsData = [
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
                         <ul className='trustedByLogos'>
-                            <li><img src={igcb} alt=""/></li>
-                            <li><img src={ryan} alt=""/></li>
-                            <li><img src={athenarenewable} alt=""/></li>
-                            <li><img src={siyarams} alt=""/></li>
+                            <li><img src={igcb} loading='lazy' alt=""/></li>
+                            <li><img src={ryan} loading='lazy' alt=""/></li>
+                            <li><img src={athenarenewable} loading='lazy' alt=""/></li>
+                            <li><img src={siyarams} loading='lazy' alt=""/></li>
                         </ul>
                     </div>
 
@@ -257,13 +274,13 @@ const faqsData = [
                         <span></span>
                     </div>
                     <div className='RoundIconB RoundIcon pinkB'></div>
-                    <img src={pattern} alt="pattern" className='pattern' />
+                    <img src={pattern} loading='lazy' alt="pattern" className='pattern' />
                 </div>
 
 
                 <div className='SolutionsColOurServies'>
                     <Link to='#'>
-                        <img src={ourServiesBtn} alt="Our Servies" />
+                        <img src={ourServiesBtn} loading='lazy' alt="Our Servies" />
                     </Link>
                 </div>
             </div>
@@ -278,9 +295,9 @@ const faqsData = [
               <div className='solutionsSecServicesFaq'>
               <div className='Heading center HeadingIcon pb-20'>
                   <h2 className='sizeH1 uppercase'>
-                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                       Services
-                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                   </h2>
                 </div>                
                 <div className='solutionsSecServicesFaqList'>
@@ -311,6 +328,58 @@ const faqsData = [
             </div>
         </section>
 
+        <div className='container'>
+                <div className='strokeB'><SVGCurveLine/></div>      
+        </div>
+
+
+        <section className='solutionsSecCaseStudy'>
+            <div className='container'>
+
+            <div className='Heading center HeadingIcon'>
+                <h2 className='sizeH1 uppercase'>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
+                    Case studies
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
+                </h2>
+            </div>
+
+
+            <div className='solutionsSecCaseStudyList'>
+
+                <Slider {...CaseStudySlider} className='CaseStudySlider slick-slider'>
+                    {CaseStudyData.map((CaseStudy, index) => (
+                        <div key={index} className='item'>
+                        <div className='CaseStudyCol'>
+                            <Link to={CaseStudy.link}>
+                                <div className='CaseStudyImg'><img src={CaseStudy.image} loading='lazy' />
+                                <div className='workGridItemHover'>
+                                    <div className='workGridItemHoverIn'>
+                                        <h3>{CaseStudy.title}</h3>
+                                        <h4>{CaseStudy.brand}</h4>
+                                        <p>{CaseStudy.department}</p>
+                                    </div>
+                                </div></div>
+                                <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
+                                <div className='textTag'><p>{CaseStudy.tag}
+                                  {CaseStudy.tags.map((tag, index) => (
+                                    <span key={index}>{tag.name}</span>
+                                  ))}
+                                </p></div>
+                            </Link>
+                        </div>
+                        </div>
+                    ))}
+                </Slider>
+
+            <div className='btnSpaceEx center'>     
+                <Link to="../work/case-studies#keyword" className="btnDark fontM ripple-button"><span>View All</span></Link>
+            </div>
+
+            </div>
+
+            </div>
+        </section>  
 
 {/* 
         <section className='solutionsSecCaseStudy'>

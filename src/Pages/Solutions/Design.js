@@ -1,11 +1,11 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import StartAProjectFormPopup from '../../Components/Forms/StartAProjectFormPopup';
 import Testimonias from '../../Components/Testimonias';
 
-import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 import Slider from 'react-slick';
@@ -26,6 +26,7 @@ import tataMotors2 from '../../Assets/Images/logos/work/tataMotors2.png';
 import bitsPilani from '../../Assets/Images/logos/work/bitsPilani.png';
 import starY from '../../Assets/Images/icons/star.webp';
 import barc from '../../Assets/Images/work/BARC.webp';
+import octarine from '../../Assets/Images/work/oo.jpg'
 
 
 import wurthCarHaus from '../../Assets/Images/logos/work/automative/wurth-car-haus.png';
@@ -102,7 +103,6 @@ const CaseStudySlider = {
  
 
 const Design = () => {
-  useLenisScroll();
   const [OpenModalStartAProjectFormPopup, setOpenModalStartAProjectFormPopup] = React.useState(false);
 
 
@@ -159,6 +159,18 @@ const CaseStudyData = [
     brand: "BARC India Yearbook",
     department: 'Design'
 },
+{
+  id:10,
+  title:'Enchanting Mushroom Magic Box with Innovative Packaging Design',
+  tags:[
+    {name:'Plant-Based Products'},
+    {name:'Product Packaging'},
+  ],
+  image:octarine,
+  link:'/work/case-studies/oc',
+  brand:"Octarine Organics",
+  department:'Design'
+}
   ];
 //CaseStudy Data End
 
@@ -217,6 +229,27 @@ const faqsData = [
 
   return (
     <>
+
+    
+<Helmet>
+      <title>Creative Design Agency in Mumbai | Brand Design Solutions – AGENCY09</title>
+      <meta name="robots" content="index, follow"/> 
+
+      <meta name="description" content="AGENCY09 delivers creative solutions to bring your brand to new heights, including Brand Identity, Logo Design, Packagaing and Communication Design."/>
+      <link rel="canonical" href="https://www.agency09.in/solutions/tech"/>
+
+      <meta property="og:title" content="Creative Design Agency in Mumbai | Brand Design Solutions – AGENCY09"/> 
+      <meta property="og:description" content="AGENCY09 delivers creative solutions to bring your brand to new heights, including Brand Identity, Logo Design, Packagaing and Communication Design."/> 
+      <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
+      <meta property="og:type" content="website"/> 
+
+      <meta name="twitter:card" content="summary"/> 
+      <meta name="twitter:site" content="@AGENCY09"/> 
+      <meta name="twitter:creator" content="@AGENCY09"/> 
+      <meta name="twitter:url" content="https://www.agency09.in/solutions/tech"/> 
+      <meta name="twitter:description" content="AGENCY09 delivers creative solutions to bring your brand to new heights, including Brand Identity, Logo Design, Packagaing and Communication Design."/> 
+      <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
+    </Helmet>
       <Header />
       <div className="spacer"></div>
 
@@ -233,10 +266,10 @@ const faqsData = [
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
                         <ul className='trustedByLogos'>
-                            <li><img src={wurthCarHaus} alt=""/></li>
-                            <li><img src={barci} alt=""/></li>
-                            <li><img src={hudobosshugo} alt=""/></li>
-                            <li><img src={movado} alt=""/></li>
+                            <li><img src={wurthCarHaus} loading='lazy' alt=""/></li>
+                            <li><img src={barci} loading='lazy' alt=""/></li>
+                            <li><img src={hudobosshugo} loading='lazy' alt=""/></li>
+                            <li><img src={movado} loading='lazy' alt=""/></li>
                         </ul>
                     </div>
                 </div>
@@ -245,13 +278,13 @@ const faqsData = [
                         <span></span>
                     </div>
                     <div className='RoundIconB RoundIcon pinkB'></div>
-                    <img src={pattern} alt="pattern" className='pattern' />
+                    <img src={pattern} loading='lazy' alt="pattern" className='pattern' />
                 </div>
 
 
                 <div className='SolutionsColOurServies'>
                     <Link to='#'>
-                        <img src={ourServiesBtn} alt="Our Servies" />
+                        <img src={ourServiesBtn} loading='lazy' alt="Our Servies" />
                     </Link>
                 </div>
             </div>
@@ -267,9 +300,9 @@ const faqsData = [
 
                 <div className='Heading center HeadingIcon pb-20'>
                   <h2 className='sizeH1 uppercase'>
-                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                       Services
-                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                   </h2>
                 </div>
 
@@ -312,9 +345,9 @@ const faqsData = [
 
             <div className='Heading center HeadingIcon'>
                 <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                     Case studies
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                 </h2>
             </div>
 
@@ -326,7 +359,7 @@ const faqsData = [
                         <div key={index} className='item'>
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/>
+                                <div className='CaseStudyImg'><img src={CaseStudy.image} loading='lazy' />
                                 <div className='workGridItemHover'>
                                     <div className='workGridItemHoverIn'>
                                         <h3>{CaseStudy.title}</h3>
@@ -347,7 +380,7 @@ const faqsData = [
                 </Slider>
 
             <div className='btnSpaceEx center'>     
-                <Link to="../work/case-studies" className="btnDark fontM ripple-button"><span>View All</span></Link>
+                <Link to="../work/case-studies#design" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
 
             </div>

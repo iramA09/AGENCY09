@@ -6,7 +6,8 @@ import { IoMdArrowForward, IoMdHeart } from "react-icons/io"
 import { BsClockFill } from "react-icons/bs";
 import SVGCurveLine from '../Hooks/SVGCurveLine'; 
 import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import Clock from '../Components/clock';
 // Images
 import AGENCY09W from '../Assets/Images/agency-light.webp'
 import a09storeW from '../Assets/Images/logos/a09storeW.png'
@@ -103,7 +104,7 @@ const Footer = () => {
           <li><Link to='/work/our-clients'>Clients</Link></li>
           <li><Link to='/careers#Opportunities'>Vacancies</Link></li>
           <li><Link to='/connect'>Connect</Link></li>
-          <li><Link to='https://www.agency09.co/simplifyingtheweb/' target='_blank'>Simplifying The Web</Link></li>
+          <li><a href='https://www.agency09.in/simplifyingtheweb/'>Simplifying The Web</a></li>
           <li><Link to='https://www.a09store.com/' target='_blank'>A09 Store</Link></li>
         </ul>
       </div>
@@ -151,14 +152,20 @@ const Footer = () => {
     <div className='footerWrap3'><div className='container'><div className='footerRow'>
       <ul>
         <li>
-          <div className='clock'><BsClockFill/></div>
+          {/* <div className='clock'><BsClockFill/></div> */}
+          <div className='clock'>
+            <Clock timezone ="Asia/Dubai" canvasId="dubai"/>
+            </div>
           <div className='text'>
             <h4>Office - <b>Dubai</b></h4>
             <p>Media City, Dubai</p>
           </div>
       </li>
       <li>
-          <div className='clock'><BsClockFill/></div>
+          {/* <div className='clock'><BsClockFill/></div> */}
+          <div className='clock'>
+            <Clock timezone="Asia/Kolkata" canvasId="india" />
+          </div>
           <div className='text'>
           <h4>Head Office - <b>Mumbai</b></h4>
           <p>101, Meghdoot, Junction of Linking & Turner Rd.,<br/> Above Bank of Baroda Bank, Opp HP Petrol Pump,<br/> Bandra West, Mumbai - 400 050</p>
@@ -166,7 +173,10 @@ const Footer = () => {
           </div>
       </li>        
       <li>
-          <div className='clock'><BsClockFill/></div>
+          {/* <div className='clock'><BsClockFill/></div> */}
+          <div className='clock'>
+            <Clock timezone ="Australia/Sydney" canvasId="australia" />
+            </div>
           <div className='text'>
             <h4>Office - <b>Australia</b></h4>
             <p>North Adelaide, Adelaide 5006</p>
@@ -184,7 +194,7 @@ const Footer = () => {
     <div className='footerRow'>
       <div className='fLogo09'>
         <Link to='/'>
-          <img src={AGENCY09W} alt={AGENCY09W} />
+          <img loading='lazy' src={AGENCY09W} alt={AGENCY09W} />
         </Link>
       </div>
     </div>
@@ -199,12 +209,12 @@ const Footer = () => {
     <div className='footerRow'>
       <h5>Our Ecosystem</h5>
       <ul>
-        <li><Link to='https://www.a09store.com/' target='_blank'><img src={a09storeW} alt={a09storeW} /></Link></li>
-        <li><Link to='https://www.instaholidays.in/' target='_blank'><img src={Instaw} alt={Instaw} /></Link></li>
-        <li><Link to='https://www.academy09.com/' target='_blank'><img src={AZ9w} alt={AZ9w} /></Link></li>
-        <li><Link to='#' target='_blank'><img src={LO9IX} alt={LO9IX} /></Link></li>
-        <li><Link to='https://www.pk-a.in/' target='_blank'><img src={PKAw} alt={PKAw} /></Link></li>
-        <li><Link to='https://www.octarineorganics.com/' target='_blank'><img src={OOw} alt={OOw} /></Link></li>
+        <li><Link to='https://www.a09store.com/' target='_blank'><img loading='lazy' src={a09storeW} alt={a09storeW} /></Link></li>
+        <li><Link to='https://www.instaholidays.in/' target='_blank'><img loading='lazy' src={Instaw} alt={Instaw} /></Link></li>
+        <li><Link to='https://www.academy09.com/' target='_blank'><img loading='lazy' src={AZ9w} alt={AZ9w} /></Link></li>
+        <li><Link to='#' target='_blank'><img loading='lazy' src={LO9IX} alt={LO9IX} /></Link></li>
+        <li><Link to='https://www.pk-a.in/' target='_blank'><img loading='lazy' src={PKAw} alt={PKAw} /></Link></li>
+        <li><Link to='https://www.octarineorganics.com/' target='_blank'><img loading='lazy' src={OOw} alt={OOw} /></Link></li>
       </ul>
     </div>
 

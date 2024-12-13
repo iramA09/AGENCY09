@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 
 import { GoNorthStar } from "react-icons/go";
 import { PiStarFourFill } from "react-icons/pi";
@@ -15,7 +14,6 @@ import bitsom2 from "../../../Assets/Images/case-study/bitsom/bitsom2.jpg"
 import bitsom3 from "../../../Assets/Images/case-study/bitsom/bitsom3.jpg"
 
 const Bitsom = () => {
-    useLenisScroll();
     // Calculat Data
     const calculatData = [
         {
@@ -55,7 +53,7 @@ const Bitsom = () => {
                 </div> 
 
                 <div className='col'>
-                    <img src={bitsom} />
+                    <img src={bitsom} loading='lazy'  />
                 </div>
 
             </div>
@@ -88,7 +86,7 @@ const Bitsom = () => {
             </div>
 
             <div className='bioImg'>
-                <img src={bitsom1} />
+                <img src={bitsom1} loading='lazy'  />
             </div>
 
 
@@ -121,7 +119,7 @@ const Bitsom = () => {
                     <h3 className='sizeH5 bold uppercase'>IMPLEMENTATION</h3>
                     <div className='Heading center HeadingIcon'>
                         <h2 className='sizeH1 uppercase'>
-                            <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>SOLUTIONS<span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                            <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy'  alt='Star Icon' /></i></span>SOLUTIONS<span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy'  alt='Star Icon' /></i></span>
                         </h2>
                     </div>
                 </div>
@@ -157,7 +155,7 @@ const Bitsom = () => {
                     </div>
 
                     <div className='bioImg'>
-                      <img src={bitsom2} />
+                      <img src={bitsom2} loading='lazy'  />
                     </div>
                 </div>
 
@@ -174,7 +172,7 @@ const Bitsom = () => {
                     </div>
 
                     <div className='bioImg'>
-                      <img src={bitsom3} />
+                      <img src={bitsom3} loading='lazy'  />
                     </div>
                 </div>
 
@@ -193,7 +191,7 @@ const Bitsom = () => {
         <div className='solutionshead center pb-30'>
             <div className='Heading center HeadingIcon mb-0'>
                 <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>RESULTS<span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy'  alt='Star Icon' /></i></span>RESULTS<span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy'  alt='Star Icon' /></i></span>
                 </h2>
             </div>
             <h3 className='sizeH4  uppercase'>WHAT WE ACHIEVED IN 21 DAYS</h3>

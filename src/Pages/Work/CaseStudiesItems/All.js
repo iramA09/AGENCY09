@@ -11,6 +11,23 @@ import godrejlaffaire from '../../../Assets/Images/work/Laffaire.webp';
 import RGI from '../../../Assets/Images/work/rgi.webp';
 import lakme from '../../../Assets/Images/work/lakme.webp';
 import barc from '../../../Assets/Images/work/BARC.webp';
+import box from '../../../Assets/Images/work/box.jpg';
+
+
+import worknahar from '../../../Assets/Images/work/nahar.jpg';
+import workryan from '../../../Assets/Images/work/ryan.jpg';
+import workmahindrasolariz from '../../../Assets/Images/work/mahindrasolariz.jpg';
+import worksiyarmas from '../../../Assets/Images/work/siyarmas.jpg';
+import workdhanvarsha from '../../../Assets/Images/work/dhanvarsha.jpg';
+import workjpinfra from '../../../Assets/Images/work/jpinfra.jpg';
+import workmchi from '../../../Assets/Images/work/mchi.jpg';
+import workaldo from '../../../Assets/Images/work/aldo-tmb.jpg';
+import workoo from '../../../Assets/Images/work/oo.jpg';
+import workcodashop from '../../../Assets/Images/work/codashop/codaShoptm.jpg';
+import workchineswok from '../../../Assets/Images/work/chineseWok/chineseWok-tm.jpg';
+import worksiyaramedia from '../../../Assets/Images/work/siyaram-tmb.jpg';
+
+
 
 // Tech
 export const allData = [
@@ -168,6 +185,156 @@ export const allData = [
         department: 'Production'
     },
 
+
+
+    // New
+
+    {
+        id: 1,
+        title: 'Massive Organic Growth for Nahar Group’s Search Presence',
+        tags: [
+            { name: 'Digital Marketing', link: '' },
+            { name: 'SEO', link: '' }
+        ],
+        image: worknahar,
+        link: '/work/case-studies/massive-organic-growth-for-nahar-groups-search-presence',
+        brand: "Nahar Group’s",
+        department: 'Keyword'
+    },
+    {
+        id: 2,
+        title: 'Consolidation of 91+ Websites and Tremendous SEO Growth for Ryan Group',
+        tags: [
+            { name: 'Digital Marketing', link: '' },
+            { name: 'SEO', link: '' },
+            { name: 'Website Consolidation', link: '' }
+        ],
+        image: workryan,
+        link: '/work/case-studies/consolidation-of-91-plus-websites-and-tremendous-seo-growth-for-ryan-group',
+        brand: "Ryan Group",
+        department: 'Keyword'
+    }, 
+    {
+        id: 3,
+        title: 'Industry Leading Organic Search Results from Scratch for Mahindra Solarize',
+        tags: [
+            { name: 'Digital Marketing', link: '' },
+            { name: 'SEO', link: '' },
+            { name: 'Website Launch', link: '' }
+        ],
+        image: workmahindrasolariz,
+        link: '/work/case-studies/industry-leading-organic-search-results-from-scratch-for-mahindra-solarize',
+        brand: "Mahindra Solarize",
+        department: 'Keyword'
+    },
+    {
+        id: 4,
+        title: "Enhancing Organic User Engagement for Siyaram's",
+        tags: [
+            { name: 'Digital Marketing', link: '' },
+            { name: 'SEO', link: '' },
+        ],
+        image: worksiyarmas,
+        link: '/work/case-studies/enhancing-organic-users-engagement-for-siyarams',
+        brand: "Siyaram's",
+        department: 'Keyword'
+    },
+
+    {
+        id: 5,
+        title: 'Successful Mobile App Download Campaign for Dhanvarsha',
+        tags: [
+        ],
+        image: workdhanvarsha,
+        link: '/work/case-studies/successful-mobile-app-download-campaign-for-dhanvarsha',
+        brand: "Dhanvarsha",
+        department: 'Media'
+    },
+    {
+        id: 6,
+        title: 'Multichannel Lead Gen Campaign for JP Infra',
+        tags: [
+        ],
+        image: workjpinfra,
+        link: '/work/case-studies/multi-channel-lead-gen-campaign-for-jpinfa',
+        brand: "JP Infra",
+        department: 'Media'
+    },
+    {
+        id: 7,
+        title: 'Promoting India’s Biggest Award Function for Real Estate: CREDAI MCHI Golden Pillar Awards',
+        tags: [
+        ],
+        image: workmchi,
+        link: '/work/case-studies/promoting-indias-biggest-award-function-for-real-estate-credai-mchi-golden-pillar-awards',
+        brand: "CREDAI MCHI Golden Pillar Awards",
+        department: 'Media'
+    },
+    {
+        id: 8,
+        title: 'Leveraging Digital to Generate Online Registrations for an Event: MCHI Maha Property Expo',
+        tags: [
+        ],
+        image: workmchi,
+        link: '/work/case-studies/leveraging-digital-to-generate-online-registrations-for-an-event-mchi-maha-property-expo',
+        brand: "MCHI Maha Property Expo",
+        department: 'Media'
+    },
+    {
+        id: 9,
+        title: "Promoting ALDO's SS'19 and Wedding Collections",
+        tags: [
+        ],
+        image: workaldo,
+        link: '/work/case-studies/promoting-aldos-ss19-and-wedding-collections',
+        brand: "ALDO's",
+        department: "Media"
+    },
+   
+    {
+        id: 10,
+        title: "New Year's Campaign Hits the Mark with Siyaram's: Leveraging Celebrity Power for Maximum Impact",
+        tags: [
+        ],
+        image: worksiyaramedia,
+        link: '/work/case-studies/new-years-campaign-hits-the-mark-with-siyarams-leveraging-celebrity-power-for-maximum-impact',
+        brand: "Siyaram's",
+        department: "Media"
+    },
+    {
+        id: 10,
+        title: "Chinese Wok's Post-Lockdown Revival: Influencer Campaign Boosts Starter Spread",
+        tags: [
+        ],
+        image: workchineswok,
+        link: '/work/case-studies/chinese-woks-post-lockdown-revival-influencer-campaign-boosts-starter-spread',
+        brand: "Chinese Wok's",
+        department: "Media"
+    },
+
+    {
+        id: 11,
+        title: "Octarine Organics: Enchanting Mushroom Magic Box with Innovative Packaging Design",
+        tags: [
+        ],
+        image: workoo,
+        link: '/work/case-studies/octarine-organics-enchanting-mushroom-magic-box-with-innovative-packaging-design',
+        brand: "Octarine Organics",
+        department: "Design"
+    },
+
+    {
+        id: 12,
+        title: "Codashop Gets Gamers Grooving: Engaging BGMI Players with a Unique Rap Song and Dance Contest",
+        tags: [
+        ],
+        image: workcodashop,
+        link: '/work/case-studies/codashop-gets-gamers-grooving-engaging-bgmi-players-with-a-unique-rap-song-and-dance-contest',
+        brand: "Codashop Gets Gamers Grooving",
+        department: "Content"
+    },
+
+
 ];
 
 // State for each tab
@@ -188,7 +355,7 @@ const All = () => {
                         <Link to={item.link} className='workGridItemLink'>
                             <div className='cursor09'></div>
                             <div className='workGridItemImg'>
-                                <img src={item.image} alt={item.title} />
+                                <img src={item.image} alt={item.title} loading='lazy' />
                                 <div className='workGridItemHover'>
                                     <div className='workGridItemHoverIn'>
                                         <h3>{item.title}</h3>

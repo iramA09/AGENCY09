@@ -635,20 +635,25 @@ p {
     width: fit-content;
     position: absolute;
     gap: 5px;
+    width: fit-content;
+    margin: auto;
 
     li {
-        width: 10px;
-        height: 10px;
-        display: block;
+        width: 10px!important;
+        height: 10px!important;
+        display: block!important;
 
         button {
-            width: 100%;
-            height: 100%;
-            font-size: 0;
-            border: none;
-            background: #fff;
-            border-radius: 100%;
-            cursor: pointer;
+            width: 100%!important;
+            height: 100%!important;
+            font-size: 0!important;
+            border: none!important;
+            background: #fff!important;
+            border-radius: 100%!important;
+            cursor: pointer!important;
+            &::before {
+                font-size: 0px!important;
+            }
         }
 
         &.slick-active button {
@@ -1693,7 +1698,15 @@ footer{
     }
 
 }
-
+.form_response{
+    .error{
+        all: unset;
+        text-align: center;
+        display: block;
+        padding: 0 0 20px;
+        font-size: 21px;
+    }
+}
 
 // 404 error end
 
@@ -1725,19 +1738,23 @@ footer{
             height: 100%;
         }
         .slick-dots{
-            left: 0;
-            right: 0;
-            bottom: 10%;
-            gap: 10px;
+            left: 0!important;
+            right: 0!important;
+            bottom: 10%!important;
+            gap: 10px!important;
+            width: fit-content;
+            margin: auto;
             li{
-                width: 50px;
-                height: 6px;
+                width: 40px!important;
+                height: 5px!important;
+                margin: auto!important;
                 button{
-                    border-radius: 10px;
+                    border-radius: 10px!important;
                     background: #7ce1d5;
                     transition: all 0.5s;
                     position: relative;
                     overflow: hidden;
+                    padding: 0!important;
                     &::before{
                         content: '1';
                         display: block;
@@ -2028,9 +2045,9 @@ footer{
         }
     }
     .workGridItem{
-        margin: 0;
+        margin:auto 0;
         height: fit-content;
-        &:nth-child(4n + 4) {margin-top: -35%;}
+        // &:nth-child(4n + 4) {margin-top: -35%;}
     }
 }
 .navBarC{
@@ -2868,7 +2885,13 @@ footer{
     }
 }
 // Milestones End
-
+.slick-arrow.slick-prev {
+    transform: rotate(180deg)!important;
+}
+.slick-arrow{
+    &::before{display: none;}
+}
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{  background: image-set!important;}
 
 // Awards
 .awards09{
@@ -2880,9 +2903,9 @@ footer{
     position: inherit!important;
     .slick-arrow{
         position: absolute;
-        background: url('../Images/icons/arrow-right2.webp') no-repeat;
-        background-position: center;
-          background-size: 26%;
+        background: url('../Images/icons/arrow-right2.webp') no-repeat!important;
+        background-position: center!important ;
+          background-size: 26%!important;
         width: 40px;
         height: 40px;
         bottom: 5%;
@@ -2891,6 +2914,8 @@ footer{
         border-radius: 100%;
         left: 0;
         right: 0;
+        top: inherit;
+        transform: translate(0px, 0px);
         &.slick-next{
             left: 60px;
         }
@@ -3016,10 +3041,6 @@ footer{
 
 }
 
-
-
-
-
 .pillars09{
  padding: 80px 0;
 }
@@ -3059,6 +3080,30 @@ footer{
     }
 }
 // Partner Companies End
+
+// video
+.ytfm iframe{
+    @media(max-width:768px){
+    width: 100%; height:auto
+}
+}
+
+.ytgrd{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:16px;
+
+    @media(max-width:768px){
+        grid-template-columns: 1fr;
+        margin-bottom: 20px;
+    }
+
+    iframe{
+        width: 100%;
+    }
+    
+}
+// video
 
 
 // About US End
@@ -3169,11 +3214,18 @@ footer{
         }
     }
 }
+
+.brdwh{
+    .form-group{
+    border-bottom:1px solid $white
+    }
+}
+
 .formDark{
     .form-group{
         .form-control{
             color: $black;
-            border-bottom: 1px solid $black!important;
+            border-bottom: 1px solid $black;
             &::placeholder{
                 opacity:0.5;
                 color: $black;
@@ -3182,6 +3234,8 @@ footer{
     }
 
 }
+
+
     .form-group-btn{
         white-space: nowrap;
         width: 49%;
@@ -3200,6 +3254,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
+    
 }
 // Form09 End
 
@@ -3351,15 +3406,21 @@ footer{
 }
 .LifeAtA09Row{
     width: 90%;
+    position: relative;
     .slick-list{
         overflow: inherit;
     }
 .slick-arrow{
     background-color: $green;
+    background-image: url('../Images/icons/arrow-right2.webp') ;
+    background-position: center;
+    background-size: 30%!important;
+    background-repeat: no-repeat;
     width: 40px;
     height: 40px;
     border-radius: 100%;
     background-size: 60%;
+
     &.slick-disabled{
         opacity: 0;
     }
@@ -4266,36 +4327,51 @@ footer{
         display: flex;
         gap:50px;
         flex-wrap: wrap;
+        *{
+            font-size: 15px;
+        }
         .cSsecMinBCol{
             width: 30%;
             margin: 0;
+
+            &:nth-of-type(4n+1){
+                width: 30%;
+            }
+
+            &:nth-of-type(4n+2){
+                width: 20%;
+            }
+
+            &:nth-of-type(4n+3){
+                width: 20%;
+            }
+
+            &:nth-of-type(4n+4){
+                width: 15%;
+            }
+
             ul{
                 padding: 0 10px;
             }
-            // &:first-child{
-            //     width: 25%;
-            // }
-
-            // &:nth-child(5){
-            //     width: 25%;
-            // }
-            // // &:last-child{
-            //     width: 30%;
-            // }
-            h4{
-                color: $black;
-                text-transform: uppercase;
-                font-family: $bold;
+            &.cSsecMinBColS2{
+                width: 30%;  
             }
-            p{
-                color: #242323;
-                margin-bottom: 12px;
-            }
-            ul{
-                
-                li{
-                    padding-bottom:12px;
-                }
+        }
+        
+        h4{
+            color: $black;
+            text-transform: uppercase;
+            font-family: $bold;
+        }
+        p{
+            color: #242323;
+            margin-bottom: 12px;
+        }
+        ul,ol{
+            padding-left: 25px;
+            
+            li{
+                padding-bottom:10px;
             }
         }
     }
@@ -4336,16 +4412,15 @@ footer{
 .mainslider{
     position: relative;
     .slick-arrow{
-        background-image:url('../Images/icons/arrow-right2.webp');
-        background-repeat: no-repeat;
-        background-size: contain;
+        background-image:url('../Images/icons/arrow-right2.webp')!important;
+        background-repeat: no-repeat!important;
         width: 35px;
         height: 35px;
         border-radius: 100%;
         position: absolute;
-        background-color: $yellow;
-        background-position: center;
-        background-size: 20%;
+        background-color: $yellow!important;
+        background-position: center!important;
+        background-size: 20%!important;
         opacity: 1;
         &.slick-prev{
             top: 50%;
@@ -4525,6 +4600,7 @@ footer{
     }
     h2{
         font-size: 30px;
+        font-weight: 600;
         margin: 0;
         margin-bottom: 15px;
         line-height: 38px;
@@ -4558,14 +4634,14 @@ footer{
         font-size: 18px;
         margin-bottom: 20px;
         margin:0;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 28px;
     }
     h6{
         font-size: 15px;
         margin-bottom: 20px;
         margin: 0;  
-        font-weight: 500;
+        font-weight: 600;
         line-height: 28px;
        
     }
@@ -4600,14 +4676,23 @@ footer{
         &::after{
             position: absolute;
             content:'';
-            width:8px;
-            height: 8px;
+            width:5px;
+            height:5px;
             top:12px;
-            left:0;
+            left:-10px;
             transform: translateY(-50%);
             background-color: #006dea;
             border-radius: 20px;
         }   
+    }
+    iframe{
+        width:100%;
+    }
+    .img-txt{
+        display: flex;
+        @media(max-width:768){
+            flex-direction: column;
+        }
     }
 }
 }
@@ -4662,9 +4747,9 @@ footer{
     display:flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
 & button{
-    border: none;
+    border: none !important;
     margin: 0;
     height: 30px;
     width: 30px;
@@ -4693,7 +4778,7 @@ footer{
     margin: 0;
 .share-buttons{
     position: sticky;
-    top:0;
+    top:115px;
     display: flex;
     flex-direction: column;
     gap:10px;
@@ -4885,10 +4970,92 @@ footer{
             border:1px solid #69e879;
         }
     }
-    }
-        
+    }     
 // Blog End
 
+// VIDEO CSS
+
+.vdCol{
+    display: flex;
+    @media(max-width:768px){
+        flex-direction: column;
+        gap: 20px;
+    }
+    video{
+        width:400px;
+        height: 400px;
+        @media(max-width:768px){
+            width:100%;
+            height: auto;
+        }
+    }
+}
+
+// VIDEO CSS
+
+// URL Builder
+
+.urlbldr_sec{
+    padding: 100px 0 0;
+
+    .arrowRightH{
+        @media (max-width:768px){
+            display: none;
+        }
+    }
+}
+
+.URLBuilder{
+.cus_url_f{
+    display: block;
+    width: 100%;
+}
+
+
+.urlbld_l{
+    width: 100%;margin: 0;
+    h2{
+        text-transform: uppercase;margin:auto 0 10px;
+    }
+    label{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    small{
+        background:#fff118;
+        padding: 1px;
+        font-style: italic;
+        margin-left: 10px;
+    }
+  
+}
+.urlbld_r{width: 100%;margin:auto;}
+.url_sec h1{margin-bottom: 10px;}
+.url_sec h2{margin-bottom: 10px;}
+.urlbld_main h4{padding: 20px 0px;}
+li.whoweare_active a{ color:#000; border-bottom:1px solid}
+.url-flx{display:block;margin:40px 0px;}
+.url-flx .urlbld_l {display: flex;flex-direction: column;}
+.url-flx .urlbld_l  p{font-size: 12px;margin-bottom:10px;}
+.url-flx .urlbld_l  input{width: 100%;padding:8px 10px;margin:5px 0px 10px 0px;border: 1px solid #000;border-radius: 2px;}
+.url-flx .urlbld_l  .url-frm-group{margin: 4px 0px;}
+.url-flx .urlbld_l  textarea{width: 100%;padding:8px 10px;margin-top: 10px;border: 1px solid #000;border-radius: 2px;}
+.url-flx .copy-btn{margin:20px 0px 0px 0px}
+.url-flx .copy-btn button{background:#006dea;border: 1px solid #fff;padding: 12px 30px;text-transform: uppercase;font-size: 15px;border-radius: 50px;cursor: pointer;color: #fff;}
+.url-flx .copy-btn button:hover{transition: .3s ease-in-out ;border:1px solid #006dea;background-color: transparent;color: #000;}
+.url-flx .urlbld_r h4{margin-bottom: 10px;}
+.url-flx .urlbld_r p{margin-top: 10px;margin-bottom: 20px;}
+.toast {visibility: hidden;min-width: 250px;margin-left: -125px;background-color: #333;color: #fff;text-align: center;border-radius: 2px;position: fixed;z-index: 1;left: 50%;bottom: 30px;font-size: 17px;box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);padding: 16px;opacity: 0;transition: opacity 0.5s, visibility 0.5s;}
+.toast.show {visibility: visible;opacity: 1;}
+@media(max-width:768px){
+.url-flx{flex-direction: column;}
+.url-flx .urlbld_l{width: 100%;}
+.url-flx .urlbld_r{width: 100%;margin-top: 30px;}
+.url-flx .urlbld_l  input{margin-top: 10px;}
+}
+}
+
+// URL Builder
 
 
 @media screen and (max-width: 5000px) and (min-width: 900px) and (max-height: 750px)  {

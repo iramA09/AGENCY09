@@ -117,7 +117,7 @@ const StartAProjectFormPopup = ({ closeModal, defaultService }) => {
   ];
 
   return (
-    <div className='modalBackground fixForm'>
+    <div className='modalBackground fixForm brdwh'>
       <div className='modalContainer'>
         <button className='modalClose' onClick={() => closeModal(false)}><IoCloseCircle /></button>
         <div className='center'>
@@ -180,7 +180,7 @@ const StartAProjectFormPopup = ({ closeModal, defaultService }) => {
               </div>
             </div>
             <div className='floatingDiv'>
-              <img src='/assets/images/common/floating-icons.svg' alt='' />
+              <img loading='lazy' src='/assets/images/common/floating-icons.svg' alt='' />
             </div>
           </form>
           <div className="privacyText">

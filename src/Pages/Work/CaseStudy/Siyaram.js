@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
@@ -100,7 +99,6 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const TataTrucks = () => {
-    useLenisScroll();
 
 
   return (
@@ -123,7 +121,7 @@ const TataTrucks = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy' />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -138,26 +136,52 @@ const TataTrucks = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>Siyaram's, a leader in men’s clothing, aims to understand and cater to the diverse needs of its customers. By staying on the cutting edge of innovation and technology, Siyaram's continually strives to turn their customers' fashion dreams into reality. Our task was to design a visually captivating website that embraces a user-centric approach to its information architecture while effectively showcasing the brand's rich legacy.</p>
+                        <p>Siyaram's, a leader in men’s clothing, is dedicated to understanding and catering to the diverse needs of its customers by staying at the forefront of innovation and technology. Our task was to design a visually captivating website that embraced a user-centric approach to its information architecture while effectively showcasing the brand's rich legacy and commitment to fashion excellence.</p>
                     </div>
-
+<div className="cSsecMinBCol">
+    <h4>Industry</h4>
+    <p>Fashion</p>
+</div>
                     <div className='cSsecMinBCol'>
-                        <h4>Key Highlights</h4>
+                        <h4>Services</h4>
                         <ul>
-                            <li><b> Dynamic Content Population: </b>  Enabled real-time updates and dynamic content display to keep the website fresh and engaging.</li>
-                            <li><b>Modern UI: </b> Developed a sleek and contemporary user interface that aligns with the brand’s innovative image.</li>
-                            <li><b> Quick Loading:  </b>Ensured fast loading times for a seamless user experience.</li>
-                            <li><b>Mobile First Approach: </b> Optimized the website for mobile devices to provide a consistent and high-quality experience across all platforms.</li>
+                            <li>Web Design & Development</li>
+                            <li>UI/UX Design</li>
                         </ul>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                    <p>Web Design & Development, UI/UX Design</p>
+                    <h4>Objective</h4>
+                    <p>To create a visually compelling and user-friendly website for Siyaram's that reflects the brand's innovative spirit, showcases its rich legacy, and provides an exceptional user experience.</p>
                     </div>
 
- 
+                    <div className='cSsecMinBCol'>
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Designing a website that balances the brand's rich legacy with a modern, innovative image.</li>
+                            <li>Ensuring the website remains fresh and engaging with real-time content updates.</li>
+                            <li>Achieving quick loading times for a seamless user experience across all devices.</li>
+                        </ul>
+                    </div>
 
+                    <div className='cSsecMinBCol'>
+                        <h4>Approach</h4>
+                        <ul>
+                            <li>Developed a sleek and contemporary user interface that aligns with Siyaram's brand identity.</li>
+                            <li>Implemented dynamic content population to enable real-time updates and keep the website engaging.</li>
+                            <li>Optimized the website for mobile devices, adopting a mobile-first approach to ensure a consistent and high-quality experience across all platforms.</li>
+                            <li>Focused on reducing loading times to enhance the overall user experience.</li>
+                        </ul>
+                    </div>
 
+                    <div className='cSsecMinBCol'>
+                        <h4>Results</h4>
+                        <ul>
+                            <li>Successfully created a visually captivating and user-friendly website that aligns with Siyaram's brand identity.</li>
+                            <li>Enhanced user engagement through dynamic content updates and a modern UI.</li>
+                            <li>Delivered a seamless browsing experience with quick loading times</li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -166,7 +190,7 @@ const TataTrucks = () => {
             <div className='cSsecMinC'>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork1} /></span>
+                    <span><img src={ourwork1} loading='lazy' /></span>
                 </div>
 
                 
@@ -177,23 +201,23 @@ const TataTrucks = () => {
 <div className='mainslider'>
     <Slider {...mainSlider} className='clientelSlider slick-slider'>
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork2} /></span>
+                    <span><img src={ourwork2} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork3} /></span>
+                    <span><img src={ourwork3} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork4} /></span>
+                    <span><img src={ourwork4} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork5} /></span>
+                    <span><img src={ourwork5} loading='lazy' /></span>
                 </div>
 
                 <div className ='imgCol1 imgCol'>
-                    <span><img src={ourwork6}/></span>
+                    <span><img src={ourwork6} loading='lazy' /></span>
                 </div>
     </Slider>
 </div>

@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
-import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
-import Transitions from '../../Hooks/Transitions';
 import RippleButton from '../../Hooks/RippleButton';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 import Slider from 'react-slick';
@@ -14,11 +12,7 @@ import LogosSlider from '../../Components/LogosSlider';
 import { PiStarFourFill } from "react-icons/pi";
 import { GoNorthStar } from "react-icons/go";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-
-// Tabs
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-// Tabs End
+ 
 
 // Images
 import ourServiesBtn from '../../Assets/Images/icons/ourServiesBtn.webp';
@@ -135,8 +129,7 @@ const testimonialSlider = {
  
 
 const BrandDesign = () => {
-  useLenisScroll();
-
+ 
 //Tools Data
   const toolsData = [
     {
@@ -309,10 +302,10 @@ const testimonialData = [
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
                         <ul className='trustedByLogos'>
-                            <li><img src={bitsPilani} alt=""/></li>
-                            <li><img src={tataMotors2} alt=""/></li>
-                            <li><img src={ryan} alt=""/></li>
-                            <li><img src={mahindraAccelo} alt=""/></li>
+                            <li><img src={bitsPilani} loading='lazy' alt=""/></li>
+                            <li><img src={tataMotors2} loading='lazy' alt=""/></li>
+                            <li><img src={ryan} loading='lazy' alt=""/></li>
+                            <li><img src={mahindraAccelo} loading='lazy' alt=""/></li>
                         </ul>
                     </div>
                 </div>
@@ -321,13 +314,13 @@ const testimonialData = [
                         <span></span>
                     </div>
                     <div className='RoundIconB RoundIcon pinkB'></div>
-                    <img src={pattern} alt="pattern" className='pattern' />
+                    <img src={pattern} loading='lazy' alt="pattern" className='pattern' />
                 </div>
 
 
                 <div className='SolutionsColOurServies'>
                     <Link to='#'>
-                        <img src={ourServiesBtn} alt="Our Servies" />
+                        <img src={ourServiesBtn} loading='lazy' alt="Our Servies" />
                     </Link>
                 </div>
             </div>
@@ -369,13 +362,13 @@ const testimonialData = [
                 Amplifying Business Progress<br/>
                     <span className='iconSVG'>
                     <i className='iconF'>
-                        <img src={starY} alt='Star Icon' />
+                        <img src={starY} loading='lazy' alt='Star Icon' />
                     </i>
                     </span>
                     Through Smart Solutions
                     <span className='iconSVG'>
                     <i className='iconF'>
-                        <img src={starY} alt='Star Icon' />
+                        <img src={starY} loading='lazy' alt='Star Icon' />
                     </i>
                     </span>
                 </h2>
@@ -415,7 +408,7 @@ const testimonialData = [
                                 </div>
 
                                 <div className='solutionsCol'>
-                                    <img src={corporateWebsite} alt="corporateWebsite" />
+                                    <img src={corporateWebsite} loading='lazy' alt="corporateWebsite" />
                                 </div>
                                 
                                 </div>    
@@ -470,9 +463,9 @@ const testimonialData = [
                 
                 <div className='Heading center HeadingIcon'>
                 <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                         TOOLS
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                 </h2>
                 </div>
 
@@ -483,7 +476,7 @@ const testimonialData = [
                 <div key={index} className='item'>
                 <div className='toolsCol'>
                     <Link to={tools.link}>
-                        <div className='toolsImg'><img src={tools.image}/></div>
+                        <div className='toolsImg'><img src={tools.image} loading='lazy' /></div>
                         <div className='toolsTitale'>{tools.titale}</div>
                         <div className='textDecoration'><p>{tools.decoration}</p></div>
                         <div className='toolsBtn'><IoIosArrowDroprightCircle /></div>
@@ -534,9 +527,9 @@ const testimonialData = [
             <div className='Heading center HeadingIcon'>
             <h3 className='sizeH5 uppercase bold pb-20'>Case studies</h3>
                 <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                     Lorem ipsum dolor
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                 </h2>
             </div>
 
@@ -548,7 +541,7 @@ const testimonialData = [
                         <div key={index} className='item'>
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/></div>
+                                <div className='CaseStudyImg'><img src={CaseStudy.image} loading='lazy'/></div>
                                 <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
                                 <div className='textTag'><p>{CaseStudy.tag}
                                 
@@ -599,9 +592,9 @@ const testimonialData = [
 
                 <div className='Heading center HeadingIcon'>
                     <h2 className='sizeH1 uppercase'>
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                        <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                         TESTIMONIALS
-                        <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                        <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy' alt='Star Icon' /></i></span>
                     </h2>
                 </div>
 
@@ -614,7 +607,7 @@ const testimonialData = [
               <div className='textwithimg'>
                 <div className='awardsYear'><h5>{testimonial.name}</h5></div>
                 <div className='awardsDesignation'><p>{testimonial.designation}</p></div>
-                <div className='awardsImg'><img src={testimonial.image} alt='testimonial Logo' /></div>
+                <div className='awardsImg'><img src={testimonial.image} loading='lazy' alt='testimonial Logo' /></div>
                 </div>
               </div>
             </div>
@@ -641,7 +634,7 @@ const testimonialData = [
 
                 <div className='freeAuditSecCol'>
                     <Link to=''>
-                      <img src={clickHere} alt='Click Here' />
+                      <img src={clickHere} loading='lazy' alt='Click Here' />
                     </Link>
                 </div>
             </div>

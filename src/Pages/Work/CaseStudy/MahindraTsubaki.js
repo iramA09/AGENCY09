@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiStarFourFill } from "react-icons/pi";
@@ -76,7 +75,6 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const MahindraTsubaki = () => {
-    useLenisScroll();
 
 
   return (
@@ -99,7 +97,7 @@ const MahindraTsubaki = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy' />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -159,24 +157,24 @@ const MahindraTsubaki = () => {
             <div className='cSsecMinC'>
 
                 <div className='imgCol1 imgCol '>
-                    <span><img src={ourwork1} /></span>
+                    <span><img src={ourwork1} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork2} /></span>
+                    <span><img src={ourwork2} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork3} /></span>
+                    <span><img src={ourwork3} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork4} /></span>
+                    <span><img src={ourwork4} loading='lazy' /></span>
                 </div>
 
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork5} /></span>
+                    <span><img src={ourwork5} loading='lazy' /></span>
                 </div>
 
             </div>
@@ -200,9 +198,9 @@ const MahindraTsubaki = () => {
 
             <div className='Heading center HeadingIcon'>
                 <h2 className='sizeH1 uppercase'>
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy'  alt='Star Icon' /></i></span>
                     Related Work
-                    <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                    <span className='iconSVG'><i className='iconF'><img src={starY} loading='lazy'  alt='Star Icon' /></i></span>
                 </h2>
             </div>
 
@@ -214,7 +212,7 @@ const MahindraTsubaki = () => {
                         <div key={index} className='item'>
                         <div className='CaseStudyCol'>
                             <Link to={CaseStudy.link}>
-                                <div className='CaseStudyImg'><img src={CaseStudy.image}/></div>
+                                <div className='CaseStudyImg'><img src={CaseStudy.image} loading='lazy' /></div>
                                 <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
                                 <div className='textTag'><p>{CaseStudy.tag}
                                 

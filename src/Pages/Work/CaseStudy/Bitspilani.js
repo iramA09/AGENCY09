@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
@@ -100,7 +99,6 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const TataTrucks = () => {
-    useLenisScroll();
 
 
   return (
@@ -123,7 +121,7 @@ const TataTrucks = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy'  />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -138,27 +136,63 @@ const TataTrucks = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>We undertook the challenge of revamping the website for BITS Pilani, India's premier non-government technical institute. The previous website design was outdated, non-mobile-friendly, and did not reflect the institute’s prestige or recent developments. Additionally, UI and UX issues made the browsing experience confusing for users.</p>
+                        <p>We revamped the website for BITS Pilani, India's premier non-government technical institute, to modernize its digital presence. The previous website was outdated, non-mobile-friendly, and did not reflect the institute's prestige. It also suffered from UI/UX issues that made navigation and content access difficult for users.</p>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Key Highlights</h4>
-                        <ul>
-                            <li><b> Simplified User Journey:</b> Streamlined navigation for all stakeholders with a mindful UI-UX approach, ensuring an intuitive and seamless browsing experience.</li>
-                            <li><b>Simplified Content Structure: </b>  Organized content to be easily accessible and relevant, enhancing the user experience.</li>
-                            <li><b>Elevated Design Language: </b> Introduced a modern design language that reflects the institute's prestige and forward-thinking approach.</li>
-                            <li><b>Cross-Device Compatibility: </b>Ensured the website is fully responsive, providing a consistent experience across all devices.</li>
-                            <li><b>Advanced Search: </b>Implemented a robust search function to facilitate easy access to information.</li>
-                            <li><b>Dynamic Content Population:   </b>Enabled real-time updates and dynamic content display to keep the website current and engaging.</li>
-                            <li><b>Modern UI: </b> Developed a sleek and user-friendly interface.</li>
-                            <li><b>Well-Mapped User Journey:  </b>Carefully mapped out user journeys to cater to different user groups.</li>
-                            <li><b>Robust CMS: </b>Built a powerful content management system to support ongoing updates and maintenance.</li>
-
-                        </ul>
+                        <h4>Industry</h4>
+                        <p>Education</p>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                       <p>Web Design & Development, UI/UX Design</p>
+                       <h4>Services</h4>
+                       <ul>
+                        <li>Web Design & Development</li>
+                        <li>UI/UX Design</li>
+                       </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                       <h4>Objective</h4>
+                        <p>To create a modern, responsive website for BITS Pilani that reflects its prestige and enhances the user experience for all stakeholders.</p>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                       <h4>Challenges</h4>
+                       <ul>
+                        <li>Overhauling an outdated website design to be mobile-friendly and visually aligned with the institute’s esteemed reputation.</li>
+                        <li>Addressing UI/UX issues to simplify navigation and improve content accessibility.</li>
+                        <li>Ensuring the website could support dynamic content updates and provide a consistent experience across all devices.</li>
+                       </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                       <h4>Approach</h4>
+                       <ul>
+                        <li>Simplified the user journey with a mindful UI/UX design, making navigation intuitive and seamless for all stakeholders.</li>
+                        <li>Organized content into a simplified structure that is easily accessible and relevant to users.</li>
+                        <li>Introduced a modern design language that elevates the institute's online presence.</li>
+                        <li>Ensured full cross-device compatibility to provide a consistent browsing experience on any device.</li>
+                        <li>Implemented an advanced search function for easy access to information.</li>
+                        <li>Enabled real-time updates and dynamic content display to keep the website current and engaging.</li>
+                        <li>Developed a sleek and user-friendly modern interface.</li>
+                        <li>Mapped out user journeys to cater to different user groups effectively.</li>
+                        <li>Built a robust content management system (CMS) to support ongoing updates and maintenance.</li>
+                       </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                       <h4>Results</h4>
+                       <ul>
+                        <li>A modernized website that aligns with BITS Pilani's prestigious image.</li>
+                        <li>Enhanced user experience across all devices with improved navigation and content accessibility.</li>
+                        <li>Increased user engagement due to a more intuitive and dynamic online presence.</li>
+                       </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                       <h4>Year</h4>
+                       <p>2023</p>
                     </div>
 
                 </div>
@@ -167,32 +201,28 @@ const TataTrucks = () => {
 
 
             <div className='cSsecMinC'>
-
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork1} /></span>
+                    <span><img src={ourwork1} loading='lazy' /></span>
                 </div>
-
-                
-
             </div>
 
 
 <div className='mainslider'>
     <Slider {...mainSlider} className='clientelSlider slick-slider'>
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork2} /></span>
+                    <span><img src={ourwork2} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork3} /></span>
+                    <span><img src={ourwork3} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork4} /></span>
+                    <span><img src={ourwork4} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork5} /></span>
+                    <span><img src={ourwork5} loading='lazy' /></span>
                 </div>
 
     </Slider>

@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import { motion } from 'framer-motion'; 
 
 // Images
 import rgiLogo from '../Assets/Images/hero/rgi-logo.webp'
@@ -102,23 +101,23 @@ const HeroBanner = () => {
           <div className='HeroSlider'>
             <Slider {...homescreenSliderSettings} className="homescreen-slick slick-slider">
               {slideData.map((slide, index) => (
-                <motion.div 
+                <div 
                   key={index} 
                   className={`item ${slide.className}`} 
                 >
                   <div className='HeroImage'>
                     <div className='container'>
-                      <div className='Herobg'><img src={slide.image} alt={`Slide ${index} - ${slide.image}`} /></div>
+                      <div className='Herobg'><img loading='lazy' src={slide.image} alt={`Slide ${index} - ${slide.image}`}  /></div>
                       <div className='videoBg'>
                         {slide.video && (
-                          <video ref={el => videoRefs.current[index] = el} loop playsInline >
+                          <video ref={el => videoRefs.current[index] = el} loop playsInline muted >
                             <source src={slide.video} type="video/mp4" />
                           </video>
                         )}
                       </div>
                      
                       <div className='HeroText'>
-                      <div className='HerobgLogo'><img src={slide.imageLogo} alt={`Slide ${index} - ${slide.image}`} /></div>
+                      <div className='HerobgLogo'><img loading='lazy' src={slide.imageLogo} alt={`Slide ${index} - ${slide.image}`} /></div>
                         {slide.title && <h1 dangerouslySetInnerHTML={{ __html: slide.title }} />}
                         {slide.description && <p>{slide.description}</p>}
                         <div className='HeroBtn'>
@@ -127,7 +126,7 @@ const HeroBanner = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </Slider>
           </div>

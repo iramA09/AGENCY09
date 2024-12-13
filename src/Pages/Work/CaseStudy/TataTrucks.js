@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
@@ -101,7 +100,6 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const TataTrucks = () => {
-    useLenisScroll();
 
 
   return (
@@ -124,7 +122,7 @@ const TataTrucks = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy' />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -139,26 +137,54 @@ const TataTrucks = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>To enhance the online presence and brand visibility of Tata Motors' commercial vehicle range, we crafted five dynamic websites. These websites were designed to spotlight the diverse lineup of Tata Motors' commercial vehicles, including small trucks, medium trucks, and buses & vans. The goal was to drive online engagement, showcase the reliability and performance of the vehicles, and provide a seamless user experience.</p>
+                        <p>To enhance the online presence and brand visibility of Tata Motors' commercial vehicle range, we developed five dynamic websites. These sites were specifically designed to highlight Tata Motors' diverse lineup, including small trucks, medium trucks, and buses & vans. The objective was to drive online engagement, showcase the reliability and performance of the vehicles, and provide a seamless user experience.</p>
 
 
                     </div>
 
 
                     <div className='cSsecMinBCol'>
-                        <h4>Each website features</h4>
+                        <h4>Industry</h4>
+                        <p>Automotive</p>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Services</h4>
                         <ul>
-                            <li>High-quality visuals and comprehensive information about the vehicle range.</li>
-                            <li>Interactive elements to engage users and provide an in-depth look at each vehicle's features and benefits.</li>
-                            <li>Easy navigation and user-friendly design to ensure a seamless browsing experience.</li>
+                            <li>Digital Strategy</li>
+                            <li>Web Development</li>
                         </ul>
-
-                        <p>The outcome was a significant increase in online engagement, with users spending more time exploring the detailed features of Tata Motors' commercial vehicles. The enhanced online presence helped reinforce Tata Motors' position as a leader in the commercial vehicle market.</p>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Capability</h4>
-                        <p>Digital Strategy & Web Development</p>
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Creating a robust online presence for multiple vehicle categories.</li>
+                            <li>Ensuring high user engagement and an intuitive browsing experience across the websites.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Approach</h4>
+                        <ul>
+                            <li>Developed websites featuring high-quality visuals and comprehensive information about each vehicle range.</li>
+<li>Incorporated interactive elements to engage users and provide an in-depth look at each vehicle's features and benefits.</li>
+<li>Ensured easy navigation and user-friendly design for a seamless browsing experience.</li>
+                            </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Results</h4>
+                        <ul>
+                            <li>Significant increase in online engagement.</li>
+                            <li>Users spent more time exploring the detailed features of Tata Motors' commercial vehicles.</li>
+                            <li>Enhanced Tata Motors' position as a leader in the commercial vehicle market.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Year</h4>
+                        <p>2023</p>
                     </div>
 
                 </div>
@@ -169,7 +195,7 @@ const TataTrucks = () => {
             <div className='cSsecMinC'>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork1} /></span>
+                    <span><img src={ourwork1} loading='lazy' /></span>
                 </div>
 
                 
@@ -180,27 +206,27 @@ const TataTrucks = () => {
 <div className='mainslider'>
     <Slider {...mainSlider} className='clientelSlider slick-slider'>
     <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork2} /></span>
+                    <span><img src={ourwork2} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork3} /></span>
+                    <span><img src={ourwork3} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork4} /></span>
+                    <span><img src={ourwork4} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork5} /></span>
+                    <span><img src={ourwork5} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork6} /></span>
+                    <span><img src={ourwork6} loading='lazy' /></span>
                 </div>
 
                 <div className ='imgCol1 imgCol'>
-                    <span><img src={ourwork7}/></span>
+                    <span><img src={ourwork7} loading='lazy' /></span>
                 </div>
     </Slider>
 </div>

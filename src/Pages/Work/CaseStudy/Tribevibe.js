@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
@@ -98,7 +97,6 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const Tribevibe = () => {
-    useLenisScroll();
 
 
   return (
@@ -121,7 +119,7 @@ const Tribevibe = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy' />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -136,29 +134,58 @@ const Tribevibe = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>We partnered with TribeVibe to conceptualize, strategize, and implement a cutting-edge campus ambassador program. This program was designed to engage and empower students across various campuses, leveraging technology to track and reward their performance while promoting TribeVibe’s brand.</p>
+                        <p>We partnered with TribeVibe to conceptualize, strategize, and implement an innovative campus ambassador program. This tech-driven initiative was designed to engage and empower students across various campuses, using technology to track and reward their performance while promoting TribeVibe’s brand.</p>
+                    </div>
 
-
+                    <div className='cSsecMinBCol'>
+                        <h4>Industry</h4>
+                        <p>Education & Events</p>
                     </div>
 
 
                     <div className='cSsecMinBCol'>
-                        <h4>The project involved</h4>
+                        <h4>Services</h4>
                         <ul>
-                            <li><b> CMS Website and Backend:</b>  We developed a comprehensive content management system (CMS) and backend infrastructure to collect and manage data on campus ambassadors. This system enables efficient tracking of tasks, rewards, and overall performance.</li>
-                            <li><b>Multiple User Management:</b>   The platform supports multiple user roles, ensuring smooth coordination and management of ambassadors from different campuses.</li>
-                            <li><b>Gamification & Leaderboard: </b> To motivate ambassadors and foster healthy competition, we incorporated gamification elements and a dynamic leaderboard, showcasing top performers.</li>
-                            <li><b>Analytics & Reports: </b> The system provides detailed analytics and reports, offering insights into the performance and impact of the ambassadors' activities.</li>
-                            <li><b>Campus Engagement: </b> Ambassadors are tasked with creating buzz on their college’s social media platforms, newsletters, alumni meets, and more, ensuring widespread brand visibility.</li>
-                            <li><b>Certificates & Recommendations: </b> High-performing ambassadors receive certificates of excellence and letters of recommendation, adding value to their professional portfolios.</li>
-                        </ul>
-
-                        <p>The outcome is a vibrant and engaging program that not only promotes TribeVibe’s brand but also provides valuable experiences and recognition for student ambassadors.</p>
+                            <li>Tech-Based Program Strategy & Development</li>
+                            </ul>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Capability</h4>
-                        <p>Tech-Based Program Strategy & Development</p>
+                        <h4>Objective</h4>
+                        <p>To create a tech-driven campus ambassador program that enhances TribeVibe's brand visibility across campuses, while providing students with valuable experiences and rewards.</p>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Developing a comprehensive system to manage and track the performance of numerous campus ambassadors across multiple locations.</li>
+                            <li>Incorporating engaging elements like gamification to motivate ambassadors and ensure active participation.</li>
+                            </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Approach</h4>
+                        <ul>
+                            <li>Developed a robust CMS website and backend infrastructure to collect and manage data on campus ambassadors, facilitating efficient tracking of tasks, rewards, and overall performance.</li>
+                            <li>Implemented multiple user management features to support various roles, ensuring smooth coordination across different campuses.</li>
+                            <li>Incorporated gamification elements and a dynamic leaderboard to motivate ambassadors and foster healthy competition.</li>
+                            <li>Provided detailed analytics and reports to offer insights into the performance and impact of ambassador activities.</li>
+                            <li>Focused on campus engagement by tasking ambassadors with promoting TribeVibe on their college’s social media platforms, newsletters, and events.</li>
+                            <li>Rewarded high-performing ambassadors with certificates of excellence and letters of recommendation to enhance their professional portfolios.</li>
+                            </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Results</h4>
+                        <ul>
+                            <li>Created a vibrant and engaging campus ambassador program that significantly increased TribeVibe’s brand visibility across campuses.</li>
+                            <li>Empowered students with valuable experiences, recognition, and professional development opportunities.</li>
+                            </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Year</h4>
+                       <p>2023</p>
                     </div>
 
                 </div>
@@ -169,7 +196,7 @@ const Tribevibe = () => {
             <div className='cSsecMinC'>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork1} /></span>
+                    <span><img src={ourwork1} loading='lazy' /></span>
                 </div>
 
                 
@@ -180,15 +207,15 @@ const Tribevibe = () => {
 <div className='mainslider'>
     <Slider {...mainSlider} className='clientelSlider slick-slider'>
     <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork2} /></span>
+                    <span><img src={ourwork2} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork3} /></span>
+                    <span><img src={ourwork3} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork4} /></span>
+                    <span><img src={ourwork4} loading='lazy' /></span>
                 </div>
 
     </Slider>

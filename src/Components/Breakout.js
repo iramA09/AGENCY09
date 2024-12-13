@@ -7,7 +7,7 @@ const Breakout = ({ closeModal }) => {
          <div className='modalBackground Breakout09'>
         <div className='modalContainer'>
           <button className='modalClose' onClick={() => closeModal(false)}><IoCloseCircle /></button>
-          <iframe src="https://www.agency09.in/breakout/" title="Game09" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe src="https://www.agency09.in/breakout/" title="Game09"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
       </div>
       

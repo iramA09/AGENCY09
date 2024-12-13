@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import godrejlaffaire from '../../../Assets/Images/work/Laffaire.webp';
 import RGI from '../../../Assets/Images/work/rgi.webp';
 import lakme from '../../../Assets/Images/work/lakme.webp';
+import workcodashop from '../../../Assets/Images/work/codashop.jpg';
+
 // Content
 export const ContentData = [
     {
@@ -43,6 +45,16 @@ export const ContentData = [
         brand: "Lakme Fashion Week",
         department: 'Content'
     },
+    {
+        id: 12,
+        title: "Codashop Gets Gamers Grooving: Engaging BGMI Players with a Unique Rap Song and Dance Contest",
+        tags: [
+        ],
+        image: workcodashop,
+        link: '/work/case-studies/codashop-gets-gamers-grooving-engaging-bgmi-players-with-a-unique-rap-song-and-dance-contest',
+        brand: "Codashop Gets Gamers Grooving",
+        department: "Content"
+    },
 
 ];
 
@@ -64,7 +76,7 @@ const Content = () => {
                         <Link to={item.link} className='workGridItemLink'>
                             <div className='cursor09'></div>
                             <div className='workGridItemImg'>
-                                <img src={item.image} alt={item.title} />
+                                <img src={item.image} alt={item.title} loading='lazy' />
                                 <div className='workGridItemHover'>
                                     <div className='workGridItemHoverIn'>
                                         <h3>{item.title}</h3>

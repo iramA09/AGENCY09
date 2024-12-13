@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
@@ -100,8 +99,6 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const TataTrucks = () => {
-    useLenisScroll();
-
 
   return (
     <>
@@ -123,7 +120,7 @@ const TataTrucks = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy' />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -138,22 +135,56 @@ const TataTrucks = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>We collaborated with Groupsoft to revamp their website, aligning it with their new brand identity. The objective was to create a modern, technically adept, and visually impressive website that reflects Groupsoft's core beliefs and philosophies. As a technology company, it was crucial to integrate the latest technical advancements and create a distinct tone and imagery.</p>
+                        <p>We partnered with Groupsoft to revamp their website, aligning it with their new brand identity. The goal was to create a modern, technically sophisticated, and visually compelling website that embodies Groupsoft's core beliefs and philosophies. As a leading technology company, it was essential to integrate the latest technical advancements while establishing a distinct tone and imagery.</p>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Key Highlights</h4>
+                        <h4>Industry</h4>
+                        <p>Technology (SaaS)</p>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Services</h4>
                         <ul>
-                            <li><b> Mobile First: </b> Ensured the website is optimized for mobile devices, providing a seamless experience across all platforms.</li>
-                            <li><b>Engaging UI: </b> Developed a visually engaging user interface that captivates visitors and enhances user interaction.</li>
-                            <li><b>Mapped User Journey: </b> Carefully mapped out user journeys to ensure intuitive navigation and a cohesive experience.</li>
+                            <li>Web Design & Development</li>
+                            <li>UI/UX Design</li>
+                        </ul>
+                    </div>
+                    <div className='cSsecMinBCol'>
+                        <h4>Objective</h4>
+                        <p>To modernize Groupsoft’s digital identity by creating a website that reflects their brand’s technological expertise and innovative spirit, while providing a seamless and engaging user experience.</p>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Aligning the website design with Groupsoft’s new brand identity while integrating the latest technical advancements.</li>
+                            <li>Ensuring the website was fully optimized for mobile devices to provide a seamless experience across all platforms.</li>
+                            <li>Mapping user journeys to ensure intuitive navigation and a cohesive browsing experience.</li>
+                        </ul>
+                    </div>
+                    <div className='cSsecMinBCol'>
+                        <h4>Approach</h4>
+                        <ul>
+                            <li>Implemented a mobile-first design strategy to optimize the website for all devices, ensuring a consistent user experience.</li>
+                            <li>Developed a visually engaging user interface to captivate visitors and enhance user interaction.</li>
+                            <li>Carefully mapped out user journeys to ensure intuitive navigation and a cohesive experience across the website.</li>
                         </ul>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                       <p>Web Design & Development, UI/UX Design</p>
+                        <h4>Results</h4>
+                        <ul>
+                            <li>Successfully revamped Groupsoft's website, creating a modern digital identity that reflects their technological expertise and brand values.</li>
+                            <li>Enhanced user engagement through a visually compelling and mobile-optimized website.</li>
+                            <li>Improved navigation and user experience, aligning with the latest industry standards.</li>
+                        </ul>
                     </div>
 
+<div className='cSsecMinBCol'>
+<h4>Year</h4>
+<p>2023</p>
+</div>
 
                 </div>
 
@@ -163,7 +194,7 @@ const TataTrucks = () => {
             <div className='cSsecMinC'>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork1} /></span>
+                    <span><img src={ourwork1} loading='lazy' /></span>
                 </div>
 
                 
@@ -174,19 +205,19 @@ const TataTrucks = () => {
 <div className='mainslider'>
     <Slider {...mainSlider} className='clientelSlider slick-slider'>
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork2} /></span>
+                    <span><img src={ourwork2} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork3} /></span>
+                    <span><img src={ourwork3} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork4} /></span>
+                    <span><img src={ourwork4} loading='lazy' /></span>
                 </div>
 
                 <div className='imgCol1 imgCol'>
-                    <span><img src={ourwork5} /></span>
+                    <span><img src={ourwork5} loading='lazy' /></span>
                 </div>
 
     </Slider>

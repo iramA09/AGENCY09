@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
@@ -100,7 +99,6 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const GodrejLaffaire = () => {
-    useLenisScroll();
 
 
   return (
@@ -123,7 +121,7 @@ const GodrejLaffaire = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy' />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -138,26 +136,59 @@ const GodrejLaffaire = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>In an ambitious effort to discover and nurture India's next big content creator, we launched Godrej L’Affaire Select, a nationwide talent hunt that sought out the most promising digital talents across the country. The initiative aimed to identify and support budding creators, providing them with unparalleled opportunities for growth and exposure.</p>
-
-
+                        <p>In a bid to discover and nurture India's next big content creator, we launched Godrej L’Affaire Select, a nationwide talent hunt aimed at identifying and supporting the country’s most promising digital talents. The initiative provided budding creators with unmatched opportunities for growth, exposure, and industry connections.</p>
                     </div>
 
 
                     <div className='cSsecMinBCol'>
-                        <h4>The campaign involved</h4>
+                        <h4>Industry</h4>
+                        <p>Lifestyle & Digital Content</p>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Services</h4>
                         <ul>
-                            <li><b>Nationwide Hunt:</b> A rigorous selection process that attracted thousands of participants from across India, all vying for a spot in the top 25.</li>
-                            <li><b>Expert Mentorship:</b>  The top 25 finalists were provided with exclusive mentorship from Ranveer Allahbadia, one of India's leading digital influencers, along with guidance from a vast jury of industry experts.</li>
-                            <li><b>L’Affaire On Ground Event:</b>  The culmination of the campaign was a grand event where the finalists were commemorated. This event celebrated their journey, showcased their talents, and provided a platform for them to connect with industry leaders and potential collaborators.</li>
+                            <li>Digital Strategy</li>
+                            <li>IP Building</li>
+                            <li>Community Engagement</li>
                         </ul>
-
-                        <p>The initiative not only uncovered new digital talent but also reinforced Godrej's commitment to supporting creativity and innovation in the digital space.</p>
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Capability</h4>
-                        <p>Digital Strategy, IP Building, Community Engagement</p>
+                        <h4>Objective</h4>
+                        <p>To discover, mentor, and elevate emerging digital content creators in India, while reinforcing Godrej's commitment to creativity and innovation in the digital space.</p>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Managing a nationwide talent hunt with thousands of participants.</li>
+                            <li>Ensuring the selection process identified the most promising talents.</li>
+                            <li>Providing meaningful mentorship and exposure to the finalists.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Approach</h4>
+                        <ul>
+                            <li>Conducted a rigorous nationwide hunt to attract and select top digital talents, narrowing down thousands of participants to the top 25 finalists.</li>
+                            <li>Provided exclusive mentorship to the finalists from renowned digital influencer Ranveer Allahbadia and a jury of industry experts.</li>
+                            <li>Organized the L’Affaire On Ground Event as the campaign’s grand finale, celebrating the finalists’ journey, showcasing their talents, and facilitating connections with industry leaders.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Results</h4>
+                        <ul>
+                            <li>Successfully identified and mentored India’s next wave of digital content creators.</li>
+                            <li>Strengthened Godrej's reputation as a supporter of creativity and innovation in the digital landscape.</li>
+                            <li>Enhanced engagement with a new generation of digital talent.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Year</h4>
+                       <p>2023</p>
                     </div>
 
                 </div>
@@ -169,6 +200,14 @@ const GodrejLaffaire = () => {
 
         </div>
     </section>
+<section className='cSsecMin'>
+    <div className='container'>
+        <div className="ytfm">
+    <iframe width="1260" height="560" src="https://www.youtube.com/embed/OgGZXhIAhKo?si=TS5XFXLTQVSNUjdU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    </div>
+</section>
+    
 
 {/* 
     

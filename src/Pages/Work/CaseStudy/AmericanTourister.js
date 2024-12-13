@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
@@ -100,8 +99,7 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const AmericanTourister = () => {
-    useLenisScroll();
-
+ 
 
   return (
     <>
@@ -123,7 +121,7 @@ const AmericanTourister = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy'  />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -138,27 +136,50 @@ const AmericanTourister = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>We collaborated with American Tourister to create a series of exceptional product films aimed at showcasing their latest offerings. These films were designed to highlight the unique features, quality, and style of American Tourister products, providing potential customers with an engaging and informative viewing experience.</p>
+                        <p>We partnered with American Tourister to create a series of captivating product films designed to showcase their latest offerings. These films aimed to highlight the unique features, quality, and style of American Tourister products, providing an engaging and informative viewing experience for potential customers.</p>
                     </div>
 
+                    <div className='cSsecMinBCol'>
+                        <h4>Industry</h4>
+                        <p>Retail & Consumer Goods</p>
+                    </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Key Highlights</h4>
+                        <h4>Services</h4>
                         <ul>
-                            <li><b> Product Showcase: </b>  Each film was meticulously shot to highlight the distinct features and benefits of the products, emphasizing durability, design, and functionality.</li>
-                            <li><b>High-Quality Production:</b>   Utilized high-end filming techniques and equipment to ensure the highest production quality, making the products stand out.
-                            </li>
-                            <li><b>Engaging Content:   </b> Crafted engaging narratives and visuals to capture the attention of the target audience, showcasing the products in various real-life scenarios.
-                            </li>
-                            <li><b>Brand Alignment:  </b>Ensured that the films aligned with American Tourister’s brand identity and marketing objectives, reinforcing their reputation for quality and style.
-                            </li>
+                            <li>Product Film Production</li>
+                            <li>Content Creation</li>
                         </ul>
-
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Capability</h4>
-                        <p>Product Film Production & Content Creation</p>
+                        <h4>Objective</h4>
+                        <p>To create visually stunning product films that highlight the unique features and quality of American Tourister products, while aligning with the brand’s identity and marketing goals.</p>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Showcasing the distinct features, durability, and design of the products in an engaging manner.</li>
+                            <li>Ensuring high production quality and aligning the content with American Tourister’s brand identity.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Approach</h4>
+                        <ul>
+                            <li>Conducted meticulous filming to emphasize the unique features, durability, design, and functionality of the products.</li>
+                            <li>Utilized high-end filming techniques and equipment to achieve superior production quality.</li>
+                            <li>Crafted engaging narratives and visuals to capture the attention of the target audience, showcasing the products in various real-life scenarios.</li>
+                            <li>Ensured that the films aligned with American Tourister’s brand identity and marketing objectives, reinforcing their reputation for quality and style.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Results</h4>
+                        <ul>
+                            <li>Produced a series of high-quality product films that effectively showcased American Tourister’s</li>
+                            </ul>
                     </div>
 
                 </div>
@@ -169,7 +190,16 @@ const AmericanTourister = () => {
 
         </div>
     </section>
-
+    <section className='cSsecMin'>
+    <div className='container'>
+        <div className="ytgrd">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Rj3Fu9dln3c?si=4LT1dpFd4pMvufzP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/p5e35M4hgdw?si=lFU28ecRVJzuWHIF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AogwIGpDIhA?si=yESoLQ_v8LdNV78-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8IyF02nNLXw?si=gGtEjz3irutSsm-d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    </div>
+</section>
 
 
     <Footer/>

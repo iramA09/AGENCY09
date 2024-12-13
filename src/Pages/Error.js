@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Transitions from '../Hooks/Transitions';
 import RippleButton from '../Hooks/RippleButton';
 
 const Error = () => { 

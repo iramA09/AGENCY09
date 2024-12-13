@@ -4,7 +4,6 @@ import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import useLenisScroll from '../../../Hooks/useLenisScroll';
 import SVGCurveLine from '../../../Hooks/SVGCurveLine'; 
 import { GoNorthStar } from "react-icons/go";
 import { PiSlideshow, PiStarFourFill } from "react-icons/pi";
@@ -12,13 +11,9 @@ import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
 import starY from '../../../Assets/Images/icons/star.webp';
 import logo from '../../../Assets/Images/logos/work/fashion_lifestyle/lakme.png';
-import ourwork1 from '../../../Assets/Images/work/tata-trucks/tata-main.webp';
-import ourwork2 from '../../../Assets/Images/work/tata-trucks/tata-slide1.webp';
-import ourwork3 from '../../../Assets/Images/work/tata-trucks/tata-slide2.webp';
-import ourwork4 from '../../../Assets/Images/work/tata-trucks/tata-slide3.webp';
-import ourwork5 from '../../../Assets/Images/work/tata-trucks/tata-slide4.webp';
-import ourwork6 from '../../../Assets/Images/work/tata-trucks/tata-slide5.webp';
-import ourwork7 from '../../../Assets/Images/work/tata-trucks/tata-slide6.webp';
+import ourwork1 from '../../../Assets/Images/work/lakme/lk-main.webp'
+import ourwork2 from '../../../Assets/Images/work/lakme/lk-1.webp'
+import ourwork3 from '../../../Assets/Images/work/lakme/lk-2.webp'
 
 
 // CaseStudySlider 
@@ -100,7 +95,6 @@ const CaseStudyData = [
 //CaseStudy Data End
 
 const LakmeFashionWeek = () => {
-    useLenisScroll();
 
 
   return (
@@ -123,7 +117,7 @@ const LakmeFashionWeek = () => {
                 </div>
 
                 <div className='cSsecMinInfo m0'>
-                    <img src={logo} />
+                    <img src={logo} loading='lazy' />
                     {/* <Link>Info <GoPlus /></Link> */}
                 </div>
 
@@ -138,33 +132,85 @@ const LakmeFashionWeek = () => {
                 <div className='cSsecMinBRow'>
                     <div className='cSsecMinBCol'>
                         <h4>Overview</h4>
-                        <p>Over six seasons of Lakme Fashion Week, we played a pivotal role in enhancing the event's digital presence and engagement. Our comprehensive approach involved creating compelling content, providing extensive event coverage, and fulfilling sponsor deliverables, ensuring that the essence and excitement of the fashion week were effectively captured and shared.</p>
-
-
+                        <p>Over six seasons of Lakme Fashion Week, we played a crucial role in amplifying the event's digital presence and engagement. Our approach encompassed creating compelling content, providing extensive event coverage, and fulfilling sponsor deliverables, ensuring that the excitement and essence of the fashion week were effectively captured and shared with the audience.</p>
                     </div>
 
+                    <div className='cSsecMinBCol'>
+                        <h4>Industry</h4>
+                        <p>Fashion & Events</p>
+                    </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Key Highlights</h4>
+                        <h4>Services</h4>
                         <ul>
-                            <li><b> Content Creation for Social:</b>   Developed engaging and visually appealing content for various social media platforms, ensuring real-time updates and consistent brand messaging.</li>
-                            <li><b>Event Coverage:</b>   Provided extensive coverage of the event, including live updates, interviews, and behind-the-scenes insights, bringing the audience closer to the action.</li>
-                            <li><b>Sponsor Deliverables: </b>  Ensured all sponsor deliverables were met with high-quality content and timely execution, maintaining strong relationships and satisfaction.</li>
-                            <li><b>Lives:  </b> Conducted live streams and live updates, keeping the audience engaged and connected with the event in real time.</li>
-                            <li><b>Creation of IP - Be the Next (A Model Hunt): </b> Conceptualized and executed the "Be the Next" model hunt, adding a unique and interactive dimension to the event, and uncovering new talent.</li>
+                            <li>Content Creation</li>
+                            <li>Event Coverage</li>
                         </ul>
-
                     </div>
 
                     <div className='cSsecMinBCol'>
-                        <h4>Capability</h4>
-                        <p>Content Creation & Event Coverage</p>
+                        <h4>Objective</h4>
+                        <p>To enhance the digital presence of Lakme Fashion Week through engaging content and comprehensive event coverage, while meeting sponsor deliverables and adding interactive elements to the event.</p>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Developing engaging content that captures the excitement of the fashion week and resonates across various social media platforms.</li>
+                            <li>Providing extensive and real-time event coverage to keep the audience connected with the event's happenings.</li>
+                            <li>Fulfilling sponsor deliverables with high-quality content and timely execution.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Approach</h4>
+                        <ul>
+                            <li>Created engaging and visually appealing content for social media platforms, ensuring real-time updates and consistent brand messaging.</li>
+                            <li>Provided extensive event coverage, including live updates, interviews, and behind-the-scenes insights, to bring the audience closer to the action.</li>
+                            <li>Ensured all sponsor deliverables were met with high-quality content and timely execution, maintaining strong relationships with sponsors.</li>
+                            <li>Conducted live streams and live updates to keep the audience engaged and connected with the event in real time.</li>
+                            <li>Conceptualized and executed the "Be the Next" model hunt, adding a unique and interactive dimension to the event, and uncovering new talent.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Results</h4>
+                        <ul>
+                            <li>Successfully enhanced the digital presence and engagement of Lakme Fashion Week through impactful content and event coverage.</li>
+                            <li>Maintained strong sponsor relationships with high-quality and timely deliverables.</li>
+                            <li>Increased audience engagement with real-time updates and interactive elements like the "Be the Next" model hunt.</li>
+                        </ul>
+                    </div>
+
+                    <div className='cSsecMinBCol'>
+                        <h4>Year</h4>
+                        <p>2015 - 2017</p>
                     </div>
 
                 </div>
 
             </div>
 
+            <div className='cSsecMinC'>
+
+<div className='imgCol1 imgCol'>
+    <span><img src={ourwork1} loading='lazy' /></span>
+</div>
+
+</div>
+
+
+<div className='mainslider'>
+<Slider {...mainSlider} className='clientelSlider slick-slider'>
+<div className='imgCol1 imgCol'>
+                <span><img src={ourwork2} loading='lazy' /></span>
+            </div>
+
+            <div className='imgCol1 imgCol'>
+                <span><img src={ourwork3} loading='lazy' /></span>
+            </div>
+</Slider>
+</div>
 
           
         </div>

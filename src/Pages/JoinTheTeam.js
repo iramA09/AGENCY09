@@ -3,13 +3,11 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import { PiArrowCircleRightThin } from "react-icons/pi";
 import JoinTheTeamForm from '../Components/Forms/JoinTheTeamForm';
-import useLenisScroll from '../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 
 
 
 const JoinTheTeam = () => {
-  useLenisScroll();
   return (
     <>
       <Header />

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
-import { Link, useLocation } from 'react-router-dom';
-import useLenisScroll from '../../Hooks/useLenisScroll';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import AllData from './CaseStudiesItems/All';
@@ -22,6 +21,7 @@ import ourwork3 from '../../Assets/Images/work/ourwork-3.webp';
 // Tabs
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+
 
 // CaseStudySlider 
 const CaseStudySlider = {
@@ -88,17 +88,50 @@ const CaseStudyData = [
 
 const CaseStudies = () => {
     const location = useLocation();
-    useLenisScroll();
+    const navigate = useNavigate();
+
+    // Map tab names to indices
+    const tabMapping = {
+      all: 0,
+      tech: 1,
+      design: 2,
+      content: 3,
+      media: 4,
+      production: 5,
+      keyword: 6,
+    };
+  
+    // Parse the initial tab from the URL hash
+    const initialTab = tabMapping[location.hash.replace('#', '')] || 0;
+  
+    const [selectedTab, setSelectedTab] = useState(initialTab);
+  
+    // Update URL hash when tab changes
+    const handleTabChange = (index) => {
+      setSelectedTab(index);
+  
+      const hash = Object.keys(tabMapping).find((key) => tabMapping[key] === index);
+      navigate(`#${hash}`);
+    };
+  
+    // Update the tab index when the URL hash changes
+    useEffect(() => {
+      const hash = location.hash.replace('#', '');
+      if (tabMapping[hash] !== undefined) {
+        setSelectedTab(tabMapping[hash]);
+      }
+    }, [location.hash]);
+  
     return (
         <>
 
         <Helmet>
-            <title> Case Study – AGENCY09</title>
-            <meta name="description" content="Clients achieve better ROI with integrated digital & inbound marketing strategies. Peek at our lead based campaigns, website designs, SEO and ORM."/>
+            <title> AGENCY09 Case Studies: Proven Success in Advertising & Branding</title>
+            <meta name="description" content="Explore AGENCY09 case studies showcasing successful advertising campaigns,  growing audience online and digital marketing for leading brands."/>
             <link rel="canonical" href="https://www.agency09.in/work/case-studies"/>
 
-            <meta property="og:title" content=" Case Study – AGENCY09 "/> 
-            <meta property="og:description" content=" Clients achieve better ROI with integrated digital & inbound marketing strategies. Peek at our lead based campaigns, website designs, SEO and ORM."/> 
+            <meta property="og:title" content=" AGENCY09 Case Studies: Proven Success in Advertising & Branding"/> 
+            <meta property="og:description" content=" Explore AGENCY09 case studies showcasing successful advertising campaigns,  growing audience online and digital marketing for leading brands."/> 
             <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
             <meta property="og:type" content="website"/> 
 
@@ -106,7 +139,7 @@ const CaseStudies = () => {
             <meta name="twitter:site" content="@AGENCY09"/> 
             <meta name="twitter:creator" content="@AGENCY09"/> 
             <meta name="twitter:url" content="https://www.agency09.in/work/case-studies"/> 
-            <meta name="twitter:description" content=" Clients achieve better ROI with integrated digital & inbound marketing strategies. Peek at our lead based campaigns, website designs, SEO and ORM. "/> 
+            <meta name="twitter:description" content=" Explore AGENCY09 case studies showcasing successful advertising campaigns,  growing audience online and digital marketing for leading brands."/> 
             <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
         </Helmet>
 
@@ -136,7 +169,7 @@ const CaseStudies = () => {
                     </ul>
 
                     {/* Case Studies */}
-                    <Tabs>
+                    <Tabs selectedIndex={selectedTab} onSelect={handleTabChange}>
                         <TabList >
                             <Tab><span>All</span></Tab>
                             <Tab><span>Tech</span></Tab>
@@ -174,10 +207,6 @@ const CaseStudies = () => {
                         {/* Media */}
                         <TabPanel>
 
-                            <div className='comingSoon'>
-                              <h2>Coming Soon...</h2>
-                            </div>
-
                             <MediaData/>
                         </TabPanel>
                         {/* Media */}
@@ -190,10 +219,6 @@ const CaseStudies = () => {
 
                         {/* Keyword */}
                         <TabPanel>
-                            
-                            <div className='comingSoon'>
-                                <h2>Coming Soon...</h2>
-                            </div>
                             <KeywordData/>
                         </TabPanel>
                         {/* Keyword */}

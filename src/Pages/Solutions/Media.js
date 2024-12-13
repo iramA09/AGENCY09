@@ -7,7 +7,6 @@ import Footer from '../../Components/Footer';
 import StartAProjectFormPopup from '../../Components/Forms/StartAProjectFormPopup';
 import Testimonias from '../../Components/Testimonias';
 
-import useLenisScroll from '../../Hooks/useLenisScroll';
 import Accordion from 'react-bootstrap/Accordion';
 import SVGCurveLine from '../../Hooks/SVGCurveLine'; 
 import Slider from 'react-slick';
@@ -33,7 +32,9 @@ import starY from '../../Assets/Images/icons/star.webp';
 import ourwork1 from '../../Assets/Images/work/ourwork-4.webp';
 import ourwork2 from '../../Assets/Images/work/ourwork-1.webp';
 import ourwork3 from '../../Assets/Images/work/ourwork-3.webp';
-
+import dhanvarsha from '../../Assets/Images/work/dhanvarsha.jpg';
+import jp from '../../Assets/Images/work/jpinfra.jpg';
+import MCHI from '../../Assets/Images/work/mchi.jpg';
 
 // Partners
 import GooglePremierPartner from '../../Assets/Images/logos/partners/GooglePremierPartner.png';
@@ -135,7 +136,6 @@ const CaseStudySlider = {
  
 
 const Media = () => {
-  useLenisScroll();
   const [OpenModalStartAProjectFormPopup, setOpenModalStartAProjectFormPopup] = React.useState(false);
 
 
@@ -221,27 +221,45 @@ const calculatData = [
 
 //CaseStudy Data
 const CaseStudyData = [
-    {
-        link: '#',
-        image: ourwork1,
-        titale: 'Brand led site for a Banking Solutions Firm',
-        tags: [{ name: 'BFSI' },],
-    },  
-    {
-        link: '#',
-        image: ourwork2,
-        titale: 'A dynamic website for India’s biggest truck company',
-        tags: [
-            { name: 'Automobile' },
-        ],
-    },  
-    {
-        link: '#',
-        image: ourwork3,
-        titale: 'Revamped Website for one of the India’s biggest institution',
-        tags: [{ name: 'Education' },],
-
-    },
+   {
+    id:11,
+    title:"Successful Mobile App Download Campaign for Dhanvarsha",
+    tags: [
+      {name:'Microsite'},
+      {name:'Content'},
+      {name:'Paid media'}
+    ],
+    image: dhanvarsha,
+    link:'/work/case-studies/successful-mobile-app-download-campaign-for-dhanvarsha',
+    brand:'Dhan Varsha',
+    department:'Media'
+   },
+   {
+    id:12,
+    title:'Multichannel Lead Gen Campaign for JP Infra',
+    tags:[
+      {name:'Microsite'},
+      {name:'Paid Media'},
+      {name:'Content'}
+    ],
+    image:jp,
+    link:'/work/case-studies/multi-channel-lead-gen-campaign-for-jpinfa',
+    brand:'JP Infra',
+    department:'Media'
+   },
+   {
+    id:13,
+    title:"Promoting India’s Biggest Award Function for Real Estate",
+    tags:[
+      {name:'Design & Content,'},
+      {name:'Paid Media'},
+      {name:'Microsite'}
+    ],
+    image:MCHI,
+    link:'/work/case-studies/promoting-indias-biggest-award-function-for-real-estate-credai-mchi-golden-pillar-awards',
+    brand:'CRED MCHI',
+    department:'Media'
+   }
   ];
 //CaseStudy Data End
  
@@ -303,14 +321,14 @@ const faqsData = [
     <>
 
     <Helmet>
-      <title>Media Solutions | Performance Marketing Services - AGENCY09</title>
+      <title>Social Media Marketing Agency in Mumbai |  Performance Marketing & Ad Campaigns – AGENCY09</title>
       <meta name="robots" content="index, follow"/> 
 
-      <meta name="description" content="Being an advertising company, we covers all social media platforms through PPC campaigns, performance marketing, influencer marketing, and programmatic advertising."/>
+      <meta name="description" content="AGENCY09 offers media services, including paid ad campaigns, performance marketing, lead generation campaign. and influencer marketing."/>
       <link rel="canonical" href="https://www.agency09.in/solutions/media"/>
 
-      <meta property="og:title" content="Media Solutions | Performance Marketing Services - AGENCY09"/> 
-      <meta property="og:description" content="Being an advertising company, we covers all social media platforms through PPC campaigns, performance marketing, influencer marketing, and programmatic advertising."/> 
+      <meta property="og:title" content="Social Media Marketing Agency in Mumbai |  Performance Marketing & Ad Campaigns – AGENCY09"/> 
+      <meta property="og:description" content="AGENCY09 offers media services, including paid ad campaigns, performance marketing, lead generation campaign. and influencer marketing."/> 
       <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
       <meta property="og:type" content="website"/> 
 
@@ -318,7 +336,7 @@ const faqsData = [
       <meta name="twitter:site" content="@AGENCY09"/> 
       <meta name="twitter:creator" content="@AGENCY09"/> 
       <meta name="twitter:url" content="https://www.agency09.in/solutions/media"/> 
-      <meta name="twitter:description" content="Being an advertising company, we covers all social media platforms through PPC campaigns, performance marketing, influencer marketing, and programmatic advertising."/> 
+      <meta name="twitter:description" content="AGENCY09 offers media services, including paid ad campaigns, performance marketing, lead generation campaign. and influencer marketing."/> 
       <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/> 
     </Helmet>
 
@@ -340,10 +358,10 @@ const faqsData = [
                     <div className='trustedBy'>
                         <h3 className='sizeH5'>Trusted By</h3>
                         <ul className='trustedByLogos'>
-                            <li><img src={chinesewok} alt=""/></li>
-                            <li><img src={aldo} alt=""/></li>
-                            <li><img src={stepsetgo} alt=""/></li>
-                            <li><img src={credaimchi} alt=""/></li>
+                            <li><img loading='lazy' src={chinesewok} alt=""/></li>
+                            <li><img loading='lazy' src={aldo} alt=""/></li>
+                            <li><img loading='lazy' src={stepsetgo} alt=""/></li>
+                            <li><img loading='lazy' src={credaimchi} alt=""/></li>
                         </ul>
                     </div>
                 </div>
@@ -352,13 +370,13 @@ const faqsData = [
                         <span></span>
                     </div>
                     <div className='RoundIconB RoundIcon pinkB'></div>
-                    <img src={pattern} alt="pattern" className='pattern' />
+                    <img loading='lazy'  src={pattern} alt="pattern" className='pattern' />
                 </div>
 
 
                 <div className='SolutionsColOurServies'>
                     <Link to='#'>
-                        <img src={ourServiesBtn} alt="Our Servies" />
+                        <img loading='lazy'  src={ourServiesBtn} alt="Our Servies" />
                     </Link>
                 </div>
             </div>
@@ -393,9 +411,9 @@ const faqsData = [
 
               <div className='Heading center HeadingIcon pb-20'>
                   <h2 className='sizeH1 uppercase'>
-                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
                       Services
-                      <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                      <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
                   </h2>
                 </div>
 
@@ -427,6 +445,59 @@ const faqsData = [
 
             </div>
         </section>
+
+        <div className='container'>
+                <div className='strokeB'><SVGCurveLine/></div>      
+        </div>
+
+
+        <section className='solutionsSecCaseStudy'>
+            <div className='container'>
+
+            <div className='Heading center HeadingIcon'>
+                <h2 className='sizeH1 uppercase'>
+                    <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
+                    Case studies
+                    <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
+                </h2>
+            </div>
+
+
+            <div className='solutionsSecCaseStudyList'>
+
+                <Slider {...CaseStudySlider} className='CaseStudySlider slick-slider'>
+                    {CaseStudyData.map((CaseStudy, index) => (
+                        <div key={index} className='item'>
+                        <div className='CaseStudyCol'>
+                            <Link to={CaseStudy.link}>
+                                <div className='CaseStudyImg'><img loading='lazy'  src={CaseStudy.image}/>
+                                <div className='workGridItemHover'>
+                                    <div className='workGridItemHoverIn'>
+                                        <h3>{CaseStudy.title}</h3>
+                                        <h4>{CaseStudy.brand}</h4>
+                                        <p>{CaseStudy.department}</p>
+                                    </div>
+                                </div></div>
+                                <div className='CaseStudyTitale'>{CaseStudy.titale}</div>
+                                <div className='textTag'><p>{CaseStudy.tag}
+                                  {CaseStudy.tags.map((tag, index) => (
+                                    <span key={index}>{tag.name}</span>
+                                  ))}
+                                </p></div>
+                            </Link>
+                        </div>
+                        </div>
+                    ))}
+                </Slider>
+
+            <div className='btnSpaceEx center'>     
+                <Link to="../work/case-studies#media" className="btnDark fontM ripple-button"><span>View All</span></Link>
+            </div>
+
+            </div>
+
+            </div>
+        </section>  
 
 {/* 
 
@@ -499,14 +570,14 @@ const faqsData = [
                 <TabPanel>
                   <div className='mdlogoList'>
                     <ul>
-                      <li><img src={GooglePremierPartner}/></li>
-                      <li><img src={MetaVerifiedPartner}/></li>
-                      <li><img src={LinkedInMarketingPartner}/></li>
-                      <li><img src={TwitterAdPartner}/></li>
-                      <li><img src={SnapchatCertifiedPartner}/></li>
-                      <li><img src={AmazonAdvertisingPartner}/></li>
-                      <li><img src={HubSpotAgencyPartner}/></li>
-                      <li><img src={MicrosoftAdvertisingPartner}/></li>
+                      <li><img loading='lazy'  src={GooglePremierPartner}/></li>
+                      <li><img loading='lazy'  src={MetaVerifiedPartner}/></li>
+                      <li><img loading='lazy'  src={LinkedInMarketingPartner}/></li>
+                      <li><img loading='lazy'  src={TwitterAdPartner}/></li>
+                      <li><img loading='lazy'  src={SnapchatCertifiedPartner}/></li>
+                      <li><img loading='lazy'  src={AmazonAdvertisingPartner}/></li>
+                      <li><img loading='lazy'  src={HubSpotAgencyPartner}/></li>
+                      <li><img loading='lazy'  src={MicrosoftAdvertisingPartner}/></li>
                     </ul>
                   </div>
                 </TabPanel>
@@ -514,20 +585,20 @@ const faqsData = [
                 <TabPanel>
                   <div className='mdlogoList'>
                     <ul>
-                      <li><img src={Meta}/></li>
-                      <li><img src={LinkedIn}/></li>
-                      <li><img src={YouTube}/></li>
-                      <li><img src={GoogleAds}/></li>
-                      <li><img src={Twitter}/></li>
-                      <li><img src={Snapchat}/></li>
-                      <li><img src={MicrosoftAdvertising}/></li>
-                      <li><img src={Pinterest}/></li>
-                      <li><img src={AmazonAdvertising}/></li>
-                      <li><img src={Taboola}/></li>
-                      <li><img src={Outbrain}/></li>
-                      <li><img src={SpotifyAdStudio}/></li>
-                      <li><img src={QuoraAds}/></li>
-                      <li><img src={RedditAds}/></li>
+                      <li><img loading='lazy'  src={Meta}/></li>
+                      <li><img loading='lazy'  src={LinkedIn}/></li>
+                      <li><img loading='lazy'  src={YouTube}/></li>
+                      <li><img loading='lazy'  src={GoogleAds}/></li>
+                      <li><img loading='lazy'  src={Twitter}/></li>
+                      <li><img loading='lazy'  src={Snapchat}/></li>
+                      <li><img loading='lazy'  src={MicrosoftAdvertising}/></li>
+                      <li><img loading='lazy'  src={Pinterest}/></li>
+                      <li><img loading='lazy'  src={AmazonAdvertising}/></li>
+                      <li><img loading='lazy'  src={Taboola}/></li>
+                      <li><img loading='lazy'  src={Outbrain}/></li>
+                      <li><img loading='lazy'  src={SpotifyAdStudio}/></li>
+                      <li><img loading='lazy'  src={QuoraAds}/></li>
+                      <li><img loading='lazy'  src={RedditAds}/></li>
                     </ul>
                   </div>
                 </TabPanel>
@@ -555,9 +626,9 @@ const faqsData = [
                 <div className='freeAuditSecCol'>
                 <div className='Heading HeadingIcon'>
               <h2 className='sizeH1 uppercase white center'>
-                  <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                  <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
                   One Dashboard 
-                  <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+                  <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
               </h2>
             </div>
                     <p className='white'>Simplify your media management with our integrated dashboard, providing comprehensive insights and analytics across all your campaigns and channels. </p>
@@ -574,9 +645,9 @@ const faqsData = [
         <div className='container'>
 
         <div className='Heading center HeadingIcon pb-20'><h2 className='sizeH1'>
-          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+          <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
               FAQs
-          <span className='iconSVG'><i className='iconF'><img src={starY} alt='Star Icon' /></i></span>
+          <span className='iconSVG'><i className='iconF'><img loading='lazy'  src={starY} alt='Star Icon' /></i></span>
         </h2></div>
           <Accordion>
             {faqsData.map(faq => (

@@ -106,13 +106,13 @@ const Awards = () => {
           <h2 className='sizeH1 uppercase'>
             <span className='iconSVG'>
               <i className='iconF'>
-                <img src={starY} alt='Star Icon' />
+                <img src={starY} loading='lazy' alt='Star Icon' />
               </i>
             </span>
             awards
             <span className='iconSVG'>
               <i className='iconF'>
-                <img src={starY} alt='Star Icon' />
+                <img src={starY} loading='lazy' alt='Star Icon' />
               </i>
             </span>
           </h2>

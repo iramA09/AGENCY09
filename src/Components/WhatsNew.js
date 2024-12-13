@@ -117,7 +117,7 @@ useEffect(() => {
     {UpdateData.map((item, index) => (
       <div className='item' key={index}>
         <Link>
-          <img src={item.image} alt={item.title} />
+          <img src={item.image} alt={item.title} loading="lazy" />
           <h2>{item.title}</h2>
           {/* <p>{item.description}</p> */}
           {/* <hr/>

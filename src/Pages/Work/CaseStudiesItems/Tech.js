@@ -113,7 +113,7 @@ const Tech = () => {
                         <Link to={item.link} className='workGridItemLink'>
                             <div className='cursor09'></div>
                             <div className='workGridItemImg'>
-                                <img src={item.image} alt={item.title} />
+                                <img src={item.image} alt={item.title} loading='lazy' />
                                 <div className='workGridItemHover'>
                                     <div className='workGridItemHoverIn'>
                                         <h3>{item.title}</h3>

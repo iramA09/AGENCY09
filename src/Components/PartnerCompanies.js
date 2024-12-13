@@ -96,13 +96,13 @@ const PartnerCompanies = [
           <h2 className='sizeH1 uppercase'>
             <span className='iconSVG'>
               <i className='iconF'>
-                <img src={starY} alt='Star Icon' />
+                <img src={starY} loading='lazy' alt='Star Icon' />
               </i>
             </span>
             Partner Companies
             <span className='iconSVG'>
               <i className='iconF'>
-                <img src={starY} alt='Star Icon' />
+                <img src={starY} loading='lazy' alt='Star Icon' />
               </i>
             </span>
           </h2>
@@ -115,7 +115,7 @@ const PartnerCompanies = [
             <div key={index} className='item'>
                 <Link to={PartnerCompanies.link} target="_blank">
                     <div className='PartnerCompaniesCol'>
-                        <div className='PartnerCompaniesImg'><img src={PartnerCompanies.image} alt='' /></div>
+                        <div className='PartnerCompaniesImg'><img src={PartnerCompanies.image} loading='lazy' alt='' /></div>
                         <div className='PartnerCompaniesText'><p>{PartnerCompanies.Text}</p></div>
                         <div className='PartnerCompaniesUrl'><span>{PartnerCompanies.siteUrl}</span></div>
                     </div>

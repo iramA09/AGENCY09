@@ -111,7 +111,7 @@ function PartnerWithUs() {
 
 
   return (
-    <div className='contactForm formDark'>
+    <div className='contactForm formDark '>
       <form onSubmit={handleSubmit}>
         <div className='FormGridTwo '>
           <div className='form-group'>

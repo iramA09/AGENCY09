@@ -11,7 +11,6 @@ import Social from '../Components/Social';
 import Calculat from '../Components/Calculat';
 import Items from '../Components/WhatsNew';
 import WeMakeIdeasPerform from '../Components/WeMakeIdeasPerform';
-import useLenisScroll from '../Hooks/useLenisScroll';
 import animateGsap from '../Components/Animation/HomeGsap'; 
 import { IoStarSharp } from "react-icons/io5";
 import { SlArrowRightCircle } from "react-icons/sl";
@@ -84,7 +83,6 @@ export const workItems = [
 ];
 
 const Home = () => {
-  useLenisScroll();
 
   useEffect(() => {
     const cleanup = animateGsap();
@@ -96,14 +94,14 @@ const Home = () => {
     <>
 
 <Helmet>
-    <title> Advertising Agency | Brand Agency in Mumbai - AGENCY09 </title>
+    <title>Advertising Agency | Brand Agency in Mumbai - AGENCY09 </title>
     <meta name="robots" content="index, follow"/> 
 
-    <meta name="description" content="AGENCY09 is a leading advertising agency in Mumbai. We grow brands with ideas for content, technology, design & data."/>
+    <meta name="description" content="AGENCY09 is a leading advertising agency in Mumbai. We grow brands with ideas for content, technology, design & data to implement growth strategies with results."/>
     <link rel="canonical" href="https://www.agency09.in/"/>
 
     <meta property="og:title" content="Advertising Agency | Brand Agency in Mumbai - AGENCY09 "/> 
-    <meta property="og:description" content="AGENCY09 is a leading advertising agency in Mumbai. We grow brands with ideas for content, technology, design & data."/> 
+    <meta property="og:description" content="AGENCY09 is a leading advertising agency in Mumbai. We grow brands with ideas for content, technology, design & data to implement growth strategies with results."/> 
     <meta property="og:image" content="https://www.agency09.in/agency09.png"/> 
     <meta property="og:type" content="website"/> 
 
@@ -112,7 +110,7 @@ const Home = () => {
     <meta name="twitter:site" content="@AGENCY09" /> 
     <meta name="twitter:creator" content="@AGENCY09" /> 
     <meta name="twitter:url" content="https://www.agency09.in/"/> 
-    <meta name="twitter:description" content=" AGENCY09 is a leading advertising agency in Mumbai. We grow brands with ideas for content, technology, design & data."/> 
+    <meta name="twitter:description" content=" AGENCY09 is a leading advertising agency in Mumbai. We grow brands with ideas for content, technology, design & data to implement growth strategies with results."/> 
     <meta name="twitter:image" content="https://www.agency09.in/agency09.png"/>
 </Helmet>
 
@@ -145,7 +143,7 @@ const Home = () => {
                   <Link to={item.link} className='workGridItemLink'>
                     <div className='cursor09'></div>
                     <div className='workGridItemImg'>
-                      <img src={item.image} alt={item.title}/>
+                      <img src={item.image} alt={item.title} loading="lazy"/>
                       <div className='workGridItemHover'>
                           <div className='workGridItemHoverIn'>
                               <h3>{item.title}</h3>
