@@ -54,10 +54,10 @@ const Social = () => {
   };
 
   const videos = [
-    { id: 1, url: "https://www.youtube.com/embed/sRFUln5_vuc", title: "Behind the AGENCY09" },
-    { id: 2, url: "https://www.youtube.com/embed/14dE_HMrhyo", title: "AGENCY09 - The team" },
-    { id: 3, url: "https://www.youtube.com/embed/uy4z0KhDDP0", title: "Resolutions | AGENCY09" },
-    { id: 4, url: "https://www.youtube.com/embed/PzEC_u1YUCw", title: "The Finger Pacer | AGENCY09" }
+    { id: 1, url: "https://www.youtube.com/embed/lwaoZUeekbI", title: "Behind the AGENCY09" },
+    { id: 2, url: "https://www.youtube.com/embed/kEY2I0t64HM", title: "AGENCY09 - The team" },
+    { id: 3, url: "https://www.youtube.com/embed/wQgHwsarek8", title: "Resolutions | AGENCY09" },
+    { id: 4, url: "https://www.youtube.com/embed/EmEA2j234hU", title: "The Finger Pacer | AGENCY09" }
   ];
 
   const handleMouseEnter = (id) => {
