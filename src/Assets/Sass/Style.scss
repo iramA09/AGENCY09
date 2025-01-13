@@ -775,12 +775,12 @@ p {
             background: none;
             border-radius: 0;
             border: none;
-            font-size: 20px;
+            font-size: 25px;
             border-top: 1px dotted $black;
             display: block;
             width: 100%;
             text-align: left;
-            padding: 15px 0;
+            padding: 20px 0;
             position: relative;
             &::after,&::before{
                 content: '';
@@ -1265,7 +1265,8 @@ header{
                                 width: fit-content;
                                 margin: 0 0 15px;
                                 text-transform: uppercase;
-                                font-size: 12px;
+                                font-size: 22px;
+                                font-family: $bold;
                                 gap: 5px;
                                 a{
                                     margin: 0;
@@ -1524,7 +1525,7 @@ footer{
                     margin:20px 0 0;
                     iframe{
                         border: none;
-                        background: #282828;
+                        background: #1f1f1f;
                         margin: auto;
                         padding:20px 10px ;
                         height: 130px;

@@ -31,8 +31,8 @@ const ServicesList = () => {
               </Link>
             </div></li>
             <li><div>
-              <Link to="/solutions/media" className="btnDark fontL ripple-button">
-                <span>Media</span>
+              <Link to="/solutions/performance-marketing" className="btnDark fontL ripple-button">
+                <span>Performance Marketing</span>
                 <span className='btnArrow'><PiArrowCircleRightThin /></span>
               </Link>
             </div></li>

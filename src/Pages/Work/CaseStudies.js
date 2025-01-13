@@ -96,7 +96,7 @@ const CaseStudies = () => {
       tech: 1,
       design: 2,
       content: 3,
-      media: 4,
+      'performance-marketing': 4,
       production: 5,
       keyword: 6,
     };
@@ -175,7 +175,7 @@ const CaseStudies = () => {
                             <Tab><span>Tech</span></Tab>
                             <Tab><span>Design</span></Tab>
                             <Tab><span>Content</span></Tab>
-                            <Tab><span>Media</span></Tab>
+                            <Tab><span>Performance Marketing</span></Tab>
                             <Tab><span>Production</span></Tab>
                             <Tab><span>Keyword</span></Tab>
                         </TabList>

@@ -248,7 +248,7 @@ export const allData = [
         image: workdhanvarsha,
         link: '/work/case-studies/successful-mobile-app-download-campaign-for-dhanvarsha',
         brand: "Dhanvarsha",
-        department: 'Media'
+        department: 'Performance Marketing'
     },
     {
         id: 6,
@@ -258,7 +258,7 @@ export const allData = [
         image: workjpinfra,
         link: '/work/case-studies/multi-channel-lead-gen-campaign-for-jpinfa',
         brand: "JP Infra",
-        department: 'Media'
+        department: 'Performance Marketing'
     },
     {
         id: 7,
@@ -268,7 +268,7 @@ export const allData = [
         image: workmchi,
         link: '/work/case-studies/promoting-indias-biggest-award-function-for-real-estate-credai-mchi-golden-pillar-awards',
         brand: "CREDAI MCHI Golden Pillar Awards",
-        department: 'Media'
+        department: 'Performance Marketing'
     },
     {
         id: 8,
@@ -278,7 +278,7 @@ export const allData = [
         image: workmchi,
         link: '/work/case-studies/leveraging-digital-to-generate-online-registrations-for-an-event-mchi-maha-property-expo',
         brand: "MCHI Maha Property Expo",
-        department: 'Media'
+        department: 'Performance Marketing'
     },
     {
         id: 9,
@@ -288,7 +288,7 @@ export const allData = [
         image: workaldo,
         link: '/work/case-studies/promoting-aldos-ss19-and-wedding-collections',
         brand: "ALDO's",
-        department: "Media"
+        department: "Performance Marketing"
     },
    
     {
@@ -299,7 +299,7 @@ export const allData = [
         image: worksiyaramedia,
         link: '/work/case-studies/new-years-campaign-hits-the-mark-with-siyarams-leveraging-celebrity-power-for-maximum-impact',
         brand: "Siyaram's",
-        department: "Media"
+        department: "Performance Marketing"
     },
     {
         id: 10,
@@ -309,7 +309,7 @@ export const allData = [
         image: workchineswok,
         link: '/work/case-studies/chinese-woks-post-lockdown-revival-influencer-campaign-boosts-starter-spread',
         brand: "Chinese Wok's",
-        department: "Media"
+        department: "Performance Marketing"
     },
 
     {

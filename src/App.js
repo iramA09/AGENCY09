@@ -68,7 +68,7 @@ function App() {
           <Route exact path='/solutions/tech' element={<Tech />} />
           <Route exact path='/solutions/content' element={<Content />} />
           <Route exact path='/solutions/design' element={<Design />} />
-          <Route exact path='/solutions/media' element={<Media />} />
+          <Route exact path='/solutions/performance-marketing' element={<Media />} />
           <Route exact path='/solutions/production' element={<Production />} />
           <Route exact path='/solutions/keyword' element={<Keyword />} />
           <Route exact path='/work/case-studies/tata-trucks' element={<TataTrucks />} />

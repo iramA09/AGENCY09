@@ -232,7 +232,7 @@ const CaseStudyData = [
     image: dhanvarsha,
     link:'/work/case-studies/successful-mobile-app-download-campaign-for-dhanvarsha',
     brand:'Dhan Varsha',
-    department:'Media'
+    department:'Performance Marketing'
    },
    {
     id:12,
@@ -245,7 +245,7 @@ const CaseStudyData = [
     image:jp,
     link:'/work/case-studies/multi-channel-lead-gen-campaign-for-jpinfa',
     brand:'JP Infra',
-    department:'Media'
+    department:'Performance Marketing'
    },
    {
     id:13,
@@ -258,7 +258,7 @@ const CaseStudyData = [
     image:MCHI,
     link:'/work/case-studies/promoting-indias-biggest-award-function-for-real-estate-credai-mchi-golden-pillar-awards',
     brand:'CRED MCHI',
-    department:'Media'
+    department:'Performance Marketing'
    }
   ];
 //CaseStudy Data End
@@ -350,7 +350,7 @@ const faqsData = [
         <div className="container">
             <div className='SolutionsRow'>
                 <div className='SolutionsCol'>
-                    <div className='SolutionsTag'><span className='blackB white'><GoNorthStar className='yellow'/> Media</span></div>
+                    <div className='SolutionsTag'><span className='blackB white'><GoNorthStar className='yellow'/> Performance Marketing</span></div>
                     <h1 className='sizeH1 uppercase'>Harness the potential of digital platforms to propel your brand to new heights</h1>
                     <p>Performance marketing strategies are meticulously crafted to deliver unparalleled results for your brand. With a data-driven approach and a relentless pursuit of ROI, we empower businesses to thrive in the competitive digital landscape. From maximizing conversions to optimizing ad spend, we're here to elevate your brand's performance and propel your success to new heights</p>
                                 
@@ -491,7 +491,7 @@ const faqsData = [
                 </Slider>
 
             <div className='btnSpaceEx center'>     
-                <Link to="../work/case-studies#media" className="btnDark fontM ripple-button"><span>View All</span></Link>
+                <Link to="../work/case-studies#performance-marketing" className="btnDark fontM ripple-button"><span>View All</span></Link>
             </div>
 
             </div>

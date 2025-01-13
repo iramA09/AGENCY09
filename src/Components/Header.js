@@ -67,7 +67,7 @@ const Header = () => {
                     <span><Link className={location.pathname === '/solutions/tech' ? 'active' : ''} to='/solutions/tech'>Tech</Link></span>
                     <span><Link className={location.pathname === '/solutions/design' ? 'active' : ''} to='/solutions/design'>Design</Link></span>
                     <span><Link className={location.pathname === '/solutions/content' ? 'active' : ''} to='/solutions/content'>Content</Link></span>
-                    <span><Link className={location.pathname === '/solutions/media' ? 'active' : ''} to='/solutions/media'>Media</Link></span>
+                    <span><Link className={location.pathname === '/solutions/performance-marketing' ? 'active' : ''} to='/solutions/performance-marketing'>Performance Marketing</Link></span>
                     <span><Link className={location.pathname === '/solutions/production' ? 'active' : ''} to='/solutions/production'>Production</Link></span>
                     <span><Link className={location.pathname === '/solutions/keyword' ? 'active' : ''} to='/solutions/keyword'>Keyword</Link></span>
                   </div>
@@ -149,7 +149,7 @@ const Header = () => {
                 <li><Link className={location.pathname === '/solutions/tech' ? 'active' : ''} to='/solutions/tech'>Tech</Link></li>
                 <li><Link className={location.pathname === '/solutions/content' ? 'active' : ''} to='/solutions/content'>Content</Link></li>
                 <li><Link className={location.pathname === '/solutions/design' ? 'active' : ''} to='/solutions/design'>Design</Link></li>
-                <li><Link className={location.pathname === '/solutions/media' ? 'active' : ''} to='/solutions/media'>Media</Link></li>
+                <li><Link className={location.pathname === '/solutions/performance-marketing' ? 'active' : ''} to='/solutions/performance-marketing'>Performance Marketing</Link></li>
                 <li><Link className={location.pathname === '/solutions/production' ? 'active' : ''} to='/solutions/production'>Production</Link></li>
                 <li><Link className={location.pathname === '/solutions/Keyword' ? 'active' : ''} to='/solutions/keyword'>Keyword</Link></li>
               </ul>
