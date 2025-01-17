@@ -164,12 +164,13 @@ const Header = () => {
                       </div>
 
                       <div className='NBItemContent'>
-                      <a href='https://www.agency09.in/simplifyingtheweb/strategy/elevate-your-print-marketing-unleash-creativity-with-agency09/'>
+                        <a href='https://www.agency09.in/simplifyingtheweb/design/the-journey-of-rhealthbeat-magazine-a-testament-to-innovative-design/' target='_blank'>
                           <div className='NBItemImg'>
-                            <img src={blog2} loading='lazy' alt='{blog}' />
+                            <img src={'https://www.agency09.in/simplifyingtheweb/wp-content/uploads/2025/01/rgi-magazine.jpeg'} loading='lazy' alt='{caseStudies}' />
                           </div>
                           <div className='NBItemText'>
-                            <p>Elevate Your Print Marketing: Unleash Creativity with AGENCY09</p>
+                            <p>The Journey of RHealthBeat Magazine, a Testament to Innovative Design
+                            </p>
                           </div>
                         </a>
                       </div>
@@ -182,12 +183,12 @@ const Header = () => {
                       </div>
 
                       <div className='NBItemContent'>
-                        <a href='https://www.agency09.in/simplifyingtheweb/marketing/must-have-tools-for-social-media-marketers/'>
+                      <a href='https://www.agency09.in/simplifyingtheweb/strategy/elevate-your-print-marketing-unleash-creativity-with-agency09/' target='_blank'>
                           <div className='NBItemImg'>
-                            <img src={blog1} loading='lazy' alt='{caseStudies}' />
+                            <img src={blog2} loading='lazy' alt='{blog}' />
                           </div>
                           <div className='NBItemText'>
-                            <p>Must have tools for Social Media Marketers</p>
+                            <p>Elevate Your Print Marketing: Unleash Creativity with AGENCY09</p>
                           </div>
                         </a>
                       </div>
