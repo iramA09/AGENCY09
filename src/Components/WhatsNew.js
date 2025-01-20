@@ -12,7 +12,7 @@ import ideasPerform from '../Assets/Images/growth/mediaA09.webp';
 import ideasPerform1 from '../Assets/Images/growth/ideas-perform1.webp';
 import sportday from '../Assets/Images/growth/sportday.webp';
 import ideasPerform2 from '../Assets/Images/growth/ideas-perform2.webp';
-import kinjal from '../Assets/Images/growth/kinjal.webp';
+import rgiimage from '../Assets/Images/growth/rgi.webp';
 import starY from '../Assets/Images/icons/star.webp';
 
 
@@ -94,9 +94,9 @@ useEffect(() => {
     },
     {
       link: '/',
-      image: kinjal,
-      title: 'AGENCY09 Signs up as Social Media Partner for Kinjal Group',
-      description: "Strengthens real estate portfolio",
+      image: rgiimage,
+      title: 'The Journey of RHealthBeat Magazine, a Testament to Innovative Design',
+      description: "Designing Stories, Crafting Impact",
     },
   ];
   // Update end
