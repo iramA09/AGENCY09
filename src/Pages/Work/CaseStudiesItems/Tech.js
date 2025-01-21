@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import TataMotors from '../../../Assets/Images/work/TataMotors.webp';
+import TataMotors from '../../../Assets/Images/work/TatamotorsNew.webp';
 import Ryan from '../../../Assets/Images/work/Ryan.webp';
 import GroupSoft from '../../../Assets/Images/work/GroupSoft.webp';
 import Siyarams from '../../../Assets/Images/work/siyarams.webp';

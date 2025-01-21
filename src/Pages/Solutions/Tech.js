@@ -31,7 +31,7 @@ import ticketing_system from '../../Assets/Images/tools/ticketing_system.webp';
 import url_builder from '../../Assets/Images/tools/url_builder.webp';
 import website_audit from '../../Assets/Images/tools/website_audit.webp';
 
-import TataMotors from '../../Assets/Images/work/TataMotors.webp';
+import TataMotors from '../../Assets/Images/work/TatamotorsNew.webp.';
 import Ryan from '../../Assets/Images/work/Ryan.webp';
 import GroupSoft from '../../Assets/Images/work/GroupSoft.webp';
 import Siyarams from '../../Assets/Images/work/siyarams.webp';
