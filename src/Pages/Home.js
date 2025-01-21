@@ -18,7 +18,7 @@ import SVGCurveLine from '../Hooks/SVGCurveLine';
 // Images
 import barc from '../Assets/Images/work/BARC.webp';
 import godrejlaffaire from '../Assets/Images/work/Laffaire.webp';
-import TataMotors from '../Assets/Images/work/TataMotors.webp';
+import TataMotors from '../Assets/Images/work/TatamotorsNew.webp';
 import Tribevibe from '../Assets/Images/work/TribeVibe.webp';
 
 // Images end

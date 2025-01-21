@@ -227,7 +227,7 @@ const Footer = () => {
     <div className='footerRow'>
 
       <div className='footerCol'>
-        <p>©AGENCY<b>09</b>.  All Rights Reserved 2024</p>
+        <p>©AGENCY<b>09</b>.  All Rights Reserved 2025</p>
       </div>
 
       <div className='footerCol'>

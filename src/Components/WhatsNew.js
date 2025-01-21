@@ -93,7 +93,7 @@ useEffect(() => {
       description: "Sports Day at AGENCY09",
     },
     {
-      link: '/',
+      link: 'https://www.agency09.in/simplifyingtheweb/design/the-journey-of-rhealthbeat-magazine-a-testament-to-innovative-design/',
       image: rgiimage,
       title: 'The Journey of RHealthBeat Magazine, a Testament to Innovative Design',
       description: "Designing Stories, Crafting Impact",
@@ -116,7 +116,7 @@ useEffect(() => {
     <Slider {...UpdateSlider} className="UpdateSlider-slick slick-slider">
     {UpdateData.map((item, index) => (
       <div className='item' key={index}>
-        <Link>
+        <Link to={item.link} target='_blank'>
           <img src={item.image} alt={item.title} loading="lazy" />
           <h2>{item.title}</h2>
           {/* <p>{item.description}</p> */}
