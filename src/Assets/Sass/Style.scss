@@ -44,7 +44,9 @@ $purple: #9f00ff;
 // site color end
 
 // Common Style 
-
+body{
+.slick-next, .slick-next:focus, .slick-next:hover, .slick-prev, .slick-prev:focus, .slick-prev:hover{  background-color: #fff;}
+}
 .lg-outer,.lg-backdrop{
     width: 80%!important;
     height: 80%!important;
@@ -401,7 +403,7 @@ p {
     transition: all 0.9s;
     
     &.fontL{
-        font-size: $sizeH3;
+        font-size: $sizeH4;
     }
     &.btnDark{
         color: $black;
@@ -3413,16 +3415,18 @@ footer{
         overflow: inherit;
     }
 .slick-arrow{
-    background-color: $green;
-    background-image: url('../Images/icons/arrow-right2.webp') ;
-    background-position: center;
+    background-color: $green!important;
+    background-image: url('../Images/icons/arrow-right2.webp') !important;
+    background-position: center!important;
     background-size: 30%!important;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat!important;
     width: 40px;
     height: 40px;
     border-radius: 100%;
     background-size: 60%;
-
+    top: 0;
+    bottom: 0;
+    &.slick-prev{top: -25px;}
     &.slick-disabled{
         opacity: 0;
     }
